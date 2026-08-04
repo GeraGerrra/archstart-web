@@ -1,0 +1,966 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "phase01-source-2026-07-27",
+  "generatedAt": "2026-07-27T23:29:02.225Z",
+  "sourcePolicy": "CLEAN_ALLOWLIST_DEFAULT_DENY",
+  "counts": {
+    "modules": 8,
+    "lessons": 40,
+    "projects": 8,
+    "quizQuestions": 200
+  },
+  "statuses": [
+    "AVAILABLE",
+    "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+    "PICE_PENDING",
+    "VIDEO_PENDING",
+    "CAPTIONS_PENDING",
+    "ALIAS_RESOLVED",
+    "IGNORED_BY_POLICY",
+    "INVALID",
+    "DUPLICATE",
+    "SANITIZATION_REQUIRED"
+  ],
+  "authoritativeSources": [
+    {
+      "sourceId": "GEN_COURSE_STRUCTURE",
+      "relativePath": "Course Structure.txt",
+      "role": "COURSE_STRUCTURE",
+      "sha256": "b5c4c44c6c9989354a6138b77dac9f43432a110e0df6d0f7a8750534373a188f",
+      "sizeBytes": 7757,
+      "immutable": true,
+      "contentVersion": "phase01-source-2026-07-27"
+    },
+    {
+      "sourceId": "GEN_LESSON_OBJECTIVES",
+      "relativePath": "Lessons Obj.txt",
+      "role": "LESSON_OBJECTIVES",
+      "sha256": "fe081c4d3bc0cd5b024b01c82855b46e8287b2ffe3483b158034c2e993e08815",
+      "sizeBytes": 47339,
+      "immutable": true,
+      "contentVersion": "phase01-source-2026-07-27"
+    },
+    {
+      "sourceId": "GEN_MODULE_OBJECTIVES",
+      "relativePath": "Modules Obj.txt",
+      "role": "MODULE_OBJECTIVES",
+      "sha256": "f16b112d8cc34d21bc1091edabe620649cb99c1044b231417460dc2d7065cf98",
+      "sizeBytes": 10550,
+      "immutable": true,
+      "contentVersion": "phase01-source-2026-07-27"
+    },
+    {
+      "sourceId": "GEN_PROJECT_OBJECTIVES",
+      "relativePath": "Projects Obj.txt",
+      "role": "PROJECT_OBJECTIVES",
+      "sha256": "14cf524c69ab989686b4de855418eb169a2d7c89bc3f28721a4dd77bdcc222a0",
+      "sizeBytes": 10843,
+      "immutable": true,
+      "contentVersion": "phase01-source-2026-07-27"
+    },
+    {
+      "sourceId": "GEN_QUIZ_SOURCE",
+      "relativePath": "Questions Lessons.txt",
+      "role": "QUIZ_SOURCE",
+      "sha256": "c01469168b00ebd05105b54d06fa0c2aaa9d3d5a2238e9ba82fd722f5a03179e",
+      "sizeBytes": 132210,
+      "immutable": true,
+      "contentVersion": "phase01-source-2026-07-27"
+    }
+  ],
+  "entities": {
+    "modules": [
+      {
+        "code": "M01",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M02",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M03",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M04",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M05",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M06",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M07",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M08",
+        "contentVersion": "phase01-source-2026-07-27"
+      }
+    ],
+    "lessons": [
+      {
+        "code": "M01_L01",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M01_L02",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M01_L03",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M01_L04",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M01_L05",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M02_L01",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M02_L02",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M02_L03",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M02_L04",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M02_L05",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M03_L01",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M03_L02",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M03_L03",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M03_L04",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M03_L05",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M04_L01",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M04_L02",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M04_L03",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M04_L04",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M04_L05",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M05_L01",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M05_L02",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M05_L03",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M05_L04",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M05_L05",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M06_L01",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M06_L02",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M06_L03",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M06_L04",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M06_L05",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M07_L01",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M07_L02",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M07_L03",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M07_L04",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M07_L05",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M08_L01",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M08_L02",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M08_L03",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M08_L04",
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      {
+        "code": "M08_L05",
+        "contentVersion": "phase01-source-2026-07-27"
+      }
+    ],
+    "projects": [
+      {
+        "code": "M01_P01",
+        "contentVersion": "phase01-source-2026-07-27",
+        "formatType": "SINGLE_BOARD"
+      },
+      {
+        "code": "M02_P02",
+        "contentVersion": "phase01-source-2026-07-27",
+        "formatType": "SINGLE_BOARD"
+      },
+      {
+        "code": "M03_P03",
+        "contentVersion": "phase01-source-2026-07-27",
+        "formatType": "SINGLE_BOARD"
+      },
+      {
+        "code": "M04_P04",
+        "contentVersion": "phase01-source-2026-07-27",
+        "formatType": "SINGLE_BOARD"
+      },
+      {
+        "code": "M05_P05",
+        "contentVersion": "phase01-source-2026-07-27",
+        "formatType": "SINGLE_BOARD"
+      },
+      {
+        "code": "M06_P06",
+        "contentVersion": "phase01-source-2026-07-27",
+        "formatType": "SINGLE_BOARD"
+      },
+      {
+        "code": "M07_P07",
+        "contentVersion": "phase01-source-2026-07-27",
+        "formatType": "SINGLE_BOARD"
+      },
+      {
+        "code": "M08_P08",
+        "contentVersion": "phase01-source-2026-07-27",
+        "formatType": "MULTI_PAGE_PACK"
+      }
+    ],
+    "quizzes": [
+      {
+        "lessonCode": "M01_L01",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M01_L02",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M01_L03",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M01_L04",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M01_L05",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M02_L01",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M02_L02",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M02_L03",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M02_L04",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M02_L05",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M03_L01",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M03_L02",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M03_L03",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M03_L04",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M03_L05",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M04_L01",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M04_L02",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M04_L03",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M04_L04",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M04_L05",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M05_L01",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M05_L02",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M05_L03",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M05_L04",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M05_L05",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M06_L01",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M06_L02",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M06_L03",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M06_L04",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M06_L05",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M07_L01",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M07_L02",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M07_L03",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M07_L04",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M07_L05",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M08_L01",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M08_L02",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M08_L03",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M08_L04",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      },
+      {
+        "lessonCode": "M08_L05",
+        "quizVersion": "phase01-source-2026-07-27",
+        "questionCount": 5
+      }
+    ]
+  },
+  "assetRegistry": [
+    {
+      "relativePath": "ARCH.START_M03_Project03_Student_Page (1).docx",
+      "fileName": "ARCH.START_M03_Project03_Student_Page (1).docx",
+      "classification": "EXPLICIT_ALIAS",
+      "role": "STUDENT_PAGE",
+      "contentCode": "M03_P03",
+      "status": "ALIAS_RESOLVED",
+      "canonicalPublicFilename": "ARCH.START_M03_Project03_Student_Page.docx",
+      "reason": "Approved Phase 00 V4 audit-sample alias.",
+      "sourceSha256": "8c5e99b0fc5317c6149353110cfb65ab62971760455aeff056300a1277ad0c17",
+      "sizeBytes": 380700,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "Course Structure.txt",
+      "fileName": "Course Structure.txt",
+      "classification": "AUTHORITATIVE_GEN",
+      "role": "COURSE_STRUCTURE",
+      "contentCode": null,
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "b5c4c44c6c9989354a6138b77dac9f43432a110e0df6d0f7a8750534373a188f",
+      "sizeBytes": 7757,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "Lessons Obj.txt",
+      "fileName": "Lessons Obj.txt",
+      "classification": "AUTHORITATIVE_GEN",
+      "role": "LESSON_OBJECTIVES",
+      "contentCode": null,
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "fe081c4d3bc0cd5b024b01c82855b46e8287b2ffe3483b158034c2e993e08815",
+      "sizeBytes": 47339,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L01/M01_L01_MNOT.txt",
+      "fileName": "M01_L01_MNOT.txt",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "MNOT",
+      "contentCode": "M01_L01",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "ac021eeb513412097b698582fa312f174dd07299e347e87785f668c3d5ed3c27",
+      "sizeBytes": 5204,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L01/M01_L01_PICE.png",
+      "fileName": "M01_L01_PICE.png",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "PICE",
+      "contentCode": "M01_L01",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "0082b59d207bb11608310e6ff6ecb79792b0e9574bd99b90dff8db3a2d42aa0a",
+      "sizeBytes": 2579478,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L01/M01_L01_PRES.pptx",
+      "fileName": "M01_L01_PRES.pptx",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "PRES",
+      "contentCode": "M01_L01",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "5ad5abf8be17796f4e24e17b6145ca12425c3933dba9411b41bc5db6512f8b8f",
+      "sizeBytes": 2564405,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L01/M01_L01_SRPT.txt",
+      "fileName": "M01_L01_SRPT.txt",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "SRPT",
+      "contentCode": "M01_L01",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "b3ab8de6e74e2e694c7e0b5cd7e0e689d162d7abef8ef44c006b4be6128eb421",
+      "sizeBytes": 34170,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L01/M01_L01_VOCB.pdf",
+      "fileName": "M01_L01_VOCB.pdf",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "VOCB",
+      "contentCode": "M01_L01",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "a349b20e1b58cfd633f4f35e38396953515ec52a7f133b8945f6a55bc8e8e4a7",
+      "sizeBytes": 1936037,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L02/M01_L02_MNOT.txt",
+      "fileName": "M01_L02_MNOT.txt",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "MNOT",
+      "contentCode": "M01_L02",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "f96917cac41e08873367c92857723abc729923cb9443cc3f16c0240637f248f3",
+      "sizeBytes": 4989,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L02/M01_L02_PICE.png",
+      "fileName": "M01_L02_PICE.png",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "PICE",
+      "contentCode": "M01_L02",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "8b0de0926a902e1996762ad2c6e94d7d03e03e51f571afdaaf555256256d6908",
+      "sizeBytes": 2638715,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L02/M01_L02_PRES.pptx",
+      "fileName": "M01_L02_PRES.pptx",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "PRES",
+      "contentCode": "M01_L02",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "d22fe005a406aacc8127687a8c388418864b4df907a30dde9fa87b691bf22d15",
+      "sizeBytes": 1781833,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L02/M01_L02_SRPT.txt",
+      "fileName": "M01_L02_SRPT.txt",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "SRPT",
+      "contentCode": "M01_L02",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "7aab0039cc9a922bdb2a7ee2dd919ca321a0b80f335dcec8d1ae8025440e331c",
+      "sizeBytes": 39254,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L02/M01_L02_VOCB.pdf",
+      "fileName": "M01_L02_VOCB.pdf",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "VOCB",
+      "contentCode": "M01_L02",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "3ba1d80a398c2d967ba54cb3d216c1b9bcfdb831eff920e9ba4d42c12404a66f",
+      "sizeBytes": 1087451,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L03/M01_L03_MNOT.txt",
+      "fileName": "M01_L03_MNOT.txt",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "MNOT",
+      "contentCode": "M01_L03",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "36f913e97347285aef9c914519c10c1caeaa939c176a4e264f2bfd5cea164401",
+      "sizeBytes": 4896,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L03/M01_L03_PICE.png",
+      "fileName": "M01_L03_PICE.png",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "PICE",
+      "contentCode": "M01_L03",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "e779fbb2657ed5034754d3006b761fdd6278f065f12e0814d3ffb42b9c8613b4",
+      "sizeBytes": 2547892,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L03/M01_L03_PRES.pptx",
+      "fileName": "M01_L03_PRES.pptx",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "PRES",
+      "contentCode": "M01_L03",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "7b65273229cebada47916c3e505c65e2d6e87e10a96f02a7204307e74b7bb748",
+      "sizeBytes": 18517187,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L03/M01_L03_SRPT.txt",
+      "fileName": "M01_L03_SRPT.txt",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "SRPT",
+      "contentCode": "M01_L03",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "01cc73399ddf8ecf9217c2f1d637c5d98e00277f7bc86a4f364a8b81f737c71a",
+      "sizeBytes": 36342,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L03/M01_L03_VOCB.pdf",
+      "fileName": "M01_L03_VOCB.pdf",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "VOCB",
+      "contentCode": "M01_L03",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "281998286fcc91b3a61da41a297fb4e6aee7d80a8c53c7051ada60efc6305ed6",
+      "sizeBytes": 1624763,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L04/M01_L04_MNOT.txt",
+      "fileName": "M01_L04_MNOT.txt",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "MNOT",
+      "contentCode": "M01_L04",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "1e2984af34df435a009211cf93e8e4b9822c3fb9c79dfffc0ac3d684614a5ca0",
+      "sizeBytes": 5132,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L04/M01_L04_PICE.png",
+      "fileName": "M01_L04_PICE.png",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "PICE",
+      "contentCode": "M01_L04",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "2642ee767d73a00996c0c771be80f790c06608b64388d755895da7830676c805",
+      "sizeBytes": 2632077,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L04/M01_L04_PRES.pptx",
+      "fileName": "M01_L04_PRES.pptx",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "PRES",
+      "contentCode": "M01_L04",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "6599144010d4c673cbe3ca5ec2661b299afa6bbc72df364ee1dade64995e2e28",
+      "sizeBytes": 8155044,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L04/M01_L04_SRPT.txt",
+      "fileName": "M01_L04_SRPT.txt",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "SRPT",
+      "contentCode": "M01_L04",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "b86dc275f5c886ad617a094f6edae7bfedf13ae5906c7e1bd79d33434427ba38",
+      "sizeBytes": 34799,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L04/M01_L04_VOCB.pdf",
+      "fileName": "M01_L04_VOCB.pdf",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "VOCB",
+      "contentCode": "M01_L04",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "4c867036ce5e1ffbbd98b87e189ff0d3f7c39e756349717efc7ff799b7defdb0",
+      "sizeBytes": 2702958,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L05/M01_L05_MNOT.txt",
+      "fileName": "M01_L05_MNOT.txt",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "MNOT",
+      "contentCode": "M01_L05",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "66e5561541766b00dbb7858168e756bd513c04d95de5bfc53b6624ee02616c43",
+      "sizeBytes": 5209,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L05/M01_L05_PICE.png",
+      "fileName": "M01_L05_PICE.png",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "PICE",
+      "contentCode": "M01_L05",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "f21bee3bb676bd67bc336ce77fda675de8af5eb7cc1cd13c3a9c0d806e4e0754",
+      "sizeBytes": 2687031,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L05/M01_L05_PRES.pptx",
+      "fileName": "M01_L05_PRES.pptx",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "PRES",
+      "contentCode": "M01_L05",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "f59e6a17f78cf4d627a4a30190bc0a240d618ce232ca76612b6b36ae27624cd1",
+      "sizeBytes": 13225575,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L05/M01_L05_SRPT.txt",
+      "fileName": "M01_L05_SRPT.txt",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "SRPT",
+      "contentCode": "M01_L05",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "dd216902ef74a4dd9f23ddbdc2391f9acd936835b83a9348503e3da9d262a14e",
+      "sizeBytes": 38546,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_L05/M01_L05_VOCB.pdf",
+      "fileName": "M01_L05_VOCB.pdf",
+      "classification": "LESSON_ALLOWLIST",
+      "role": "VOCB",
+      "contentCode": "M01_L05",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "60bfbbb9e20b5ec7a5d1a49dbe6494596c7433f5905668b7854d8a361a53e42c",
+      "sizeBytes": 1869200,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_P01/ARCH.START_M01_Project01_Student_Page_V2.docx",
+      "fileName": "ARCH.START_M01_Project01_Student_Page_V2.docx",
+      "classification": "EXPLICIT_ALIAS",
+      "role": "STUDENT_PAGE",
+      "contentCode": "M01_P01",
+      "status": "ALIAS_RESOLVED",
+      "canonicalPublicFilename": "ARCH.START_M01_Project01_Student_Page.docx",
+      "reason": "Explicit Phase 01 source registration for the intentionally supplied approved M01 Student Page revision.",
+      "sourceSha256": "956a2541aa07314352e02b8dc8e7b31b16e7b151f1558f15d20ee9b6da6ac749",
+      "sizeBytes": 258042,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M01/M01_P01/M01_P01_PPTX.pptx",
+      "fileName": "M01_P01_PPTX.pptx",
+      "classification": "PROJECT_ALLOWLIST",
+      "role": "EXAMPLE_PPTX",
+      "contentCode": "M01_P01",
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "824da84203bd03a91fe0cde793b827931e8b8c747d7825f67a631d750d984b34",
+      "sizeBytes": 4897125,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "M03_P03_PPTX (1).pptx",
+      "fileName": "M03_P03_PPTX (1).pptx",
+      "classification": "EXPLICIT_ALIAS",
+      "role": "EXAMPLE_PPTX",
+      "contentCode": "M03_P03",
+      "status": "ALIAS_RESOLVED",
+      "canonicalPublicFilename": "M03_P03_PPTX.pptx",
+      "reason": "Approved Phase 00 V4 audit-sample alias.",
+      "sourceSha256": "8d73f1301898b3e75e77d235deaa81ecb2eb6fbc81f4caedec882a2e3ddd36d6",
+      "sizeBytes": 7885054,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "Modules Obj.txt",
+      "fileName": "Modules Obj.txt",
+      "classification": "AUTHORITATIVE_GEN",
+      "role": "MODULE_OBJECTIVES",
+      "contentCode": null,
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "f16b112d8cc34d21bc1091edabe620649cb99c1044b231417460dc2d7065cf98",
+      "sizeBytes": 10550,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "Projects Obj.txt",
+      "fileName": "Projects Obj.txt",
+      "classification": "AUTHORITATIVE_GEN",
+      "role": "PROJECT_OBJECTIVES",
+      "contentCode": null,
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "14cf524c69ab989686b4de855418eb169a2d7c89bc3f28721a4dd77bdcc222a0",
+      "sizeBytes": 10843,
+      "sourcePathPublic": null
+    },
+    {
+      "relativePath": "Questions Lessons.txt",
+      "fileName": "Questions Lessons.txt",
+      "classification": "AUTHORITATIVE_GEN",
+      "role": "QUIZ_SOURCE",
+      "contentCode": null,
+      "status": "AVAILABLE",
+      "canonicalPublicFilename": null,
+      "reason": null,
+      "sourceSha256": "c01469168b00ebd05105b54d06fa0c2aaa9d3d5a2238e9ba82fd722f5a03179e",
+      "sizeBytes": 132210,
+      "sourcePathPublic": null
+    }
+  ],
+  "aliasCount": 3,
+  "ignoredCount": 1,
+  "duplicateCount": 0,
+  "publicGeneratedBoundaries": [
+    "generated/public"
+  ],
+  "serverOnlyGeneratedBoundaries": [
+    "generated/server"
+  ]
+}

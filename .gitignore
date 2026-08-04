@@ -1,0 +1,13 @@
+
+node_modules/
+.next/
+.vercel/
+.env
+.env.*
+!.env.example
+coverage/
+workbench/storage/
+workbench/sanitized/
+*.log
+*.tsbuildinfo
+.DS_Store

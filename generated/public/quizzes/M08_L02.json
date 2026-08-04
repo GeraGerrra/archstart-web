@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M08_L02",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M08_L02_Q01",
+      "questionText": "Какая главная идея presentation board (презентационного планшета) в этом уроке?",
+      "options": [
+        {
+          "id": "M08_L02_Q01_OPT_A",
+          "text": "Board должен выглядеть заполненным и декоративным."
+        },
+        {
+          "id": "M08_L02_Q01_OPT_B",
+          "text": "Board — это visual argument, который ведёт зрителя через project evidence."
+        },
+        {
+          "id": "M08_L02_Q01_OPT_C",
+          "text": "Board должен включать все drawings одного размера."
+        },
+        {
+          "id": "M08_L02_Q01_OPT_D",
+          "text": "Board должен состоять в основном из paragraphs."
+        }
+      ]
+    },
+    {
+      "id": "M08_L02_Q02",
+      "questionText": "Что контролирует hierarchy (иерархия)?",
+      "options": [
+        {
+          "id": "M08_L02_Q02_OPT_A",
+          "text": "Стоимость проекта."
+        },
+        {
+          "id": "M08_L02_Q02_OPT_B",
+          "text": "Что зритель читает первым, вторым и третьим."
+        },
+        {
+          "id": "M08_L02_Q02_OPT_C",
+          "text": "Точный legal scale drawing."
+        },
+        {
+          "id": "M08_L02_Q02_OPT_D",
+          "text": "Количество деревьев на board."
+        }
+      ]
+    },
+    {
+      "id": "M08_L02_Q03",
+      "questionText": "Какая board story sequence самая сильная?",
+      "options": [
+        {
+          "id": "M08_L02_Q03_OPT_A",
+          "text": "Random images → title → more images."
+        },
+        {
+          "id": "M08_L02_Q03_OPT_B",
+          "text": "Problem → evidence → decision → outcome → trade-off."
+        },
+        {
+          "id": "M08_L02_Q03_OPT_C",
+          "text": "Render → render → render."
+        },
+        {
+          "id": "M08_L02_Q03_OPT_D",
+          "text": "Text block → text block → text block."
+        }
+      ]
+    },
+    {
+      "id": "M08_L02_Q04",
+      "questionText": "Какая caption самая сильная?",
+      "options": [
+        {
+          "id": "M08_L02_Q04_OPT_A",
+          "text": "“Plan.”"
+        },
+        {
+          "id": "M08_L02_Q04_OPT_B",
+          "text": "“Section.”"
+        },
+        {
+          "id": "M08_L02_Q04_OPT_C",
+          "text": "“Section shows daylight, airflow and roof structure logic.”"
+        },
+        {
+          "id": "M08_L02_Q04_OPT_D",
+          "text": "“Nice drawing.”"
+        }
+      ]
+    },
+    {
+      "id": "M08_L02_Q05",
+      "questionText": "Какой realistic layout trade-off возможен?",
+      "options": [
+        {
+          "id": "M08_L02_Q05_OPT_A",
+          "text": "Большой main drawing усиливает hierarchy, но оставляет меньше места для process work."
+        },
+        {
+          "id": "M08_L02_Q05_OPT_B",
+          "text": "White space всегда ухудшает board."
+        },
+        {
+          "id": "M08_L02_Q05_OPT_C",
+          "text": "Alignment не нужен."
+        },
+        {
+          "id": "M08_L02_Q05_OPT_D",
+          "text": "Больше images всегда улучшает clarity."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "ARCHSTART_M01_YOUTUBE_VIDEO_MAP.csv",
+  "playlistId": "PLRNkQfxX9Bek",
+  "videos": {
+    "M01_L01": {
+      "youtubeId": "gKhuFr_ewzs",
+      "youtubeUrl": "https://www.youtube.com/watch?v=gKhuFr_ewzs",
+      "visibility": "public"
+    },
+    "M01_L02": {
+      "youtubeId": "_J0EGye6rug",
+      "youtubeUrl": "https://www.youtube.com/watch?v=_J0EGye6rug",
+      "visibility": "public"
+    },
+    "M01_L03": {
+      "youtubeId": "Ut3Yqdx8iB0",
+      "youtubeUrl": "https://www.youtube.com/watch?v=Ut3Yqdx8iB0",
+      "visibility": "public"
+    },
+    "M01_L04": {
+      "youtubeId": "3t9HJy0gr14",
+      "youtubeUrl": "https://www.youtube.com/watch?v=3t9HJy0gr14",
+      "visibility": "public"
+    },
+    "M01_L05": {
+      "youtubeId": "KgvOPaOP83s",
+      "youtubeUrl": "https://www.youtube.com/watch?v=KgvOPaOP83s",
+      "visibility": "public"
+    }
+  }
+}

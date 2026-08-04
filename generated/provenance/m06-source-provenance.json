@@ -1,0 +1,278 @@
+{
+  "schemaVersion": "1.0.0",
+  "result": "PASS",
+  "root": "M06/",
+  "fileCount": 27,
+  "files": [
+    {
+      "contentCode": "M06_L01",
+      "sourceId": "SRC_203017D8F856",
+      "relativePath": "M06/M06_L01/M06_L01_MNOT.txt",
+      "role": "MNOT",
+      "sha256": "1e225809d08b4142597a03df13a9a4a373e07a9bac016e224525b1b759725e6d",
+      "sizeBytes": 5309,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L01",
+      "sourceId": "SRC_90295DAB763B",
+      "relativePath": "M06/M06_L01/M06_L01_PICE.png",
+      "role": "PICE",
+      "sha256": "22d9c65232987d2b3f395bae8dfc4dc8f13e7b874ff62b1b3a119719bb816839",
+      "sizeBytes": 2865771,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L01",
+      "sourceId": "SRC_67C4952D07E4",
+      "relativePath": "M06/M06_L01/M06_L01_PRES.pptx",
+      "role": "PRES",
+      "sha256": "6462c7be35ae0c995a90ae1ed9b0d5fc9ebb56a006768743be7ca5e5b5d53650",
+      "sizeBytes": 31029067,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L01",
+      "sourceId": "SRC_320D478313B6",
+      "relativePath": "M06/M06_L01/M06_L01_SRPT.txt",
+      "role": "SRPT",
+      "sha256": "6323dfb3fe9b1dfc5f216b4aac948e5db1dc32f5b09273b11e12be636420771e",
+      "sizeBytes": 40271,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L01",
+      "sourceId": "SRC_8101F5E6CD05",
+      "relativePath": "M06/M06_L01/M06_L01_VOCB.pdf",
+      "role": "VOCB",
+      "sha256": "46122f3934e520fa2d2dbe8aee5f707db85a227888159191159ede8a456e5c2e",
+      "sizeBytes": 3432845,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L02",
+      "sourceId": "SRC_945B91BC9A45",
+      "relativePath": "M06/M06_L02/M06_L02_MNOT.txt",
+      "role": "MNOT",
+      "sha256": "ee69e64c78667a69c0d19c7f260d44db33bbdeebfea32b788afb92720899edf6",
+      "sizeBytes": 5805,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L02",
+      "sourceId": "SRC_5FDB1CBF9F1B",
+      "relativePath": "M06/M06_L02/M06_L02_PICE.png",
+      "role": "PICE",
+      "sha256": "9ac4bb84bba045ac4ff4d45e3aaaf498323fe5f35460145e5c35555be6128169",
+      "sizeBytes": 2889458,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L02",
+      "sourceId": "SRC_50B34C6B14C7",
+      "relativePath": "M06/M06_L02/M06_L02_PRES.pptx",
+      "role": "PRES",
+      "sha256": "373691613f606c045509b779b4f79f254527296c55bf032579fd8fcd556ad686",
+      "sizeBytes": 7568430,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L02",
+      "sourceId": "SRC_EDBB897AE13E",
+      "relativePath": "M06/M06_L02/M06_L02_SRPT.txt",
+      "role": "SRPT",
+      "sha256": "d12788bf8689fec25997bbf42f7a32ef49b1ba4c64f523226a4ab284cf7ac4c4",
+      "sizeBytes": 40527,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L02",
+      "sourceId": "SRC_0E0D64B0BE15",
+      "relativePath": "M06/M06_L02/M06_L02_VOCB.pdf",
+      "role": "VOCB",
+      "sha256": "a9c11ce57e5322521d955b6fc61900784359dfc2e30d4a6fc5bdbb43c2049773",
+      "sizeBytes": 2659431,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L03",
+      "sourceId": "SRC_70F95E636EC6",
+      "relativePath": "M06/M06_L03/M06_L03_MNOT.txt",
+      "role": "MNOT",
+      "sha256": "8b1b472a812d8b1383fd3f52e96b561aaaf61870c11e60bfd7debad479add004",
+      "sizeBytes": 5501,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L03",
+      "sourceId": "SRC_C0823CCD4A18",
+      "relativePath": "M06/M06_L03/M06_L03_PICE.png",
+      "role": "PICE",
+      "sha256": "021b4d836ba2b90198583ee31e793a27205e04fafcc2850638b3f480bf87e776",
+      "sizeBytes": 2651605,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L03",
+      "sourceId": "SRC_FBDBC3FB4B70",
+      "relativePath": "M06/M06_L03/M06_L03_PRES.pptx",
+      "role": "PRES",
+      "sha256": "250ffdc048e9383174f9b7cfe29e62727e8a0fa86f68acd2c27bfa20e1701ed1",
+      "sizeBytes": 30756350,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L03",
+      "sourceId": "SRC_590AFC172E00",
+      "relativePath": "M06/M06_L03/M06_L03_SRPT.txt",
+      "role": "SRPT",
+      "sha256": "9576a2b681d37e7342229f7aff76bf4dc2d90de3d569d995206d67abe6e6e3cb",
+      "sizeBytes": 41730,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L03",
+      "sourceId": "SRC_A0D44CC2C0F2",
+      "relativePath": "M06/M06_L03/M06_L03_VOCB.pdf",
+      "role": "VOCB",
+      "sha256": "3c582f409a287f3d48f8b40d6a1c8f13e9322c1c76c829172f67c9ca67f4679a",
+      "sizeBytes": 4167420,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L04",
+      "sourceId": "SRC_F6328297A2A5",
+      "relativePath": "M06/M06_L04/M06_L04_MNOT.txt",
+      "role": "MNOT",
+      "sha256": "de530a8b6822c307fa7beffc0cd06d49bdaedf0bb1812911513556de397ed5d4",
+      "sizeBytes": 5323,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L04",
+      "sourceId": "SRC_D97E7E866EB2",
+      "relativePath": "M06/M06_L04/M06_L04_PICE.png",
+      "role": "PICE",
+      "sha256": "c1021cd3918b54b18c84ec22946fba5fe3c3164087b57fa7ab36f49485e7527c",
+      "sizeBytes": 2654370,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L04",
+      "sourceId": "SRC_5487C0A56115",
+      "relativePath": "M06/M06_L04/M06_L04_PRES.pptx",
+      "role": "PRES",
+      "sha256": "9aca3e12f43e6850e366371cdf4832a963704ad777aa3e71781ca13beb81013a",
+      "sizeBytes": 32156781,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L04",
+      "sourceId": "SRC_FBA3EE90709A",
+      "relativePath": "M06/M06_L04/M06_L04_SRPT.txt",
+      "role": "SRPT",
+      "sha256": "2a5fd1ae335a3fef38ee0fb547a89fbf6d4ee4898f3af36c94081c6747911738",
+      "sizeBytes": 41387,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L04",
+      "sourceId": "SRC_23A3C13E49F0",
+      "relativePath": "M06/M06_L04/M06_L04_VOCB.pdf",
+      "role": "VOCB",
+      "sha256": "519670e0b1c9b56da8639c046e29e336caf6a9082e68945e931eadd35367013b",
+      "sizeBytes": 2340392,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L05",
+      "sourceId": "SRC_A6A3739B467D",
+      "relativePath": "M06/M06_L05/M06_L05_MNOT.txt",
+      "role": "MNOT",
+      "sha256": "7016a734aa064f429a581401869885c805c9ffb1d2f79452424a351ffc4e8aed",
+      "sizeBytes": 5273,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L05",
+      "sourceId": "SRC_1BC59B3A5047",
+      "relativePath": "M06/M06_L05/M06_L05_PICE.png",
+      "role": "PICE",
+      "sha256": "0179857763ef2775779f7cb461a22eaf694d3e02d739a85845753ab0b739561e",
+      "sizeBytes": 2849344,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L05",
+      "sourceId": "SRC_A77490F79DD4",
+      "relativePath": "M06/M06_L05/M06_L05_PRES.pptx",
+      "role": "PRES",
+      "sha256": "b324b6cdd8ec581c44ef82fb0eb0385a31917b5faa2e3244739591c2c41e3d05",
+      "sizeBytes": 30629209,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L05",
+      "sourceId": "SRC_A1F3E62662FB",
+      "relativePath": "M06/M06_L05/M06_L05_SRPT.txt",
+      "role": "SRPT",
+      "sha256": "9d03c91f73ba87bfb48ba673802dc674ea752e91342ebc2edad95b67dbbe8c61",
+      "sizeBytes": 37568,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_L05",
+      "sourceId": "SRC_B468F2BAC07D",
+      "relativePath": "M06/M06_L05/M06_L05_VOCB.pdf",
+      "role": "VOCB",
+      "sha256": "a198a0fa4b254a198b27fdc326ba2863a2a3874849a2067512c70680cef2e093",
+      "sizeBytes": 4918665,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_P06",
+      "sourceId": "SRC_FE02A0790CEE",
+      "relativePath": "M06/M06_P06/ARCH.START_M06_Project06_Student_Page.docx",
+      "role": "STUDENT_PAGE",
+      "sha256": "2fc6c5c53a269b4cef521efd86de4bebc997eb64e978cbbc16a52e390bf4e69b",
+      "sizeBytes": 435866,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    },
+    {
+      "contentCode": "M06_P06",
+      "sourceId": "SRC_E993119A6EBA",
+      "relativePath": "M06/M06_P06/M06_P06_PPTX.pptx",
+      "role": "EXAMPLE_PPTX",
+      "sha256": "32b86900a18710b25207a60528c117bccebd696dfe17b061bfbf5ac6157eade1",
+      "sizeBytes": 15623230,
+      "immutable": true,
+      "contentVersion": "phase05-pass3d-m06-2026-08-02"
+    }
+  ]
+}

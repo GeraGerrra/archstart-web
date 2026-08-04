@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "ARCHSTART_YOUTUBE_MASTER_PLAYLIST_AND_VIDEO_ID_MAP (2)(5).txt#M06",
+  "playlistId": "PLYNK9-CjXOqY",
+  "videos": {
+    "M06_L01": {
+      "youtubeId": "yPq5Rv5ADVk",
+      "youtubeUrl": "https://www.youtube.com/watch?v=yPq5Rv5ADVk",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/yPq5Rv5ADVk",
+      "visibility": "public"
+    },
+    "M06_L02": {
+      "youtubeId": "ZlpyNZeyVxI",
+      "youtubeUrl": "https://www.youtube.com/watch?v=ZlpyNZeyVxI",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/ZlpyNZeyVxI",
+      "visibility": "public"
+    },
+    "M06_L03": {
+      "youtubeId": "lbEMH47UeF8",
+      "youtubeUrl": "https://www.youtube.com/watch?v=lbEMH47UeF8",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/lbEMH47UeF8",
+      "visibility": "public"
+    },
+    "M06_L04": {
+      "youtubeId": "EdkMKMSFa2o",
+      "youtubeUrl": "https://www.youtube.com/watch?v=EdkMKMSFa2o",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/EdkMKMSFa2o",
+      "visibility": "public"
+    },
+    "M06_L05": {
+      "youtubeId": "OounWRz9Q44",
+      "youtubeUrl": "https://www.youtube.com/watch?v=OounWRz9Q44",
+      "embedUrl": "https://www.youtube-nocookie.com/embed/OounWRz9Q44",
+      "visibility": "public"
+    }
+  }
+}

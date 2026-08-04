@@ -1,0 +1,840 @@
+{
+  "schemaVersion": "1.0.0",
+  "mode": "NON_DESTRUCTIVE",
+  "sourcesModified": false,
+  "sourceAssetsCopiedToPublic": false,
+  "sanitationPlan": [
+    "Create any sanitized derivative only in a separate generated/workbench boundary.",
+    "Retain source provenance and source SHA-256 for every derivative.",
+    "Remove or review author/company metadata, comments, speaker notes, hidden content, local paths, external relationships, Canva identifiers, prompts, macros, and active content before publication.",
+    "Never publish an immutable source file directly merely because inspection completed."
+  ],
+  "items": [
+    {
+      "source": {
+        "sourceId": "SRC_86D2E9F55DBD",
+        "relativePath": "ARCH.START_M03_Project03_Student_Page (1).docx",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "8c5e99b0fc5317c6149353110cfb65ab62971760455aeff056300a1277ad0c17",
+        "sizeBytes": 380700,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "authorMetadataFieldsPresent": [],
+        "companyMetadataFieldsPresent": [
+          "Company",
+          "Manager",
+          "Template"
+        ],
+        "comments": false,
+        "speakerNotes": false,
+        "hiddenSlidesOrContent": false,
+        "localOrOneDrivePaths": false,
+        "externalRelationshipCount": 0,
+        "canvaIdentifiers": true,
+        "embeddedProductionPrompts": false,
+        "macrosOrActiveContent": false
+      },
+      "warnings": [
+        {
+          "code": "DOCUMENT_METADATA",
+          "severity": "medium",
+          "message": "Document identity, company, manager, or template metadata requires review in a sanitized derivative."
+        },
+        {
+          "code": "CANVA_IDENTIFIER",
+          "severity": "medium",
+          "message": "Canva-related identifiers require metadata review."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_1A82D4EC667B",
+        "relativePath": "M01/M01_L01/M01_L01_PICE.png",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "0082b59d207bb11608310e6ff6ecb79792b0e9574bd99b90dff8db3a2d42aa0a",
+        "sizeBytes": 2579478,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "metadataKeysPresent": [
+          "eXIf",
+          "iTXt",
+          "pHYs"
+        ],
+        "localOrOneDrivePaths": false,
+        "canvaIdentifiers": true,
+        "dimensions": {
+          "width": 1653,
+          "height": 2337,
+          "format": "PNG"
+        }
+      },
+      "warnings": [
+        {
+          "code": "IMAGE_METADATA",
+          "severity": "medium",
+          "message": "Image metadata requires review before publication."
+        },
+        {
+          "code": "CANVA_IDENTIFIER",
+          "severity": "medium",
+          "message": "Canva-related identifiers require metadata review."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_2EF472784D03",
+        "relativePath": "M01/M01_L01/M01_L01_PRES.pptx",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "5ad5abf8be17796f4e24e17b6145ca12425c3933dba9411b41bc5db6512f8b8f",
+        "sizeBytes": 2564405,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "authorMetadataFieldsPresent": [
+          "dc:creator",
+          "cp:lastModifiedBy"
+        ],
+        "companyMetadataFieldsPresent": [
+          "Company"
+        ],
+        "comments": false,
+        "speakerNotes": true,
+        "hiddenSlidesOrContent": false,
+        "localOrOneDrivePaths": true,
+        "externalRelationshipCount": 0,
+        "canvaIdentifiers": false,
+        "embeddedProductionPrompts": false,
+        "macrosOrActiveContent": false
+      },
+      "warnings": [
+        {
+          "code": "DOCUMENT_METADATA",
+          "severity": "medium",
+          "message": "Document identity, company, manager, or template metadata requires review in a sanitized derivative."
+        },
+        {
+          "code": "SPEAKER_NOTES_PRESENT",
+          "severity": "high",
+          "message": "Speaker notes are present; SRPT remains canonical and public derivatives require note removal."
+        },
+        {
+          "code": "LOCAL_PATH_REFERENCE",
+          "severity": "high",
+          "message": "Local file-system or OneDrive references are present and must be sanitized."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_EAEA6089101E",
+        "relativePath": "M01/M01_L01/M01_L01_VOCB.pdf",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "a349b20e1b58cfd633f4f35e38396953515ec52a7f133b8945f6a55bc8e8e4a7",
+        "sizeBytes": 1936037,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "metadataFieldsPresent": [
+          "Title",
+          "Keywords",
+          "Author",
+          "Creator",
+          "Producer",
+          "CreationDate",
+          "ModDate",
+          "Custom Metadata"
+        ],
+        "externalLinkCount": 0,
+        "javascriptOrActiveContent": false,
+        "localOrOneDrivePaths": true,
+        "canvaIdentifiers": true
+      },
+      "warnings": [
+        {
+          "code": "PDF_METADATA",
+          "severity": "medium",
+          "message": "PDF metadata requires sanitation review."
+        },
+        {
+          "code": "LOCAL_PATH_REFERENCE",
+          "severity": "high",
+          "message": "Local file-system or OneDrive references are present and must be sanitized."
+        },
+        {
+          "code": "CANVA_IDENTIFIER",
+          "severity": "medium",
+          "message": "Canva-related identifiers require metadata review."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_0258730524A4",
+        "relativePath": "M01/M01_L02/M01_L02_PICE.png",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "8b0de0926a902e1996762ad2c6e94d7d03e03e51f571afdaaf555256256d6908",
+        "sizeBytes": 2638715,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "metadataKeysPresent": [
+          "eXIf",
+          "iTXt",
+          "pHYs"
+        ],
+        "localOrOneDrivePaths": false,
+        "canvaIdentifiers": true,
+        "dimensions": {
+          "width": 1653,
+          "height": 2337,
+          "format": "PNG"
+        }
+      },
+      "warnings": [
+        {
+          "code": "IMAGE_METADATA",
+          "severity": "medium",
+          "message": "Image metadata requires review before publication."
+        },
+        {
+          "code": "CANVA_IDENTIFIER",
+          "severity": "medium",
+          "message": "Canva-related identifiers require metadata review."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_9BE30173A678",
+        "relativePath": "M01/M01_L02/M01_L02_PRES.pptx",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "d22fe005a406aacc8127687a8c388418864b4df907a30dde9fa87b691bf22d15",
+        "sizeBytes": 1781833,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "authorMetadataFieldsPresent": [
+          "dc:creator",
+          "cp:lastModifiedBy"
+        ],
+        "companyMetadataFieldsPresent": [
+          "Company"
+        ],
+        "comments": false,
+        "speakerNotes": true,
+        "hiddenSlidesOrContent": false,
+        "localOrOneDrivePaths": true,
+        "externalRelationshipCount": 0,
+        "canvaIdentifiers": false,
+        "embeddedProductionPrompts": false,
+        "macrosOrActiveContent": false
+      },
+      "warnings": [
+        {
+          "code": "DOCUMENT_METADATA",
+          "severity": "medium",
+          "message": "Document identity, company, manager, or template metadata requires review in a sanitized derivative."
+        },
+        {
+          "code": "SPEAKER_NOTES_PRESENT",
+          "severity": "high",
+          "message": "Speaker notes are present; SRPT remains canonical and public derivatives require note removal."
+        },
+        {
+          "code": "LOCAL_PATH_REFERENCE",
+          "severity": "high",
+          "message": "Local file-system or OneDrive references are present and must be sanitized."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_4C8A40B23C58",
+        "relativePath": "M01/M01_L02/M01_L02_VOCB.pdf",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "3ba1d80a398c2d967ba54cb3d216c1b9bcfdb831eff920e9ba4d42c12404a66f",
+        "sizeBytes": 1087451,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "metadataFieldsPresent": [
+          "Title",
+          "Keywords",
+          "Author",
+          "Creator",
+          "Producer",
+          "CreationDate",
+          "ModDate",
+          "Custom Metadata"
+        ],
+        "externalLinkCount": 0,
+        "javascriptOrActiveContent": false,
+        "localOrOneDrivePaths": true,
+        "canvaIdentifiers": true
+      },
+      "warnings": [
+        {
+          "code": "PDF_METADATA",
+          "severity": "medium",
+          "message": "PDF metadata requires sanitation review."
+        },
+        {
+          "code": "LOCAL_PATH_REFERENCE",
+          "severity": "high",
+          "message": "Local file-system or OneDrive references are present and must be sanitized."
+        },
+        {
+          "code": "CANVA_IDENTIFIER",
+          "severity": "medium",
+          "message": "Canva-related identifiers require metadata review."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_65724C815D33",
+        "relativePath": "M01/M01_L03/M01_L03_PICE.png",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "e779fbb2657ed5034754d3006b761fdd6278f065f12e0814d3ffb42b9c8613b4",
+        "sizeBytes": 2547892,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "metadataKeysPresent": [
+          "eXIf",
+          "iTXt",
+          "pHYs"
+        ],
+        "localOrOneDrivePaths": false,
+        "canvaIdentifiers": true,
+        "dimensions": {
+          "width": 1653,
+          "height": 2337,
+          "format": "PNG"
+        }
+      },
+      "warnings": [
+        {
+          "code": "IMAGE_METADATA",
+          "severity": "medium",
+          "message": "Image metadata requires review before publication."
+        },
+        {
+          "code": "CANVA_IDENTIFIER",
+          "severity": "medium",
+          "message": "Canva-related identifiers require metadata review."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_6652B70F01AE",
+        "relativePath": "M01/M01_L03/M01_L03_PRES.pptx",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "7b65273229cebada47916c3e505c65e2d6e87e10a96f02a7204307e74b7bb748",
+        "sizeBytes": 18517187,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "authorMetadataFieldsPresent": [
+          "dc:creator",
+          "cp:lastModifiedBy"
+        ],
+        "companyMetadataFieldsPresent": [
+          "Company"
+        ],
+        "comments": false,
+        "speakerNotes": true,
+        "hiddenSlidesOrContent": false,
+        "localOrOneDrivePaths": true,
+        "externalRelationshipCount": 0,
+        "canvaIdentifiers": false,
+        "embeddedProductionPrompts": false,
+        "macrosOrActiveContent": false
+      },
+      "warnings": [
+        {
+          "code": "DOCUMENT_METADATA",
+          "severity": "medium",
+          "message": "Document identity, company, manager, or template metadata requires review in a sanitized derivative."
+        },
+        {
+          "code": "SPEAKER_NOTES_PRESENT",
+          "severity": "high",
+          "message": "Speaker notes are present; SRPT remains canonical and public derivatives require note removal."
+        },
+        {
+          "code": "LOCAL_PATH_REFERENCE",
+          "severity": "high",
+          "message": "Local file-system or OneDrive references are present and must be sanitized."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_F70BD67ED6C6",
+        "relativePath": "M01/M01_L03/M01_L03_VOCB.pdf",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "281998286fcc91b3a61da41a297fb4e6aee7d80a8c53c7051ada60efc6305ed6",
+        "sizeBytes": 1624763,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "metadataFieldsPresent": [
+          "Title",
+          "Keywords",
+          "Author",
+          "Creator",
+          "Producer",
+          "CreationDate",
+          "ModDate",
+          "Custom Metadata"
+        ],
+        "externalLinkCount": 0,
+        "javascriptOrActiveContent": false,
+        "localOrOneDrivePaths": true,
+        "canvaIdentifiers": true
+      },
+      "warnings": [
+        {
+          "code": "PDF_METADATA",
+          "severity": "medium",
+          "message": "PDF metadata requires sanitation review."
+        },
+        {
+          "code": "LOCAL_PATH_REFERENCE",
+          "severity": "high",
+          "message": "Local file-system or OneDrive references are present and must be sanitized."
+        },
+        {
+          "code": "CANVA_IDENTIFIER",
+          "severity": "medium",
+          "message": "Canva-related identifiers require metadata review."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_386415953851",
+        "relativePath": "M01/M01_L04/M01_L04_PICE.png",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "2642ee767d73a00996c0c771be80f790c06608b64388d755895da7830676c805",
+        "sizeBytes": 2632077,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "metadataKeysPresent": [
+          "eXIf",
+          "iTXt",
+          "pHYs"
+        ],
+        "localOrOneDrivePaths": false,
+        "canvaIdentifiers": true,
+        "dimensions": {
+          "width": 1653,
+          "height": 2337,
+          "format": "PNG"
+        }
+      },
+      "warnings": [
+        {
+          "code": "IMAGE_METADATA",
+          "severity": "medium",
+          "message": "Image metadata requires review before publication."
+        },
+        {
+          "code": "CANVA_IDENTIFIER",
+          "severity": "medium",
+          "message": "Canva-related identifiers require metadata review."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_9B6BF1133199",
+        "relativePath": "M01/M01_L04/M01_L04_PRES.pptx",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "6599144010d4c673cbe3ca5ec2661b299afa6bbc72df364ee1dade64995e2e28",
+        "sizeBytes": 8155044,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "authorMetadataFieldsPresent": [
+          "dc:creator",
+          "cp:lastModifiedBy"
+        ],
+        "companyMetadataFieldsPresent": [
+          "Company"
+        ],
+        "comments": false,
+        "speakerNotes": true,
+        "hiddenSlidesOrContent": false,
+        "localOrOneDrivePaths": true,
+        "externalRelationshipCount": 0,
+        "canvaIdentifiers": false,
+        "embeddedProductionPrompts": false,
+        "macrosOrActiveContent": false
+      },
+      "warnings": [
+        {
+          "code": "DOCUMENT_METADATA",
+          "severity": "medium",
+          "message": "Document identity, company, manager, or template metadata requires review in a sanitized derivative."
+        },
+        {
+          "code": "SPEAKER_NOTES_PRESENT",
+          "severity": "high",
+          "message": "Speaker notes are present; SRPT remains canonical and public derivatives require note removal."
+        },
+        {
+          "code": "LOCAL_PATH_REFERENCE",
+          "severity": "high",
+          "message": "Local file-system or OneDrive references are present and must be sanitized."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_A018E2DB1FE8",
+        "relativePath": "M01/M01_L04/M01_L04_VOCB.pdf",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "4c867036ce5e1ffbbd98b87e189ff0d3f7c39e756349717efc7ff799b7defdb0",
+        "sizeBytes": 2702958,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "metadataFieldsPresent": [
+          "Title",
+          "Keywords",
+          "Author",
+          "Creator",
+          "Producer",
+          "CreationDate",
+          "ModDate",
+          "Custom Metadata"
+        ],
+        "externalLinkCount": 0,
+        "javascriptOrActiveContent": false,
+        "localOrOneDrivePaths": true,
+        "canvaIdentifiers": true
+      },
+      "warnings": [
+        {
+          "code": "PDF_METADATA",
+          "severity": "medium",
+          "message": "PDF metadata requires sanitation review."
+        },
+        {
+          "code": "LOCAL_PATH_REFERENCE",
+          "severity": "high",
+          "message": "Local file-system or OneDrive references are present and must be sanitized."
+        },
+        {
+          "code": "CANVA_IDENTIFIER",
+          "severity": "medium",
+          "message": "Canva-related identifiers require metadata review."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_9D12BA115522",
+        "relativePath": "M01/M01_L05/M01_L05_PICE.png",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "f21bee3bb676bd67bc336ce77fda675de8af5eb7cc1cd13c3a9c0d806e4e0754",
+        "sizeBytes": 2687031,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "metadataKeysPresent": [
+          "eXIf",
+          "iTXt",
+          "pHYs"
+        ],
+        "localOrOneDrivePaths": false,
+        "canvaIdentifiers": true,
+        "dimensions": {
+          "width": 1653,
+          "height": 2337,
+          "format": "PNG"
+        }
+      },
+      "warnings": [
+        {
+          "code": "IMAGE_METADATA",
+          "severity": "medium",
+          "message": "Image metadata requires review before publication."
+        },
+        {
+          "code": "CANVA_IDENTIFIER",
+          "severity": "medium",
+          "message": "Canva-related identifiers require metadata review."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_AEF0BDEB14F6",
+        "relativePath": "M01/M01_L05/M01_L05_PRES.pptx",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "f59e6a17f78cf4d627a4a30190bc0a240d618ce232ca76612b6b36ae27624cd1",
+        "sizeBytes": 13225575,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "authorMetadataFieldsPresent": [
+          "dc:creator",
+          "cp:lastModifiedBy"
+        ],
+        "companyMetadataFieldsPresent": [
+          "Company"
+        ],
+        "comments": false,
+        "speakerNotes": true,
+        "hiddenSlidesOrContent": false,
+        "localOrOneDrivePaths": true,
+        "externalRelationshipCount": 0,
+        "canvaIdentifiers": false,
+        "embeddedProductionPrompts": false,
+        "macrosOrActiveContent": false
+      },
+      "warnings": [
+        {
+          "code": "DOCUMENT_METADATA",
+          "severity": "medium",
+          "message": "Document identity, company, manager, or template metadata requires review in a sanitized derivative."
+        },
+        {
+          "code": "SPEAKER_NOTES_PRESENT",
+          "severity": "high",
+          "message": "Speaker notes are present; SRPT remains canonical and public derivatives require note removal."
+        },
+        {
+          "code": "LOCAL_PATH_REFERENCE",
+          "severity": "high",
+          "message": "Local file-system or OneDrive references are present and must be sanitized."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_E3898D48450F",
+        "relativePath": "M01/M01_L05/M01_L05_VOCB.pdf",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "60bfbbb9e20b5ec7a5d1a49dbe6494596c7433f5905668b7854d8a361a53e42c",
+        "sizeBytes": 1869200,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "metadataFieldsPresent": [
+          "Title",
+          "Keywords",
+          "Author",
+          "Creator",
+          "Producer",
+          "CreationDate",
+          "ModDate",
+          "Custom Metadata"
+        ],
+        "externalLinkCount": 0,
+        "javascriptOrActiveContent": true,
+        "localOrOneDrivePaths": true,
+        "canvaIdentifiers": true
+      },
+      "warnings": [
+        {
+          "code": "PDF_METADATA",
+          "severity": "medium",
+          "message": "PDF metadata requires sanitation review."
+        },
+        {
+          "code": "PDF_ACTIVE_CONTENT",
+          "severity": "critical",
+          "message": "PDF active content must be rejected or removed."
+        },
+        {
+          "code": "LOCAL_PATH_REFERENCE",
+          "severity": "high",
+          "message": "Local file-system or OneDrive references are present and must be sanitized."
+        },
+        {
+          "code": "CANVA_IDENTIFIER",
+          "severity": "medium",
+          "message": "Canva-related identifiers require metadata review."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_DEC75B7492EE",
+        "relativePath": "M01/M01_P01/ARCH.START_M01_Project01_Student_Page_V2.docx",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "956a2541aa07314352e02b8dc8e7b31b16e7b151f1558f15d20ee9b6da6ac749",
+        "sizeBytes": 258042,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "authorMetadataFieldsPresent": [
+          "dc:creator",
+          "cp:lastModifiedBy"
+        ],
+        "companyMetadataFieldsPresent": [
+          "Company",
+          "Manager",
+          "Template"
+        ],
+        "comments": false,
+        "speakerNotes": false,
+        "hiddenSlidesOrContent": false,
+        "localOrOneDrivePaths": false,
+        "externalRelationshipCount": 0,
+        "canvaIdentifiers": true,
+        "embeddedProductionPrompts": false,
+        "macrosOrActiveContent": false
+      },
+      "warnings": [
+        {
+          "code": "DOCUMENT_METADATA",
+          "severity": "medium",
+          "message": "Document identity, company, manager, or template metadata requires review in a sanitized derivative."
+        },
+        {
+          "code": "CANVA_IDENTIFIER",
+          "severity": "medium",
+          "message": "Canva-related identifiers require metadata review."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_31CF49849EE1",
+        "relativePath": "M01/M01_P01/M01_P01_PPTX.pptx",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "824da84203bd03a91fe0cde793b827931e8b8c747d7825f67a631d750d984b34",
+        "sizeBytes": 4897125,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "authorMetadataFieldsPresent": [
+          "dc:creator",
+          "cp:lastModifiedBy"
+        ],
+        "companyMetadataFieldsPresent": [],
+        "comments": false,
+        "speakerNotes": false,
+        "hiddenSlidesOrContent": false,
+        "localOrOneDrivePaths": false,
+        "externalRelationshipCount": 0,
+        "canvaIdentifiers": false,
+        "embeddedProductionPrompts": false,
+        "macrosOrActiveContent": false
+      },
+      "warnings": [
+        {
+          "code": "DOCUMENT_METADATA",
+          "severity": "medium",
+          "message": "Document identity, company, manager, or template metadata requires review in a sanitized derivative."
+        }
+      ]
+    },
+    {
+      "source": {
+        "sourceId": "SRC_D42DB56A4DA4",
+        "relativePath": "M03_P03_PPTX (1).pptx",
+        "role": "SANITIZATION_INSPECTION",
+        "sha256": "8d73f1301898b3e75e77d235deaa81ecb2eb6fbc81f4caedec882a2e3ddd36d6",
+        "sizeBytes": 7885054,
+        "immutable": true,
+        "contentVersion": "phase01-source-2026-07-27"
+      },
+      "inspectionMode": "NON_DESTRUCTIVE",
+      "publicationStatus": "SANITIZATION_REQUIRED",
+      "details": {
+        "authorMetadataFieldsPresent": [
+          "dc:creator",
+          "cp:lastModifiedBy"
+        ],
+        "companyMetadataFieldsPresent": [],
+        "comments": false,
+        "speakerNotes": false,
+        "hiddenSlidesOrContent": false,
+        "localOrOneDrivePaths": false,
+        "externalRelationshipCount": 0,
+        "canvaIdentifiers": false,
+        "embeddedProductionPrompts": false,
+        "macrosOrActiveContent": false
+      },
+      "warnings": [
+        {
+          "code": "DOCUMENT_METADATA",
+          "severity": "medium",
+          "message": "Document identity, company, manager, or template metadata requires review in a sanitized derivative."
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "inspected": 19,
+    "sanitizationRequired": 19,
+    "criticalWarnings": 1,
+    "highWarnings": 15
+  }
+}

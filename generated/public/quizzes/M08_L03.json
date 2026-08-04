@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M08_L03",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M08_L03_Q01",
+      "questionText": "Какая главная идея portfolio (портфолио) в этом уроке?",
+      "options": [
+        {
+          "id": "M08_L03_Q01_OPT_A",
+          "text": "Галерея только финальных изображений."
+        },
+        {
+          "id": "M08_L03_Q01_OPT_B",
+          "text": "Proof of thinking через selected process, decisions, final outcome и reflection."
+        },
+        {
+          "id": "M08_L03_Q01_OPT_C",
+          "text": "Место, куда нужно включить каждый drawing."
+        },
+        {
+          "id": "M08_L03_Q01_OPT_D",
+          "text": "Декоративная magazine layout."
+        }
+      ]
+    },
+    {
+      "id": "M08_L03_Q02",
+      "questionText": "Что такое selection (отбор работ) в portfolio?",
+      "options": [
+        {
+          "id": "M08_L03_Q02_OPT_A",
+          "text": "Включение каждого файла."
+        },
+        {
+          "id": "M08_L03_Q02_OPT_B",
+          "text": "Выбор работ, которые поддерживают project narrative, и удаление повторов или отвлекающих элементов."
+        },
+        {
+          "id": "M08_L03_Q02_OPT_C",
+          "text": "Удаление всей process work."
+        },
+        {
+          "id": "M08_L03_Q02_OPT_D",
+          "text": "Выбор только самых больших изображений."
+        }
+      ]
+    },
+    {
+      "id": "M08_L03_Q03",
+      "questionText": "Какая sequence лучше всего показывает proof of thinking?",
+      "options": [
+        {
+          "id": "M08_L03_Q03_OPT_A",
+          "text": "Final render → final render → final render."
+        },
+        {
+          "id": "M08_L03_Q03_OPT_B",
+          "text": "Problem → process evidence → key decision → final outcome → reflection."
+        },
+        {
+          "id": "M08_L03_Q03_OPT_C",
+          "text": "Random sketches → title page → unrelated diagram."
+        },
+        {
+          "id": "M08_L03_Q03_OPT_D",
+          "text": "Text paragraph → text paragraph → text paragraph."
+        }
+      ]
+    },
+    {
+      "id": "M08_L03_Q04",
+      "questionText": "Что должна объяснять caption к process work?",
+      "options": [
+        {
+          "id": "M08_L03_Q04_OPT_A",
+          "text": "Только то, что это sketch."
+        },
+        {
+          "id": "M08_L03_Q04_OPT_B",
+          "text": "Что process work проверяла или изменила в проекте."
+        },
+        {
+          "id": "M08_L03_Q04_OPT_C",
+          "text": "Какое software использовалось."
+        },
+        {
+          "id": "M08_L03_Q04_OPT_D",
+          "text": "Цветовую схему."
+        }
+      ]
+    },
+    {
+      "id": "M08_L03_Q05",
+      "questionText": "Какой realistic portfolio trade-off возможен?",
+      "options": [
+        {
+          "id": "M08_L03_Q05_OPT_A",
+          "text": "Больше process evidence может оставить меньше места для atmospheric final images."
+        },
+        {
+          "id": "M08_L03_Q05_OPT_B",
+          "text": "Portfolio selection не имеет последствий."
+        },
+        {
+          "id": "M08_L03_Q05_OPT_C",
+          "text": "У каждого проекта должно быть одинаковое количество spreads."
+        },
+        {
+          "id": "M08_L03_Q05_OPT_D",
+          "text": "Reflection всегда нужно убрать."
+        }
+      ]
+    }
+  ]
+}

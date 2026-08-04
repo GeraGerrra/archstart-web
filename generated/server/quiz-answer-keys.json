@@ -1,0 +1,1246 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "phase01-source-2026-07-27",
+  "quizzes": {
+    "M01_L01": {
+      "lessonCode": "M01_L01",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M01_L01_Q01",
+          "correctOptionId": "M01_L01_Q01_OPT_B",
+          "explanation": "Главная проблема связана не с facade (фасад), а с тем, как работает пространство. Movement (движение) мешает функции ожидания."
+        },
+        {
+          "questionId": "M01_L01_Q02",
+          "correctOptionId": "M01_L01_Q02_OPT_B",
+          "explanation": "Design decision (проектное решение) должно отвечать на user, function, context, constraint или design problem."
+        },
+        {
+          "questionId": "M01_L01_Q03",
+          "correctOptionId": "M01_L01_Q03_OPT_B",
+          "explanation": "Если основной маршрут пересекает учебную зону, движение мешает функции пространства."
+        },
+        {
+          "questionId": "M01_L01_Q04",
+          "correctOptionId": "M01_L01_Q04_OPT_C",
+          "explanation": "Архитектурный диагноз требует evidence (доказательства). «Скучно» — это вкус, пока не связано с функцией, движением, масштабом, светом или иерархией."
+        },
+        {
+          "questionId": "M01_L01_Q05",
+          "correctOptionId": "M01_L01_Q05_OPT_A",
+          "explanation": "Trade-off означает, что одно улучшение создаёт цену или ограничение в другом месте."
+        }
+      ]
+    },
+    "M01_L02": {
+      "lessonCode": "M01_L02",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M01_L02_Q01",
+          "correctOptionId": "M01_L02_Q01_OPT_B",
+          "explanation": "Такой запрос должен стать brief (проектным заданием): для кого, зачем, при каких условиях и как проверить результат."
+        },
+        {
+          "questionId": "M01_L02_Q02",
+          "correctOptionId": "M01_L02_Q02_OPT_C",
+          "explanation": "Хороший user profile (профиль пользователя) описывает действие, время, потребность и ситуацию."
+        },
+        {
+          "questionId": "M01_L02_Q03",
+          "correctOptionId": "M01_L02_Q03_OPT_B",
+          "explanation": "Program начинается с функций и действий, а не со стиля или списка покупок."
+        },
+        {
+          "questionId": "M01_L02_Q04",
+          "correctOptionId": "M01_L02_Q04_OPT_C",
+          "explanation": "Adjacency diagram помогает понять, что должно быть рядом, отделено или защищено до финального plan."
+        },
+        {
+          "questionId": "M01_L02_Q05",
+          "correctOptionId": "M01_L02_Q05_OPT_A",
+          "explanation": "Больше privacy может уменьшить visibility. Больше открытости может уменьшить ощущение защиты."
+        }
+      ]
+    },
+    "M01_L03": {
+      "lessonCode": "M01_L03",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M01_L03_Q01",
+          "correctOptionId": "M01_L03_Q01_OPT_A",
+          "explanation": "Plan показывает пространство сверху: вход, зоны, мебель и route (маршрут)."
+        },
+        {
+          "questionId": "M01_L03_Q02",
+          "correctOptionId": "M01_L03_Q02_OPT_B",
+          "explanation": "Section показывает высоту, потолок, положение окна, daylight и human scale."
+        },
+        {
+          "questionId": "M01_L03_Q03",
+          "correctOptionId": "M01_L03_Q03_OPT_C",
+          "explanation": "Elevation — это вид без перспективного искажения. Он помогает читать openings, rhythm, proportion и порядок фасада."
+        },
+        {
+          "questionId": "M01_L03_Q04",
+          "correctOptionId": "M01_L03_Q04_OPT_B",
+          "explanation": "Annotation должна объяснять evidence: маршрут, конфликт, daylight, высоту, иерархию. «Красивое» — это вкус, если нет причины."
+        },
+        {
+          "questionId": "M01_L03_Q05",
+          "correctOptionId": "M01_L03_Q05_OPT_C",
+          "explanation": "Drawing set работает сильнее, потому что каждый drawing отвечает на свой вопрос: движение, высота, свет, пропорции."
+        }
+      ]
+    },
+    "M01_L04": {
+      "lessonCode": "M01_L04",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M01_L04_Q01",
+          "correctOptionId": "M01_L04_Q01_OPT_B",
+          "explanation": "Scale, furniture scale, distance, ceiling height и hierarchy могут сильно изменить ощущение пространства."
+        },
+        {
+          "questionId": "M01_L04_Q02",
+          "correctOptionId": "M01_L04_Q02_OPT_B",
+          "explanation": "Furniture scale нужно проверять вместе с user, function и circulation. Полезный объект всё равно может ломать spatial logic."
+        },
+        {
+          "questionId": "M01_L04_Q03",
+          "correctOptionId": "M01_L04_Q03_OPT_B",
+          "explanation": "Section показывает вертикальные отношения: human scale, ceiling height, полку, окно и daylight."
+        },
+        {
+          "questionId": "M01_L04_Q04",
+          "correctOptionId": "M01_L04_Q04_OPT_A",
+          "explanation": "Rhythm организует повтор элементов. Hierarchy показывает, что главное, второстепенное и фоновое."
+        },
+        {
+          "questionId": "M01_L04_Q05",
+          "correctOptionId": "M01_L04_Q05_OPT_B",
+          "explanation": "Trade-off означает, что одно улучшение создаёт новую цену. Больше privacy может уменьшить visibility и safety."
+        }
+      ]
+    },
+    "M01_L05": {
+      "lessonCode": "M01_L05",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M01_L05_Q01",
+          "correctOptionId": "M01_L05_Q01_OPT_B",
+          "explanation": "Concept должна направлять design decisions. Если она не влияет на plan, section, movement или hierarchy, это скорее slogan."
+        },
+        {
+          "questionId": "M01_L05_Q02",
+          "correctOptionId": "M01_L05_Q02_OPT_B",
+          "explanation": "Concept должна отвечать на evidence. Если circulation conflict остаётся, концепция не управляет решениями."
+        },
+        {
+          "questionId": "M01_L05_Q03",
+          "correctOptionId": "M01_L05_Q03_OPT_C",
+          "explanation": "Iteration — это версия с обучением. Каждая версия должна проверять проблему, ограничение или trade-off."
+        },
+        {
+          "questionId": "M01_L05_Q04",
+          "correctOptionId": "M01_L05_Q04_OPT_B",
+          "explanation": "«Quiet Edge» означает, что спокойная функция уходит от главного движения, но остаётся видимой и доступной."
+        },
+        {
+          "questionId": "M01_L05_Q05",
+          "correctOptionId": "M01_L05_Q05_OPT_B",
+          "explanation": "Trade-off показывает понимание последствий: больше privacy может уменьшить openness, а больше openness — уменьшить protection.\n\nM02"
+        }
+      ]
+    },
+    "M02_L01": {
+      "lessonCode": "M02_L01",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M02_L01_Q01",
+          "correctOptionId": "M02_L01_Q01_OPT_B",
+          "explanation": "Урок учит читать историю через architectural logic, а не запоминать только внешние признаки."
+        },
+        {
+          "questionId": "M02_L01_Q02",
+          "correctOptionId": "M02_L01_Q02_OPT_A",
+          "explanation": "Egyptian architecture в этом уроке читается через mass, stone, permanence, ritual, afterlife и power."
+        },
+        {
+          "questionId": "M02_L01_Q03",
+          "correctOptionId": "M02_L01_Q03_OPT_B",
+          "explanation": "Column (колонна) одновременно поддерживает здание и участвует в classical order."
+        },
+        {
+          "questionId": "M02_L01_Q04",
+          "correctOptionId": "M02_L01_Q04_OPT_B",
+          "explanation": "Рим читается через engineering logic: арки, своды, купола, бетон, дороги, акведуки и городские системы."
+        },
+        {
+          "questionId": "M02_L01_Q05",
+          "correctOptionId": "M02_L01_Q05_OPT_B",
+          "explanation": "Визуальный признак нужно связать с архитектурной логикой, а не просто назвать."
+        }
+      ]
+    },
+    "M02_L02": {
+      "lessonCode": "M02_L02",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M02_L02_Q01",
+          "correctOptionId": "M02_L02_Q01_OPT_B",
+          "explanation": "Урок читает историю через условия, материал, конструкцию, культуру, климат и опыт пространства."
+        },
+        {
+          "questionId": "M02_L02_Q02",
+          "correctOptionId": "M02_L02_Q02_OPT_B",
+          "explanation": "Courtyard может объединять climate response, privacy, light, airflow и social space."
+        },
+        {
+          "questionId": "M02_L02_Q03",
+          "correctOptionId": "M02_L02_Q03_OPT_B",
+          "explanation": "Ornament может быть системой порядка, света, поверхности и символического смысла."
+        },
+        {
+          "questionId": "M02_L02_Q04",
+          "correctOptionId": "M02_L02_Q04_OPT_B",
+          "explanation": "Vernacular architecture показывает местный строительный интеллект, связанный с климатом и использованием."
+        },
+        {
+          "questionId": "M02_L02_Q05",
+          "correctOptionId": "M02_L02_Q05_OPT_B",
+          "explanation": "Dome может создавать центр, sacred light, вертикальный фокус и особый внутренний опыт."
+        }
+      ]
+    },
+    "M02_L03": {
+      "lessonCode": "M02_L03",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M02_L03_Q01",
+          "correctOptionId": "M02_L03_Q01_OPT_B",
+          "explanation": "Урок читает эти периоды через axis, symmetry, perspective, movement, monumentality и authority."
+        },
+        {
+          "questionId": "M02_L03_Q02",
+          "correctOptionId": "M02_L03_Q02_OPT_A",
+          "explanation": "Perspective связана с human-centered order, rational space и организованным взглядом."
+        },
+        {
+          "questionId": "M02_L03_Q03",
+          "correctOptionId": "M02_L03_Q03_OPT_B",
+          "explanation": "Baroque architecture читается через drama, movement, compression/release, focal point и theatrical direction."
+        },
+        {
+          "questionId": "M02_L03_Q04",
+          "correctOptionId": "M02_L03_Q04_OPT_A",
+          "explanation": "Classicism часто использует symmetry, columns, monumentality и central entrance как язык общественной власти."
+        },
+        {
+          "questionId": "M02_L03_Q05",
+          "correctOptionId": "M02_L03_Q05_OPT_A",
+          "explanation": "Symmetry — это инструмент. Он полезен, если связан с задачей, а не применён автоматически."
+        }
+      ]
+    },
+    "M02_L04": {
+      "lessonCode": "M02_L04",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M02_L04_Q01",
+          "correctOptionId": "M02_L04_Q01_OPT_B",
+          "explanation": "Modernism связан с Industrial age, steel, glass, concrete, frame, free plan, standardization и social reform."
+        },
+        {
+          "questionId": "M02_L04_Q02",
+          "correctOptionId": "M02_L04_Q02_OPT_B",
+          "explanation": "Frame отделяет конструкцию от многих стен и позволяет free plan."
+        },
+        {
+          "questionId": "M02_L04_Q03",
+          "correctOptionId": "M02_L04_Q03_OPT_B",
+          "explanation": "Standardization может поддерживать efficiency и mass housing, но иногда создаёт monotony."
+        },
+        {
+          "questionId": "M02_L04_Q04",
+          "correctOptionId": "M02_L04_Q04_OPT_B",
+          "explanation": "Glass может дать свет и прозрачность, но создаёт риски перегрева, бликов и потери приватности."
+        },
+        {
+          "questionId": "M02_L04_Q05",
+          "correctOptionId": "M02_L04_Q05_OPT_B",
+          "explanation": "Сильный анализ модернизма связывает внешний вид с механизмом: материалом, каркасом, функцией, светом, воздухом или социальной задачей."
+        }
+      ]
+    },
+    "M02_L05": {
+      "lessonCode": "M02_L05",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M02_L05_Q01",
+          "correctOptionId": "M02_L05_Q01_OPT_B",
+          "explanation": "Contemporary architecture включает разные подходы: high-tech, parametric, adaptive reuse, contextual, social и ecological."
+        },
+        {
+          "questionId": "M02_L05_Q02",
+          "correctOptionId": "M02_L05_Q02_OPT_A",
+          "explanation": "Parametric logic означает, что форма меняется по правилам: солнце, конструкция, вид, программа, движение или другой параметр."
+        },
+        {
+          "questionId": "M02_L05_Q03",
+          "correctOptionId": "M02_L05_Q03_OPT_B",
+          "explanation": "Adaptive reuse работает с existing building, structure, material, memory и new program."
+        },
+        {
+          "questionId": "M02_L05_Q04",
+          "correctOptionId": "M02_L05_Q04_OPT_B",
+          "explanation": "Social architecture должна подтверждаться user/community evidence, program logic, access и everyday use."
+        },
+        {
+          "questionId": "M02_L05_Q05",
+          "correctOptionId": "M02_L05_Q05_OPT_B",
+          "explanation": "Ecological design должна быть связана с performance и systems, а не только с green aesthetic.\n\nM03"
+        }
+      ]
+    },
+    "M03_L01": {
+      "lessonCode": "M03_L01",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M03_L01_Q01",
+          "correctOptionId": "M03_L01_Q01_OPT_B",
+          "explanation": "Site analysis должен связывать evidence (доказательства участка) с design decisions, а не просто украшать доску."
+        },
+        {
+          "questionId": "M03_L01_Q02",
+          "correctOptionId": "M03_L01_Q02_OPT_B",
+          "explanation": "Noise map (карта шума) должна влиять на zoning, buffers и размещение тихих функций."
+        },
+        {
+          "questionId": "M03_L01_Q03",
+          "correctOptionId": "M03_L01_Q03_OPT_B",
+          "explanation": "View corridor может направлять orientation, window placement и spatial focus."
+        },
+        {
+          "questionId": "M03_L01_Q04",
+          "correctOptionId": "M03_L01_Q04_OPT_A",
+          "explanation": "Slope влияет на движение людей, посадку здания на землю и путь runoff (поверхностного стока)."
+        },
+        {
+          "questionId": "M03_L01_Q05",
+          "correctOptionId": "M03_L01_Q05_OPT_A",
+          "explanation": "Сильное site decision логично отвечает на evidence. Хороший вид может направлять orientation и openings."
+        }
+      ]
+    },
+    "M03_L02": {
+      "lessonCode": "M03_L02",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M03_L02_Q01",
+          "correctOptionId": "M03_L02_Q01_OPT_B",
+          "explanation": "Daylighting — это не максимальная яркость, а полезный и контролируемый свет для конкретной функции."
+        },
+        {
+          "questionId": "M03_L02_Q02",
+          "correctOptionId": "M03_L02_Q02_OPT_B",
+          "explanation": "Direct sunlight может быть полезным, но на рабочей поверхности часто создаёт glare и дискомфорт."
+        },
+        {
+          "questionId": "M03_L02_Q03",
+          "correctOptionId": "M03_L02_Q03_OPT_A",
+          "explanation": "Daylight depth показывает, как далеко от окна остаётся достаточно полезного света."
+        },
+        {
+          "questionId": "M03_L02_Q04",
+          "correctOptionId": "M03_L02_Q04_OPT_B",
+          "explanation": "Shading полезно, когда контролирует direct sun и glare, но сохраняет usable daylight."
+        },
+        {
+          "questionId": "M03_L02_Q05",
+          "correctOptionId": "M03_L02_Q05_OPT_B",
+          "explanation": "Задача двойная: уменьшить glare у окна и улучшить daylight depth в глубине комнаты."
+        }
+      ]
+    },
+    "M03_L03": {
+      "lessonCode": "M03_L03",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M03_L03_Q01",
+          "correctOptionId": "M03_L03_Q01_OPT_B",
+          "explanation": "Airflow требует spatial logic: wind, pressure, inlet, path, outlet и comfort."
+        },
+        {
+          "questionId": "M03_L03_Q02",
+          "correctOptionId": "M03_L03_Q02_OPT_A",
+          "explanation": "Cross ventilation работает, когда есть inlet, outlet и понятный путь воздуха между ними."
+        },
+        {
+          "questionId": "M03_L03_Q03",
+          "correctOptionId": "M03_L03_Q03_OPT_A",
+          "explanation": "Stack effect — это вертикальный airflow: тёплый воздух поднимается, выходит через высокие openings и втягивает более прохладный воздух снизу."
+        },
+        {
+          "questionId": "M03_L03_Q04",
+          "correctOptionId": "M03_L03_Q04_OPT_B",
+          "explanation": "Blocked airflow возникает, когда путь воздуха прерывается, даже если openings формально есть."
+        },
+        {
+          "questionId": "M03_L03_Q05",
+          "correctOptionId": "M03_L03_Q05_OPT_A",
+          "explanation": "Больше openings может улучшить вентиляцию, но создать акустические, тепловые или приватные проблемы."
+        }
+      ]
+    },
+    "M03_L04": {
+      "lessonCode": "M03_L04",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M03_L04_Q01",
+          "correctOptionId": "M03_L04_Q01_OPT_B",
+          "explanation": "Thermal comfort — это система. На ощущение тела влияют воздух, поверхности, солнце, airflow и envelope."
+        },
+        {
+          "questionId": "M03_L04_Q02",
+          "correctOptionId": "M03_L04_Q02_OPT_A",
+          "explanation": "Surface temperature и radiant heat exchange влияют на ощущение холода рядом с холодным окном или стеной."
+        },
+        {
+          "questionId": "M03_L04_Q03",
+          "correctOptionId": "M03_L04_Q03_OPT_B",
+          "explanation": "Direct sun может вызывать overheating. Shading и положение task area помогают контролировать heat gain и glare."
+        },
+        {
+          "questionId": "M03_L04_Q04",
+          "correctOptionId": "M03_L04_Q04_OPT_B",
+          "explanation": "Thermal bridge — это участок envelope с повышенной потерей или притоком тепла, часто вызывающий холодные или горячие поверхности."
+        },
+        {
+          "questionId": "M03_L04_Q05",
+          "correctOptionId": "M03_L04_Q05_OPT_A",
+          "explanation": "Shading улучшает летний комфорт, но может уменьшить свет или winter solar gain. Хорошее решение балансирует последствия."
+        }
+      ]
+    },
+    "M03_L05": {
+      "lessonCode": "M03_L05",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M03_L05_Q01",
+          "correctOptionId": "M03_L05_Q01_OPT_A",
+          "explanation": "Runoff — это вода, движущаяся по поверхности. Она следует уклону и должна быть безопасно направлена."
+        },
+        {
+          "questionId": "M03_L05_Q02",
+          "correctOptionId": "M03_L05_Q02_OPT_A",
+          "explanation": "Slope направляет runoff. Если вода идёт к entry, нужны drainage и entry protection."
+        },
+        {
+          "questionId": "M03_L05_Q03",
+          "correctOptionId": "M03_L05_Q03_OPT_A",
+          "explanation": "Permeable surface может уменьшить runoff и поддержать охлаждение участка."
+        },
+        {
+          "questionId": "M03_L05_Q04",
+          "correctOptionId": "M03_L05_Q04_OPT_A",
+          "explanation": "Heat island возникает, когда exposed hard surfaces нагреваются и ухудшают local microclimate."
+        },
+        {
+          "questionId": "M03_L05_Q05",
+          "correctOptionId": "M03_L05_Q05_OPT_B",
+          "explanation": "Сильная стратегия работает с водой и microclimate одновременно: drainage, entry protection, shade и surface choice.\n\nM04"
+        }
+      ]
+    },
+    "M04_L01": {
+      "lessonCode": "M04_L01",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M04_L01_Q01",
+          "correctOptionId": "M04_L01_Q01_OPT_B",
+          "explanation": "Load path — это непрерывный путь нагрузки через элементы здания к foundation и ground."
+        },
+        {
+          "questionId": "M04_L01_Q02",
+          "correctOptionId": "M04_L01_Q02_OPT_B",
+          "explanation": "Live load меняется во время использования: люди, мебель и подвижные предметы."
+        },
+        {
+          "questionId": "M04_L01_Q03",
+          "correctOptionId": "M04_L01_Q03_OPT_A",
+          "explanation": "Beam (балке) нужна опора. Если нагрузка не может перейти дальше к support, foundation и ground, путь нагрузки разрывается."
+        },
+        {
+          "questionId": "M04_L01_Q04",
+          "correctOptionId": "M04_L01_Q04_OPT_B",
+          "explanation": "Foundation передаёт нагрузку в ground. Load path должен доходить до земли."
+        },
+        {
+          "questionId": "M04_L01_Q05",
+          "correctOptionId": "M04_L01_Q05_OPT_A",
+          "explanation": "Openness может быть архитектурно ценной, но long spans требуют конструктивной стратегии и создают trade-offs."
+        }
+      ]
+    },
+    "M04_L02": {
+      "lessonCode": "M04_L02",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M04_L02_Q01",
+          "correctOptionId": "M04_L02_Q01_OPT_B",
+          "explanation": "Structural anatomy показывает, как foundation, wall, column, beam, slab и roof работают вместе."
+        },
+        {
+          "questionId": "M04_L02_Q02",
+          "correctOptionId": "M04_L02_Q02_OPT_A",
+          "explanation": "Load-bearing wall несёт нагрузку. Partition нельзя автоматически считать несущим элементом."
+        },
+        {
+          "questionId": "M04_L02_Q03",
+          "correctOptionId": "M04_L02_Q03_OPT_A",
+          "explanation": "Beam перекрывает span между supports. Её нагрузка должна перейти на wall, column или другую опору."
+        },
+        {
+          "questionId": "M04_L02_Q04",
+          "correctOptionId": "M04_L02_Q04_OPT_A",
+          "explanation": "Foundation соединяет structural supports с ground и завершает путь нагрузки."
+        },
+        {
+          "questionId": "M04_L02_Q05",
+          "correctOptionId": "M04_L02_Q05_OPT_A",
+          "explanation": "Structural grid упорядочивает конструкцию, но влияет на rooms, openings и movement."
+        }
+      ]
+    },
+    "M04_L03": {
+      "lessonCode": "M04_L03",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M04_L03_Q01",
+          "correctOptionId": "M04_L03_Q01_OPT_B",
+          "explanation": "Structural system — это организованная логика supports, spans и load paths."
+        },
+        {
+          "questionId": "M04_L03_Q02",
+          "correctOptionId": "M04_L03_Q02_OPT_A",
+          "explanation": "Frame несёт нагрузку через columns и beams, поэтому многие внутренние стены могут быть non-load-bearing partitions."
+        },
+        {
+          "questionId": "M04_L03_Q03",
+          "correctOptionId": "M04_L03_Q03_OPT_A",
+          "explanation": "Truss использует треугольники, чтобы создать устойчивую геометрию и перекрывать большие пролёты."
+        },
+        {
+          "questionId": "M04_L03_Q04",
+          "correctOptionId": "M04_L03_Q04_OPT_A",
+          "explanation": "В bearing wall system стены несут нагрузку, поэтому их сложнее свободно перемещать или прорезать."
+        },
+        {
+          "questionId": "M04_L03_Q05",
+          "correctOptionId": "M04_L03_Q05_OPT_A",
+          "explanation": "Большие открытые spans часто требуют frame, truss или другой long-span strategy, связанной с пространственной задачей."
+        }
+      ]
+    },
+    "M04_L04": {
+      "lessonCode": "M04_L04",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M04_L04_Q01",
+          "correctOptionId": "M04_L04_Q01_OPT_B",
+          "explanation": "High-rise работает не только с вертикальной нагрузкой, но и с боковыми силами."
+        },
+        {
+          "questionId": "M04_L04_Q02",
+          "correctOptionId": "M04_L04_Q02_OPT_B",
+          "explanation": "Structural core может организовать circulation/services и помогать lateral stability."
+        },
+        {
+          "questionId": "M04_L04_Q03",
+          "correctOptionId": "M04_L04_Q03_OPT_A",
+          "explanation": "Bracing помогает frame сопротивляться lateral loads и уменьшать sway."
+        },
+        {
+          "questionId": "M04_L04_Q04",
+          "correctOptionId": "M04_L04_Q04_OPT_A",
+          "explanation": "Sway — это lateral movement, которое нужно контролировать в tall buildings."
+        },
+        {
+          "questionId": "M04_L04_Q05",
+          "correctOptionId": "M04_L04_Q05_OPT_A",
+          "explanation": "Больше stiffness улучшает stability, но влияет на plan, facade, cost и structural depth."
+        }
+      ]
+    },
+    "M04_L05": {
+      "lessonCode": "M04_L05",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M04_L05_Q01",
+          "correctOptionId": "M04_L05_Q01_OPT_B",
+          "explanation": "Construction sequence строится на зависимостях: земля и foundation идут до structure, а finishes обычно после envelope и MEP coordination."
+        },
+        {
+          "questionId": "M04_L05_Q02",
+          "correctOptionId": "M04_L05_Q02_OPT_A",
+          "explanation": "Access и staging влияют на доставку, сборку и движение людей/техники на площадке."
+        },
+        {
+          "questionId": "M04_L05_Q03",
+          "correctOptionId": "M04_L05_Q03_OPT_A",
+          "explanation": "Temporary support может удерживать beams, slabs или roof elements, пока final load path ещё не работает полностью."
+        },
+        {
+          "questionId": "M04_L05_Q04",
+          "correctOptionId": "M04_L05_Q04_OPT_A",
+          "explanation": "MEP должен быть согласован с beams, slabs, walls и service zones до закрытия стен и потолков."
+        },
+        {
+          "questionId": "M04_L05_Q05",
+          "correctOptionId": "M04_L05_Q05_OPT_A",
+          "explanation": "Prefabrication экономит время, но меняет site logistics, delivery и assembly requirements.\n\nM05"
+        }
+      ]
+    },
+    "M05_L01": {
+      "lessonCode": "M05_L01",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M05_L01_Q01",
+          "correctOptionId": "M05_L01_Q01_OPT_B",
+          "explanation": "Material strategy связывает выбор материала с performance, местом применения, рисками, maintenance и trade-off."
+        },
+        {
+          "questionId": "M05_L01_Q02",
+          "correctOptionId": "M05_L01_Q02_OPT_C",
+          "explanation": "Материал нужно оценивать по его роли в конкретном месте, нагрузке, климате и условиях использования."
+        },
+        {
+          "questionId": "M05_L01_Q03",
+          "correctOptionId": "M05_L01_Q03_OPT_B",
+          "explanation": "Материал может быть тем же, но exposure меняет риски, detailing и maintenance."
+        },
+        {
+          "questionId": "M05_L01_Q04",
+          "correctOptionId": "M05_L01_Q04_OPT_C",
+          "explanation": "Матрица помогает сравнивать материалы как performance decisions, а не как декоративные варианты."
+        },
+        {
+          "questionId": "M05_L01_Q05",
+          "correctOptionId": "M05_L01_Q05_OPT_C",
+          "explanation": "Сильный trade-off называет и пользу материала, и его цену: риск, уход или ограничение."
+        }
+      ]
+    },
+    "M05_L02": {
+      "lessonCode": "M05_L02",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M05_L02_Q01",
+          "correctOptionId": "M05_L02_Q01_OPT_B",
+          "explanation": "Матрица помогает сравнивать материалы как архитектурные решения, а не как style preferences."
+        },
+        {
+          "questionId": "M05_L02_Q02",
+          "correctOptionId": "M05_L02_Q02_OPT_C",
+          "explanation": "Сильная оценка материала называет и его преимущества, и его риски."
+        },
+        {
+          "questionId": "M05_L02_Q03",
+          "correctOptionId": "M05_L02_Q03_OPT_B",
+          "explanation": "Steel прочная и может перекрывать пролёты тонкими элементами, но требует защиты от corrosion, fire и thermal bridges."
+        },
+        {
+          "questionId": "M05_L02_Q04",
+          "correctOptionId": "M05_L02_Q04_OPT_A",
+          "explanation": "Glass ценно для света и вида, но сильно влияет на envelope, comfort и privacy."
+        },
+        {
+          "questionId": "M05_L02_Q05",
+          "correctOptionId": "M05_L02_Q05_OPT_B",
+          "explanation": "Brick — модульный masonry material, часто хорошо работающий на сжатие, хотя влага, соли, трещины и швы всё равно важны."
+        }
+      ]
+    },
+    "M05_L03": {
+      "lessonCode": "M05_L03",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M05_L03_Q01",
+          "correctOptionId": "M05_L03_Q01_OPT_B",
+          "explanation": "Building envelope включает слои и элементы, которые контролируют water, air, heat, moisture и comfort между внешней и внутренней средой."
+        },
+        {
+          "questionId": "M05_L03_Q02",
+          "correctOptionId": "M05_L03_Q02_OPT_B",
+          "explanation": "Одна линия не объясняет, как стена контролирует воду, тепло, воздух, пар, нагрузку и внутреннюю отделку."
+        },
+        {
+          "questionId": "M05_L03_Q03",
+          "correctOptionId": "M05_L03_Q03_OPT_A",
+          "explanation": "Insulation уменьшает heat flow через building envelope."
+        },
+        {
+          "questionId": "M05_L03_Q04",
+          "correctOptionId": "M05_L03_Q04_OPT_B",
+          "explanation": "Thermal bridge показывает место, где тепло может обходить insulation или проходить через проводящий материал."
+        },
+        {
+          "questionId": "M05_L03_Q05",
+          "correctOptionId": "M05_L03_Q05_OPT_C",
+          "explanation": "Цель урока — показать стену как layered performance system, включая потоки и риски."
+        }
+      ]
+    },
+    "M05_L04": {
+      "lessonCode": "M05_L04",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M05_L04_Q01",
+          "correctOptionId": "M05_L04_Q01_OPT_C",
+          "explanation": "Detail показывает, как встречаются системы и как контролируются water, air, heat, movement и maintenance."
+        },
+        {
+          "questionId": "M05_L04_Q02",
+          "correctOptionId": "M05_L04_Q02_OPT_B",
+          "explanation": "Sealant должен быть доступным, заменяемым и поддержанным drainage, flashing или backup protection."
+        },
+        {
+          "questionId": "M05_L04_Q03",
+          "correctOptionId": "M05_L04_Q03_OPT_B",
+          "explanation": "Drip edge помогает воде капать вниз, а не затекать назад под поверхность."
+        },
+        {
+          "questionId": "M05_L04_Q04",
+          "correctOptionId": "M05_L04_Q04_OPT_B",
+          "explanation": "Window detail рискован, потому что там встречаются water, air, heat, movement, frame и continuity of layers."
+        },
+        {
+          "questionId": "M05_L04_Q05",
+          "correctOptionId": "M05_L04_Q05_OPT_C",
+          "explanation": "Цель урока — показать joint как risk-control decision, а не только как геометрию или текстуру."
+        }
+      ]
+    },
+    "M05_L05": {
+      "lessonCode": "M05_L05",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M05_L05_Q01",
+          "correctOptionId": "M05_L05_Q01_OPT_B",
+          "explanation": "Durability — это долгосрочная performance, а не просто визуальная прочность или высокая цена."
+        },
+        {
+          "questionId": "M05_L05_Q02",
+          "correctOptionId": "M05_L05_Q02_OPT_B",
+          "explanation": "Patina может быть нормальным surface aging, а damage влияет на protection, comfort, safety или function."
+        },
+        {
+          "questionId": "M05_L05_Q03",
+          "correctOptionId": "M05_L05_Q03_OPT_B",
+          "explanation": "Repairability помогает системе продолжать работать через доступный repair и replacement."
+        },
+        {
+          "questionId": "M05_L05_Q04",
+          "correctOptionId": "M05_L05_Q04_OPT_B",
+          "explanation": "Adaptive reuse сохраняет useful structure, space или material value и адаптирует их к новой функции."
+        },
+        {
+          "questionId": "M05_L05_Q05",
+          "correctOptionId": "M05_L05_Q05_OPT_C",
+          "explanation": "Aging + Maintenance + Reuse Strategy Diagram показывает long-term performance визуально.\n\nM06"
+        }
+      ]
+    },
+    "M06_L01": {
+      "lessonCode": "M06_L01",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M06_L01_Q01",
+          "correctOptionId": "M06_L01_Q01_OPT_C",
+          "explanation": "Sustainability должна быть связана с performance и evidence, а не только с внешним видом."
+        },
+        {
+          "questionId": "M06_L01_Q02",
+          "correctOptionId": "M06_L01_Q02_OPT_B",
+          "explanation": "Сильное утверждение называет problem, strategy и evidence."
+        },
+        {
+          "questionId": "M06_L01_Q03",
+          "correctOptionId": "M06_L01_Q03_OPT_B",
+          "explanation": "IEQ связывает sustainability со здоровьем, комфортом и качеством внутреннего пространства."
+        },
+        {
+          "questionId": "M06_L01_Q04",
+          "correctOptionId": "M06_L01_Q04_OPT_B",
+          "explanation": "Carbon включает operational impact и embodied impact; M06_L03 разбирает это глубже."
+        },
+        {
+          "questionId": "M06_L01_Q05",
+          "correctOptionId": "M06_L01_Q05_OPT_C",
+          "explanation": "Сильный trade-off называет конкретное улучшение и конкретное возможное последствие."
+        }
+      ]
+    },
+    "M06_L02": {
+      "lessonCode": "M06_L02",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M06_L02_Q01",
+          "correctOptionId": "M06_L02_Q01_OPT_B",
+          "explanation": "LEED-inspired logic используется как учебная рамка, а не как обучение реальной сертификации."
+        },
+        {
+          "questionId": "M06_L02_Q02",
+          "correctOptionId": "M06_L02_Q02_OPT_A",
+          "explanation": "Prerequisite — required condition. Credit — дополнительная strategy или improvement."
+        },
+        {
+          "questionId": "M06_L02_Q03",
+          "correctOptionId": "M06_L02_Q03_OPT_B",
+          "explanation": "Points — упрощённый учебный инструмент. Они не заменяют architectural reasoning."
+        },
+        {
+          "questionId": "M06_L02_Q04",
+          "correctOptionId": "M06_L02_Q04_OPT_C",
+          "explanation": "Сильный credit связывает strategy, problem, evidence и trade-off."
+        },
+        {
+          "questionId": "M06_L02_Q05",
+          "correctOptionId": "M06_L02_Q05_OPT_B",
+          "explanation": "Integrative process соединяет категории так, чтобы стратегии поддерживали друг друга, а не существовали отдельно."
+        }
+      ]
+    },
+    "M06_L03": {
+      "lessonCode": "M06_L03",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M06_L03_Q01",
+          "correctOptionId": "M06_L03_Q01_OPT_B",
+          "explanation": "Embodied carbon связан с материалами и строительством на lifecycle stages до, во время и после эксплуатации."
+        },
+        {
+          "questionId": "M06_L03_Q02",
+          "correctOptionId": "M06_L03_Q02_OPT_A",
+          "explanation": "Operational carbon связан с heating, cooling, lighting, ventilation и equipment во время использования здания."
+        },
+        {
+          "questionId": "M06_L03_Q03",
+          "correctOptionId": "M06_L03_Q03_OPT_B",
+          "explanation": "Lifecycle отслеживает материал или здание от сырья до использования, maintenance и end-of-life."
+        },
+        {
+          "questionId": "M06_L03_Q04",
+          "correctOptionId": "M06_L03_Q04_OPT_B",
+          "explanation": "Сильное утверждение связывает reuse, avoided new production, long-term use и maintenance."
+        },
+        {
+          "questionId": "M06_L03_Q05",
+          "correctOptionId": "M06_L03_Q05_OPT_A",
+          "explanation": "Carbon strategies часто балансируют embodied material impact и operational energy performance."
+        }
+      ]
+    },
+    "M06_L04": {
+      "lessonCode": "M06_L04",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M06_L04_Q01",
+          "correctOptionId": "M06_L04_Q01_OPT_B",
+          "explanation": "Passive design использует orientation, shading, daylight, ventilation, insulation и envelope logic, чтобы снизить demand."
+        },
+        {
+          "questionId": "M06_L04_Q02",
+          "correctOptionId": "M06_L04_Q02_OPT_C",
+          "explanation": "Technology может помогать, но если form и envelope создают высокий demand, panels alone недостаточно."
+        },
+        {
+          "questionId": "M06_L04_Q03",
+          "correctOptionId": "M06_L04_Q03_OPT_B",
+          "explanation": "Natural ventilation работает, когда воздух может войти, пройти через пространство и выйти."
+        },
+        {
+          "questionId": "M06_L04_Q04",
+          "correctOptionId": "M06_L04_Q04_OPT_A",
+          "explanation": "Passive strategies улучшают performance, но требуют баланса по сезонам, комфорту и использованию."
+        },
+        {
+          "questionId": "M06_L04_Q05",
+          "correctOptionId": "M06_L04_Q05_OPT_B",
+          "explanation": "Section — это evidence drawing для performance passive design."
+        }
+      ]
+    },
+    "M06_L05": {
+      "lessonCode": "M06_L05",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M06_L05_Q01",
+          "correctOptionId": "M06_L05_Q01_OPT_B",
+          "explanation": "Site ecology — это performance system, а не декоративное landscaping."
+        },
+        {
+          "questionId": "M06_L05_Q02",
+          "correctOptionId": "M06_L05_Q02_OPT_A",
+          "explanation": "Runoff часто увеличивается на hard, impermeable surfaces."
+        },
+        {
+          "questionId": "M06_L05_Q03",
+          "correctOptionId": "M06_L05_Q03_OPT_B",
+          "explanation": "Stormwater strategy должна показывать, куда вода идёт, где замедляется, собирается или впитывается."
+        },
+        {
+          "questionId": "M06_L05_Q04",
+          "correctOptionId": "M06_L05_Q04_OPT_B",
+          "explanation": "Heat island связан с surface heat, hard paving, low shade и накопленным теплом."
+        },
+        {
+          "questionId": "M06_L05_Q05",
+          "correctOptionId": "M06_L05_Q05_OPT_C",
+          "explanation": "Сильная стратегия связывает water, shade, habitat, heat island, outdoor comfort и maintenance.\n\nM07"
+        }
+      ]
+    },
+    "M07_L01": {
+      "lessonCode": "M07_L01",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M07_L01_Q01",
+          "correctOptionId": "M07_L01_Q01_OPT_B",
+          "explanation": "Resilience — это проектное мышление о стрессе, безопасности, снижении ущерба и восстановлении."
+        },
+        {
+          "questionId": "M07_L01_Q02",
+          "correctOptionId": "M07_L01_Q02_OPT_B",
+          "explanation": "Risk появляется, когда hazard влияет на exposed и vulnerable users, spaces или systems."
+        },
+        {
+          "questionId": "M07_L01_Q03",
+          "correctOptionId": "M07_L01_Q03_OPT_B",
+          "explanation": "Exposure отвечает на вопрос: кто или что попадает под воздействие hazard zone."
+        },
+        {
+          "questionId": "M07_L01_Q04",
+          "correctOptionId": "M07_L01_Q04_OPT_B",
+          "explanation": "Redundancy даёт запасной путь, систему или зону, если первый вариант не работает."
+        },
+        {
+          "questionId": "M07_L01_Q05",
+          "correctOptionId": "M07_L01_Q05_OPT_C",
+          "explanation": "Сильное risk statement называет hazard, exposure, vulnerability и consequence."
+        }
+      ]
+    },
+    "M07_L02": {
+      "lessonCode": "M07_L02",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M07_L02_Q01",
+          "correctOptionId": "M07_L02_Q01_OPT_B",
+          "explanation": "Earthquake в этом уроке читается как lateral shaking, поэтому важно показать lateral load и load path."
+        },
+        {
+          "questionId": "M07_L02_Q02",
+          "correctOptionId": "M07_L02_Q02_OPT_B",
+          "explanation": "Lateral load действует сбоку и должна передаваться через resisting system."
+        },
+        {
+          "questionId": "M07_L02_Q03",
+          "correctOptionId": "M07_L02_Q03_OPT_B",
+          "explanation": "Soft storey становится vulnerability, когда один этаж значительно слабее или более открыт, чем соседние уровни."
+        },
+        {
+          "questionId": "M07_L02_Q04",
+          "correctOptionId": "M07_L02_Q04_OPT_B",
+          "explanation": "Earthquake Stability Diagram должен показывать, как сила проходит через здание и где работает upgrade."
+        },
+        {
+          "questionId": "M07_L02_Q05",
+          "correctOptionId": "M07_L02_Q05_OPT_A",
+          "explanation": "Bracing или shear wall могут улучшить устойчивость, но повлиять на пространство, проёмы, стоимость или circulation."
+        }
+      ]
+    },
+    "M07_L03": {
+      "lessonCode": "M07_L03",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M07_L03_Q01",
+          "correctOptionId": "M07_L03_Q01_OPT_B",
+          "explanation": "Flood-safe thinking изучается через section logic, а не через катастрофическую картинку."
+        },
+        {
+          "questionId": "M07_L03_Q02",
+          "correctOptionId": "M07_L03_Q02_OPT_B",
+          "explanation": "Wet zone допускает контакт с водой. Dry zone защищает equipment, users и важные функции."
+        },
+        {
+          "questionId": "M07_L03_Q03",
+          "correctOptionId": "M07_L03_Q03_OPT_B",
+          "explanation": "Drainage должен показывать path и destination, а не только значок."
+        },
+        {
+          "questionId": "M07_L03_Q04",
+          "correctOptionId": "M07_L03_Q04_OPT_B",
+          "explanation": "Protected equipment должно быть расположено выше water risk или внутри защищённой зоны."
+        },
+        {
+          "questionId": "M07_L03_Q05",
+          "correctOptionId": "M07_L03_Q05_OPT_A",
+          "explanation": "Raised floor помогает dry-zone safety, но создаёт access, cost и maintenance trade-offs."
+        }
+      ]
+    },
+    "M07_L04": {
+      "lessonCode": "M07_L04",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M07_L04_Q01",
+          "correctOptionId": "M07_L04_Q01_OPT_B",
+          "explanation": "Fire safety изучается как spatial planning logic, а не как spectacle."
+        },
+        {
+          "questionId": "M07_L04_Q02",
+          "correctOptionId": "M07_L04_Q02_OPT_B",
+          "explanation": "Egress route показывает, как users выходят или достигают safety."
+        },
+        {
+          "questionId": "M07_L04_Q03",
+          "correctOptionId": "M07_L04_Q03_OPT_B",
+          "explanation": "Smoke влияет на visibility и breathing, поэтому routes нужно читать вместе с smoke movement."
+        },
+        {
+          "questionId": "M07_L04_Q04",
+          "correctOptionId": "M07_L04_Q04_OPT_C",
+          "explanation": "Сильная Evacuation + Compartment Diagram связывает users, routes, zones, exits, refuge, assembly и trade-off."
+        },
+        {
+          "questionId": "M07_L04_Q05",
+          "correctOptionId": "M07_L04_Q05_OPT_A",
+          "explanation": "Fire-safety upgrades могут улучшить route protection, но повлиять на openness, cost, layout и circulation."
+        }
+      ]
+    },
+    "M07_L05": {
+      "lessonCode": "M07_L05",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M07_L05_Q01",
+          "correctOptionId": "M07_L05_Q01_OPT_B",
+          "explanation": "Climate adaptation изучается как building performance under stress, а не как fear imagery."
+        },
+        {
+          "questionId": "M07_L05_Q02",
+          "correctOptionId": "M07_L05_Q02_OPT_B",
+          "explanation": "Heat refuge должна быть расположена на плане и связана с user safety."
+        },
+        {
+          "questionId": "M07_L05_Q03",
+          "correctOptionId": "M07_L05_Q03_OPT_B",
+          "explanation": "Ventilation — это spatial logic: воздуху нужен вход, путь и выход."
+        },
+        {
+          "questionId": "M07_L05_Q04",
+          "correctOptionId": "M07_L05_Q04_OPT_B",
+          "explanation": "Wind protection должна отвечать на exposed points: entries, canopies и edges."
+        },
+        {
+          "questionId": "M07_L05_Q05",
+          "correctOptionId": "M07_L05_Q05_OPT_A",
+          "explanation": "Adaptation strategies повышают resilience, но создают architectural и maintenance trade-offs.\n\nM08"
+        }
+      ]
+    },
+    "M08_L01": {
+      "lessonCode": "M08_L01",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M08_L01_Q01",
+          "correctOptionId": "M08_L01_Q01_OPT_B",
+          "explanation": "Drawing set — это выбранная система доказательств, а не pile of drawings."
+        },
+        {
+          "questionId": "M08_L01_Q02",
+          "correctOptionId": "M08_L01_Q02_OPT_A",
+          "explanation": "Section объясняет vertical relationships и performance: высоту, свет, конструкцию и оболочку."
+        },
+        {
+          "questionId": "M08_L01_Q03",
+          "correctOptionId": "M08_L01_Q03_OPT_B",
+          "explanation": "Annotation / caption должна помогать зрителю понять evidence, которое даёт drawing."
+        },
+        {
+          "questionId": "M08_L01_Q04",
+          "correctOptionId": "M08_L01_Q04_OPT_B",
+          "explanation": "Drawing redundancy ослабляет clarity, потому что повторяет информацию без цели."
+        },
+        {
+          "questionId": "M08_L01_Q05",
+          "correctOptionId": "M08_L01_Q05_OPT_B",
+          "explanation": "Сильная логика связывает drawing type с тем, что он доказывает."
+        }
+      ]
+    },
+    "M08_L02": {
+      "lessonCode": "M08_L02",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M08_L02_Q01",
+          "correctOptionId": "M08_L02_Q01_OPT_B",
+          "explanation": "Presentation board должен передавать project logic, а не просто украшать страницу."
+        },
+        {
+          "questionId": "M08_L02_Q02",
+          "correctOptionId": "M08_L02_Q02_OPT_B",
+          "explanation": "Hierarchy управляет visual importance и reading priority."
+        },
+        {
+          "questionId": "M08_L02_Q03",
+          "correctOptionId": "M08_L02_Q03_OPT_B",
+          "explanation": "Board narrative должен вести зрителя через project argument."
+        },
+        {
+          "questionId": "M08_L02_Q04",
+          "correctOptionId": "M08_L02_Q04_OPT_C",
+          "explanation": "Сильная caption объясняет, что drawing доказывает."
+        },
+        {
+          "questionId": "M08_L02_Q05",
+          "correctOptionId": "M08_L02_Q05_OPT_A",
+          "explanation": "Board composition создаёт trade-offs между space, hierarchy и evidence density."
+        }
+      ]
+    },
+    "M08_L03": {
+      "lessonCode": "M08_L03",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M08_L03_Q01",
+          "correctOptionId": "M08_L03_Q01_OPT_B",
+          "explanation": "Portfolio должно показывать, как проект развивался, а не только как выглядит финальный результат."
+        },
+        {
+          "questionId": "M08_L03_Q02",
+          "correctOptionId": "M08_L03_Q02_OPT_B",
+          "explanation": "Selection — это intentional curation of evidence."
+        },
+        {
+          "questionId": "M08_L03_Q03",
+          "correctOptionId": "M08_L03_Q03_OPT_B",
+          "explanation": "Proof of thinking требует показать развитие, решение, результат и reflection."
+        },
+        {
+          "questionId": "M08_L03_Q04",
+          "correctOptionId": "M08_L03_Q04_OPT_B",
+          "explanation": "Process work становится полезной, когда caption объясняет decision или test."
+        },
+        {
+          "questionId": "M08_L03_Q05",
+          "correctOptionId": "M08_L03_Q05_OPT_A",
+          "explanation": "Trade-off появляется, когда sequence отдаёт приоритет одному типу evidence перед другим."
+        }
+      ]
+    },
+    "M08_L04": {
+      "lessonCode": "M08_L04",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M08_L04_Q01",
+          "correctOptionId": "M08_L04_Q01_OPT_B",
+          "explanation": "Representation выбирают по communication goal и evidence."
+        },
+        {
+          "questionId": "M08_L04_Q02",
+          "correctOptionId": "M08_L04_Q02_OPT_A",
+          "explanation": "Render полезен для experience и atmosphere, но он не доказывает всё."
+        },
+        {
+          "questionId": "M08_L04_Q03",
+          "correctOptionId": "M08_L04_Q03_OPT_A",
+          "explanation": "Section объясняет vertical performance и отношения, которые render может скрыть."
+        },
+        {
+          "questionId": "M08_L04_Q04",
+          "correctOptionId": "M08_L04_Q04_OPT_A",
+          "explanation": "Diagram объясняет relationships и strategies, которые могут быть невидимы на других изображениях."
+        },
+        {
+          "questionId": "M08_L04_Q05",
+          "correctOptionId": "M08_L04_Q05_OPT_B",
+          "explanation": "Сильная representation logic связывает каждый способ показа с конкретной communication goal."
+        }
+      ]
+    },
+    "M08_L05": {
+      "lessonCode": "M08_L05",
+      "quizVersion": "phase01-source-2026-07-27",
+      "answers": [
+        {
+          "questionId": "M08_L05_Q01",
+          "correctOptionId": "M08_L05_Q01_OPT_B",
+          "explanation": "Design defense должна связывать argument, evidence и trade-off."
+        },
+        {
+          "questionId": "M08_L05_Q02",
+          "correctOptionId": "M08_L05_Q02_OPT_B",
+          "explanation": "Verbal presentation требует ясной sequence, чтобы слушатель понял project argument."
+        },
+        {
+          "questionId": "M08_L05_Q03",
+          "correctOptionId": "M08_L05_Q03_OPT_C",
+          "explanation": "Сильный ответ указывает на evidence и называет trade-off."
+        },
+        {
+          "questionId": "M08_L05_Q04",
+          "correctOptionId": "M08_L05_Q04_OPT_C",
+          "explanation": "Feedback помогает планировать revision и понимать, что улучшать дальше."
+        },
+        {
+          "questionId": "M08_L05_Q05",
+          "correctOptionId": "M08_L05_Q05_OPT_B",
+          "explanation": "Self-critique показывает, что student умеет оценивать и улучшать собственную работу."
+        }
+      ]
+    }
+  }
+}

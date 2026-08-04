@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M06_L04",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M06_L04_Q01",
+      "questionText": "Какая главная идея passive design (пассивного проектирования) в этом уроке?",
+      "options": [
+        {
+          "id": "M06_L04_Q01_OPT_A",
+          "text": "Добавить как можно больше solar panels."
+        },
+        {
+          "id": "M06_L04_Q01_OPT_B",
+          "text": "Использовать архитектуру, чтобы снижать energy demand через climate response."
+        },
+        {
+          "id": "M06_L04_Q01_OPT_C",
+          "text": "Полностью избегать окон."
+        },
+        {
+          "id": "M06_L04_Q01_OPT_D",
+          "text": "Использовать только натуральные материалы."
+        }
+      ]
+    },
+    {
+      "id": "M06_L04_Q02",
+      "questionText": "Почему glass pavilion с solar panels всё ещё может быть слабой low-energy strategy?",
+      "options": [
+        {
+          "id": "M06_L04_Q02_OPT_A",
+          "text": "Solar panels всегда плохие."
+        },
+        {
+          "id": "M06_L04_Q02_OPT_B",
+          "text": "Glass никогда не имеет ценности."
+        },
+        {
+          "id": "M06_L04_Q02_OPT_C",
+          "text": "Panels не исправляют overheating, glare, heat gain/loss и слабую envelope logic."
+        },
+        {
+          "id": "M06_L04_Q02_OPT_D",
+          "text": "В нём слишком много стен."
+        }
+      ]
+    },
+    {
+      "id": "M06_L04_Q03",
+      "questionText": "Что нужно natural ventilation (естественной вентиляции)?",
+      "options": [
+        {
+          "id": "M06_L04_Q03_OPT_A",
+          "text": "Одно декоративное окно без airflow path."
+        },
+        {
+          "id": "M06_L04_Q03_OPT_B",
+          "text": "Inlet, outlet и clear air path."
+        },
+        {
+          "id": "M06_L04_Q03_OPT_C",
+          "text": "Только искусственное освещение."
+        },
+        {
+          "id": "M06_L04_Q03_OPT_D",
+          "text": "Более тяжёлая стена."
+        }
+      ]
+    },
+    {
+      "id": "M06_L04_Q04",
+      "questionText": "Какой trade-off самый точный?",
+      "options": [
+        {
+          "id": "M06_L04_Q04_OPT_A",
+          "text": "Shading уменьшает overheating, но при плохом размере может снизить winter sun или daylight."
+        },
+        {
+          "id": "M06_L04_Q04_OPT_B",
+          "text": "Shading не имеет последствий."
+        },
+        {
+          "id": "M06_L04_Q04_OPT_C",
+          "text": "Airtightness означает, что вентиляция больше не нужна."
+        },
+        {
+          "id": "M06_L04_Q04_OPT_D",
+          "text": "Daylighting всегда снижает energy без рисков."
+        }
+      ]
+    },
+    {
+      "id": "M06_L04_Q05",
+      "questionText": "Что должен показывать Passive Strategy Section?",
+      "options": [
+        {
+          "id": "M06_L04_Q05_OPT_A",
+          "text": "Только декоративный фасад."
+        },
+        {
+          "id": "M06_L04_Q05_OPT_B",
+          "text": "Sun, shade, daylight, airflow, envelope/insulation, heat gain/loss и trade-off."
+        },
+        {
+          "id": "M06_L04_Q05_OPT_C",
+          "text": "Только список eco features."
+        },
+        {
+          "id": "M06_L04_Q05_OPT_D",
+          "text": "Только icon solar panel."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1930 @@
+{
+  "schemaVersion": "1.0.0",
+  "items": [
+    {
+      "contentCode": "M01_L01",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M01_L01",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M01_L02",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M01_L02",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M01_L03",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M01_L03",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M01_L04",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M01_L04",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M01_L05",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M01_L05",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M02_L01",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L01",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L01",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L01",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L01",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L01",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M02_L01",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M02_L02",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L02",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L02",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L02",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L02",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L02",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M02_L02",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M02_L03",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L03",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L03",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L03",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L03",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L03",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M02_L03",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M02_L04",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L04",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L04",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L04",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L04",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L04",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M02_L04",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M02_L05",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L05",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L05",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L05",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L05",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_L05",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M02_L05",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M03_L01",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L01",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L01",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L01",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L01",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L01",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M03_L01",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M03_L02",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L02",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L02",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L02",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L02",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L02",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M03_L02",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M03_L03",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L03",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L03",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L03",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L03",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L03",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M03_L03",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M03_L04",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L04",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L04",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L04",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L04",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L04",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M03_L04",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M03_L05",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L05",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L05",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L05",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L05",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_L05",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M03_L05",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M04_L01",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L01",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L01",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L01",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L01",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L01",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M04_L01",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M04_L02",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L02",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L02",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L02",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L02",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L02",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M04_L02",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M04_L03",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L03",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L03",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L03",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L03",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L03",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M04_L03",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M04_L04",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L04",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L04",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L04",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L04",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L04",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M04_L04",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M04_L05",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L05",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L05",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L05",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L05",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_L05",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M04_L05",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M05_L01",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L01",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L01",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L01",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L01",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L01",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M05_L01",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M05_L02",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L02",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L02",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L02",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L02",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L02",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M05_L02",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M05_L03",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L03",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L03",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L03",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L03",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L03",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M05_L03",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M05_L04",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L04",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L04",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L04",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L04",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L04",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M05_L04",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M05_L05",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L05",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L05",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L05",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L05",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_L05",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M05_L05",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M06_L01",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L01",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L01",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L01",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L01",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L01",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M06_L01",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M06_L02",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L02",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L02",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L02",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L02",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L02",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M06_L02",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M06_L03",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L03",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L03",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L03",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L03",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L03",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M06_L03",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M06_L04",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L04",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L04",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L04",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L04",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L04",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M06_L04",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M06_L05",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L05",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L05",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L05",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L05",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_L05",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M06_L05",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M07_L01",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L01",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L01",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L01",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L01",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L01",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M07_L01",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M07_L02",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L02",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L02",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L02",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L02",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L02",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M07_L02",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M07_L03",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L03",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L03",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L03",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L03",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L03",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M07_L03",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M07_L04",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L04",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L04",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L04",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L04",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L04",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M07_L04",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M07_L05",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L05",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L05",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L05",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L05",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_L05",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M07_L05",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M08_L01",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L01",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L01",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L01",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L01",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L01",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M08_L01",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M08_L02",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L02",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L02",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L02",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L02",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L02",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M08_L02",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M08_L03",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L03",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L03",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L03",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L03",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L03",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M08_L03",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M08_L04",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L04",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L04",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L04",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L04",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L04",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M08_L04",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M08_L05",
+      "contentType": "LESSON",
+      "role": "PRES",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L05",
+      "contentType": "LESSON",
+      "role": "SRPT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L05",
+      "contentType": "LESSON",
+      "role": "VOCB",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L05",
+      "contentType": "LESSON",
+      "role": "MNOT",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L05",
+      "contentType": "LESSON",
+      "role": "PICE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_L05",
+      "contentType": "LESSON",
+      "role": "YOUTUBE_ID",
+      "status": "VIDEO_PENDING",
+      "reason": "No approved public YouTube ID supplied."
+    },
+    {
+      "contentCode": "M08_L05",
+      "contentType": "LESSON",
+      "role": "CAPTIONS",
+      "status": "CAPTIONS_PENDING",
+      "reason": "No approved captions file supplied."
+    },
+    {
+      "contentCode": "M01_P01",
+      "contentType": "PROJECT",
+      "role": "PREVIEW_IMAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_P02",
+      "contentType": "PROJECT",
+      "role": "STUDENT_PAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_P02",
+      "contentType": "PROJECT",
+      "role": "EXAMPLE_PPTX",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M02_P02",
+      "contentType": "PROJECT",
+      "role": "PREVIEW_IMAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M03_P03",
+      "contentType": "PROJECT",
+      "role": "PREVIEW_IMAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_P04",
+      "contentType": "PROJECT",
+      "role": "STUDENT_PAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_P04",
+      "contentType": "PROJECT",
+      "role": "EXAMPLE_PPTX",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M04_P04",
+      "contentType": "PROJECT",
+      "role": "PREVIEW_IMAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_P05",
+      "contentType": "PROJECT",
+      "role": "STUDENT_PAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_P05",
+      "contentType": "PROJECT",
+      "role": "EXAMPLE_PPTX",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M05_P05",
+      "contentType": "PROJECT",
+      "role": "PREVIEW_IMAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_P06",
+      "contentType": "PROJECT",
+      "role": "STUDENT_PAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_P06",
+      "contentType": "PROJECT",
+      "role": "EXAMPLE_PPTX",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M06_P06",
+      "contentType": "PROJECT",
+      "role": "PREVIEW_IMAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_P07",
+      "contentType": "PROJECT",
+      "role": "STUDENT_PAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_P07",
+      "contentType": "PROJECT",
+      "role": "EXAMPLE_PPTX",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M07_P07",
+      "contentType": "PROJECT",
+      "role": "PREVIEW_IMAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_P08",
+      "contentType": "PROJECT",
+      "role": "STUDENT_PAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_P08",
+      "contentType": "PROJECT",
+      "role": "EXAMPLE_PPTX",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    },
+    {
+      "contentCode": "M08_P08",
+      "contentType": "PROJECT",
+      "role": "PREVIEW_IMAGE",
+      "status": "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+      "reason": "Project asset was intentionally not supplied in the Phase 01 sample."
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "schemaVersion": "1.0.0",
+  "items": [
+    {
+      "lessonCode": "M07_L01",
+      "sourceFile": "M07/M07_L01/M07_L01_MNOT.txt",
+      "detectedBoundaries": [
+        {
+          "heading": "mini output title",
+          "key": "title",
+          "line": 1,
+          "numericPrefix": 1
+        },
+        {
+          "heading": "purpose",
+          "key": "purpose",
+          "line": 4,
+          "numericPrefix": 2
+        },
+        {
+          "heading": "status",
+          "key": "status",
+          "line": 6,
+          "numericPrefix": 3
+        },
+        {
+          "heading": "estimated time",
+          "key": "estimatedTime",
+          "line": 9,
+          "numericPrefix": 4
+        },
+        {
+          "heading": "tools",
+          "key": "tools",
+          "line": 11,
+          "numericPrefix": 5
+        },
+        {
+          "heading": "student task",
+          "key": "studentTask",
+          "line": 23,
+          "numericPrefix": 6
+        },
+        {
+          "heading": "our example",
+          "key": "ourExample",
+          "line": 36,
+          "numericPrefix": 7
+        },
+        {
+          "heading": "our example png prompt",
+          "key": "INTERNAL",
+          "line": 38,
+          "numericPrefix": 8
+        },
+        {
+          "heading": "mini output self check",
+          "key": "selfCheck",
+          "line": 152,
+          "numericPrefix": 9
+        }
+      ],
+      "includedPublicSections": [
+        "title",
+        "purpose",
+        "status",
+        "estimatedTime",
+        "tools",
+        "studentTask",
+        "ourExample",
+        "selfCheck"
+      ],
+      "excludedInternalSections": [
+        "our example png prompt"
+      ],
+      "forbiddenMarkerLeaks": [],
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M07_L02",
+      "sourceFile": "M07/M07_L02/M07_L02_MNOT.txt",
+      "detectedBoundaries": [
+        {
+          "heading": "mini output title",
+          "key": "title",
+          "line": 1,
+          "numericPrefix": 1
+        },
+        {
+          "heading": "purpose",
+          "key": "purpose",
+          "line": 4,
+          "numericPrefix": 2
+        },
+        {
+          "heading": "status",
+          "key": "status",
+          "line": 6,
+          "numericPrefix": 3
+        },
+        {
+          "heading": "estimated time",
+          "key": "estimatedTime",
+          "line": 9,
+          "numericPrefix": 4
+        },
+        {
+          "heading": "tools",
+          "key": "tools",
+          "line": 11,
+          "numericPrefix": 5
+        },
+        {
+          "heading": "student task",
+          "key": "studentTask",
+          "line": 23,
+          "numericPrefix": 6
+        },
+        {
+          "heading": "our example",
+          "key": "ourExample",
+          "line": 37,
+          "numericPrefix": 7
+        },
+        {
+          "heading": "our example png prompt",
+          "key": "INTERNAL",
+          "line": 39,
+          "numericPrefix": 8
+        },
+        {
+          "heading": "mini output self check",
+          "key": "selfCheck",
+          "line": 152,
+          "numericPrefix": 9
+        }
+      ],
+      "includedPublicSections": [
+        "title",
+        "purpose",
+        "status",
+        "estimatedTime",
+        "tools",
+        "studentTask",
+        "ourExample",
+        "selfCheck"
+      ],
+      "excludedInternalSections": [
+        "our example png prompt"
+      ],
+      "forbiddenMarkerLeaks": [],
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M07_L03",
+      "sourceFile": "M07/M07_L03/M07_L03_MNOT.txt",
+      "detectedBoundaries": [
+        {
+          "heading": "mini output title",
+          "key": "title",
+          "line": 1,
+          "numericPrefix": 1
+        },
+        {
+          "heading": "purpose",
+          "key": "purpose",
+          "line": 4,
+          "numericPrefix": 2
+        },
+        {
+          "heading": "status",
+          "key": "status",
+          "line": 6,
+          "numericPrefix": 3
+        },
+        {
+          "heading": "estimated time",
+          "key": "estimatedTime",
+          "line": 9,
+          "numericPrefix": 4
+        },
+        {
+          "heading": "tools",
+          "key": "tools",
+          "line": 11,
+          "numericPrefix": 5
+        },
+        {
+          "heading": "student task",
+          "key": "studentTask",
+          "line": 23,
+          "numericPrefix": 6
+        },
+        {
+          "heading": "our example",
+          "key": "ourExample",
+          "line": 37,
+          "numericPrefix": 7
+        },
+        {
+          "heading": "our example png prompt",
+          "key": "INTERNAL",
+          "line": 39,
+          "numericPrefix": 8
+        },
+        {
+          "heading": "mini output self check",
+          "key": "selfCheck",
+          "line": 142,
+          "numericPrefix": 9
+        }
+      ],
+      "includedPublicSections": [
+        "title",
+        "purpose",
+        "status",
+        "estimatedTime",
+        "tools",
+        "studentTask",
+        "ourExample",
+        "selfCheck"
+      ],
+      "excludedInternalSections": [
+        "our example png prompt"
+      ],
+      "forbiddenMarkerLeaks": [],
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M07_L04",
+      "sourceFile": "M07/M07_L04/M07_L04_MNOT.txt",
+      "detectedBoundaries": [
+        {
+          "heading": "mini output title",
+          "key": "title",
+          "line": 1,
+          "numericPrefix": 1
+        },
+        {
+          "heading": "purpose",
+          "key": "purpose",
+          "line": 4,
+          "numericPrefix": 2
+        },
+        {
+          "heading": "status",
+          "key": "status",
+          "line": 6,
+          "numericPrefix": 3
+        },
+        {
+          "heading": "estimated time",
+          "key": "estimatedTime",
+          "line": 9,
+          "numericPrefix": 4
+        },
+        {
+          "heading": "tools",
+          "key": "tools",
+          "line": 11,
+          "numericPrefix": 5
+        },
+        {
+          "heading": "student task",
+          "key": "studentTask",
+          "line": 23,
+          "numericPrefix": 6
+        },
+        {
+          "heading": "our example",
+          "key": "ourExample",
+          "line": 37,
+          "numericPrefix": 7
+        },
+        {
+          "heading": "our example png prompt",
+          "key": "INTERNAL",
+          "line": 39,
+          "numericPrefix": 8
+        },
+        {
+          "heading": "mini output self check",
+          "key": "selfCheck",
+          "line": 161,
+          "numericPrefix": 9
+        }
+      ],
+      "includedPublicSections": [
+        "title",
+        "purpose",
+        "status",
+        "estimatedTime",
+        "tools",
+        "studentTask",
+        "ourExample",
+        "selfCheck"
+      ],
+      "excludedInternalSections": [
+        "our example png prompt"
+      ],
+      "forbiddenMarkerLeaks": [],
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M07_L05",
+      "sourceFile": "M07/M07_L05/M07_L05_MNOT.txt",
+      "detectedBoundaries": [
+        {
+          "heading": "mini output title",
+          "key": "title",
+          "line": 1,
+          "numericPrefix": 1
+        },
+        {
+          "heading": "purpose",
+          "key": "purpose",
+          "line": 4,
+          "numericPrefix": 2
+        },
+        {
+          "heading": "status",
+          "key": "status",
+          "line": 6,
+          "numericPrefix": 3
+        },
+        {
+          "heading": "estimated time",
+          "key": "estimatedTime",
+          "line": 9,
+          "numericPrefix": 4
+        },
+        {
+          "heading": "tools",
+          "key": "tools",
+          "line": 11,
+          "numericPrefix": 5
+        },
+        {
+          "heading": "student task",
+          "key": "studentTask",
+          "line": 23,
+          "numericPrefix": 6
+        },
+        {
+          "heading": "our example",
+          "key": "ourExample",
+          "line": 37,
+          "numericPrefix": 7
+        },
+        {
+          "heading": "our example png prompt",
+          "key": "INTERNAL",
+          "line": 39,
+          "numericPrefix": 8
+        },
+        {
+          "heading": "mini output self check",
+          "key": "selfCheck",
+          "line": 156,
+          "numericPrefix": 9
+        }
+      ],
+      "includedPublicSections": [
+        "title",
+        "purpose",
+        "status",
+        "estimatedTime",
+        "tools",
+        "studentTask",
+        "ourExample",
+        "selfCheck"
+      ],
+      "excludedInternalSections": [
+        "our example png prompt"
+      ],
+      "forbiddenMarkerLeaks": [],
+      "result": "PASS"
+    }
+  ]
+}

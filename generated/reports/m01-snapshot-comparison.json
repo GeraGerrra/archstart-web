@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "compared": true,
+  "acceptedSnapshot": "accepted generated/public/m01-dataset.json",
+  "semanticEqual": true,
+  "controlledTimestampFieldsExcluded": [
+    "generatedAt"
+  ],
+  "differences": [],
+  "sourceGroundedCorrections": 0,
+  "unexpectedDifferences": 0,
+  "result": "PASS"
+}

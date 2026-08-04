@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0.0",
+  "canonicalDownloadRole": "VOCB_PDF",
+  "derivedHtmlReplacement": false,
+  "extractor": "pdftotext-tsv",
+  "totalValidatedEntries": 69,
+  "lessons": [
+    {
+      "lessonCode": "M01_L01",
+      "sourceFile": "M01/M01_L01/M01_L01_VOCB.pdf",
+      "entryCount": 13,
+      "sourcePages": [
+        1,
+        2,
+        3
+      ],
+      "warnings": [],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M01_L02",
+      "sourceFile": "M01/M01_L02/M01_L02_VOCB.pdf",
+      "entryCount": 13,
+      "sourcePages": [
+        1,
+        2,
+        3
+      ],
+      "warnings": [],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M01_L03",
+      "sourceFile": "M01/M01_L03/M01_L03_VOCB.pdf",
+      "entryCount": 14,
+      "sourcePages": [
+        1,
+        2,
+        3
+      ],
+      "warnings": [],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M01_L04",
+      "sourceFile": "M01/M01_L04/M01_L04_VOCB.pdf",
+      "entryCount": 15,
+      "sourcePages": [
+        1,
+        2,
+        3
+      ],
+      "warnings": [],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M01_L05",
+      "sourceFile": "M01/M01_L05/M01_L05_VOCB.pdf",
+      "entryCount": 14,
+      "sourcePages": [
+        1,
+        2,
+        3
+      ],
+      "warnings": [],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

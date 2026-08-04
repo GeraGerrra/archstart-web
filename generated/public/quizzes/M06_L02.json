@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M06_L02",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M06_L02_Q01",
+      "questionText": "Зачем в курсе используется LEED-inspired logic?",
+      "options": [
+        {
+          "id": "M06_L02_Q01_OPT_A",
+          "text": "Чтобы профессионально сертифицировать реальный проект."
+        },
+        {
+          "id": "M06_L02_Q01_OPT_B",
+          "text": "Чтобы организовать sustainability strategies через categories, requirements, credits, evidence и trade-offs."
+        },
+        {
+          "id": "M06_L02_Q01_OPT_C",
+          "text": "Чтобы проект выглядел зелёным."
+        },
+        {
+          "id": "M06_L02_Q01_OPT_D",
+          "text": "Чтобы заменить архитектурное проектирование баллами."
+        }
+      ]
+    },
+    {
+      "id": "M06_L02_Q02",
+      "questionText": "В чём разница между prerequisite и credit?",
+      "options": [
+        {
+          "id": "M06_L02_Q02_OPT_A",
+          "text": "Prerequisite — обязательное условие; credit — дополнительное улучшение, которое может дать points."
+        },
+        {
+          "id": "M06_L02_Q02_OPT_B",
+          "text": "Prerequisite декоративный, а credit конструктивный."
+        },
+        {
+          "id": "M06_L02_Q02_OPT_C",
+          "text": "Prerequisite всегда даёт больше points."
+        },
+        {
+          "id": "M06_L02_Q02_OPT_D",
+          "text": "Это одно и то же."
+        }
+      ]
+    },
+    {
+      "id": "M06_L02_Q03",
+      "questionText": "Почему points недостаточно для оценки sustainable design?",
+      "options": [
+        {
+          "id": "M06_L02_Q03_OPT_A",
+          "text": "Points никогда не полезны."
+        },
+        {
+          "id": "M06_L02_Q03_OPT_B",
+          "text": "Points помогают организовать мышление, но evidence, trade-offs и design judgment всё равно нужны."
+        },
+        {
+          "id": "M06_L02_Q03_OPT_C",
+          "text": "Points относятся только к мебели."
+        },
+        {
+          "id": "M06_L02_Q03_OPT_D",
+          "text": "Points автоматически доказывают идеальную sustainability."
+        }
+      ]
+    },
+    {
+      "id": "M06_L02_Q04",
+      "questionText": "Какое credit statement самое сильное?",
+      "options": [
+        {
+          "id": "M06_L02_Q04_OPT_A",
+          "text": "Добавить растения."
+        },
+        {
+          "id": "M06_L02_Q04_OPT_B",
+          "text": "Сделать проект eco."
+        },
+        {
+          "id": "M06_L02_Q04_OPT_C",
+          "text": "Добавить exterior shading, чтобы уменьшить overheating; evidence — sun section; trade-off — меньше winter sun."
+        },
+        {
+          "id": "M06_L02_Q04_OPT_D",
+          "text": "Использовать зелёный цвет."
+        }
+      ]
+    },
+    {
+      "id": "M06_L02_Q05",
+      "questionText": "Что означает integrative process (интегративный процесс) в этом уроке?",
+      "options": [
+        {
+          "id": "M06_L02_Q05_OPT_A",
+          "text": "Добавить много несвязанных eco features."
+        },
+        {
+          "id": "M06_L02_Q05_OPT_B",
+          "text": "Согласовать strategies между categories: energy, water, materials и IEQ."
+        },
+        {
+          "id": "M06_L02_Q05_OPT_C",
+          "text": "Выбрать один материал для всего здания."
+        },
+        {
+          "id": "M06_L02_Q05_OPT_D",
+          "text": "Избежать всех trade-offs."
+        }
+      ]
+    }
+  ]
+}

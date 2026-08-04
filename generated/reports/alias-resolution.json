@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0.0",
+  "items": [
+    {
+      "sourceFilename": "ARCH.START_M01_Project01_Student_Page_V2.docx",
+      "canonicalCode": "M01_P01",
+      "canonicalRole": "STUDENT_PAGE",
+      "canonicalPublicFilename": "ARCH.START_M01_Project01_Student_Page.docx",
+      "reason": "Explicit Phase 01 source registration for the intentionally supplied approved M01 Student Page revision.",
+      "sourcePresent": true,
+      "sourceRelativePath": "M01/M01_P01/ARCH.START_M01_Project01_Student_Page_V2.docx",
+      "sourceSha256": "956a2541aa07314352e02b8dc8e7b31b16e7b151f1558f15d20ee9b6da6ac749",
+      "status": "ALIAS_RESOLVED",
+      "deterministicExactMatch": true,
+      "fuzzyMatchingUsed": false
+    },
+    {
+      "sourceFilename": "ARCH.START_M03_Project03_Student_Page (1).docx",
+      "canonicalCode": "M03_P03",
+      "canonicalRole": "STUDENT_PAGE",
+      "canonicalPublicFilename": "ARCH.START_M03_Project03_Student_Page.docx",
+      "reason": "Approved Phase 00 V4 audit-sample alias.",
+      "sourcePresent": true,
+      "sourceRelativePath": "ARCH.START_M03_Project03_Student_Page (1).docx",
+      "sourceSha256": "8c5e99b0fc5317c6149353110cfb65ab62971760455aeff056300a1277ad0c17",
+      "status": "ALIAS_RESOLVED",
+      "deterministicExactMatch": true,
+      "fuzzyMatchingUsed": false
+    },
+    {
+      "sourceFilename": "M03_P03_PPTX (1).pptx",
+      "canonicalCode": "M03_P03",
+      "canonicalRole": "EXAMPLE_PPTX",
+      "canonicalPublicFilename": "M03_P03_PPTX.pptx",
+      "reason": "Approved Phase 00 V4 audit-sample alias.",
+      "sourcePresent": true,
+      "sourceRelativePath": "M03_P03_PPTX (1).pptx",
+      "sourceSha256": "8d73f1301898b3e75e77d235deaa81ecb2eb6fbc81f4caedec882a2e3ddd36d6",
+      "status": "ALIAS_RESOLVED",
+      "deterministicExactMatch": true,
+      "fuzzyMatchingUsed": false
+    }
+  ]
+}

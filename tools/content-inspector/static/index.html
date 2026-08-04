@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ARCH.START Development Content Inspector</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header><h1>ARCH.START / Development Content Inspector</h1><p>Localhost only · Phase 01 · unavailable in production</p></header>
+    <main>
+      <section id="totals" class="totals" aria-label="Official totals"></section>
+      <form class="filters" role="search" onsubmit="return false">
+        <label>Search <input id="search" type="search" placeholder="Code, title, role, status…" /></label>
+        <label>Status <select id="status"><option value="">All statuses</option></select></label>
+        <label>Type <select id="type"><option value="">All types</option><option>MODULE</option><option>LESSON</option><option>PROJECT</option><option>ASSET</option></select></label>
+      </form>
+      <section class="boundary"><strong>Language boundary:</strong> Russian-first core records are normalized. <code>content/en</code> is an empty, controlled future documentary namespace.</section>
+      <table><thead><tr><th>Code</th><th>Type</th><th>Title / role</th><th>Status</th></tr></thead><tbody id="rows"></tbody></table>
+      <section class="previews">
+        <article><h2>MNOT public preview</h2><pre id="mnot"></pre></article>
+        <article><h2>Transcript preview</h2><pre id="transcript"></pre></article>
+        <article><h2>Vocabulary preview</h2><pre id="vocab"></pre></article>
+        <article><h2>Public quiz payload</h2><pre id="quiz"></pre><p id="server-key-status">Server-only answer-key status is loading from a client-safe summary report.</p></article>
+      </section>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

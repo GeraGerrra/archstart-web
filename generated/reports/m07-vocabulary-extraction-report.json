@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0.0",
+  "items": [
+    {
+      "lessonCode": "M07_L01",
+      "sourceFile": "M07/M07_L01/M07_L01_VOCB.pdf",
+      "entryCount": 21,
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "warnings": [],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M07_L02",
+      "sourceFile": "M07/M07_L02/M07_L02_VOCB.pdf",
+      "entryCount": 22,
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "warnings": [],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M07_L03",
+      "sourceFile": "M07/M07_L03/M07_L03_VOCB.pdf",
+      "entryCount": 22,
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "warnings": [],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M07_L04",
+      "sourceFile": "M07/M07_L04/M07_L04_VOCB.pdf",
+      "entryCount": 21,
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "warnings": [
+        "M07/M07_L04/M07_L04_VOCB.pdf: uncertain label geometry for entry 22 on page 5"
+      ],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS_WITH_WARNINGS"
+    },
+    {
+      "lessonCode": "M07_L05",
+      "sourceFile": "M07/M07_L05/M07_L05_VOCB.pdf",
+      "entryCount": 20,
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "warnings": [
+        "M07/M07_L05/M07_L05_VOCB.pdf: uncertain label geometry for entry 21 on page 5"
+      ],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS_WITH_WARNINGS"
+    }
+  ]
+}

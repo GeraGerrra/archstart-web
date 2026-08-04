@@ -1,0 +1,3164 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "phase01-source-2026-07-27",
+  "generatedAt": "2026-07-27T23:29:02.225Z",
+  "course": {
+    "code": "ARCHSTART",
+    "name": "ARCH.START",
+    "languageMode": "RUSSIAN_FIRST_CORE",
+    "moduleCount": 8,
+    "lessonCount": 40,
+    "projectCount": 8,
+    "quizQuestionCount": 200
+  },
+  "modules": [
+    {
+      "code": "M01",
+      "titleRu": "Архитектурное мышление: пространство, масштаб, функция",
+      "titleEn": "Architectural Thinking: Space, Scale, Function",
+      "order": 1,
+      "lessonCodes": [
+        "M01_L01",
+        "M01_L02",
+        "M01_L03",
+        "M01_L04",
+        "M01_L05"
+      ],
+      "projectCode": "M01_P01",
+      "goal": "Научиться видеть архитектуру как систему решений: кто пользуется пространством, что там происходит, как человек двигается и что можно улучшить.",
+      "outcomes": [
+        {
+          "order": 1,
+          "label": "Читать / Read",
+          "text": "читать небольшое пространство через пользователя, функцию, движение, масштаб и проблему.",
+          "sourceText": "Читать / Read — читать небольшое пространство через пользователя, функцию, движение, масштаб и проблему."
+        },
+        {
+          "order": 2,
+          "label": "Анализировать / Analyze",
+          "text": "анализировать, почему пространство работает плохо, нормально или хорошо.",
+          "sourceText": "Анализировать / Analyze — анализировать, почему пространство работает плохо, нормально или хорошо."
+        },
+        {
+          "order": 3,
+          "label": "Показывать схемой / Diagram",
+          "text": "показывать план, разрез, движение, масштаб и простую концепцию через схемы.",
+          "sourceText": "Показывать схемой / Diagram — показывать план, разрез, движение, масштаб и простую концепцию через схемы."
+        },
+        {
+          "order": 4,
+          "label": "Выбирать решение / Decide",
+          "text": "выбирать проектные решения на основе задачи, пользователя и ограничений.",
+          "sourceText": "Выбирать решение / Decide — выбирать проектные решения на основе задачи, пользователя и ограничений."
+        },
+        {
+          "order": 5,
+          "label": "Создавать / Produce",
+          "text": "создавать ясную доску чтения пространства с проблемой, схемами и улучшениями.",
+          "sourceText": "Создавать / Produce — создавать ясную доску чтения пространства с проблемой, схемами и улучшениями."
+        }
+      ],
+      "status": "AVAILABLE",
+      "contentVersion": "phase01-source-2026-07-27"
+    },
+    {
+      "code": "M02",
+      "titleRu": "История и стили: архитектура как машина времени",
+      "titleEn": "History and Styles: Architecture as a Time Machine",
+      "order": 2,
+      "lessonCodes": [
+        "M02_L01",
+        "M02_L02",
+        "M02_L03",
+        "M02_L04",
+        "M02_L05"
+      ],
+      "projectCode": "M02_P02",
+      "goal": "Научиться читать архитектуру через время, общество, материалы, технологии, конструкцию и культурный смысл, а не запоминать стили как декор.",
+      "outcomes": [
+        {
+          "order": 1,
+          "label": "Читать / Read",
+          "text": "читать историческое здание через форму, материал, конструкцию, функцию и эпоху.",
+          "sourceText": "Читать / Read — читать историческое здание через форму, материал, конструкцию, функцию и эпоху."
+        },
+        {
+          "order": 2,
+          "label": "Анализировать / Analyze",
+          "text": "анализировать, почему архитектурный стиль появился в конкретном времени и обществе.",
+          "sourceText": "Анализировать / Analyze — анализировать, почему архитектурный стиль появился в конкретном времени и обществе."
+        },
+        {
+          "order": 3,
+          "label": "Показывать схемой / Diagram",
+          "text": "показывать стиль, ось, симметрию, материал, конструкцию и исторический контекст через схемы.",
+          "sourceText": "Показывать схемой / Diagram — показывать стиль, ось, симметрию, материал, конструкцию и исторический контекст через схемы."
+        },
+        {
+          "order": 4,
+          "label": "Выбирать решение / Decide",
+          "text": "выбирать доказательства, которые связывают внешний вид здания с его исторической логикой.",
+          "sourceText": "Выбирать решение / Decide — выбирать доказательства, которые связывают внешний вид здания с его исторической логикой."
+        },
+        {
+          "order": 5,
+          "label": "Создавать / Produce",
+          "text": "создавать архитектурное исследование здания как case study, а не как список красивых признаков.",
+          "sourceText": "Создавать / Produce — создавать архитектурное исследование здания как case study, а не как список красивых признаков."
+        }
+      ],
+      "status": "AVAILABLE",
+      "contentVersion": "phase01-source-2026-07-27"
+    },
+    {
+      "code": "M03",
+      "titleRu": "Участок, свет, ветер, температура",
+      "titleEn": "Site, Light, Wind, Temperature",
+      "order": 3,
+      "lessonCodes": [
+        "M03_L01",
+        "M03_L02",
+        "M03_L03",
+        "M03_L04",
+        "M03_L05"
+      ],
+      "projectCode": "M03_P03",
+      "goal": "Научиться понимать, что здание работает не в пустоте, а вместе с участком, солнцем, ветром, водой, температурой, шумом и видами.",
+      "outcomes": [
+        {
+          "order": 1,
+          "label": "Читать / Read",
+          "text": "читать участок через доступ, ориентацию, солнце, ветер, воду, шум, виды и микроклимат.",
+          "sourceText": "Читать / Read — читать участок через доступ, ориентацию, солнце, ветер, воду, шум, виды и микроклимат."
+        },
+        {
+          "order": 2,
+          "label": "Анализировать / Analyze",
+          "text": "анализировать, как климатические условия влияют на комфорт и проектные решения.",
+          "sourceText": "Анализировать / Analyze — анализировать, как климатические условия влияют на комфорт и проектные решения."
+        },
+        {
+          "order": 3,
+          "label": "Показывать схемой / Diagram",
+          "text": "показывать site layers, sun path, daylight, airflow, thermal comfort, runoff and microclimate diagrams.",
+          "sourceText": "Показывать схемой / Diagram — показывать site layers, sun path, daylight, airflow, thermal comfort, runoff and microclimate diagrams."
+        },
+        {
+          "order": 4,
+          "label": "Выбирать решение / Decide",
+          "text": "выбирать климатические стратегии для света, вентиляции, тепла, воды и outdoor comfort.",
+          "sourceText": "Выбирать решение / Decide — выбирать климатические стратегии для света, вентиляции, тепла, воды и outdoor comfort."
+        },
+        {
+          "order": 5,
+          "label": "Создавать / Produce",
+          "text": "создавать климатическую диаграмму, которая связывает условия участка с архитектурными решениями.",
+          "sourceText": "Создавать / Produce — создавать климатическую диаграмму, которая связывает условия участка с архитектурными решениями."
+        }
+      ],
+      "status": "AVAILABLE",
+      "contentVersion": "phase01-source-2026-07-27"
+    },
+    {
+      "code": "M04",
+      "titleRu": "Конструктивная инженерия для архитекторов",
+      "titleEn": "Structural Engineering for Architects",
+      "order": 4,
+      "lessonCodes": [
+        "M04_L01",
+        "M04_L02",
+        "M04_L03",
+        "M04_L04",
+        "M04_L05"
+      ],
+      "projectCode": "M04_P04",
+      "goal": "Научиться понимать, как здание физически стоит: куда идёт нагрузка, что несёт конструкция, какая система выбрана и как здание можно построить.",
+      "outcomes": [
+        {
+          "order": 1,
+          "label": "Читать / Read",
+          "text": "читать здание через load path, foundation, walls, columns, beams, slabs and structural system.",
+          "sourceText": "Читать / Read — читать здание через load path, foundation, walls, columns, beams, slabs and structural system."
+        },
+        {
+          "order": 2,
+          "label": "Анализировать / Analyze",
+          "text": "анализировать, где конструктивная логика ясна, а где есть слабое место или broken load path.",
+          "sourceText": "Анализировать / Analyze — анализировать, где конструктивная логика ясна, а где есть слабое место или broken load path."
+        },
+        {
+          "order": 3,
+          "label": "Показывать схемой / Diagram",
+          "text": "показывать нагрузку, конструктивную анатомию, систему, устойчивость и sequence через схемы.",
+          "sourceText": "Показывать схемой / Diagram — показывать нагрузку, конструктивную анатомию, систему, устойчивость и sequence через схемы."
+        },
+        {
+          "order": 4,
+          "label": "Выбирать решение / Decide",
+          "text": "выбирать конструктивную систему и исправление слабого места с учётом span, openness, cost and trade-off.",
+          "sourceText": "Выбирать решение / Decide — выбирать конструктивную систему и исправление слабого места с учётом span, openness, cost and trade-off."
+        },
+        {
+          "order": 5,
+          "label": "Создавать / Produce",
+          "text": "создавать exploded axonometric, который объясняет structural anatomy, load path and buildability.",
+          "sourceText": "Создавать / Produce — создавать exploded axonometric, который объясняет structural anatomy, load path and buildability."
+        }
+      ],
+      "status": "AVAILABLE",
+      "contentVersion": "phase01-source-2026-07-27"
+    },
+    {
+      "code": "M05",
+      "titleRu": "Материалы, оболочка, детали",
+      "titleEn": "Materials, Envelope, Details",
+      "order": 5,
+      "lessonCodes": [
+        "M05_L01",
+        "M05_L02",
+        "M05_L03",
+        "M05_L04",
+        "M05_L05"
+      ],
+      "projectCode": "M05_P05",
+      "goal": "Научиться выбирать материалы, слои оболочки и детали по работе, долговечности, уходу, климату, конструкции и компромиссам, а не по moodboard logic.",
+      "outcomes": [
+        {
+          "order": 1,
+          "label": "Читать / Read",
+          "text": "читать материалы как performance choices, а не как декоративные поверхности.",
+          "sourceText": "Читать / Read — читать материалы как performance choices, а не как декоративные поверхности."
+        },
+        {
+          "order": 2,
+          "label": "Анализировать / Analyze",
+          "text": "анализировать слои стены, путь воды, теплопередачу, слабые места деталей и старение материалов.",
+          "sourceText": "Анализировать / Analyze — анализировать слои стены, путь воды, теплопередачу, слабые места деталей и старение материалов."
+        },
+        {
+          "order": 3,
+          "label": "Показывать схемой / Diagram",
+          "text": "показывать material matrix, wall section, critical detail, water path and aging timeline.",
+          "sourceText": "Показывать схемой / Diagram — показывать material matrix, wall section, critical detail, water path and aging timeline."
+        },
+        {
+          "order": 4,
+          "label": "Выбирать решение / Decide",
+          "text": "выбирать material strategy по климату, конструкции, долговечности, уходу, стоимости и атмосфере.",
+          "sourceText": "Выбирать решение / Decide — выбирать material strategy по климату, конструкции, долговечности, уходу, стоимости и атмосфере."
+        },
+        {
+          "order": 5,
+          "label": "Создавать / Produce",
+          "text": "создавать Material Strategy Board с материалами, оболочкой, критическим узлом, рисками и maintenance logic.",
+          "sourceText": "Создавать / Produce — создавать Material Strategy Board с материалами, оболочкой, критическим узлом, рисками и maintenance logic."
+        }
+      ],
+      "status": "AVAILABLE",
+      "contentVersion": "phase01-source-2026-07-27"
+    },
+    {
+      "code": "M06",
+      "titleRu": "Экология, принципы LEED, углерод, ресурсы",
+      "titleEn": "Ecology, LEED Principles, Carbon, Resources",
+      "order": 6,
+      "lessonCodes": [
+        "M06_L01",
+        "M06_L02",
+        "M06_L03",
+        "M06_L04",
+        "M06_L05"
+      ],
+      "projectCode": "M06_P06",
+      "goal": "Научиться отличать реальную sustainability от green aesthetic и объяснять устойчивость через энергию, воду, углерод, здоровье, материалы и экологию участка.",
+      "outcomes": [
+        {
+          "order": 1,
+          "label": "Читать / Read",
+          "text": "читать устойчивость здания через energy, water, carbon, health, materials, site ecology and lifecycle.",
+          "sourceText": "Читать / Read — читать устойчивость здания через energy, water, carbon, health, materials, site ecology and lifecycle."
+        },
+        {
+          "order": 2,
+          "label": "Анализировать / Analyze",
+          "text": "анализировать, где есть реальная performance strategy, а где только зелёная заявка без доказательств.",
+          "sourceText": "Анализировать / Analyze — анализировать, где есть реальная performance strategy, а где только зелёная заявка без доказательств."
+        },
+        {
+          "order": 3,
+          "label": "Показывать схемой / Diagram",
+          "text": "показывать sustainability diagnosis, scorecard, carbon timeline, passive section and ecology strategy map.",
+          "sourceText": "Показывать схемой / Diagram — показывать sustainability diagnosis, scorecard, carbon timeline, passive section and ecology strategy map."
+        },
+        {
+          "order": 4,
+          "label": "Выбирать решение / Decide",
+          "text": "выбирать sustainability strategies с учётом evidence, trade-offs and measurable impact.",
+          "sourceText": "Выбирать решение / Decide — выбирать sustainability strategies с учётом evidence, trade-offs and measurable impact."
+        },
+        {
+          "order": 5,
+          "label": "Создавать / Produce",
+          "text": "создавать Mini LEED-Inspired Strategy, которая связывает экологические цели с архитектурными решениями.",
+          "sourceText": "Создавать / Produce — создавать Mini LEED-Inspired Strategy, которая связывает экологические цели с архитектурными решениями."
+        }
+      ],
+      "status": "AVAILABLE",
+      "contentVersion": "phase01-source-2026-07-27"
+    },
+    {
+      "code": "M07",
+      "titleRu": "Риски, катастрофы, устойчивость",
+      "titleEn": "Risk, Disasters, Resilience",
+      "order": 7,
+      "lessonCodes": [
+        "M07_L01",
+        "M07_L02",
+        "M07_L03",
+        "M07_L04",
+        "M07_L05"
+      ],
+      "projectCode": "M07_P07",
+      "goal": "Научиться думать о здании не только в обычный день, но и под нагрузкой риска: землетрясение, вода, пожар, жара, ветер и сбои инфраструктуры.",
+      "outcomes": [
+        {
+          "order": 1,
+          "label": "Читать / Read",
+          "text": "читать здание через hazard, exposure, vulnerability, risk and resilience.",
+          "sourceText": "Читать / Read — читать здание через hazard, exposure, vulnerability, risk and resilience."
+        },
+        {
+          "order": 2,
+          "label": "Анализировать / Analyze",
+          "text": "анализировать слабые места здания при землетрясении, воде, пожаре, жаре, ветре и emergency conditions.",
+          "sourceText": "Анализировать / Analyze — анализировать слабые места здания при землетрясении, воде, пожаре, жаре, ветре и emergency conditions."
+        },
+        {
+          "order": 3,
+          "label": "Показывать схемой / Diagram",
+          "text": "показывать hazard map, vulnerability diagram, flood section, evacuation plan and adaptation strategy.",
+          "sourceText": "Показывать схемой / Diagram — показывать hazard map, vulnerability diagram, flood section, evacuation plan and adaptation strategy."
+        },
+        {
+          "order": 4,
+          "label": "Выбирать решение / Decide",
+          "text": "выбирать upgrade strategies: avoid, resist, absorb, adapt, recover.",
+          "sourceText": "Выбирать решение / Decide — выбирать upgrade strategies: avoid, resist, absorb, adapt, recover."
+        },
+        {
+          "order": 5,
+          "label": "Создавать / Produce",
+          "text": "создавать Resilient Building Upgrade с рисками, улучшениями, safety logic and trade-offs.",
+          "sourceText": "Создавать / Produce — создавать Resilient Building Upgrade с рисками, улучшениями, safety logic and trade-offs."
+        }
+      ],
+      "status": "AVAILABLE",
+      "contentVersion": "phase01-source-2026-07-27"
+    },
+    {
+      "code": "M08",
+      "titleRu": "Профессиональная подача и презентация",
+      "titleEn": "Professional and Presentation Guide",
+      "order": 8,
+      "lessonCodes": [
+        "M08_L01",
+        "M08_L02",
+        "M08_L03",
+        "M08_L04",
+        "M08_L05"
+      ],
+      "projectCode": "M08_P08",
+      "goal": "Научиться представлять архитектурный проект как ясный аргумент через drawings, diagrams, boards, portfolio, critique and defense.",
+      "outcomes": [
+        {
+          "order": 1,
+          "label": "Читать / Read",
+          "text": "читать собственный проект как набор доказательств: brief, site, plan, section, structure, material, sustainability and risk logic.",
+          "sourceText": "Читать / Read — читать собственный проект как набор доказательств: brief, site, plan, section, structure, material, sustainability and risk logic."
+        },
+        {
+          "order": 2,
+          "label": "Анализировать / Analyze",
+          "text": "анализировать, какие drawings and representations лучше объясняют проблему, процесс, решение и trade-off.",
+          "sourceText": "Анализировать / Analyze — анализировать, какие drawings and representations лучше объясняют проблему, процесс, решение и trade-off."
+        },
+        {
+          "order": 3,
+          "label": "Показывать схемой / Diagram",
+          "text": "показывать drawing set, board layout, portfolio sequence, representation choice and presentation script.",
+          "sourceText": "Показывать схемой / Diagram — показывать drawing set, board layout, portfolio sequence, representation choice and presentation script."
+        },
+        {
+          "order": 4,
+          "label": "Выбирать решение / Decide",
+          "text": "выбирать, что показать на board, что оставить в portfolio, а что убрать как лишнее.",
+          "sourceText": "Выбирать решение / Decide — выбирать, что показать на board, что оставить в portfolio, а что убрать как лишнее."
+        },
+        {
+          "order": 5,
+          "label": "Создавать / Produce",
+          "text": "создавать Final Architecture Presentation Pack с доской, drawing set, portfolio spread and 2-minute defense.",
+          "sourceText": "Создавать / Produce — создавать Final Architecture Presentation Pack с доской, drawing set, portfolio spread and 2-minute defense."
+        }
+      ],
+      "status": "AVAILABLE",
+      "contentVersion": "phase01-source-2026-07-27"
+    }
+  ],
+  "lessons": [
+    {
+      "code": "M01_L01",
+      "moduleCode": "M01",
+      "orderInModule": 1,
+      "globalOrder": 1,
+      "titleRu": "Что делает архитектор: не фасад, а система решений",
+      "titleEn": "What an Architect Does: Not Facade, but a System of Decisions",
+      "objective": "Понять, что архитектор работает не только с внешним видом здания, а с системой людей, задач, пространства, климата, конструкции и решений.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему архитектура начинается не с красивого фасада, а с понимания задачи.",
+          "sourceText": "Объяснить / Explain — объяснить, почему архитектура начинается не с красивого фасада, а с понимания задачи."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти в небольшом здании или пространстве пользователя, функцию, вход, движение и проблему.",
+          "sourceText": "Найти / Identify — найти в небольшом здании или пространстве пользователя, функцию, вход, движение и проблему."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, что в пространстве работает плохо, нормально или хорошо.",
+          "sourceText": "Проанализировать / Analyze — определить, что в пространстве работает плохо, нормально или хорошо."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать здание через 5 простых слоёв: people, site, structure, climate, function.",
+          "sourceText": "Показать схемой / Diagram — показать здание через 5 простых слоёв: people, site, structure, climate, function."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать, какую проблему стоит решать первой и почему.",
+          "sourceText": "Выбрать решение / Decide — выбрать, какую проблему стоит решать первой и почему."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать 5-Layer Architecture Reading Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать 5-Layer Architecture Reading Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "VIDEO_PENDING",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M01_L02",
+      "moduleCode": "M01",
+      "orderInModule": 2,
+      "globalOrder": 2,
+      "titleRu": "Бриф, пользователь, программа: как задача превращается в пространство",
+      "titleEn": "Brief, User, Program: How a Task Becomes Space",
+      "objective": "Научиться превращать простую задачу в понятный brief, user scenario и программу пространства.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, зачем проекту нужны brief, user и program.",
+          "sourceText": "Объяснить / Explain — объяснить, зачем проекту нужны brief, user и program."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти главного пользователя, его действия, потребности и ограничения.",
+          "sourceText": "Найти / Identify — найти главного пользователя, его действия, потребности и ограничения."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, какие зоны должны быть рядом, а какие лучше разделить.",
+          "sourceText": "Проанализировать / Analyze — определить, какие зоны должны быть рядом, а какие лучше разделить."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать связи между зонами через простую adjacency diagram.",
+          "sourceText": "Показать схемой / Diagram — показать связи между зонами через простую adjacency diagram."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать, какая организация пространства лучше отвечает сценарию пользователя.",
+          "sourceText": "Выбрать решение / Decide — выбрать, какая организация пространства лучше отвечает сценарию пользователя."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Brief + User Scenario + Adjacency Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Brief + User Scenario + Adjacency Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "VIDEO_PENDING",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M01_L03",
+      "moduleCode": "M01",
+      "orderInModule": 3,
+      "globalOrder": 3,
+      "titleRu": "План, разрез, фасад: как читать архитектурные чертежи",
+      "titleEn": "Plan, Section, Elevation: How to Read Architectural Drawings",
+      "objective": "Научиться понимать, что plan, section and elevation отвечают на разные архитектурные вопросы.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, чем отличаются план, разрез и фасад.",
+          "sourceText": "Объяснить / Explain — объяснить, чем отличаются план, разрез и фасад."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти на чертеже вход, стены, проёмы, высоты, уровни и основные зоны.",
+          "sourceText": "Найти / Identify — найти на чертеже вход, стены, проёмы, высоты, уровни и основные зоны."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, какую информацию лучше читать в плане, разрезе или фасаде.",
+          "sourceText": "Проанализировать / Analyze — определить, какую информацию лучше читать в плане, разрезе или фасаде."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать один объект через plan, section and elevation.",
+          "sourceText": "Показать схемой / Diagram — показать один объект через plan, section and elevation."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать правильный тип чертежа для конкретного вопроса.",
+          "sourceText": "Выбрать решение / Decide — выбрать правильный тип чертежа для конкретного вопроса."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Plan / Section / Elevation Reading Sheet для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Plan / Section / Elevation Reading Sheet для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "VIDEO_PENDING",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M01_L04",
+      "moduleCode": "M01",
+      "orderInModule": 4,
+      "globalOrder": 4,
+      "titleRu": "Масштаб, пропорция, ритм, иерархия",
+      "titleEn": "Scale, Proportion, Rhythm, Hierarchy",
+      "objective": "Научиться видеть, как масштаб, пропорция, ритм и иерархия влияют на ощущение пространства.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему пространство может ощущаться тесным, хаотичным, спокойным или торжественным.",
+          "sourceText": "Объяснить / Explain — объяснить, почему пространство может ощущаться тесным, хаотичным, спокойным или торжественным."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти human scale, rhythm, focal point, repeated elements and hierarchy в пространстве.",
+          "sourceText": "Найти / Identify — найти human scale, rhythm, focal point, repeated elements and hierarchy в пространстве."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, какие элементы делают пространство сбалансированным или перегруженным.",
+          "sourceText": "Проанализировать / Analyze — определить, какие элементы делают пространство сбалансированным или перегруженным."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать scale, proportion, rhythm and hierarchy через простые схемы.",
+          "sourceText": "Показать схемой / Diagram — показать scale, proportion, rhythm and hierarchy через простые схемы."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать, какой элемент нужно изменить, чтобы улучшить восприятие пространства.",
+          "sourceText": "Выбрать решение / Decide — выбрать, какой элемент нужно изменить, чтобы улучшить восприятие пространства."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Scale / Proportion / Rhythm / Hierarchy Analysis для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Scale / Proportion / Rhythm / Hierarchy Analysis для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "VIDEO_PENDING",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M01_L05",
+      "moduleCode": "M01",
+      "orderInModule": 5,
+      "globalOrder": 5,
+      "titleRu": "Концепция и итерация: как идея становится проектом",
+      "titleEn": "Concept and Iteration: How an Idea Becomes a Project",
+      "objective": "Понять, что concept становится проектом через проверки, ограничения, изменения и iterations.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, чем рабочая concept отличается от красивой фразы.",
+          "sourceText": "Объяснить / Explain — объяснить, чем рабочая concept отличается от красивой фразы."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти в проекте главную идею, ограничение, проблему и возможность улучшения.",
+          "sourceText": "Найти / Identify — найти в проекте главную идею, ограничение, проблему и возможность улучшения."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "сравнить несколько вариантов и определить, какой лучше отвечает задаче.",
+          "sourceText": "Проанализировать / Analyze — сравнить несколько вариантов и определить, какой лучше отвечает задаче."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать развитие идеи через простую iteration sequence.",
+          "sourceText": "Показать схемой / Diagram — показать развитие идеи через простую iteration sequence."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать лучшую итерацию и объяснить trade-off.",
+          "sourceText": "Выбрать решение / Decide — выбрать лучшую итерацию и объяснить trade-off."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Concept + Iteration Sequence для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Concept + Iteration Sequence для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "VIDEO_PENDING",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M02_L01",
+      "moduleCode": "M02",
+      "orderInModule": 1,
+      "globalOrder": 6,
+      "titleRu": "Древняя архитектура: Египет, Греция, Рим",
+      "titleEn": "Ancient Architecture: Egypt, Greece, Rome",
+      "objective": "Научиться читать древнюю архитектуру через власть, религию, общество, материал, массу, колонну, арку и публичное пространство.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему древние здания часто связаны с властью, ритуалом и общественной жизнью.",
+          "sourceText": "Объяснить / Explain — объяснить, почему древние здания часто связаны с властью, ритуалом и общественной жизнью."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти mass, column, order, arch, dome and public space в примерах древней архитектуры.",
+          "sourceText": "Найти / Identify — найти mass, column, order, arch, dome and public space в примерах древней архитектуры."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, как stone, labor, engineering and belief повлияли на форму здания.",
+          "sourceText": "Проанализировать / Analyze — определить, как stone, labor, engineering and belief повлияли на форму здания."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать древнее здание через материал, конструкцию, форму и социальную функцию.",
+          "sourceText": "Показать схемой / Diagram — показать древнее здание через материал, конструкцию, форму и социальную функцию."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать главные признаки, которые доказывают архитектурную логику эпохи.",
+          "sourceText": "Выбрать решение / Decide — выбрать главные признаки, которые доказывают архитектурную логику эпохи."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Ancient Architecture Analysis Card для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Ancient Architecture Analysis Card для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M02_L02",
+      "moduleCode": "M02",
+      "orderInModule": 2,
+      "globalOrder": 7,
+      "titleRu": "Средневековая, византийская, исламская и вернакулярная архитектура",
+      "titleEn": "Medieval, Byzantine, Islamic, and Vernacular Architecture",
+      "objective": "Научиться сравнивать архитектуру разных культур через climate, light, protection, gathering, material and construction logic.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, как климат, религия, защита и повседневная жизнь влияли на архитектуру.",
+          "sourceText": "Объяснить / Explain — объяснить, как климат, религия, защита и повседневная жизнь влияли на архитектуру."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти courtyard, thick wall, dome, vault, ornament, shade and climate response в примерах.",
+          "sourceText": "Найти / Identify — найти courtyard, thick wall, dome, vault, ornament, shade and climate response в примерах."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "сравнить, как разные культуры решали свет, тепло, собрание людей и защиту.",
+          "sourceText": "Проанализировать / Analyze — сравнить, как разные культуры решали свет, тепло, собрание людей и защиту."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать связь culture, climate, structure and space через comparison card.",
+          "sourceText": "Показать схемой / Diagram — показать связь culture, climate, structure and space через comparison card."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать, какие архитектурные признаки лучше всего объясняют контекст здания.",
+          "sourceText": "Выбрать решение / Decide — выбрать, какие архитектурные признаки лучше всего объясняют контекст здания."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Climate / Culture / Structure Comparison Card для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Climate / Culture / Structure Comparison Card для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M02_L03",
+      "moduleCode": "M02",
+      "orderInModule": 3,
+      "globalOrder": 8,
+      "titleRu": "Ренессанс, барокко, классицизм",
+      "titleEn": "Renaissance, Baroque, Classicism",
+      "objective": "Научиться читать архитектуру через ось, симметрию, перспективу, порядок, власть и драматургию пространства.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, как axis, symmetry and perspective помогают управлять восприятием пространства.",
+          "sourceText": "Объяснить / Explain — объяснить, как axis, symmetry and perspective помогают управлять восприятием пространства."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти ось, центр, симметрию, порядок, движение взгляда и главный акцент.",
+          "sourceText": "Найти / Identify — найти ось, центр, симметрию, порядок, движение взгляда и главный акцент."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "сравнить спокойную рациональную композицию и драматическое направленное пространство.",
+          "sourceText": "Проанализировать / Analyze — сравнить спокойную рациональную композицию и драматическое направленное пространство."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать axis, symmetry, hierarchy and movement через простые схемы.",
+          "sourceText": "Показать схемой / Diagram — показать axis, symmetry, hierarchy and movement через простые схемы."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать, какие композиционные признаки лучше доказывают стиль или эпоху.",
+          "sourceText": "Выбрать решение / Decide — выбрать, какие композиционные признаки лучше доказывают стиль или эпоху."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Axis / Symmetry / Power Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Axis / Symmetry / Power Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M02_L04",
+      "moduleCode": "M02",
+      "orderInModule": 4,
+      "globalOrder": 9,
+      "titleRu": "Индустриальная эпоха и модернизм",
+      "titleEn": "Industrial Age and Modernism",
+      "objective": "Понять, как steel, glass, concrete, standardization and free plan изменили архитектурную форму и пространство.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему модернизм связан не только с простотой формы, но и с технологией.",
+          "sourceText": "Объяснить / Explain — объяснить, почему модернизм связан не только с простотой формы, но и с технологией."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти frame, glass facade, concrete, free plan, standard module and industrial logic.",
+          "sourceText": "Найти / Identify — найти frame, glass facade, concrete, free plan, standard module and industrial logic."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, как новые материалы и производство изменили план, фасад и конструкцию.",
+          "sourceText": "Проанализировать / Analyze — определить, как новые материалы и производство изменили план, фасад и конструкцию."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать связь material, technology, structure and form через diagram.",
+          "sourceText": "Показать схемой / Diagram — показать связь material, technology, structure and form через diagram."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать признаки, которые доказывают modernist or industrial logic.",
+          "sourceText": "Выбрать решение / Decide — выбрать признаки, которые доказывают modernist or industrial logic."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Modernism / Industrial Logic Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Modernism / Industrial Logic Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M02_L05",
+      "moduleCode": "M02",
+      "orderInModule": 5,
+      "globalOrder": 10,
+      "titleRu": "Современная архитектура",
+      "titleEn": "Contemporary Architecture",
+      "objective": "Понять contemporary architecture как набор разных подходов, а не как один стиль.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему современная архитектура не сводится к одной форме или эстетике.",
+          "sourceText": "Объяснить / Explain — объяснить, почему современная архитектура не сводится к одной форме или эстетике."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти high-tech, adaptive reuse, local design, social architecture and digital logic в примерах.",
+          "sourceText": "Найти / Identify — найти high-tech, adaptive reuse, local design, social architecture and digital logic в примерах."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, какой подход использует здание и какую проблему он решает.",
+          "sourceText": "Проанализировать / Analyze — определить, какой подход использует здание и какую проблему он решает."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать contemporary architecture через карту подходов и evidence.",
+          "sourceText": "Показать схемой / Diagram — показать contemporary architecture через карту подходов и evidence."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать, какой contemporary approach лучше объясняет выбранный пример.",
+          "sourceText": "Выбрать решение / Decide — выбрать, какой contemporary approach лучше объясняет выбранный пример."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Contemporary Architecture Approach Map для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Contemporary Architecture Approach Map для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M03_L01",
+      "moduleCode": "M03",
+      "orderInModule": 1,
+      "globalOrder": 11,
+      "titleRu": "Анализ участка: как читать место",
+      "titleEn": "Site Analysis: How to Read a Place",
+      "objective": "Научиться читать участок как набор условий, которые влияют на архитектурные решения.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему здание всегда связано с местом, а не стоит в пустоте.",
+          "sourceText": "Объяснить / Explain — объяснить, почему здание всегда связано с местом, а не стоит в пустоте."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти access, sun, wind, noise, views, slope and water на участке.",
+          "sourceText": "Найти / Identify — найти access, sun, wind, noise, views, slope and water на участке."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, какие условия участка создают проблемы или возможности.",
+          "sourceText": "Проанализировать / Analyze — определить, какие условия участка создают проблемы или возможности."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать участок через layered site map.",
+          "sourceText": "Показать схемой / Diagram — показать участок через layered site map."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать design decisions, которые отвечают условиям участка.",
+          "sourceText": "Выбрать решение / Decide — выбрать design decisions, которые отвечают условиям участка."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Layered Site Analysis Map для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Layered Site Analysis Map для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M03_L02",
+      "moduleCode": "M03",
+      "orderInModule": 2,
+      "globalOrder": 12,
+      "titleRu": "Естественный свет и daylighting",
+      "titleEn": "Natural Light and Daylighting",
+      "objective": "Научиться читать дневной свет как ресурс и риск: полезный свет, прямое солнце, блики, контраст и глубина освещения.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему больше света не всегда означает лучшее пространство.",
+          "sourceText": "Объяснить / Explain — объяснить, почему больше света не всегда означает лучшее пространство."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти direct sun, diffuse light, glare, contrast and daylight depth в разрезе.",
+          "sourceText": "Найти / Identify — найти direct sun, diffuse light, glare, contrast and daylight depth в разрезе."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где свет помогает, а где мешает пользователю.",
+          "sourceText": "Проанализировать / Analyze — определить, где свет помогает, а где мешает пользователю."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать daylight strategy в section с короткими подписями и стрелками.",
+          "sourceText": "Показать схемой / Diagram — показать daylight strategy в section с короткими подписями и стрелками."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать shading or opening strategy для улучшения света.",
+          "sourceText": "Выбрать решение / Decide — выбрать shading or opening strategy для улучшения света."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Daylight Strategy Section для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Daylight Strategy Section для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M03_L03",
+      "moduleCode": "M03",
+      "orderInModule": 3,
+      "globalOrder": 13,
+      "titleRu": "Ветер, вентиляция, движение воздуха",
+      "titleEn": "Wind, Ventilation, Airflow",
+      "objective": "Научиться понимать воздух как путь через пространство: вход, выход, направление, давление и защита от ветра.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему ventilation требует пути, а не просто окна.",
+          "sourceText": "Объяснить / Explain — объяснить, почему ventilation требует пути, а не просто окна."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти inlet, outlet, wind direction, airflow path and blocked zone.",
+          "sourceText": "Найти / Identify — найти inlet, outlet, wind direction, airflow path and blocked zone."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где воздух проходит хорошо, а где поток блокируется или создаёт дискомфорт.",
+          "sourceText": "Проанализировать / Analyze — определить, где воздух проходит хорошо, а где поток блокируется или создаёт дискомфорт."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать airflow plan or section с направлением воздуха.",
+          "sourceText": "Показать схемой / Diagram — показать airflow plan or section с направлением воздуха."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать opening or wind protection strategy.",
+          "sourceText": "Выбрать решение / Decide — выбрать opening or wind protection strategy."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Airflow Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Airflow Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M03_L04",
+      "moduleCode": "M03",
+      "orderInModule": 4,
+      "globalOrder": 14,
+      "titleRu": "Температура и тепловой комфорт",
+      "titleEn": "Temperature and Thermal Comfort",
+      "objective": "Научиться понимать тепловой комфорт как сочетание воздуха, поверхностей, солнца, утепления и движения воздуха.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему комфорт зависит не только от температуры воздуха.",
+          "sourceText": "Объяснить / Explain — объяснить, почему комфорт зависит не только от температуры воздуха."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти hot surface, cold surface, direct sun, insulation gap and comfort zone.",
+          "sourceText": "Найти / Identify — найти hot surface, cold surface, direct sun, insulation gap and comfort zone."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где возникает перегрев, теплопотери или слабое место оболочки.",
+          "sourceText": "Проанализировать / Analyze — определить, где возникает перегрев, теплопотери или слабое место оболочки."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать thermal comfort section с теплом, воздухом и поверхностями.",
+          "sourceText": "Показать схемой / Diagram — показать thermal comfort section с теплом, воздухом и поверхностями."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать улучшение для comfort zone и назвать trade-off.",
+          "sourceText": "Выбрать решение / Decide — выбрать улучшение для comfort zone и назвать trade-off."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Thermal Comfort Section для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Thermal Comfort Section для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M03_L05",
+      "moduleCode": "M03",
+      "orderInModule": 5,
+      "globalOrder": 15,
+      "titleRu": "Вода, дренаж, микроклимат",
+      "titleEn": "Water, Drainage, Microclimate",
+      "objective": "Научиться читать воду, тень, поверхности и посадки как site performance logic, а не как украшение.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, как вода и микроклимат влияют на использование участка.",
+          "sourceText": "Объяснить / Explain — объяснить, как вода и микроклимат влияют на использование участка."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти slope, runoff, drainage, splash zone, shade and hot surface.",
+          "sourceText": "Найти / Identify — найти slope, runoff, drainage, splash zone, shade and hot surface."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где вода или перегретая поверхность создают проблему.",
+          "sourceText": "Проанализировать / Analyze — определить, где вода или перегретая поверхность создают проблему."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать runoff and microclimate strategy через план или разрез.",
+          "sourceText": "Показать схемой / Diagram — показать runoff and microclimate strategy через план или разрез."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать drainage, shade or permeable surface strategy.",
+          "sourceText": "Выбрать решение / Decide — выбрать drainage, shade or permeable surface strategy."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Runoff + Microclimate Strategy Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Runoff + Microclimate Strategy Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M04_L01",
+      "moduleCode": "M04",
+      "orderInModule": 1,
+      "globalOrder": 16,
+      "titleRu": "Путь нагрузки: как сила идёт к земле",
+      "titleEn": "Load Path: How Force Goes to the Ground",
+      "objective": "Научиться понимать, куда идёт нагрузка в здании и почему load path должен доходить до земли.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, что нагрузка должна иметь непрерывный путь к фундаменту и грунту.",
+          "sourceText": "Объяснить / Explain — объяснить, что нагрузка должна иметь непрерывный путь к фундаменту и грунту."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти roof load, slab load, beam, column, wall, foundation and ground.",
+          "sourceText": "Найти / Identify — найти roof load, slab load, beam, column, wall, foundation and ground."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где load path непрерывный, а где он обрывается.",
+          "sourceText": "Проанализировать / Analyze — определить, где load path непрерывный, а где он обрывается."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать load path arrows в section or axonometric.",
+          "sourceText": "Показать схемой / Diagram — показать load path arrows в section or axonometric."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать простой fix для broken load path.",
+          "sourceText": "Выбрать решение / Decide — выбрать простой fix для broken load path."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Load Path Reading Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Load Path Reading Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M04_L02",
+      "moduleCode": "M04",
+      "orderInModule": 2,
+      "globalOrder": 17,
+      "titleRu": "Фундаменты, стены, колонны, балки, плиты",
+      "titleEn": "Foundations, Walls, Columns, Beams, Slabs",
+      "objective": "Научиться видеть structural anatomy здания как связанную систему элементов, а не список частей.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, какую роль выполняют foundation, wall, column, beam and slab.",
+          "sourceText": "Объяснить / Explain — объяснить, какую роль выполняют foundation, wall, column, beam and slab."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти несущие элементы, ненесущие элементы, опоры и соединения.",
+          "sourceText": "Найти / Identify — найти несущие элементы, ненесущие элементы, опоры и соединения."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, кто что несёт и куда передаёт нагрузку.",
+          "sourceText": "Проанализировать / Analyze — определить, кто что несёт и куда передаёт нагрузку."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать structural anatomy section с подписями и стрелками.",
+          "sourceText": "Показать схемой / Diagram — показать structural anatomy section с подписями и стрелками."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать, какой элемент нужно добавить, выровнять или уточнить.",
+          "sourceText": "Выбрать решение / Decide — выбрать, какой элемент нужно добавить, выровнять или уточнить."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Structural Anatomy Section для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Structural Anatomy Section для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M04_L03",
+      "moduleCode": "M04",
+      "orderInModule": 3,
+      "globalOrder": 18,
+      "titleRu": "Конструктивные системы: каркас, несущие стены, ферма, оболочка",
+      "titleEn": "Structural Systems: Frame, Bearing Wall, Truss, Shell",
+      "objective": "Научиться выбирать structural system по span, openness, flexibility and trade-off, а не по внешнему виду.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, чем отличаются bearing wall, frame, truss and shell.",
+          "sourceText": "Объяснить / Explain — объяснить, чем отличаются bearing wall, frame, truss and shell."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти, какая система несёт нагрузку в простом примере.",
+          "sourceText": "Найти / Identify — найти, какая система несёт нагрузку в простом примере."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "сравнить системы по span, openness, flexibility, cost and material logic.",
+          "sourceText": "Проанализировать / Analyze — сравнить системы по span, openness, flexibility, cost and material logic."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать несколько structural systems на одном footprint.",
+          "sourceText": "Показать схемой / Diagram — показать несколько structural systems на одном footprint."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать систему, которая лучше подходит задаче пространства.",
+          "sourceText": "Выбрать решение / Decide — выбрать систему, которая лучше подходит задаче пространства."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Structural System Comparison Card для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Structural System Comparison Card для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M04_L04",
+      "moduleCode": "M04",
+      "orderInModule": 4,
+      "globalOrder": 19,
+      "titleRu": "Высотные здания: ядро, каркас, связи, боковые нагрузки",
+      "titleEn": "High-Rises: Core, Frame, Bracing, Lateral Loads",
+      "objective": "Научиться понимать high-rise как систему, которая сопротивляется не только весу, но и боковым нагрузкам.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему высотному зданию нужна lateral stability.",
+          "sourceText": "Объяснить / Explain — объяснить, почему высотному зданию нужна lateral stability."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти core, frame, bracing, wind load, sway and stiffness в diagram.",
+          "sourceText": "Найти / Identify — найти core, frame, bracing, wind load, sway and stiffness в diagram."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, почему tower может быть weak, partial or stable.",
+          "sourceText": "Проанализировать / Analyze — определить, почему tower может быть weak, partial or stable."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать core / frame / bracing diagram в плане и фасаде.",
+          "sourceText": "Показать схемой / Diagram — показать core / frame / bracing diagram в плане и фасаде."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать stability improvement для слабой tower diagram.",
+          "sourceText": "Выбрать решение / Decide — выбрать stability improvement для слабой tower diagram."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать High-Rise Stability Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать High-Rise Stability Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M04_L05",
+      "moduleCode": "M04",
+      "orderInModule": 5,
+      "globalOrder": 20,
+      "titleRu": "Этапы строительства и логика участка",
+      "titleEn": "Construction Phases and Site Logic",
+      "objective": "Научиться понимать construction sequence как buildability logic: что должно быть построено первым, что зависит от чего и где возникают конфликты.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему порядок строительства влияет на проект.",
+          "sourceText": "Объяснить / Explain — объяснить, почему порядок строительства влияет на проект."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти site prep, access, excavation, foundation, structure, envelope, MEP and finishes.",
+          "sourceText": "Найти / Identify — найти site prep, access, excavation, foundation, structure, envelope, MEP and finishes."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где sequence нарушена или где systems conflict.",
+          "sourceText": "Проанализировать / Analyze — определить, где sequence нарушена или где systems conflict."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать construction timeline and site logistics plan.",
+          "sourceText": "Показать схемой / Diagram — показать construction timeline and site logistics plan."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать fix для buildability issue.",
+          "sourceText": "Выбрать решение / Decide — выбрать fix для buildability issue."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Construction Sequence Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Construction Sequence Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M05_L01",
+      "moduleCode": "M05",
+      "orderInModule": 1,
+      "globalOrder": 21,
+      "titleRu": "Материалы как работа, а не декор",
+      "titleEn": "Materials as Performance, Not Decoration",
+      "objective": "Научиться понимать материал как решение, которое работает конструктивно, климатически, атмосферно и долговременно.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему material palette не должна быть просто moodboard.",
+          "sourceText": "Объяснить / Explain — объяснить, почему material palette не должна быть просто moodboard."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти role, risk, maintenance need and trade-off для выбранного материала.",
+          "sourceText": "Найти / Identify — найти role, risk, maintenance need and trade-off для выбранного материала."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, как материал влияет на структуру, климат, атмосферу и уход.",
+          "sourceText": "Проанализировать / Analyze — определить, как материал влияет на структуру, климат, атмосферу и уход."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать material performance matrix.",
+          "sourceText": "Показать схемой / Diagram — показать material performance matrix."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать материал по работе и последствиям, а не только по внешнему виду.",
+          "sourceText": "Выбрать решение / Decide — выбрать материал по работе и последствиям, а не только по внешнему виду."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Material Performance Matrix для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Material Performance Matrix для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M05_L02",
+      "moduleCode": "M05",
+      "orderInModule": 2,
+      "globalOrder": 22,
+      "titleRu": "Дерево, кирпич, бетон, сталь, стекло",
+      "titleEn": "Timber, Brick, Concrete, Steel, Glass",
+      "objective": "Научиться сравнивать основные материалы по сильным сторонам, слабым местам, климату, конструкции и уходу.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему разные материалы подходят разным задачам.",
+          "sourceText": "Объяснить / Explain — объяснить, почему разные материалы подходят разным задачам."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти strength, weakness, maintenance need and risk для timber, brick, concrete, steel and glass.",
+          "sourceText": "Найти / Identify — найти strength, weakness, maintenance need and risk для timber, brick, concrete, steel and glass."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "сравнить материалы по структуре, климату, долговечности, стоимости и атмосфере.",
+          "sourceText": "Проанализировать / Analyze — сравнить материалы по структуре, климату, долговечности, стоимости и атмосфере."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать material comparison matrix",
+          "sourceText": "Показать схемой / Diagram — показать material comparison matrix"
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать подходящий материал для конкретной части здания.",
+          "sourceText": "Выбрать решение / Decide — выбрать подходящий материал для конкретной части здания."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Material Comparison Matrix для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Material Comparison Matrix для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M05_L03",
+      "moduleCode": "M05",
+      "orderInModule": 3,
+      "globalOrder": 23,
+      "titleRu": "Оболочка здания: слои, теплоизоляция, гидроизоляция",
+      "titleEn": "Building Envelope: Layers, Insulation, Waterproofing",
+      "objective": "Научиться понимать стену и крышу как систему слоёв, которая защищает здание от холода, жары, воздуха и воды.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, зачем зданию нужна работающая оболочка, а не только фасадная поверхность.",
+          "sourceText": "Объяснить / Explain — объяснить, зачем зданию нужна работающая оболочка, а не только фасадная поверхность."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти основные слои стены: несущий слой, утепление, защиту от воды, наружную обшивку и внутреннюю отделку.",
+          "sourceText": "Найти / Identify — найти основные слои стены: несущий слой, утепление, защиту от воды, наружную обшивку и внутреннюю отделку."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где через стену могут проходить тепло, воздух или влага.",
+          "sourceText": "Проанализировать / Analyze — определить, где через стену могут проходить тепло, воздух или влага."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать слои стены в простом разрезе с короткими подписями и стрелками.",
+          "sourceText": "Показать схемой / Diagram — показать слои стены в простом разрезе с короткими подписями и стрелками."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать, какой слой нужно улучшить в слабом варианте стены.",
+          "sourceText": "Выбрать решение / Decide — выбрать, какой слой нужно улучшить в слабом варианте стены."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Envelope Layer Section для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Envelope Layer Section для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M05_L04",
+      "moduleCode": "M05",
+      "orderInModule": 4,
+      "globalOrder": 24,
+      "titleRu": "Детали и стыки: где здания дают сбой",
+      "titleEn": "Details and Joints: Where Buildings Fail",
+      "objective": "Научиться понимать детали и стыки как места, где чаще всего встречаются вода, воздух, тепло, движение и ошибки.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему узел важен для работы здания.",
+          "sourceText": "Объяснить / Explain — объяснить, почему узел важен для работы здания."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти roof edge, window corner, wall base, joint and water path.",
+          "sourceText": "Найти / Identify — найти roof edge, window corner, wall base, joint and water path."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где в детали может возникнуть вода, теплопередача или разрыв слоя.",
+          "sourceText": "Проанализировать / Analyze — определить, где в детали может возникнуть вода, теплопередача или разрыв слоя."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать critical detail с risk path and fix.",
+          "sourceText": "Показать схемой / Diagram — показать critical detail с risk path and fix."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать улучшение детали и назвать trade-off.",
+          "sourceText": "Выбрать решение / Decide — выбрать улучшение детали и назвать trade-off."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Critical Detail Failure/Fix Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Critical Detail Failure/Fix Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M05_L05",
+      "moduleCode": "M05",
+      "orderInModule": 5,
+      "globalOrder": 25,
+      "titleRu": "Долговечность, обслуживание, адаптивное переиспользование",
+      "titleEn": "Durability, Maintenance, Adaptive Reuse",
+      "objective": "Научиться думать о здании во времени: как материалы стареют, что нужно обслуживать, что можно сохранить, заменить или переиспользовать.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить разницу между нормальным старением, патиной и повреждением.",
+          "sourceText": "Объяснить / Explain — объяснить разницу между нормальным старением, патиной и повреждением."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти элементы, которые нужно обслуживать, ремонтировать, заменять или можно сохранить.",
+          "sourceText": "Найти / Identify — найти элементы, которые нужно обслуживать, ремонтировать, заменять или можно сохранить."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, как материал или деталь может выглядеть и работать через 5, 20 и 50 лет.",
+          "sourceText": "Проанализировать / Analyze — определить, как материал или деталь может выглядеть и работать через 5, 20 и 50 лет."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать aging, maintenance and reuse timeline.",
+          "sourceText": "Показать схемой / Diagram — показать aging, maintenance and reuse timeline."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать repair, replacement or reuse strategy.",
+          "sourceText": "Выбрать решение / Decide — выбрать repair, replacement or reuse strategy."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Aging + Maintenance + Reuse Strategy Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Aging + Maintenance + Reuse Strategy Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M06_L01",
+      "moduleCode": "M06",
+      "orderInModule": 1,
+      "globalOrder": 26,
+      "titleRu": "Основы устойчивости: энергия, вода, углерод, здоровье",
+      "titleEn": "Sustainability Basics: Energy, Water, Carbon, Health",
+      "objective": "Научиться отличать реальную sustainability strategy от зелёной картинки или красивого заявления.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему sustainability должна быть связана с performance, а не только с внешним видом.",
+          "sourceText": "Объяснить / Explain — объяснить, почему sustainability должна быть связана с performance, а не только с внешним видом."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти energy, water, carbon, health, materials and site factors.",
+          "sourceText": "Найти / Identify — найти energy, water, carbon, health, materials and site factors."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где есть evidence, а где только green claim.",
+          "sourceText": "Проанализировать / Analyze — определить, где есть evidence, а где только green claim."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать sustainability diagnosis diagram.",
+          "sourceText": "Показать схемой / Diagram — показать sustainability diagnosis diagram."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать устойчивую стратегию, которая реально связана с проблемой здания.",
+          "sourceText": "Выбрать решение / Decide — выбрать устойчивую стратегию, которая реально связана с проблемой здания."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Sustainability Diagnosis Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Sustainability Diagnosis Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M06_L02",
+      "moduleCode": "M06",
+      "orderInModule": 2,
+      "globalOrder": 27,
+      "titleRu": "Принципы LEED и логика рейтинга",
+      "titleEn": "LEED Principles and Rating Logic",
+      "objective": "Понять LEED-inspired logic как учебный способ проверять sustainability через категории, требования, evidence and trade-offs.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, чем обязательное требование отличается от optional credit.",
+          "sourceText": "Объяснить / Explain — объяснить, чем обязательное требование отличается от optional credit."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти categories: energy, water, materials, site and indoor environmental quality.",
+          "sourceText": "Найти / Identify — найти categories: energy, water, materials, site and indoor environmental quality."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, какие устойчивые решения имеют evidence, а какие остаются заявкой.",
+          "sourceText": "Проанализировать / Analyze — определить, какие устойчивые решения имеют evidence, а какие остаются заявкой."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать Mini LEED-Inspired Scorecard.",
+          "sourceText": "Показать схемой / Diagram — показать Mini LEED-Inspired Scorecard."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать 5 goals or credits, которые подходят маленькому проекту.",
+          "sourceText": "Выбрать решение / Decide — выбрать 5 goals or credits, которые подходят маленькому проекту."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Mini LEED-Inspired Scorecard для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Mini LEED-Inspired Scorecard для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M06_L03",
+      "moduleCode": "M06",
+      "orderInModule": 3,
+      "globalOrder": 28,
+      "titleRu": "Воплощённый углерод и жизненный цикл",
+      "titleEn": "Embodied Carbon and Lifecycle Thinking",
+      "objective": "Научиться думать о carbon не только во время эксплуатации здания, но и до строительства, во время ремонта и после использования.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить разницу между embodied carbon and operational carbon на beginner level.",
+          "sourceText": "Объяснить / Explain — объяснить разницу между embodied carbon and operational carbon на beginner level."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти lifecycle stages: material, transport, construction, operation, maintenance, reuse.",
+          "sourceText": "Найти / Identify — найти lifecycle stages: material, transport, construction, operation, maintenance, reuse."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где материал или решение создаёт carbon impact over time.",
+          "sourceText": "Проанализировать / Analyze — определить, где материал или решение создаёт carbon impact over time."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать embodied vs operational carbon timeline.",
+          "sourceText": "Показать схемой / Diagram — показать embodied vs operational carbon timeline."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать material or reuse strategy с меньшим долгосрочным impact.",
+          "sourceText": "Выбрать решение / Decide — выбрать material or reuse strategy с меньшим долгосрочным impact."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Embodied vs Operational Carbon Timeline для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Embodied vs Operational Carbon Timeline для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M06_L04",
+      "moduleCode": "M06",
+      "orderInModule": 4,
+      "globalOrder": 29,
+      "titleRu": "Пассивное проектирование и низкоэнергетические стратегии",
+      "titleEn": "Passive Design and Low-Energy Strategies",
+      "objective": "Научиться снижать energy demand через форму, ориентацию, тень, воздух и оболочку до добавления технологий.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему passive design начинается с формы и оболочки здания.",
+          "sourceText": "Объяснить / Explain — объяснить, почему passive design начинается с формы и оболочки здания."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти orientation, shade, daylight, airflow, insulation and thermal mass.",
+          "sourceText": "Найти / Identify — найти orientation, shade, daylight, airflow, insulation and thermal mass."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где здание получает лишнее тепло, теряет тепло или плохо проветривается.",
+          "sourceText": "Проанализировать / Analyze — определить, где здание получает лишнее тепло, теряет тепло или плохо проветривается."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать passive strategy section.",
+          "sourceText": "Показать схемой / Diagram — показать passive strategy section."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать low-energy strategy и назвать trade-off.",
+          "sourceText": "Выбрать решение / Decide — выбрать low-energy strategy и назвать trade-off."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Passive Strategy Section для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Passive Strategy Section для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M06_L05",
+      "moduleCode": "M06",
+      "orderInModule": 5,
+      "globalOrder": 30,
+      "titleRu": "Экология участка, биоразнообразие, вода, тепловой остров",
+      "titleEn": "Site Ecology, Biodiversity, Water, Heat Island",
+      "objective": "Научиться понимать site ecology как работу воды, тени, растений, поверхностей и outdoor comfort, а не как декоративное озеленение.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, как участок может поддерживать воду, тень, habitat and comfort.",
+          "sourceText": "Объяснить / Explain — объяснить, как участок может поддерживать воду, тень, habitat and comfort."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти runoff, infiltration, shade, planting, habitat and heat island areas.",
+          "sourceText": "Найти / Identify — найти runoff, infiltration, shade, planting, habitat and heat island areas."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где участок теряет воду, перегревается или не поддерживает biodiversity.",
+          "sourceText": "Проанализировать / Analyze — определить, где участок теряет воду, перегревается или не поддерживает biodiversity."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать site ecology strategy map.",
+          "sourceText": "Показать схемой / Diagram — показать site ecology strategy map."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать planting, water or cool surface strategy.",
+          "sourceText": "Выбрать решение / Decide — выбрать planting, water or cool surface strategy."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Site Ecology Strategy Map для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Site Ecology Strategy Map для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M07_L01",
+      "moduleCode": "M07",
+      "orderInModule": 1,
+      "globalOrder": 31,
+      "titleRu": "Устойчивость: риск как часть проектирования",
+      "titleEn": "Resilience: Risk Is Part of Design",
+      "objective": "Научиться видеть risk как часть проектирования: что может воздействовать на здание, кто уязвим и как здание может адаптироваться.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, чем hazard, exposure, vulnerability and risk отличаются друг от друга.",
+          "sourceText": "Объяснить / Explain — объяснить, чем hazard, exposure, vulnerability and risk отличаются друг от друга."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти опасность, уязвимую зону, пользователя и critical function.",
+          "sourceText": "Найти / Identify — найти опасность, уязвимую зону, пользователя и critical function."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, почему одно здание более уязвимо, чем другое.",
+          "sourceText": "Проанализировать / Analyze — определить, почему одно здание более уязвимо, чем другое."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать hazard + vulnerability map.",
+          "sourceText": "Показать схемой / Diagram — показать hazard + vulnerability map."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать upgrade strategy: avoid, resist, absorb, adapt or recover.",
+          "sourceText": "Выбрать решение / Decide — выбрать upgrade strategy: avoid, resist, absorb, adapt or recover."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Hazard + Vulnerability Map для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Hazard + Vulnerability Map для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M07_L02",
+      "moduleCode": "M07",
+      "orderInModule": 2,
+      "globalOrder": 32,
+      "titleRu": "Землетрясения: жёсткость, пластичность, симметрия",
+      "titleEn": "Earthquakes: Stiffness, Ductility, Symmetry",
+      "objective": "Научиться понимать earthquake logic как боковое движение, устойчивость, регулярность и слабые этажи, а не как disaster image.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему earthquake creates lateral forces.",
+          "sourceText": "Объяснить / Explain — объяснить, почему earthquake creates lateral forces."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти soft storey, irregular plan, missing bracing, weak connection and symmetry issue.",
+          "sourceText": "Найти / Identify — найти soft storey, irregular plan, missing bracing, weak connection and symmetry issue."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, почему one frame is more stable than another.",
+          "sourceText": "Проанализировать / Analyze — определить, почему one frame is more stable than another."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать earthquake stability diagram.",
+          "sourceText": "Показать схемой / Diagram — показать earthquake stability diagram."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать bracing, shear wall, regularity or support upgrade.",
+          "sourceText": "Выбрать решение / Decide — выбрать bracing, shear wall, regularity or support upgrade."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Earthquake Stability Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Earthquake Stability Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M07_L03",
+      "moduleCode": "M07",
+      "orderInModule": 3,
+      "globalOrder": 33,
+      "titleRu": "Наводнения, дождь, дренаж, приподнятые здания",
+      "titleEn": "Floods, Rain, Drainage, Raised Buildings",
+      "objective": "Научиться показывать water-safe section: где вода может быть, что должно оставаться сухим и как здание восстанавливается.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, зачем зданию dry zone, wet zone and raised floor.",
+          "sourceText": "Объяснить / Explain — объяснить, зачем зданию dry zone, wet zone and raised floor."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти flood level, drainage path, protected equipment and vulnerable entry.",
+          "sourceText": "Найти / Identify — найти flood level, drainage path, protected equipment and vulnerable entry."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где вода создаёт риск для людей, материалов или оборудования.",
+          "sourceText": "Проанализировать / Analyze — определить, где вода создаёт риск для людей, материалов или оборудования."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать flood-safe section.",
+          "sourceText": "Показать схемой / Diagram — показать flood-safe section."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать raised floor, drainage, protected equipment or wet-zone strategy.",
+          "sourceText": "Выбрать решение / Decide — выбрать raised floor, drainage, protected equipment or wet-zone strategy."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Flood-Safe Section для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Flood-Safe Section для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M07_L04",
+      "moduleCode": "M07",
+      "orderInModule": 4,
+      "globalOrder": 34,
+      "titleRu": "Основы пожарной безопасности и эвакуации",
+      "titleEn": "Fire Safety and Evacuation Basics",
+      "objective": "Научиться понимать fire safety как пространственную логику выхода, разделения, маршрута и безопасности пользователя.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему evacuation route должен быть понятным и доступным.",
+          "sourceText": "Объяснить / Explain — объяснить, почему evacuation route должен быть понятным и доступным."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти exit, egress route, protected stair, compartment and assembly point.",
+          "sourceText": "Найти / Identify — найти exit, egress route, protected stair, compartment and assembly point."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где маршрут слишком длинный, запутанный или заблокированный.",
+          "sourceText": "Проанализировать / Analyze — определить, где маршрут слишком длинный, запутанный или заблокированный."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать evacuation + compartment diagram.",
+          "sourceText": "Показать схемой / Diagram — показать evacuation + compartment diagram."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать улучшение для маршрута, выхода, compartment or accessibility.",
+          "sourceText": "Выбрать решение / Decide — выбрать улучшение для маршрута, выхода, compartment or accessibility."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Evacuation + Compartment Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Evacuation + Compartment Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M07_L05",
+      "moduleCode": "M07",
+      "orderInModule": 5,
+      "globalOrder": 35,
+      "titleRu": "Экстремальная жара, ветер и климатическая адаптация",
+      "titleEn": "Extreme Heat, Wind, and Climate Adaptation",
+      "objective": "Научиться думать о здании под климатическим стрессом: жара, ветер, тень, прохладные зоны, оболочка и backup.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, как extreme heat and wind affect comfort, safety and building envelope.",
+          "sourceText": "Объяснить / Explain — объяснить, как extreme heat and wind affect comfort, safety and building envelope."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти heat risk, wind exposure, shade, refuge zone, cool surface and backup need.",
+          "sourceText": "Найти / Identify — найти heat risk, wind exposure, shade, refuge zone, cool surface and backup need."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где здание перегревается, продувается или не имеет зоны восстановления.",
+          "sourceText": "Проанализировать / Analyze — определить, где здание перегревается, продувается или не имеет зоны восстановления."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать heat + wind adaptation strategy diagram.",
+          "sourceText": "Показать схемой / Diagram — показать heat + wind adaptation strategy diagram."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать shade, ventilation, wind protection, refuge or backup strategy.",
+          "sourceText": "Выбрать решение / Decide — выбрать shade, ventilation, wind protection, refuge or backup strategy."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Heat + Wind Adaptation Strategy Diagram для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Heat + Wind Adaptation Strategy Diagram для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M08_L01",
+      "moduleCode": "M08",
+      "orderInModule": 1,
+      "globalOrder": 36,
+      "titleRu": "Архитектурный комплект чертежей: что показывать",
+      "titleEn": "Architectural Drawing Set: What to Show",
+      "objective": "Научиться выбирать правильные drawings для правильных вопросов, а не показывать всё подряд.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, зачем проекту drawing set и почему разные drawings отвечают на разные вопросы.",
+          "sourceText": "Объяснить / Explain — объяснить, зачем проекту drawing set и почему разные drawings отвечают на разные вопросы."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти site plan, plan, section, elevation, axonometric, detail and diagram.",
+          "sourceText": "Найти / Identify — найти site plan, plan, section, elevation, axonometric, detail and diagram."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, какого drawing не хватает для объяснения проекта.",
+          "sourceText": "Проанализировать / Analyze — определить, какого drawing не хватает для объяснения проекта."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать drawing set selection map.",
+          "sourceText": "Показать схемой / Diagram — показать drawing set selection map."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать drawings, которые лучше всего доказывают проектную логику.",
+          "sourceText": "Выбрать решение / Decide — выбрать drawings, которые лучше всего доказывают проектную логику."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Drawing Set Selection Map для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Drawing Set Selection Map для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M08_L02",
+      "moduleCode": "M08",
+      "orderInModule": 2,
+      "globalOrder": 37,
+      "titleRu": "Презентационный планшет: сетка, иерархия, история",
+      "titleEn": "Presentation Board: Grid, Hierarchy, Story",
+      "objective": "Научиться строить presentation board как ясный visual argument, а не как набор картинок.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему board должен иметь reading order and hierarchy.",
+          "sourceText": "Объяснить / Explain — объяснить, почему board должен иметь reading order and hierarchy."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти title, main drawing, support diagrams, captions, callouts and white space.",
+          "sourceText": "Найти / Identify — найти title, main drawing, support diagrams, captions, callouts and white space."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где board перегружен, хаотичен или плохо читается.",
+          "sourceText": "Проанализировать / Analyze — определить, где board перегружен, хаотичен или плохо читается."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать presentation board layout plan.",
+          "sourceText": "Показать схемой / Diagram — показать presentation board layout plan."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать grid, hierarchy and story для своего проекта.",
+          "sourceText": "Выбрать решение / Decide — выбрать grid, hierarchy and story для своего проекта."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Presentation Board Layout Plan для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Presentation Board Layout Plan для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M08_L03",
+      "moduleCode": "M08",
+      "orderInModule": 3,
+      "globalOrder": 38,
+      "titleRu": "Основы портфолио: отбор, последовательность, доказательство мышления",
+      "titleEn": "Portfolio Basics: Selection, Sequence, Proof of Thinking",
+      "objective": "Научиться собирать portfolio как доказательство мышления, а не галерею финальных картинок.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему portfolio должно показывать process and decisions.",
+          "sourceText": "Объяснить / Explain — объяснить, почему portfolio должно показывать process and decisions."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти сильные process sketches, diagrams, iterations and final outcomes.",
+          "sourceText": "Найти / Identify — найти сильные process sketches, diagrams, iterations and final outcomes."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, что стоит включить, убрать или переставить в sequence.",
+          "sourceText": "Проанализировать / Analyze — определить, что стоит включить, убрать или переставить в sequence."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать portfolio spread sequence.",
+          "sourceText": "Показать схемой / Diagram — показать portfolio spread sequence."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать порядок материалов, который лучше показывает развитие проекта.",
+          "sourceText": "Выбрать решение / Decide — выбрать порядок материалов, который лучше показывает развитие проекта."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Portfolio Spread Sequence для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Portfolio Spread Sequence для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M08_L04",
+      "moduleCode": "M08",
+      "orderInModule": 4,
+      "globalOrder": 39,
+      "titleRu": "Макет, рендер, диаграмма: как выбрать способ показа",
+      "titleEn": "Model, Render, Diagram: Choosing the Right Representation",
+      "objective": "Научиться выбирать representation по задаче: что нужно объяснить, доказать или почувствовать.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, чем отличаются model, render, diagram, axonometric and section.",
+          "sourceText": "Объяснить / Explain — объяснить, чем отличаются model, render, diagram, axonometric and section."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти, какой способ показа лучше отвечает конкретному вопросу проекта.",
+          "sourceText": "Найти / Identify — найти, какой способ показа лучше отвечает конкретному вопросу проекта."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, где render украшает, а diagram действительно объясняет.",
+          "sourceText": "Проанализировать / Analyze — определить, где render украшает, а diagram действительно объясняет."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать representation choice matrix.",
+          "sourceText": "Показать схемой / Diagram — показать representation choice matrix."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать правильную representation для site, structure, material, climate or atmosphere.",
+          "sourceText": "Выбрать решение / Decide — выбрать правильную representation для site, structure, material, climate or atmosphere."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать Representation Choice Matrix для mini-output.",
+          "sourceText": "Сделать / Produce — сделать Representation Choice Matrix для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    },
+    {
+      "code": "M08_L05",
+      "moduleCode": "M08",
+      "orderInModule": 5,
+      "globalOrder": 40,
+      "titleRu": "Финальная критика: как объяснить и защитить проект",
+      "titleEn": "Final Critique: How to Explain and Defend a Project",
+      "objective": "Научиться объяснять проект через problem, concept, evidence, decisions, trade-offs and next steps.",
+      "learningOutcomes": [
+        {
+          "order": 1,
+          "label": "Объяснить / Explain",
+          "text": "объяснить проект как аргумент, а не как описание внешнего вида.",
+          "sourceText": "Объяснить / Explain — объяснить проект как аргумент, а не как описание внешнего вида."
+        },
+        {
+          "order": 2,
+          "label": "Найти / Identify",
+          "text": "найти главную проблему, evidence, key drawings, decisions and trade-offs.",
+          "sourceText": "Найти / Identify — найти главную проблему, evidence, key drawings, decisions and trade-offs."
+        },
+        {
+          "order": 3,
+          "label": "Проанализировать / Analyze",
+          "text": "определить, какие части презентации сильные, а какие требуют доработки.",
+          "sourceText": "Проанализировать / Analyze — определить, какие части презентации сильные, а какие требуют доработки."
+        },
+        {
+          "order": 4,
+          "label": "Показать схемой / Diagram",
+          "text": "показать 2-minute presentation script map.",
+          "sourceText": "Показать схемой / Diagram — показать 2-minute presentation script map."
+        },
+        {
+          "order": 5,
+          "label": "Выбрать решение / Decide",
+          "text": "выбрать, как ответить на critique question через evidence, not taste.",
+          "sourceText": "Выбрать решение / Decide — выбрать, как ответить на critique question через evidence, not taste."
+        },
+        {
+          "order": 6,
+          "label": "Сделать / Produce",
+          "text": "сделать 2-Minute Project Defense Script + Self-Critique Checklist для mini-output.",
+          "sourceText": "Сделать / Produce — сделать 2-Minute Project Defense Script + Self-Critique Checklist для mini-output."
+        }
+      ],
+      "assetStatuses": {
+        "PRES": "AVAILABLE",
+        "SRPT": "AVAILABLE",
+        "VOCB": "AVAILABLE",
+        "MNOT": "AVAILABLE",
+        "PICE": "AVAILABLE"
+      },
+      "mediaStatus": {
+        "video": "AVAILABLE",
+        "captions": "CAPTIONS_PENDING"
+      },
+      "status": "AVAILABLE"
+    }
+  ],
+  "projects": [
+    {
+      "code": "M01_P01",
+      "moduleCode": "M01",
+      "order": 1,
+      "titleRu": "Доска чтения пространства",
+      "titleEn": "Space Reading Board",
+      "objective": "Показать, что небольшое пространство можно прочитать как систему пользователя, функции, движения, масштаба, проблемы и улучшений.",
+      "assessedOutcomes": [
+        {
+          "order": 1,
+          "label": "Провести диагностику / Diagnose",
+          "text": "определить главную проблему пространства и объяснить, кому она мешает.",
+          "sourceText": "Провести диагностику / Diagnose — определить главную проблему пространства и объяснить, кому она мешает."
+        },
+        {
+          "order": 2,
+          "label": "Показать схемами / Diagram",
+          "text": "показать план, движение, зоны, масштаб и bad / normal / good comparison.",
+          "sourceText": "Показать схемами / Diagram — показать план, движение, зоны, масштаб и bad / normal / good comparison."
+        },
+        {
+          "order": 3,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, как пространство работает для пользователя и где возникает конфликт.",
+          "sourceText": "Объяснить / Explain — объяснить, как пространство работает для пользователя и где возникает конфликт."
+        },
+        {
+          "order": 4,
+          "label": "Принять решения / Decide",
+          "text": "предложить проектные улучшения, связанные с реальной проблемой, а не только с внешним видом.",
+          "sourceText": "Принять решения / Decide — предложить проектные улучшения, связанные с реальной проблемой, а не только с внешним видом."
+        },
+        {
+          "order": 5,
+          "label": "Оценить / Evaluate",
+          "text": "назвать один trade-off: что улучшится и какая новая сложность может появиться.",
+          "sourceText": "Оценить / Evaluate — назвать один trade-off: что улучшится и какая новая сложность может появиться."
+        },
+        {
+          "order": 6,
+          "label": "Представить / Present",
+          "text": "собрать чистую Space Reading Board с короткими подписями, схемами и понятным reading order.",
+          "sourceText": "Представить / Present — собрать чистую Space Reading Board с короткими подписями, схемами и понятным reading order."
+        }
+      ],
+      "formatType": "SINGLE_BOARD",
+      "status": "AVAILABLE",
+      "validationSampleOnly": false
+    },
+    {
+      "code": "M02_P02",
+      "moduleCode": "M02",
+      "order": 2,
+      "titleRu": "Архитектурное расследование стиля",
+      "titleEn": "Style Detective Case Study",
+      "objective": "Доказать, что стиль здания связан с эпохой, обществом, материалом, технологией, конструкцией и культурным смыслом.",
+      "assessedOutcomes": [
+        {
+          "order": 1,
+          "label": "Провести диагностику / Diagnose",
+          "text": "определить стиль, период или архитектурный подход выбранного здания.",
+          "sourceText": "Провести диагностику / Diagnose — определить стиль, период или архитектурный подход выбранного здания."
+        },
+        {
+          "order": 2,
+          "label": "Показать схемами / Diagram",
+          "text": "показать визуальные признаки, материал, конструкцию, план/разрез и historical logic через схемы.",
+          "sourceText": "Показать схемами / Diagram — показать визуальные признаки, материал, конструкцию, план/разрез и historical logic через схемы."
+        },
+        {
+          "order": 3,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, почему эта архитектура появилась именно в своём времени и контексте.",
+          "sourceText": "Объяснить / Explain — объяснить, почему эта архитектура появилась именно в своём времени и контексте."
+        },
+        {
+          "order": 4,
+          "label": "Принять решения / Decide",
+          "text": "выбрать самые сильные evidence points, которые доказывают стиль и логику здания.",
+          "sourceText": "Принять решения / Decide — выбрать самые сильные evidence points, которые доказывают стиль и логику здания."
+        },
+        {
+          "order": 5,
+          "label": "Оценить / Evaluate",
+          "text": "сравнить здание с другим стилем или подходом и назвать важный trade-off эпохи.",
+          "sourceText": "Оценить / Evaluate — сравнить здание с другим стилем или подходом и назвать важный trade-off эпохи."
+        },
+        {
+          "order": 6,
+          "label": "Представить / Present",
+          "text": "собрать Style Detective Case Study как архитектурное расследование, а не как список красивых признаков.",
+          "sourceText": "Представить / Present — собрать Style Detective Case Study как архитектурное расследование, а не как список красивых признаков."
+        }
+      ],
+      "formatType": "SINGLE_BOARD",
+      "status": "AVAILABLE",
+      "validationSampleOnly": false
+    },
+    {
+      "code": "M03_P03",
+      "moduleCode": "M03",
+      "order": 3,
+      "titleRu": "Диаграмма климатического ответа",
+      "titleEn": "Climate Response Diagram",
+      "objective": "Показать, как здание отвечает на участок, солнце, ветер, воду, температуру, шум, виды и микроклимат через архитектурные решения.",
+      "assessedOutcomes": [
+        {
+          "order": 1,
+          "label": "Провести диагностику / Diagnose",
+          "text": "определить главные климатические условия и проблемы участка.",
+          "sourceText": "Провести диагностику / Diagnose — определить главные климатические условия и проблемы участка."
+        },
+        {
+          "order": 2,
+          "label": "Показать схемами / Diagram",
+          "text": "показать site layers, sun path, daylight, airflow, thermal comfort, runoff and microclimate diagrams.",
+          "sourceText": "Показать схемами / Diagram — показать site layers, sun path, daylight, airflow, thermal comfort, runoff and microclimate diagrams."
+        },
+        {
+          "order": 3,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, как климатические условия влияют на форму, проёмы, тень, вентиляцию и outdoor comfort.",
+          "sourceText": "Объяснить / Explain — объяснить, как климатические условия влияют на форму, проёмы, тень, вентиляцию и outdoor comfort."
+        },
+        {
+          "order": 4,
+          "label": "Принять решения / Decide",
+          "text": "выбрать 3 climate-based design decisions для света, воздуха, тепла, воды и комфорта.",
+          "sourceText": "Принять решения / Decide — выбрать 3 climate-based design decisions для света, воздуха, тепла, воды и комфорта."
+        },
+        {
+          "order": 5,
+          "label": "Оценить / Evaluate",
+          "text": "назвать один климатический trade-off, например shade vs daylight или ventilation vs noise.",
+          "sourceText": "Оценить / Evaluate — назвать один климатический trade-off, например shade vs daylight или ventilation vs noise."
+        },
+        {
+          "order": 6,
+          "label": "Представить / Present",
+          "text": "собрать Climate Response Diagram с clear evidence, diagrams and concise labels.",
+          "sourceText": "Представить / Present — собрать Climate Response Diagram с clear evidence, diagrams and concise labels."
+        }
+      ],
+      "formatType": "SINGLE_BOARD",
+      "status": "AVAILABLE",
+      "validationSampleOnly": false
+    },
+    {
+      "code": "M04_P04",
+      "moduleCode": "M04",
+      "order": 4,
+      "titleRu": "Взрывная аксонометрия конструкции",
+      "titleEn": "Structure Exploded Axonometric",
+      "objective": "Показать, как здание физически стоит: что несёт нагрузку, куда идёт load path, какая structural system выбрана и как здание можно построить.",
+      "assessedOutcomes": [
+        {
+          "order": 1,
+          "label": "Провести диагностику / Diagnose",
+          "text": "определить structural anatomy, load path и одно слабое место конструкции.",
+          "sourceText": "Провести диагностику / Diagnose — определить structural anatomy, load path и одно слабое место конструкции."
+        },
+        {
+          "order": 2,
+          "label": "Показать схемами / Diagram",
+          "text": "показать exploded axonometric, foundation, supports, beams, slabs, roof, load arrows and sequence.",
+          "sourceText": "Показать схемами / Diagram — показать exploded axonometric, foundation, supports, beams, slabs, roof, load arrows and sequence."
+        },
+        {
+          "order": 3,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, что несёт roof, slab and live load, и как нагрузка доходит до foundation and ground.",
+          "sourceText": "Объяснить / Explain — объяснить, что несёт roof, slab and live load, и как нагрузка доходит до foundation and ground."
+        },
+        {
+          "order": 4,
+          "label": "Принять решения / Decide",
+          "text": "выбрать structural system и предложить fix для weak point.",
+          "sourceText": "Принять решения / Decide — выбрать structural system и предложить fix для weak point."
+        },
+        {
+          "order": 5,
+          "label": "Оценить / Evaluate",
+          "text": "назвать trade-off между openness, span, cost, support, buildability or flexibility.",
+          "sourceText": "Оценить / Evaluate — назвать trade-off между openness, span, cost, support, buildability or flexibility."
+        },
+        {
+          "order": 6,
+          "label": "Представить / Present",
+          "text": "собрать Structure Exploded Axonometric как structural explanation, not decorative exploded drawing.",
+          "sourceText": "Представить / Present — собрать Structure Exploded Axonometric как structural explanation, not decorative exploded drawing."
+        }
+      ],
+      "formatType": "SINGLE_BOARD",
+      "status": "AVAILABLE",
+      "validationSampleOnly": false
+    },
+    {
+      "code": "M05_P05",
+      "moduleCode": "M05",
+      "order": 5,
+      "titleRu": "Доска материальной стратегии",
+      "titleEn": "Material Strategy Board",
+      "objective": "Показать, что выбор материалов — это стратегия: каждый материал имеет роль, риск, уход, срок жизни и компромисс.",
+      "assessedOutcomes": [
+        {
+          "order": 1,
+          "label": "Провести диагностику / Diagnose",
+          "text": "определить material and envelope risks для небольшого здания.",
+          "sourceText": "Провести диагностику / Diagnose — определить material and envelope risks для небольшого здания."
+        },
+        {
+          "order": 2,
+          "label": "Показать схемами / Diagram",
+          "text": "показать material matrix, wall section, critical detail, water/thermal risk and aging timeline.",
+          "sourceText": "Показать схемами / Diagram — показать material matrix, wall section, critical detail, water/thermal risk and aging timeline."
+        },
+        {
+          "order": 3,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, зачем выбран каждый материал и какую роль он выполняет.",
+          "sourceText": "Объяснить / Explain — объяснить, зачем выбран каждый материал и какую роль он выполняет."
+        },
+        {
+          "order": 4,
+          "label": "Принять решения / Decide",
+          "text": "выбрать материалы по работе, долговечности, климату, уходу и buildability, а не только по внешнему виду.",
+          "sourceText": "Принять решения / Decide — выбрать материалы по работе, долговечности, климату, уходу и buildability, а не только по внешнему виду."
+        },
+        {
+          "order": 5,
+          "label": "Оценить / Evaluate",
+          "text": "назвать один failure risk, одно maintenance need и один trade-off.",
+          "sourceText": "Оценить / Evaluate — назвать один failure risk, одно maintenance need и один trade-off."
+        },
+        {
+          "order": 6,
+          "label": "Представить / Present",
+          "text": "собрать Material Strategy Board с понятными схемами, короткими labels and performance logic.",
+          "sourceText": "Представить / Present — собрать Material Strategy Board с понятными схемами, короткими labels and performance logic."
+        }
+      ],
+      "formatType": "SINGLE_BOARD",
+      "status": "AVAILABLE",
+      "validationSampleOnly": false
+    },
+    {
+      "code": "M06_P06",
+      "moduleCode": "M06",
+      "order": 6,
+      "titleRu": "Мини-стратегия по логике LEED",
+      "titleEn": "Mini LEED-Inspired Strategy",
+      "objective": "Показать sustainability как доказательную стратегию здания через энергию, воду, углерод, здоровье, материалы, пассивный дизайн и экологию участка.",
+      "assessedOutcomes": [
+        {
+          "order": 1,
+          "label": "Провести диагностику / Diagnose",
+          "text": "отличить real sustainability strategy от green aesthetic claim.",
+          "sourceText": "Провести диагностику / Diagnose — отличить real sustainability strategy от green aesthetic claim."
+        },
+        {
+          "order": 2,
+          "label": "Показать схемами / Diagram",
+          "text": "показать sustainability diagnosis, scorecard, carbon timeline, passive section and ecology strategy map.",
+          "sourceText": "Показать схемами / Diagram — показать sustainability diagnosis, scorecard, carbon timeline, passive section and ecology strategy map."
+        },
+        {
+          "order": 3,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, как выбранные стратегии снижают demand, water use, carbon impact или улучшают health and comfort.",
+          "sourceText": "Объяснить / Explain — объяснить, как выбранные стратегии снижают demand, water use, carbon impact или улучшают health and comfort."
+        },
+        {
+          "order": 4,
+          "label": "Принять решения / Decide",
+          "text": "выбрать 5 LEED-inspired goals или credits, связанных с evidence.",
+          "sourceText": "Принять решения / Decide — выбрать 5 LEED-inspired goals или credits, связанных с evidence."
+        },
+        {
+          "order": 5,
+          "label": "Оценить / Evaluate",
+          "text": "назвать sustainability trade-off: cost, maintenance, comfort, carbon, water, ecology or material impact.",
+          "sourceText": "Оценить / Evaluate — назвать sustainability trade-off: cost, maintenance, comfort, carbon, water, ecology or material impact."
+        },
+        {
+          "order": 6,
+          "label": "Представить / Present",
+          "text": "собрать Mini LEED-Inspired Strategy board без greenwashing и декоративной “eco” эстетики.",
+          "sourceText": "Представить / Present — собрать Mini LEED-Inspired Strategy board без greenwashing и декоративной “eco” эстетики."
+        }
+      ],
+      "formatType": "SINGLE_BOARD",
+      "status": "AVAILABLE",
+      "validationSampleOnly": false
+    },
+    {
+      "code": "M07_P07",
+      "moduleCode": "M07",
+      "order": 7,
+      "titleRu": "Апгрейд здания для устойчивости",
+      "titleEn": "Resilient Building Upgrade",
+      "objective": "Показать, как слабое здание можно улучшить для риска: hazard, vulnerability, earthquake, flood, fire, heat, wind and recovery.",
+      "assessedOutcomes": [
+        {
+          "order": 1,
+          "label": "Провести диагностику / Diagnose",
+          "text": "определить hazard, exposure, vulnerability and risk для выбранного здания.",
+          "sourceText": "Провести диагностику / Diagnose — определить hazard, exposure, vulnerability and risk для выбранного здания."
+        },
+        {
+          "order": 2,
+          "label": "Показать схемами / Diagram",
+          "text": "показать hazard map, vulnerability diagram, flood section, evacuation plan and adaptation strategy.",
+          "sourceText": "Показать схемами / Diagram — показать hazard map, vulnerability diagram, flood section, evacuation plan and adaptation strategy."
+        },
+        {
+          "order": 3,
+          "label": "Объяснить / Explain",
+          "text": "объяснить, как выбранные upgrades повышают safety, resistance, adaptation or recovery.",
+          "sourceText": "Объяснить / Explain — объяснить, как выбранные upgrades повышают safety, resistance, adaptation or recovery."
+        },
+        {
+          "order": 4,
+          "label": "Принять решения / Decide",
+          "text": "выбрать upgrade strategies: avoid, resist, absorb, adapt, recover.",
+          "sourceText": "Принять решения / Decide — выбрать upgrade strategies: avoid, resist, absorb, adapt, recover."
+        },
+        {
+          "order": 5,
+          "label": "Оценить / Evaluate",
+          "text": "назвать trade-off между safety, cost, access, usability, maintenance or architectural quality.",
+          "sourceText": "Оценить / Evaluate — назвать trade-off между safety, cost, access, usability, maintenance or architectural quality."
+        },
+        {
+          "order": 6,
+          "label": "Представить / Present",
+          "text": "собрать Resilient Building Upgrade board без disaster spectacle, через evidence and clear diagrams.",
+          "sourceText": "Представить / Present — собрать Resilient Building Upgrade board без disaster spectacle, через evidence and clear diagrams."
+        }
+      ],
+      "formatType": "SINGLE_BOARD",
+      "status": "AVAILABLE",
+      "validationSampleOnly": false
+    },
+    {
+      "code": "M08_P08",
+      "moduleCode": "M08",
+      "order": 8,
+      "titleRu": "Финальный архитектурный презентационный пакет",
+      "titleEn": "Final Architecture Presentation Pack",
+      "objective": "Показать один улучшенный проект как ясный архитектурный аргумент через drawings, diagrams, evidence, decisions, trade-offs and 2-minute defense.",
+      "assessedOutcomes": [
+        {
+          "order": 1,
+          "label": "Провести диагностику / Diagnose",
+          "text": "выбрать сильный проект из курса и определить, что нужно улучшить для финальной презентации.",
+          "sourceText": "Провести диагностику / Diagnose — выбрать сильный проект из курса и определить, что нужно улучшить для финальной презентации."
+        },
+        {
+          "order": 2,
+          "label": "Показать схемами / Diagram",
+          "text": "показать brief, site, plan, section, structure, climate, material, sustainability/resilience and detail evidence.",
+          "sourceText": "Показать схемами / Diagram — показать brief, site, plan, section, structure, climate, material, sustainability/resilience and detail evidence."
+        },
+        {
+          "order": 3,
+          "label": "Объяснить / Explain",
+          "text": "объяснить project narrative: problem, concept, evidence, decisions, outcome and trade-offs.",
+          "sourceText": "Объяснить / Explain — объяснить project narrative: problem, concept, evidence, decisions, outcome and trade-offs."
+        },
+        {
+          "order": 4,
+          "label": "Принять решения / Decide",
+          "text": "выбрать правильный drawing set, board hierarchy, portfolio sequence and representation method.",
+          "sourceText": "Принять решения / Decide — выбрать правильный drawing set, board hierarchy, portfolio sequence and representation method."
+        },
+        {
+          "order": 5,
+          "label": "Оценить / Evaluate",
+          "text": "провести self-critique и назвать, что работает, что слабее и что можно улучшить дальше.",
+          "sourceText": "Оценить / Evaluate — провести self-critique и назвать, что работает, что слабее и что можно улучшить дальше."
+        },
+        {
+          "order": 6,
+          "label": "Представить / Present",
+          "text": "собрать Final Architecture Presentation Pack с final board, mini portfolio spread and 2-minute verbal defense.",
+          "sourceText": "Представить / Present — собрать Final Architecture Presentation Pack с final board, mini portfolio spread and 2-minute verbal defense."
+        }
+      ],
+      "formatType": "MULTI_PAGE_PACK",
+      "status": "AVAILABLE",
+      "validationSampleOnly": false
+    }
+  ]
+}

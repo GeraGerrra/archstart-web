@@ -1,0 +1,36 @@
+relativeSourcePath,fileName,extension,sizeBytes,sizeMiB,classification,contentRole,assetCategory,recommendedProvider,bundlePolicy
+ARCH.START_M03_Project03_Student_Page (1).docx,ARCH.START_M03_Project03_Student_Page (1).docx,.docx,380700,0.363,EXPLICIT_ALIAS,STUDENT_PAGE,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+ARCHSTART_SITE_PHASE_00_V4.zip,ARCHSTART_SITE_PHASE_00_V4.zip,.zip,78602,0.075,EXCLUDED_POLICY,,internal ignored evidence,do not publish,DO_NOT_COPY_TO_APP_BUNDLE
+Course Structure.txt,Course Structure.txt,.txt,7757,0.007,AUTHORITATIVE_GEN,COURSE_STRUCTURE,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+Lessons Obj.txt,Lessons Obj.txt,.txt,47339,0.045,AUTHORITATIVE_GEN,LESSON_OBJECTIVES,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+M01/M01_L01/M01_L01_MNOT.txt,M01_L01_MNOT.txt,.txt,5204,0.005,LESSON_ALLOWLIST,MNOT,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+M01/M01_L01/M01_L01_PICE.png,M01_L01_PICE.png,.png,2579478,2.460,LESSON_ALLOWLIST,PICE,optimized web image,optimized derivative through provider-neutral registry,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L01/M01_L01_PRES.pptx,M01_L01_PRES.pptx,.pptx,2564405,2.446,LESSON_ALLOWLIST,PRES,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L01/M01_L01_SRPT.txt,M01_L01_SRPT.txt,.txt,34170,0.033,LESSON_ALLOWLIST,SRPT,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+M01/M01_L01/M01_L01_VOCB.pdf,M01_L01_VOCB.pdf,.pdf,1936037,1.846,LESSON_ALLOWLIST,VOCB,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L02/M01_L02_MNOT.txt,M01_L02_MNOT.txt,.txt,4989,0.005,LESSON_ALLOWLIST,MNOT,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+M01/M01_L02/M01_L02_PICE.png,M01_L02_PICE.png,.png,2638715,2.516,LESSON_ALLOWLIST,PICE,optimized web image,optimized derivative through provider-neutral registry,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L02/M01_L02_PRES.pptx,M01_L02_PRES.pptx,.pptx,1781833,1.699,LESSON_ALLOWLIST,PRES,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L02/M01_L02_SRPT.txt,M01_L02_SRPT.txt,.txt,39254,0.037,LESSON_ALLOWLIST,SRPT,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+M01/M01_L02/M01_L02_VOCB.pdf,M01_L02_VOCB.pdf,.pdf,1087451,1.037,LESSON_ALLOWLIST,VOCB,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L03/M01_L03_MNOT.txt,M01_L03_MNOT.txt,.txt,4896,0.005,LESSON_ALLOWLIST,MNOT,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+M01/M01_L03/M01_L03_PICE.png,M01_L03_PICE.png,.png,2547892,2.430,LESSON_ALLOWLIST,PICE,optimized web image,optimized derivative through provider-neutral registry,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L03/M01_L03_PRES.pptx,M01_L03_PRES.pptx,.pptx,18517187,17.659,LESSON_ALLOWLIST,PRES,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L03/M01_L03_SRPT.txt,M01_L03_SRPT.txt,.txt,36342,0.035,LESSON_ALLOWLIST,SRPT,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+M01/M01_L03/M01_L03_VOCB.pdf,M01_L03_VOCB.pdf,.pdf,1624763,1.549,LESSON_ALLOWLIST,VOCB,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L04/M01_L04_MNOT.txt,M01_L04_MNOT.txt,.txt,5132,0.005,LESSON_ALLOWLIST,MNOT,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+M01/M01_L04/M01_L04_PICE.png,M01_L04_PICE.png,.png,2632077,2.510,LESSON_ALLOWLIST,PICE,optimized web image,optimized derivative through provider-neutral registry,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L04/M01_L04_PRES.pptx,M01_L04_PRES.pptx,.pptx,8155044,7.777,LESSON_ALLOWLIST,PRES,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L04/M01_L04_SRPT.txt,M01_L04_SRPT.txt,.txt,34799,0.033,LESSON_ALLOWLIST,SRPT,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+M01/M01_L04/M01_L04_VOCB.pdf,M01_L04_VOCB.pdf,.pdf,2702958,2.578,LESSON_ALLOWLIST,VOCB,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L05/M01_L05_MNOT.txt,M01_L05_MNOT.txt,.txt,5209,0.005,LESSON_ALLOWLIST,MNOT,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+M01/M01_L05/M01_L05_PICE.png,M01_L05_PICE.png,.png,2687031,2.563,LESSON_ALLOWLIST,PICE,optimized web image,optimized derivative through provider-neutral registry,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L05/M01_L05_PRES.pptx,M01_L05_PRES.pptx,.pptx,13225575,12.613,LESSON_ALLOWLIST,PRES,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_L05/M01_L05_SRPT.txt,M01_L05_SRPT.txt,.txt,38546,0.037,LESSON_ALLOWLIST,SRPT,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+M01/M01_L05/M01_L05_VOCB.pdf,M01_L05_VOCB.pdf,.pdf,1869200,1.783,LESSON_ALLOWLIST,VOCB,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_P01/ARCH.START_M01_Project01_Student_Page_V2.docx,ARCH.START_M01_Project01_Student_Page_V2.docx,.docx,258042,0.246,EXPLICIT_ALIAS,STUDENT_PAGE,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+M01/M01_P01/M01_P01_PPTX.pptx,M01_P01_PPTX.pptx,.pptx,4897125,4.670,PROJECT_ALLOWLIST,EXAMPLE_PPTX,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+M03_P03_PPTX (1).pptx,M03_P03_PPTX (1).pptx,.pptx,7885054,7.520,EXPLICIT_ALIAS,EXAMPLE_PPTX,large public download,large-object provider through storage abstraction,DO_NOT_COPY_TO_APP_BUNDLE
+Modules Obj.txt,Modules Obj.txt,.txt,10550,0.010,AUTHORITATIVE_GEN,MODULE_OBJECTIVES,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+Projects Obj.txt,Projects Obj.txt,.txt,10843,0.010,AUTHORITATIVE_GEN,PROJECT_OBJECTIVES,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY
+Questions Lessons.txt,Questions Lessons.txt,.txt,132210,0.126,AUTHORITATIVE_GEN,QUIZ_SOURCE,repository text content,version-controlled normalized content,NORMALIZE_TEXT_ONLY

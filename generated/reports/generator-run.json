@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-27T23:29:02.225Z",
+  "sourceRootRecordedAs": "IMMUTABLE_SOURCE_ROOT",
+  "deterministicOrdering": true,
+  "exactGenFilenames": [
+    "Course Structure.txt",
+    "Lessons Obj.txt",
+    "Modules Obj.txt",
+    "Projects Obj.txt",
+    "Questions Lessons.txt"
+  ],
+  "atomicCommitRequiredForDefaultOutput": true,
+  "sourceFilesModified": false,
+  "generatedFilesManuallyEdited": false
+}

@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M04_L05",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M04_L05_Q01",
+      "questionText": "Какая sequence наиболее логична для простого здания?",
+      "options": [
+        {
+          "id": "M04_L05_Q01_OPT_A",
+          "text": "Finishes → roof → foundation → excavation."
+        },
+        {
+          "id": "M04_L05_Q01_OPT_B",
+          "text": "Site preparation → excavation → foundation → structure → envelope → MEP → finishes."
+        },
+        {
+          "id": "M04_L05_Q01_OPT_C",
+          "text": "MEP → furniture → foundation → structure."
+        },
+        {
+          "id": "M04_L05_Q01_OPT_D",
+          "text": "Envelope → excavation → finishes → foundation."
+        }
+      ]
+    },
+    {
+      "id": "M04_L05_Q02",
+      "questionText": "Почему site access важен во время строительства?",
+      "options": [
+        {
+          "id": "M04_L05_Q02_OPT_A",
+          "text": "Материалам, рабочим и технике нужен маршрут к строительной зоне."
+        },
+        {
+          "id": "M04_L05_Q02_OPT_B",
+          "text": "Access важен только после завершения здания."
+        },
+        {
+          "id": "M04_L05_Q02_OPT_C",
+          "text": "Access — это только декоративная линия на плане."
+        },
+        {
+          "id": "M04_L05_Q02_OPT_D",
+          "text": "Access заменяет foundation."
+        }
+      ]
+    },
+    {
+      "id": "M04_L05_Q03",
+      "questionText": "Что такое temporary support (временная опора)?",
+      "options": [
+        {
+          "id": "M04_L05_Q03_OPT_A",
+          "text": "Опора, которая используется во время строительства до полной устойчивости финальной конструкции."
+        },
+        {
+          "id": "M04_L05_Q03_OPT_B",
+          "text": "Декоративная колонна."
+        },
+        {
+          "id": "M04_L05_Q03_OPT_C",
+          "text": "Финальная внутренняя отделка."
+        },
+        {
+          "id": "M04_L05_Q03_OPT_D",
+          "text": "Тип окна."
+        }
+      ]
+    },
+    {
+      "id": "M04_L05_Q04",
+      "questionText": "Почему MEP нужно координировать до закрытия finishes?",
+      "options": [
+        {
+          "id": "M04_L05_Q04_OPT_A",
+          "text": "Ducts, pipes и cables требуют места и могут конфликтовать с конструкцией."
+        },
+        {
+          "id": "M04_L05_Q04_OPT_B",
+          "text": "MEP — это только мебель."
+        },
+        {
+          "id": "M04_L05_Q04_OPT_C",
+          "text": "Finishes должны скрывать конструктивные проблемы."
+        },
+        {
+          "id": "M04_L05_Q04_OPT_D",
+          "text": "MEP не связан с проектированием здания."
+        }
+      ]
+    },
+    {
+      "id": "M04_L05_Q05",
+      "questionText": "Какой реальный trade-off есть у prefabricated construction elements?",
+      "options": [
+        {
+          "id": "M04_L05_Q05_OPT_A",
+          "text": "Они могут ускорить сборку, но требуют access, staging и места для подъёма/монтажа."
+        },
+        {
+          "id": "M04_L05_Q05_OPT_B",
+          "text": "Они убирают необходимость в foundation."
+        },
+        {
+          "id": "M04_L05_Q05_OPT_C",
+          "text": "Они делают sequence ненужной."
+        },
+        {
+          "id": "M04_L05_Q05_OPT_D",
+          "text": "Они не могут быть конструктивными."
+        }
+      ]
+    }
+  ]
+}

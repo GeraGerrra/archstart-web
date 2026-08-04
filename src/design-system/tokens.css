@@ -1,0 +1,99 @@
+/*
+ * ARCH.START semantic design tokens.
+ *
+ * Values are extracted from the accepted selected-A implementation. This file
+ * intentionally excludes art-directed Home collage coordinates, individual
+ * cutout transforms, and route-specific composition values.
+ *
+ * Breakpoints are documented in src/design-system/types.ts because CSS custom
+ * properties cannot be used in media-query conditions.
+ */
+
+:root {
+  /* Canvas, surfaces and monochrome ink */
+  --as-color-canvas: #f7f6f1;
+  --as-color-paper-canvas: #f7f6f2;
+  --as-color-surface: #ffffff;
+  --as-color-surface-subtle: #eeede8;
+  --as-color-ink: #111111;
+  --as-color-text-muted: #64645f;
+  --as-color-text-muted-learning: #65655f;
+  --as-color-text-subtle: #a3a39e;
+  --as-color-rule: #d8d7d1;
+  --as-color-rule-strong: #111111;
+  --as-color-focus: #111111;
+
+  /* Paper-fragment material */
+  --as-color-paper-fragment: #e7dfcf;
+  --as-color-paper-fragment-line: #9f9b91;
+  --as-color-paper-fragment-rule: #98948b;
+  --as-color-paper-fragment-border: rgba(95, 91, 80, 0.42);
+
+  /* Typography */
+  --as-font-family-interface: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --as-font-family-learning: Arial, Helvetica, sans-serif;
+  --as-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --as-font-size-body: 1rem;
+  --as-font-size-control: 0.8125rem;
+  --as-font-size-label: 0.6875rem;
+  --as-line-height-body: 1.55;
+  --as-line-height-control: 1.25;
+  --as-letter-spacing-heading: -0.035em;
+  --as-letter-spacing-control: 0.01em;
+
+  /* Content widths and gutters */
+  --as-content-width-shell: 1600px;
+  --as-content-width-page: 1500px;
+  --as-content-width-panel: 980px;
+  --as-content-width-reading: 770px;
+  --as-page-gutter: clamp(24px, 4vw, 72px);
+  --as-shell-gutter: clamp(18px, 3vw, 48px);
+
+  /* Spacing scale */
+  --as-space-1: 0.25rem;
+  --as-space-2: 0.5rem;
+  --as-space-3: 0.75rem;
+  --as-space-4: 1rem;
+  --as-space-5: 1.25rem;
+  --as-space-6: 1.5rem;
+  --as-space-8: 2rem;
+  --as-space-10: 2.5rem;
+  --as-space-12: 3rem;
+  --as-space-16: 4rem;
+  --as-space-20: 5rem;
+  --as-space-24: 6rem;
+
+  /* Controls */
+  --as-control-height-compact: 38px;
+  --as-control-height-default: 46px;
+  --as-control-height-comfortable: 64px;
+  --as-control-padding-inline: 18px;
+  --as-radius-control: 0.25rem;
+  --as-focus-ring: 0 0 0 3px rgba(17, 17, 17, 0.25);
+
+  /* Elevation */
+  --as-shadow-panel: 0 20px 50px rgba(0, 0, 0, 0.12);
+  --as-shadow-cutout: 0 10px 18px rgba(17, 17, 17, 0.12);
+  --as-shadow-cutout-active: 0 12px 20px rgba(17, 17, 17, 0.17);
+
+  /* Layering */
+  --as-z-content: 1;
+  --as-z-module-strip: 70;
+  --as-z-header: 80;
+  --as-z-overlay: 140;
+  --as-z-primary-drawer: 160;
+  --as-z-skip-link: 999;
+
+  /* Motion */
+  --as-motion-duration-fast: 160ms;
+  --as-motion-duration-standard: 180ms;
+  --as-motion-duration-drawer: 220ms;
+  --as-motion-duration-paper: 720ms;
+  --as-motion-ease-standard: ease;
+  --as-motion-ease-paper: cubic-bezier(0.18, 0.76, 0.28, 1);
+
+  /* Backward-compatible aliases used by the Phase 01 entry stylesheet. */
+  --as-color-paper: var(--as-color-canvas);
+  --as-color-muted: var(--as-color-text-muted);
+  --as-color-line: var(--as-color-rule);
+}

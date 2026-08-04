@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M06_L05",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M06_L05_Q01",
+      "questionText": "Какая главная идея site ecology (экологии участка) в этом уроке?",
+      "options": [
+        {
+          "id": "M06_L05_Q01_OPT_A",
+          "text": "Добавить как можно больше зелёных пятен."
+        },
+        {
+          "id": "M06_L05_Q01_OPT_B",
+          "text": "Показать, как water, soil, shade, planting, habitat, surfaces и people работают вместе."
+        },
+        {
+          "id": "M06_L05_Q01_OPT_C",
+          "text": "Использовать только декоративные деревья."
+        },
+        {
+          "id": "M06_L05_Q01_OPT_D",
+          "text": "Игнорировать людей и думать только о растениях."
+        }
+      ]
+    },
+    {
+      "id": "M06_L05_Q02",
+      "questionText": "Что такое runoff (поверхностный сток)?",
+      "options": [
+        {
+          "id": "M06_L05_Q02_OPT_A",
+          "text": "Вода, которая течёт по поверхности, вместо того чтобы впитываться в землю."
+        },
+        {
+          "id": "M06_L05_Q02_OPT_B",
+          "text": "Тип внутреннего освещения."
+        },
+        {
+          "id": "M06_L05_Q02_OPT_C",
+          "text": "Конструктивная колонна."
+        },
+        {
+          "id": "M06_L05_Q02_OPT_D",
+          "text": "Декоративная подпись растения."
+        }
+      ]
+    },
+    {
+      "id": "M06_L05_Q03",
+      "questionText": "Какая beginner-level strategy лучше всего поддерживает stormwater management?",
+      "options": [
+        {
+          "id": "M06_L05_Q03_OPT_A",
+          "text": "Нарисовать синие стрелки без пункта назначения."
+        },
+        {
+          "id": "M06_L05_Q03_OPT_B",
+          "text": "Направить runoff с крыши и покрытия к rain garden, swale или infiltration zone."
+        },
+        {
+          "id": "M06_L05_Q03_OPT_C",
+          "text": "Добавить случайное дерево вдали от потока воды."
+        },
+        {
+          "id": "M06_L05_Q03_OPT_D",
+          "text": "Игнорировать дождь, потому что он снаружи здания."
+        }
+      ]
+    },
+    {
+      "id": "M06_L05_Q04",
+      "questionText": "Что создаёт heat island risk в paved courtyard?",
+      "options": [
+        {
+          "id": "M06_L05_Q04_OPT_A",
+          "text": "Слишком много диаграмм."
+        },
+        {
+          "id": "M06_L05_Q04_OPT_B",
+          "text": "Твёрдые открытые поверхности, которые накапливают и излучают тепло, особенно без shade."
+        },
+        {
+          "id": "M06_L05_Q04_OPT_C",
+          "text": "Слишком много indoor daylight."
+        },
+        {
+          "id": "M06_L05_Q04_OPT_D",
+          "text": "Слишком много material labels."
+        }
+      ]
+    },
+    {
+      "id": "M06_L05_Q05",
+      "questionText": "Какая site strategy самая сильная?",
+      "options": [
+        {
+          "id": "M06_L05_Q05_OPT_A",
+          "text": "Добавить растения вокруг здания."
+        },
+        {
+          "id": "M06_L05_Q05_OPT_B",
+          "text": "Добавить деревья без объяснения их роли."
+        },
+        {
+          "id": "M06_L05_Q05_OPT_C",
+          "text": "Направить runoff к rain garden, затенить seating, добавить native habitat planting, уменьшить hot surfaces и назвать maintenance trade-off."
+        },
+        {
+          "id": "M06_L05_Q05_OPT_D",
+          "text": "Использовать зелёный фон на site plan."
+        }
+      ]
+    }
+  ]
+}

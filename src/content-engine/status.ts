@@ -1,0 +1,15 @@
+
+export const CONTENT_STATUSES = [
+  "AVAILABLE",
+  "PENDING_NOT_SUPPLIED_IN_THIS_PHASE",
+  "PICE_PENDING",
+  "VIDEO_PENDING",
+  "CAPTIONS_PENDING",
+  "ALIAS_RESOLVED",
+  "IGNORED_BY_POLICY",
+  "INVALID",
+  "DUPLICATE",
+  "SANITIZATION_REQUIRED",
+] as const;
+
+export type ContentStatus = (typeof CONTENT_STATUSES)[number];

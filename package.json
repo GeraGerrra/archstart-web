@@ -1,0 +1,51 @@
+{
+  "name": "archstart-web",
+  "version": "1.0.0-deployment-d1",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.17.0",
+  "engines": {
+    "node": ">=24.18.0 <25",
+    "pnpm": "11.17.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "typecheck:content": "tsc --noEmit -p tsconfig.content-engine.json",
+    "test": "node --experimental-strip-types --test tests/deployment/*.test.ts tests/acceptance.test.ts tests/schema-validation.test.ts tests/server-quiz-boundary.test.ts",
+    "content:generate": "node --experimental-strip-types scripts/content/generate.ts",
+    "content:validate": "node --experimental-strip-types scripts/content/validate.ts",
+    "build": "next build && node scripts/security/scan-browser-quiz-leaks.mjs",
+    "security:scan-browser": "node scripts/security/scan-browser-quiz-leaks.mjs",
+    "lockfile:verify": "node scripts/verify-lockfile.mjs",
+    "prototype:security-scan": "node scripts/security/scan-prototype-quiz-leaks.mjs",
+    "prototype:security-scan-selected-a": "node scripts/security/scan-selected-a-quiz-leaks.mjs",
+    "design-system:check": "node scripts/design-system/check-import-cycles.mjs",
+    "app-shell:check": "node scripts/app-shell/check-boundaries.mjs",
+    "learning:check": "node scripts/learning/check-boundaries.mjs",
+    "media:check": "node scripts/media/check-boundaries.mjs",
+    "quiz:check": "node scripts/quiz/check-boundaries.mjs",
+    "completion:check": "node scripts/completion/check-boundaries.mjs",
+    "showcase:check": "node scripts/showcase/check-boundaries.mjs",
+    "auth:render-review": "node scripts/auth/render-static-review.mjs"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.4",
+    "@supabase/supabase-js": "2.111.0",
+    "next": "16.2.12",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "24.10.15",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.2.12",
+    "tailwindcss": "4.3.3",
+    "typescript": "6.0.3"
+  }
+}

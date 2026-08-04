@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "items": [
+    {
+      "relativePath": "ARCHSTART_SITE_PHASE_00_V4.zip",
+      "fileName": "ARCHSTART_SITE_PHASE_00_V4.zip",
+      "classification": "EXCLUDED_POLICY",
+      "status": "IGNORED_BY_POLICY",
+      "reason": "Governing specification evidence is never ingested as public course content.",
+      "policyRule": "Governing specification evidence is never ingested as public course content."
+    }
+  ]
+}

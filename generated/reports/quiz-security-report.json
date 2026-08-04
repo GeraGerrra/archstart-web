@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-27T23:29:02.225Z",
+  "publicQuestionCount": 200,
+  "serverAnswerCount": 200,
+  "publicForbiddenKeysFound": [],
+  "publicExplanationTextLeaks": [],
+  "answerPositionDistribution": {
+    "A": 55,
+    "B": 121,
+    "C": 24,
+    "D": 0
+  },
+  "answerPositionBiasRecordedNotModified": true,
+  "result": "PASS"
+}

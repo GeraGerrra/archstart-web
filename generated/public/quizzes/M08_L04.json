@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M08_L04",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M08_L04_Q01",
+      "questionText": "Какая главная идея representation choice (выбора способа показа) в этом уроке?",
+      "options": [
+        {
+          "id": "M08_L04_Q01_OPT_A",
+          "text": "Всегда сначала делать render."
+        },
+        {
+          "id": "M08_L04_Q01_OPT_B",
+          "text": "Выбирать representation, которая лучше всего отвечает на project question."
+        },
+        {
+          "id": "M08_L04_Q01_OPT_C",
+          "text": "Использовать только physical models."
+        },
+        {
+          "id": "M08_L04_Q01_OPT_D",
+          "text": "Использовать самое эффектное изображение, даже если оно ничего не объясняет."
+        }
+      ]
+    },
+    {
+      "id": "M08_L04_Q02",
+      "questionText": "Что render обычно показывает лучше всего?",
+      "options": [
+        {
+          "id": "M08_L04_Q02_OPT_A",
+          "text": "Atmosphere, light mood, material impression и user experience."
+        },
+        {
+          "id": "M08_L04_Q02_OPT_B",
+          "text": "Exact load path и construction joint по умолчанию."
+        },
+        {
+          "id": "M08_L04_Q02_OPT_C",
+          "text": "Every plan relationship clearly."
+        },
+        {
+          "id": "M08_L04_Q02_OPT_D",
+          "text": "Legal code compliance."
+        }
+      ]
+    },
+    {
+      "id": "M08_L04_Q03",
+      "questionText": "Когда section часто сильнее render?",
+      "options": [
+        {
+          "id": "M08_L04_Q03_OPT_A",
+          "text": "Когда вопрос связан с height, daylight, airflow, structure или envelope."
+        },
+        {
+          "id": "M08_L04_Q03_OPT_B",
+          "text": "Когда вопрос только про color mood."
+        },
+        {
+          "id": "M08_L04_Q03_OPT_C",
+          "text": "Когда vertical relationship не важны."
+        },
+        {
+          "id": "M08_L04_Q03_OPT_D",
+          "text": "Когда у проекта нет interior."
+        }
+      ]
+    },
+    {
+      "id": "M08_L04_Q04",
+      "questionText": "Что diagram показывает сильнее всего?",
+      "options": [
+        {
+          "id": "M08_L04_Q04_OPT_A",
+          "text": "Invisible logic, process, flow, strategy, force, climate или risk."
+        },
+        {
+          "id": "M08_L04_Q04_OPT_B",
+          "text": "Только material atmosphere."
+        },
+        {
+          "id": "M08_L04_Q04_OPT_C",
+          "text": "Точный final appearance каждой поверхности."
+        },
+        {
+          "id": "M08_L04_Q04_OPT_D",
+          "text": "Полную construction specification."
+        }
+      ]
+    },
+    {
+      "id": "M08_L04_Q05",
+      "questionText": "Какое утверждение показывает хорошую representation logic?",
+      "options": [
+        {
+          "id": "M08_L04_Q05_OPT_A",
+          "text": "Я использовал render, потому что он выглядит professional."
+        },
+        {
+          "id": "M08_L04_Q05_OPT_B",
+          "text": "Я использовал section для light и airflow, axonometric для systems и render для atmosphere."
+        },
+        {
+          "id": "M08_L04_Q05_OPT_C",
+          "text": "Я убрал все diagrams, потому что renders достаточно."
+        },
+        {
+          "id": "M08_L04_Q05_OPT_D",
+          "text": "Я использовал один способ показа для всех вопросов."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M08_L05",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M08_L05_Q01",
+      "questionText": "Какая главная идея critique defense (защиты проекта) в этом уроке?",
+      "options": [
+        {
+          "id": "M08_L05_Q01_OPT_A",
+          "text": "Выучить идеальную речь наизусть."
+        },
+        {
+          "id": "M08_L05_Q01_OPT_B",
+          "text": "Объяснить project decisions через evidence, trade-offs и next steps."
+        },
+        {
+          "id": "M08_L05_Q01_OPT_C",
+          "text": "Говорить только о том, что нравится."
+        },
+        {
+          "id": "M08_L05_Q01_OPT_D",
+          "text": "Избегать всех вопросов."
+        }
+      ]
+    },
+    {
+      "id": "M08_L05_Q02",
+      "questionText": "Какая структура 2-minute presentation самая сильная?",
+      "options": [
+        {
+          "id": "M08_L05_Q02_OPT_A",
+          "text": "Random drawings → apology → conclusion."
+        },
+        {
+          "id": "M08_L05_Q02_OPT_B",
+          "text": "Problem → concept → evidence → decisions/trade-off → self-critique/next step."
+        },
+        {
+          "id": "M08_L05_Q02_OPT_C",
+          "text": "Render → render → render."
+        },
+        {
+          "id": "M08_L05_Q02_OPT_D",
+          "text": "Только длинное чтение текста."
+        }
+      ]
+    },
+    {
+      "id": "M08_L05_Q03",
+      "questionText": "Какой ответ на critique самый сильный?",
+      "options": [
+        {
+          "id": "M08_L05_Q03_OPT_A",
+          "text": "“I chose it because I liked it.”"
+        },
+        {
+          "id": "M08_L05_Q03_OPT_B",
+          "text": "“I do not know.”"
+        },
+        {
+          "id": "M08_L05_Q03_OPT_C",
+          "text": "“I chose the larger roof because the section shows it shades the entry; the trade-off is more structure.”"
+        },
+        {
+          "id": "M08_L05_Q03_OPT_D",
+          "text": "“It just looks better.”"
+        }
+      ]
+    },
+    {
+      "id": "M08_L05_Q04",
+      "questionText": "Что students должны делать с feedback?",
+      "options": [
+        {
+          "id": "M08_L05_Q04_OPT_A",
+          "text": "Считать его личной атакой."
+        },
+        {
+          "id": "M08_L05_Q04_OPT_B",
+          "text": "Игнорировать его."
+        },
+        {
+          "id": "M08_L05_Q04_OPT_C",
+          "text": "Использовать его, чтобы определить revision priorities и next steps."
+        },
+        {
+          "id": "M08_L05_Q04_OPT_D",
+          "text": "Удалить весь проект."
+        }
+      ]
+    },
+    {
+      "id": "M08_L05_Q05",
+      "questionText": "Что такое self-critique (самокритика)?",
+      "options": [
+        {
+          "id": "M08_L05_Q05_OPT_A",
+          "text": "Сказать, что проект плохой."
+        },
+        {
+          "id": "M08_L05_Q05_OPT_B",
+          "text": "Честно назвать strength, weakness, trade-off и next step."
+        },
+        {
+          "id": "M08_L05_Q05_OPT_C",
+          "text": "Отказаться от feedback."
+        },
+        {
+          "id": "M08_L05_Q05_OPT_D",
+          "text": "Повторить только название проекта."
+        }
+      ]
+    }
+  ]
+}

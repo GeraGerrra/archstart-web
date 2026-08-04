@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "result": "PASS",
+  "projectCode": "M03_P03",
+  "scope": "VALIDATION_SAMPLE_ONLY",
+  "aliases": [
+    {
+      "sourceFilename": "ARCH.START_M03_Project03_Student_Page (1).docx",
+      "canonicalCode": "M03_P03",
+      "canonicalRole": "STUDENT_PAGE",
+      "canonicalPublicFilename": "ARCH.START_M03_Project03_Student_Page.docx",
+      "reason": "Approved Phase 00 V4 audit-sample alias.",
+      "sourcePresent": true,
+      "sourceRelativePath": "ARCH.START_M03_Project03_Student_Page (1).docx",
+      "sourceSha256": "8c5e99b0fc5317c6149353110cfb65ab62971760455aeff056300a1277ad0c17",
+      "status": "ALIAS_RESOLVED",
+      "deterministicExactMatch": true,
+      "fuzzyMatchingUsed": false
+    },
+    {
+      "sourceFilename": "M03_P03_PPTX (1).pptx",
+      "canonicalCode": "M03_P03",
+      "canonicalRole": "EXAMPLE_PPTX",
+      "canonicalPublicFilename": "M03_P03_PPTX.pptx",
+      "reason": "Approved Phase 00 V4 audit-sample alias.",
+      "sourcePresent": true,
+      "sourceRelativePath": "M03_P03_PPTX (1).pptx",
+      "sourceSha256": "8d73f1301898b3e75e77d235deaa81ecb2eb6fbc81f4caedec882a2e3ddd36d6",
+      "status": "ALIAS_RESOLVED",
+      "deterministicExactMatch": true,
+      "fuzzyMatchingUsed": false
+    }
+  ],
+  "studentPageParser": {
+    "parsed": true,
+    "blockCount": 65
+  },
+  "projectFormatType": "SINGLE_BOARD",
+  "completeM03ModuleImported": false,
+  "publicRouteCreated": false,
+  "officialOrderModified": false
+}

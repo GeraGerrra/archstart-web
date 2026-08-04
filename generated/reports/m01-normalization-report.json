@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0",
+  "result": "PASS",
+  "moduleCode": "M01",
+  "lessonCount": 5,
+  "projectCode": "M01_P01",
+  "registeredLessonAssets": 25,
+  "transcriptSectionCount": 135,
+  "vocabularyEntryCount": 69,
+  "miniOutputCount": 5,
+  "quizQuestionCount": 25,
+  "piceAvailableCount": 5,
+  "videoPendingCount": 5,
+  "captionsPendingCount": 5,
+  "studentPageAlias": {
+    "sourceFilename": "ARCH.START_M01_Project01_Student_Page_V2.docx",
+    "canonicalCode": "M01_P01",
+    "canonicalRole": "STUDENT_PAGE",
+    "canonicalPublicFilename": "ARCH.START_M01_Project01_Student_Page.docx",
+    "reason": "Explicit Phase 01 source registration for the intentionally supplied approved M01 Student Page revision.",
+    "sourcePresent": true,
+    "sourceRelativePath": "M01/M01_P01/ARCH.START_M01_Project01_Student_Page_V2.docx",
+    "sourceSha256": "956a2541aa07314352e02b8dc8e7b31b16e7b151f1558f15d20ee9b6da6ac749",
+    "status": "ALIAS_RESOLVED",
+    "deterministicExactMatch": true,
+    "fuzzyMatchingUsed": false
+  },
+  "publicUiBuilt": false
+}

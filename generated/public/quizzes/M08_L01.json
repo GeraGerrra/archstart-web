@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M08_L01",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M08_L01_Q01",
+      "questionText": "Какая главная идея drawing set (комплекта чертежей) в этом уроке?",
+      "options": [
+        {
+          "id": "M08_L01_Q01_OPT_A",
+          "text": "Включить каждый drawing, сделанный во время курса."
+        },
+        {
+          "id": "M08_L01_Q01_OPT_B",
+          "text": "Использовать drawings как evidence system, которая доказывает project decisions."
+        },
+        {
+          "id": "M08_L01_Q01_OPT_C",
+          "text": "Заполнить board как можно большим количеством изображений."
+        },
+        {
+          "id": "M08_L01_Q01_OPT_D",
+          "text": "Использовать только renders."
+        }
+      ]
+    },
+    {
+      "id": "M08_L01_Q02",
+      "questionText": "Какой drawing лучше всего отвечает на вопросы height, light, structure и envelope logic?",
+      "options": [
+        {
+          "id": "M08_L01_Q02_OPT_A",
+          "text": "Section (разрез)."
+        },
+        {
+          "id": "M08_L01_Q02_OPT_B",
+          "text": "Только elevation."
+        },
+        {
+          "id": "M08_L01_Q02_OPT_C",
+          "text": "Только caption."
+        },
+        {
+          "id": "M08_L01_Q02_OPT_D",
+          "text": "Только render."
+        }
+      ]
+    },
+    {
+      "id": "M08_L01_Q03",
+      "questionText": "Что должна делать хорошая caption (подпись)?",
+      "options": [
+        {
+          "id": "M08_L01_Q03_OPT_A",
+          "text": "Только повторять “Plan” или “Section”."
+        },
+        {
+          "id": "M08_L01_Q03_OPT_B",
+          "text": "Объяснять, что drawing доказывает."
+        },
+        {
+          "id": "M08_L01_Q03_OPT_C",
+          "text": "Заменять drawing."
+        },
+        {
+          "id": "M08_L01_Q03_OPT_D",
+          "text": "Добавлять декоративный текст."
+        }
+      ]
+    },
+    {
+      "id": "M08_L01_Q04",
+      "questionText": "Когда drawing становится redundant (избыточным)?",
+      "options": [
+        {
+          "id": "M08_L01_Q04_OPT_A",
+          "text": "Когда он даёт полезное evidence."
+        },
+        {
+          "id": "M08_L01_Q04_OPT_B",
+          "text": "Когда несколько drawings повторяют одну информацию и не добавляют нового proof."
+        },
+        {
+          "id": "M08_L01_Q04_OPT_C",
+          "text": "Когда у него есть scale label."
+        },
+        {
+          "id": "M08_L01_Q04_OPT_D",
+          "text": "Когда это section."
+        }
+      ]
+    },
+    {
+      "id": "M08_L01_Q05",
+      "questionText": "Какое утверждение показывает самую сильную drawing-selection logic?",
+      "options": [
+        {
+          "id": "M08_L01_Q05_OPT_A",
+          "text": "Я включил это, потому что выглядит nice."
+        },
+        {
+          "id": "M08_L01_Q05_OPT_B",
+          "text": "Я включил этот section, потому что он доказывает daylight, ventilation и structural height relationships."
+        },
+        {
+          "id": "M08_L01_Q05_OPT_C",
+          "text": "Я включил все версии плана."
+        },
+        {
+          "id": "M08_L01_Q05_OPT_D",
+          "text": "Я убрал все diagrams, потому что text всё объясняет."
+        }
+      ]
+    }
+  ]
+}

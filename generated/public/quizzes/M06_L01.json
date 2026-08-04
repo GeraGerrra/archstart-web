@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M06_L01",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M06_L01_Q01",
+      "questionText": "Какая главная идея sustainability (устойчивого проектирования) в этом уроке?",
+      "options": [
+        {
+          "id": "M06_L01_Q01_OPT_A",
+          "text": "Здание устойчивое, если на нём есть растения."
+        },
+        {
+          "id": "M06_L01_Q01_OPT_B",
+          "text": "Здание устойчивое, если оно выглядит натурально."
+        },
+        {
+          "id": "M06_L01_Q01_OPT_C",
+          "text": "Sustainability означает performance с доказательствами по energy, water, carbon, health и resources."
+        },
+        {
+          "id": "M06_L01_Q01_OPT_D",
+          "text": "Sustainability означает использовать только timber."
+        }
+      ]
+    },
+    {
+      "id": "M06_L01_Q02",
+      "questionText": "Какое утверждение является самым evidence-based?",
+      "options": [
+        {
+          "id": "M06_L01_Q02_OPT_A",
+          "text": "Это здание eco, потому что оно зелёное."
+        },
+        {
+          "id": "M06_L01_Q02_OPT_B",
+          "text": "Этот павильон уменьшает overheating с помощью exterior shading, показанного в sun section."
+        },
+        {
+          "id": "M06_L01_Q02_OPT_C",
+          "text": "Этот проект ощущается натуральным."
+        },
+        {
+          "id": "M06_L01_Q02_OPT_D",
+          "text": "Этот фасад выглядит sustainable."
+        }
+      ]
+    },
+    {
+      "id": "M06_L01_Q03",
+      "questionText": "Что включает indoor environmental quality / IEQ (качество внутренней среды)?",
+      "options": [
+        {
+          "id": "M06_L01_Q03_OPT_A",
+          "text": "Только цвет внешнего фасада."
+        },
+        {
+          "id": "M06_L01_Q03_OPT_B",
+          "text": "Air, daylight, glare, temperature, acoustics и material quality внутри здания."
+        },
+        {
+          "id": "M06_L01_Q03_OPT_C",
+          "text": "Только количество деревьев снаружи."
+        },
+        {
+          "id": "M06_L01_Q03_OPT_D",
+          "text": "Только высоту здания."
+        }
+      ]
+    },
+    {
+      "id": "M06_L01_Q04",
+      "questionText": "Почему carbon — это не только operational issue?",
+      "options": [
+        {
+          "id": "M06_L01_Q04_OPT_A",
+          "text": "Carbon связан только с цветом краски."
+        },
+        {
+          "id": "M06_L01_Q04_OPT_B",
+          "text": "Materials и construction тоже создают embodied impact до начала использования здания."
+        },
+        {
+          "id": "M06_L01_Q04_OPT_C",
+          "text": "Carbon появляется только в water systems."
+        },
+        {
+          "id": "M06_L01_Q04_OPT_D",
+          "text": "Carbon не связан с архитектурой."
+        }
+      ]
+    },
+    {
+      "id": "M06_L01_Q05",
+      "questionText": "Какой trade-off самый конкретный?",
+      "options": [
+        {
+          "id": "M06_L01_Q05_OPT_A",
+          "text": "У sustainability есть плюсы и минусы."
+        },
+        {
+          "id": "M06_L01_Q05_OPT_B",
+          "text": "Стратегия хорошая, но сложная."
+        },
+        {
+          "id": "M06_L01_Q05_OPT_C",
+          "text": "Exterior shading уменьшает overheating, но может снизить winter sun и daylight."
+        },
+        {
+          "id": "M06_L01_Q05_OPT_D",
+          "text": "Green design всегда лучше."
+        }
+      ]
+    }
+  ]
+}

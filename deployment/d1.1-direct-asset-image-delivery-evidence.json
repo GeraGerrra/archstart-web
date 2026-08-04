@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "1.0.0",
+  "result": "PASS",
+  "scope": "ARCH.START Deployment Reset D1.1 direct asset image delivery patch",
+  "runtime": {
+    "node": "24.18.0",
+    "pnpm": "11.17.0"
+  },
+  "productChange": {
+    "path": "next.config.ts",
+    "imagesUnoptimized": true,
+    "externalAssetRedirectsPreserved": true,
+    "nextImageComponentsPreserved": true,
+    "customLoaderAdded": false,
+    "remotePatternsAdded": false
+  },
+  "gates": {
+    "frozenInstall": "PASS",
+    "lint": {
+      "result": "PASS",
+      "errors": 0,
+      "inheritedWarnings": 6
+    },
+    "typecheck": "PASS",
+    "contentTypecheck": "PASS",
+    "tests": {
+      "result": "PASS",
+      "total": 25,
+      "passed": 25,
+      "failed": 0
+    },
+    "contentValidation": "PASS",
+    "lockfileVerification": "PASS",
+    "sevenBoundaries": "PASS_7_OF_7",
+    "sourceQuizSecurity": "PASS_2_OF_2",
+    "productionBuild": {
+      "result": "PASS",
+      "generatedStaticPages": 280
+    },
+    "productionBrowserBundleQuizScan": "PASS",
+    "secretScan": {
+      "result": "PASS",
+      "highConfidenceMatches": 0
+    },
+    "projectSize": {
+      "targetUnder100MB": true,
+      "hardGateUnder200MB": true,
+      "largestGitBoundFileBytes": 1511439,
+      "singleFileUnder50MB": true
+    }
+  },
+  "productionTransportSmoke": {
+    "assetBaseUrl": "https://assets.example.test",
+    "runtimeOnlyPlaceholderPublicSupabaseValues": true,
+    "placeholderValuesSealedIntoProject": false,
+    "representativeRoutes": [
+      {
+        "surface": "Home",
+        "path": "/prototype/a/home",
+        "status": 200,
+        "uniqueDirectPrototypeAssetUrls": 10,
+        "prototypeOptimizerUrls": 0
+      },
+      {
+        "surface": "Module 01",
+        "path": "/prototype/a/course/m01",
+        "status": 200,
+        "uniqueDirectPrototypeAssetUrls": 2,
+        "prototypeOptimizerUrls": 0
+      },
+      {
+        "surface": "Vocabulary",
+        "path": "/prototype/a/course/m01/l01/vocabulary",
+        "status": 200,
+        "uniqueDirectPrototypeAssetUrls": 5,
+        "prototypeOptimizerUrls": 0
+      },
+      {
+        "surface": "Lecture materials",
+        "path": "/prototype/a/course/m01/l01/lecture-materials",
+        "status": 200,
+        "uniqueDirectPrototypeAssetUrls": 26,
+        "prototypeOptimizerUrls": 0
+      },
+      {
+        "surface": "Project 08",
+        "path": "/prototype/a/course/m08/project",
+        "status": 200,
+        "uniqueDirectPrototypeAssetUrls": 12,
+        "prototypeOptimizerUrls": 0
+      }
+    ],
+    "directAssetRequest": {
+      "path": "/prototype-assets/module-m01-cutout.png",
+      "status": 307,
+      "location": "https://assets.example.test/prototype-assets/module-m01-cutout.png",
+      "exactLocationMatch": true
+    },
+    "emptyAssetBaseRedirectList": true,
+    "productionDesignSystem": {
+      "path": "/dev/design-system",
+      "status": 404
+    }
+  },
+  "preservation": {
+    "assetManifestSha256": "be72504a36aacde4e4168627d06c39890a53a95615600c09ee52018ebda4e1db",
+    "assetManifestByteIdenticalToExternalAuthority": true,
+    "assetRecords": 1562,
+    "assetBytes": 1012572350,
+    "assetPackHashesPreserved": 9,
+    "assetPathLiteralsChanged": 0,
+    "generatedLearnerContentChanged": 0,
+    "youtubeMapsChanged": 0,
+    "furtherStudyChanged": 0,
+    "authProfileOnboardingSupabaseSourceChanged": 0,
+    "quizServerOnlyAnswerSourceChanged": 0
+  },
+  "externalConnections": {
+    "r2": false,
+    "github": false,
+    "vercel": false,
+    "supabase": false
+  }
+}

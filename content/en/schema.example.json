@@ -1,0 +1,9 @@
+{
+  "$comment": "Schema example only. This is not publishable documentary copy.",
+  "id": "example-id-not-content",
+  "route": "/en/example",
+  "language": "en",
+  "title": "",
+  "bodyBlocks": [],
+  "reviewStatus": "DRAFT"
+}

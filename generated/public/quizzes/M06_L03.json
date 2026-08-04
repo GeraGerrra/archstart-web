@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M06_L03",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M06_L03_Q01",
+      "questionText": "Что такое embodied carbon (воплощённый углерод)?",
+      "options": [
+        {
+          "id": "M06_L03_Q01_OPT_A",
+          "text": "Carbon, связанный только с отоплением и охлаждением во время эксплуатации."
+        },
+        {
+          "id": "M06_L03_Q01_OPT_B",
+          "text": "Carbon, связанный с materials и construction stages: extraction, manufacturing, transport и construction."
+        },
+        {
+          "id": "M06_L03_Q01_OPT_C",
+          "text": "Carbon, который появляется только после сноса."
+        },
+        {
+          "id": "M06_L03_Q01_OPT_D",
+          "text": "Carbon, вызванный только indoor lighting."
+        }
+      ]
+    },
+    {
+      "id": "M06_L03_Q02",
+      "questionText": "Что такое operational carbon (эксплуатационный углерод)?",
+      "options": [
+        {
+          "id": "M06_L03_Q02_OPT_A",
+          "text": "Carbon, связанный с energy use во время работы здания."
+        },
+        {
+          "id": "M06_L03_Q02_OPT_B",
+          "text": "Carbon, спрятанный только в образце материала."
+        },
+        {
+          "id": "M06_L03_Q02_OPT_C",
+          "text": "Carbon от рисования проекта."
+        },
+        {
+          "id": "M06_L03_Q02_OPT_D",
+          "text": "Carbon, не связанный с архитектурой."
+        }
+      ]
+    },
+    {
+      "id": "M06_L03_Q03",
+      "questionText": "Какая sequence лучше всего описывает lifecycle thinking?",
+      "options": [
+        {
+          "id": "M06_L03_Q03_OPT_A",
+          "text": "Color → style → mood → render."
+        },
+        {
+          "id": "M06_L03_Q03_OPT_B",
+          "text": "Extraction → manufacturing → transport → construction → operation → maintenance → reuse/end-of-life."
+        },
+        {
+          "id": "M06_L03_Q03_OPT_C",
+          "text": "Sketch → render → publish → forget."
+        },
+        {
+          "id": "M06_L03_Q03_OPT_D",
+          "text": "Facade → decoration → furniture → logo."
+        }
+      ]
+    },
+    {
+      "id": "M06_L03_Q04",
+      "questionText": "Какое low-impact material claim самое сильное?",
+      "options": [
+        {
+          "id": "M06_L03_Q04_OPT_A",
+          "text": "Timber натуральный, значит sustainable."
+        },
+        {
+          "id": "M06_L03_Q04_OPT_B",
+          "text": "Reused brick base снижает потребность в новом материале, может служить долго и требует проверки mortar."
+        },
+        {
+          "id": "M06_L03_Q04_OPT_C",
+          "text": "Glass выглядит чисто и современно."
+        },
+        {
+          "id": "M06_L03_Q04_OPT_D",
+          "text": "Steel всегда плохой."
+        }
+      ]
+    },
+    {
+      "id": "M06_L03_Q05",
+      "questionText": "Какой trade-off самый точный?",
+      "options": [
+        {
+          "id": "M06_L03_Q05_OPT_A",
+          "text": "Больше insulation может снизить operational energy demand, но добавляет материал с embodied impact."
+        },
+        {
+          "id": "M06_L03_Q05_OPT_B",
+          "text": "Все low-carbon strategies не имеют последствий."
+        },
+        {
+          "id": "M06_L03_Q05_OPT_C",
+          "text": "Reuse всегда решает все проблемы."
+        },
+        {
+          "id": "M06_L03_Q05_OPT_D",
+          "text": "Operational carbon не связан с design."
+        }
+      ]
+    }
+  ]
+}

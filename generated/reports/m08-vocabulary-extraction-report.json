@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "items": [
+    {
+      "lessonCode": "M08_L01",
+      "sourceFile": "M08/M08_L01/M08_L01_VOCB.pdf",
+      "entryCount": 21,
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "warnings": [],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M08_L02",
+      "sourceFile": "M08/M08_L02/M08_L02_VOCB.pdf",
+      "entryCount": 21,
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "warnings": [],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M08_L03",
+      "sourceFile": "M08/M08_L03/M08_L03_VOCB.pdf",
+      "entryCount": 21,
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "warnings": [
+        "M08/M08_L03/M08_L03_VOCB.pdf: uncertain label geometry for entry 21 on page 5",
+        "M08/M08_L03/M08_L03_VOCB.pdf: entry 21 recovered from the audited centered-number page geometry"
+      ],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS_WITH_WARNINGS"
+    },
+    {
+      "lessonCode": "M08_L04",
+      "sourceFile": "M08/M08_L04/M08_L04_VOCB.pdf",
+      "entryCount": 21,
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "warnings": [],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS"
+    },
+    {
+      "lessonCode": "M08_L05",
+      "sourceFile": "M08/M08_L05/M08_L05_VOCB.pdf",
+      "entryCount": 20,
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "warnings": [],
+      "extractor": "pdftotext-tsv",
+      "result": "PASS"
+    }
+  ]
+}

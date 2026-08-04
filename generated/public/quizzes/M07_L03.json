@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M07_L03",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M07_L03_Q01",
+      "questionText": "Какая главная flood/rain idea в этом уроке?",
+      "options": [
+        {
+          "id": "M07_L03_Q01_OPT_A",
+          "text": "Нарисовать драматичную сцену наводнения."
+        },
+        {
+          "id": "M07_L03_Q01_OPT_B",
+          "text": "Показать water level, water path, wet/dry zones, protected equipment и recovery."
+        },
+        {
+          "id": "M07_L03_Q01_OPT_C",
+          "text": "Добавить синий фон на чертёж."
+        },
+        {
+          "id": "M07_L03_Q01_OPT_D",
+          "text": "Разместить все помещения под землёй."
+        }
+      ]
+    },
+    {
+      "id": "M07_L03_Q02",
+      "questionText": "В чём разница между wet zone и dry zone?",
+      "options": [
+        {
+          "id": "M07_L03_Q02_OPT_A",
+          "text": "Wet zone декоративная, dry zone конструктивная."
+        },
+        {
+          "id": "M07_L03_Q02_OPT_B",
+          "text": "Wet zone может намокать с ограниченным ущербом, а dry zone должна защищать чувствительные функции и оборудование."
+        },
+        {
+          "id": "M07_L03_Q02_OPT_C",
+          "text": "Wet zone всегда снаружи, а dry zone всегда на крыше."
+        },
+        {
+          "id": "M07_L03_Q02_OPT_D",
+          "text": "Это одно и то же."
+        }
+      ]
+    },
+    {
+      "id": "M07_L03_Q03",
+      "questionText": "Почему одного drain symbol недостаточно?",
+      "options": [
+        {
+          "id": "M07_L03_Q03_OPT_A",
+          "text": "Drainage — это только визуальный декор."
+        },
+        {
+          "id": "M07_L03_Q03_OPT_B",
+          "text": "Diagram должна показывать, куда вода уходит, включая overflow или maintenance logic."
+        },
+        {
+          "id": "M07_L03_Q03_OPT_C",
+          "text": "Drains никогда не полезны."
+        },
+        {
+          "id": "M07_L03_Q03_OPT_D",
+          "text": "Вода не может двигаться."
+        }
+      ]
+    },
+    {
+      "id": "M07_L03_Q04",
+      "questionText": "Где должно быть protected equipment в flood-safe section?",
+      "options": [
+        {
+          "id": "M07_L03_Q04_OPT_A",
+          "text": "В самой низкой точке wet zone."
+        },
+        {
+          "id": "M07_L03_Q04_OPT_B",
+          "text": "Выше flood level или внутри protected dry zone."
+        },
+        {
+          "id": "M07_L03_Q04_OPT_C",
+          "text": "В drain."
+        },
+        {
+          "id": "M07_L03_Q04_OPT_D",
+          "text": "За пределами drawing."
+        }
+      ]
+    },
+    {
+      "id": "M07_L03_Q05",
+      "questionText": "Какой realistic trade-off возможен при raised floor (приподнятом полу)?",
+      "options": [
+        {
+          "id": "M07_L03_Q05_OPT_A",
+          "text": "Он может снизить water damage, но потребовать более высокий вход, ramp length, grading или maintenance."
+        },
+        {
+          "id": "M07_L03_Q05_OPT_B",
+          "text": "У него нет последствий."
+        },
+        {
+          "id": "M07_L03_Q05_OPT_C",
+          "text": "Он убирает необходимость в drainage."
+        },
+        {
+          "id": "M07_L03_Q05_OPT_D",
+          "text": "Он гарантирует полностью flood-proof design."
+        }
+      ]
+    }
+  ]
+}

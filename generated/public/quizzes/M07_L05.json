@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M07_L05",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M07_L05_Q01",
+      "questionText": "Какая главная идея climate adaptation (климатической адаптации) в этом уроке?",
+      "options": [
+        {
+          "id": "M07_L05_Q01_OPT_A",
+          "text": "Показать тревожные climate images без связи с проектом."
+        },
+        {
+          "id": "M07_L05_Q01_OPT_B",
+          "text": "Снизить vulnerability при heat, wind и disruption через shade, refuge, ventilation, robust envelope и backup logic."
+        },
+        {
+          "id": "M07_L05_Q01_OPT_C",
+          "text": "Добавить деревья без анализа exposure и user safety."
+        },
+        {
+          "id": "M07_L05_Q01_OPT_D",
+          "text": "Сделать каждое здание полностью закрытым без openings."
+        }
+      ]
+    },
+    {
+      "id": "M07_L05_Q02",
+      "questionText": "Что такое heat refuge (прохладное убежище / зона охлаждения)?",
+      "options": [
+        {
+          "id": "M07_L05_Q02_OPT_A",
+          "text": "Декоративная подпись на плане."
+        },
+        {
+          "id": "M07_L05_Q02_OPT_B",
+          "text": "Более прохладная, затенённая, проветриваемая или защищённая зона, где users могут ждать или восстановиться во время heat stress."
+        },
+        {
+          "id": "M07_L05_Q02_OPT_C",
+          "text": "Помещение без air path."
+        },
+        {
+          "id": "M07_L05_Q02_OPT_D",
+          "text": "Вход, полностью открытый ветру."
+        }
+      ]
+    },
+    {
+      "id": "M07_L05_Q03",
+      "questionText": "Почему ventilation arrows alone недостаточно?",
+      "options": [
+        {
+          "id": "M07_L05_Q03_OPT_A",
+          "text": "Потому что ventilation никогда не полезна."
+        },
+        {
+          "id": "M07_L05_Q03_OPT_B",
+          "text": "Потому что diagram должна показать inlet, outlet и airflow path."
+        },
+        {
+          "id": "M07_L05_Q03_OPT_C",
+          "text": "Потому что стрелки всегда должны быть цветными."
+        },
+        {
+          "id": "M07_L05_Q03_OPT_D",
+          "text": "Потому что ventilation работает только зимой."
+        }
+      ]
+    },
+    {
+      "id": "M07_L05_Q04",
+      "questionText": "Какая wind adaptation strategy самая сильная?",
+      "options": [
+        {
+          "id": "M07_L05_Q04_OPT_A",
+          "text": "Игнорировать wind, потому что у здания есть roof."
+        },
+        {
+          "id": "M07_L05_Q04_OPT_B",
+          "text": "Отметить wind exposure у entry и canopy edge, добавить sheltered entry / screen и показать robust support или edge warning."
+        },
+        {
+          "id": "M07_L05_Q04_OPT_C",
+          "text": "Нарисовать драматичный шторм."
+        },
+        {
+          "id": "M07_L05_Q04_OPT_D",
+          "text": "Добавить случайную стену без route logic."
+        }
+      ]
+    },
+    {
+      "id": "M07_L05_Q05",
+      "questionText": "Какой realistic trade-off возможен для heat/wind adaptation?",
+      "options": [
+        {
+          "id": "M07_L05_Q05_OPT_A",
+          "text": "Shading, screens и robust envelope могут улучшить safety, но добавить structure, maintenance, cost или уменьшить openness."
+        },
+        {
+          "id": "M07_L05_Q05_OPT_B",
+          "text": "Adaptation не имеет последствий."
+        },
+        {
+          "id": "M07_L05_Q05_OPT_C",
+          "text": "Backup systems никогда не требуют maintenance."
+        },
+        {
+          "id": "M07_L05_Q05_OPT_D",
+          "text": "Shaded route решает все climate problems."
+        }
+      ]
+    }
+  ]
+}

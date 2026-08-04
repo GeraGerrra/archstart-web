@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "architecture": "sectional-language-not-full-localization",
+  "core": {
+    "language": "ru",
+    "documentLanguage": "ru",
+    "routePrefix": "/",
+    "status": "RESERVED_FOUNDATION_ONLY",
+    "patterns": [
+      "/",
+      "/course",
+      "/curriculum",
+      "/how-it-works",
+      "/faq",
+      "/contact",
+      "/auth/*",
+      "/onboarding",
+      "/dashboard",
+      "/modules/[moduleCode]",
+      "/lessons/[lessonCode]",
+      "/projects/[projectCode]",
+      "/quizzes/*",
+      "/progress",
+      "/certificates/*",
+      "/profile",
+      "/privacy",
+      "/terms"
+    ]
+  },
+  "documentary": {
+    "language": "en",
+    "documentLanguage": "en",
+    "routePrefix": "/en",
+    "status": "CONTROLLED_EMPTY_NAMESPACE_FOR_PHASE_10",
+    "patterns": [
+      "/en",
+      "/en/process",
+      "/en/research",
+      "/en/methodology",
+      "/en/team",
+      "/en/impact",
+      "/en/journal",
+      "/en/journal/[slug]"
+    ],
+    "authenticationRequired": false,
+    "inventedBodyCopyAllowed": false
+  },
+  "prohibitions": {
+    "globalLanguageSwitch": true,
+    "duplicateEnglishLessonTree": true,
+    "machineTranslatedPublishedCopy": true,
+    "mixedLanguageUncontrolledBodyField": true
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "lessonCode": "M07_L04",
+  "quizVersion": "phase01-source-2026-07-27",
+  "questions": [
+    {
+      "id": "M07_L04_Q01",
+      "questionText": "Какая главная fire-safety idea в этом уроке?",
+      "options": [
+        {
+          "id": "M07_L04_Q01_OPT_A",
+          "text": "Показать драматичные сцены пожара."
+        },
+        {
+          "id": "M07_L04_Q01_OPT_B",
+          "text": "Планировать routes, exits, compartments, smoke awareness, refuge/accessibility и assembly."
+        },
+        {
+          "id": "M07_L04_Q01_OPT_C",
+          "text": "Добавить одну стрелку и остановиться."
+        },
+        {
+          "id": "M07_L04_Q01_OPT_D",
+          "text": "Сделать план визуально пугающим."
+        }
+      ]
+    },
+    {
+      "id": "M07_L04_Q02",
+      "questionText": "Что такое egress route (путь эвакуации)?",
+      "options": [
+        {
+          "id": "M07_L04_Q02_OPT_A",
+          "text": "Декоративная линия на плане."
+        },
+        {
+          "id": "M07_L04_Q02_OPT_B",
+          "text": "Маршрут от occupied space к выходу или более безопасной зоне."
+        },
+        {
+          "id": "M07_L04_Q02_OPT_C",
+          "text": "Материальная текстура."
+        },
+        {
+          "id": "M07_L04_Q02_OPT_D",
+          "text": "Конструктивная сетка колонн."
+        }
+      ]
+    },
+    {
+      "id": "M07_L04_Q03",
+      "questionText": "Почему smoke zone важна в evacuation diagram?",
+      "options": [
+        {
+          "id": "M07_L04_Q03_OPT_A",
+          "text": "Она делает рисунок драматичнее."
+        },
+        {
+          "id": "M07_L04_Q03_OPT_B",
+          "text": "Она может сделать маршрут небезопасным, даже если выход всё ещё существует."
+        },
+        {
+          "id": "M07_L04_Q03_OPT_C",
+          "text": "Она заменяет все exits."
+        },
+        {
+          "id": "M07_L04_Q03_OPT_D",
+          "text": "Это только выбор цвета."
+        }
+      ]
+    },
+    {
+      "id": "M07_L04_Q04",
+      "questionText": "Какая diagram самая сильная?",
+      "options": [
+        {
+          "id": "M07_L04_Q04_OPT_A",
+          "text": "Одна стрелка к одному выходу."
+        },
+        {
+          "id": "M07_L04_Q04_OPT_B",
+          "text": "Два exits без маршрутов."
+        },
+        {
+          "id": "M07_L04_Q04_OPT_C",
+          "text": "Users, route A, alternative route, smoke zone, compartment line, refuge/accessibility note, assembly point и trade-off."
+        },
+        {
+          "id": "M07_L04_Q04_OPT_D",
+          "text": "Драматичное изображение пожара."
+        }
+      ]
+    },
+    {
+      "id": "M07_L04_Q05",
+      "questionText": "Какой realistic trade-off возможен при добавлении compartments или protected routes?",
+      "options": [
+        {
+          "id": "M07_L04_Q05_OPT_A",
+          "text": "Safety logic может потребовать больше doors, separation, circulation space или меньше open-plan flexibility."
+        },
+        {
+          "id": "M07_L04_Q05_OPT_B",
+          "text": "У этого нет spatial consequences."
+        },
+        {
+          "id": "M07_L04_Q05_OPT_C",
+          "text": "Это убирает необходимость в exits."
+        },
+        {
+          "id": "M07_L04_Q05_OPT_D",
+          "text": "Это гарантирует code compliance без проверки."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "result": "PASS",
+  "gates": {
+    "runtime": {
+      "node": "24.18.0",
+      "pnpm": "11.17.0"
+    },
+    "frozenInstall": "PASS",
+    "lint": {
+      "result": "PASS",
+      "errors": 0,
+      "inheritedWarnings": 6
+    },
+    "typecheck": "PASS",
+    "contentTypecheck": "PASS",
+    "tests": {
+      "result": "PASS",
+      "tests": 24,
+      "passed": 24,
+      "failed": 0
+    },
+    "contentValidation": "PASS",
+    "lockfileVerification": "PASS",
+    "sevenBoundaries": {
+      "result": "PASS",
+      "passed": 7,
+      "failed": 0
+    },
+    "quizSecurity": {
+      "result": "PASS",
+      "prototypeSourceScan": "PASS",
+      "selectedASourceScan": "PASS",
+      "productionBrowserBundleScan": "PASS"
+    },
+    "productionBuild": {
+      "result": "PASS",
+      "generatedStaticPages": 280,
+      "prerenderManifestStaticRoutes": 21,
+      "appPathEntries": 26
+    },
+    "secretScan": {
+      "result": "PASS",
+      "matches": 0
+    },
+    "projectSize": {
+      "fileCountExcludingDependenciesAndBuild": 314,
+      "sizeBytesExcludingDependenciesAndBuild": 6542724,
+      "targetUnder100MB": true,
+      "hardGateUnder200MB": true,
+      "largestGitBoundFileBytes": 1511439,
+      "singleFileUnder50MB": true,
+      "preservedAcceptedFilesCompared": 269,
+      "secretMatchCount": 0
+    },
+    "assetReconciliation": {
+      "fileCount": 1562,
+      "sizeBytes": 1012572350,
+      "duplicatePathCount": 0,
+      "missingPathCount": 0,
+      "unlistedPathCount": 0,
+      "brokenDirectReferenceCount": 0
+    },
+    "liveBrowserQA": "NOT_RUN_BY_INSTRUCTION",
+    "liveAuthAcceptance": "NOT_CLAIMED",
+    "hostedServicesConfigured": false
+  }
+}
