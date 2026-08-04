@@ -1,3 +1,20 @@
+<!-- PHASE07_PASS0_CURRENT -->
+# ARCH.START Route List — Phase 07 Pass 0
+
+| Route | Access | Purpose |
+|---|---|---|
+| `/` | public | server-side redirect to `/prototype/a/home` |
+| `/prototype/a/home` | public | accepted ARCH.START public Home |
+
+This bounded launch-shell pass changes no course, Auth, profile, RLS, Quiz,
+completion, project, asset, Supabase, Resend or certificate behavior.
+
+**PHASE 06 ACCEPTED AND CLOSED**
+
+**PHASE 07.0 LAUNCH SHELL IMPLEMENTED FOR SOURCE**
+
+**PHASE 07.1 PERSISTENT PROGRESS NOT STARTED**
+
 <!-- PHASE06_PASS1_CURRENT -->
 # ARCH.START Route List — Phase 06 Pass 1
 

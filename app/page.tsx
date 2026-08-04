@@ -1,6 +1,5 @@
+import { redirect } from "next/navigation";
 
-import { notFound } from "next/navigation";
-
-export default function RepositoryFoundationPage(): never {
-  notFound();
+export default function LaunchShellPage(): never {
+  redirect("/prototype/a/home");
 }
