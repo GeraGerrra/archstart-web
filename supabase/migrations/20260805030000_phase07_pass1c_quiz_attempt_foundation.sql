@@ -83,17 +83,25 @@ immutable
 strict
 set search_path = ''
 as $$
-  select
-    pg_catalog.jsonb_typeof(p_answers) = 'object'
-    and pg_catalog.jsonb_object_length(p_answers) = 5
-    and not exists (
-      select 1
-      from pg_catalog.jsonb_each(p_answers) as entry(question_id, option_value)
-      where question_id !~ '^[A-Za-z0-9._:-]{1,128}$'
-        or pg_catalog.jsonb_typeof(option_value) <> 'string'
-        or pg_catalog.length(option_value #>> '{}') < 1
-        or pg_catalog.length(option_value #>> '{}') > 128
-    );
+  select case
+    when pg_catalog.jsonb_typeof(p_answers) <> 'object'
+      then false
+    else (
+      (
+        select count(*) = 5
+        from pg_catalog.jsonb_object_keys(p_answers)
+      )
+      and not exists (
+        select 1
+        from pg_catalog.jsonb_each(p_answers)
+          as entry(question_id, option_value)
+        where question_id !~ '^[A-Za-z0-9._:-]{1,128}$'
+          or pg_catalog.jsonb_typeof(option_value) <> 'string'
+          or pg_catalog.length(option_value #>> '{}') < 1
+          or pg_catalog.length(option_value #>> '{}') > 128
+      )
+    )
+  end;
 $$;
 
 revoke all on function private.quiz_answers_shape_is_valid(jsonb)

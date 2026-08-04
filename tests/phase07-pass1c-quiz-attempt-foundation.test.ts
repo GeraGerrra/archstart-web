@@ -69,7 +69,18 @@ test("Quiz attempts are immutable, learner-owned, and aggregate-only", () => {
 
 test("answer payloads must contain exactly five string selections", () => {
   assert.match(migration, /private\.quiz_answers_shape_is_valid/u);
-  assert.match(migration, /jsonb_object_length\(p_answers\) = 5/u);
+  assert.match(
+    migration,
+    /jsonb_object_keys\(p_answers\)/u,
+  );
+  assert.match(
+    migration,
+    /select\s+count\(\*\) = 5/u,
+  );
+  assert.doesNotMatch(
+    migration,
+    /jsonb_object_length/u,
+  );
   assert.match(migration, /jsonb_typeof\(option_value\) <> 'string'/u);
   assert.match(migration, /quiz_attempts_answers_shape/u);
 });
