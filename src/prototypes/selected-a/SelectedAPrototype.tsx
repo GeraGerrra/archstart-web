@@ -29,6 +29,7 @@ import { VISUAL_STATUS_LABELS } from "@/src/design-system";
 import {
   SelectedAShell,
   selectedAStatusForLesson as statusForLesson,
+  type SelectedAShellProgressProjection,
 } from "./shell-adapter";
 import {
   selectedALessonMapping,
@@ -181,8 +182,22 @@ export function SelectedACourse({ forceModuleMenu, forceMobileModules }: { force
   return <SelectedAShell active="course" currentModule="M01" forceModuleMenu={forceModuleMenu} forceMobileModules={forceMobileModules}><CourseOverviewPage model={selectedACourseModel} /></SelectedAShell>;
 }
 
-export function SelectedADashboard() {
-  return <SelectedAShell active="dashboard" currentModule="M01"><DashboardPage model={selectedADashboardModel} /></SelectedAShell>;
+export function SelectedADashboard({
+  model = selectedADashboardModel,
+  progressProjection,
+}: {
+  model?: DashboardViewModel;
+  progressProjection?: SelectedAShellProgressProjection;
+} = {}) {
+  return (
+    <SelectedAShell
+      active="dashboard"
+      currentModule={progressProjection?.currentModuleCode ?? "M01"}
+      progressProjection={progressProjection}
+    >
+      <DashboardPage model={model} />
+    </SelectedAShell>
+  );
 }
 
 function selectedAModuleLesson(lesson: (typeof courseLessons)[number]): ModuleLessonBranchDisplay {

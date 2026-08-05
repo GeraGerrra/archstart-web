@@ -151,6 +151,7 @@ export interface DashboardEmptyHistory {
 export interface DashboardViewModel {
   title: string;
   disclosure: string;
+  profileAction?: LearningLink;
   completedLessons: number;
   lessonTotal: number;
   continueLearning: DashboardContinueLearning;

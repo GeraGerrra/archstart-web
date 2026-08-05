@@ -7,6 +7,7 @@ import { loadLessonCompletionSnapshot } from "@/src/server/completion-state";
 import { submitQuizAttemptAction } from "@/src/server/quiz-attempt-action";
 import { SelectedALesson } from "@/src/prototypes/selected-a/SelectedAPrototype";
 import { getLesson, importedLessons, itemIs, itemsFor, slugLesson } from "@/src/prototypes/selected-a/data";
+import { LessonActivityRecorder } from "./LessonActivityRecorder";
 
 export function generateStaticParams() {
   return importedLessons.flatMap((lesson) =>
@@ -40,15 +41,18 @@ export default async function SelectedALessonItemPage({
     : completionSnapshot.state;
 
   return (
-    <SelectedALesson
-      lessonCode={lesson.code}
-      item={item}
-      completionState={completionState}
-      forceContents={state === "contents-open"}
-      forceModuleMenu={state === "module-menu-open" ? normalizedModule : null}
-      quizSubmitAction={submitQuizAttemptAction}
-      completeCompletionAction={completeLessonCompletionAction.bind(null, lesson.code)}
-      undoCompletionAction={undoLessonCompletionAction.bind(null, lesson.code)}
-    />
+    <>
+      <LessonActivityRecorder lessonCode={lesson.code} item={item} />
+      <SelectedALesson
+        lessonCode={lesson.code}
+        item={item}
+        completionState={completionState}
+        forceContents={state === "contents-open"}
+        forceModuleMenu={state === "module-menu-open" ? normalizedModule : null}
+        quizSubmitAction={submitQuizAttemptAction}
+        completeCompletionAction={completeLessonCompletionAction.bind(null, lesson.code)}
+        undoCompletionAction={undoLessonCompletionAction.bind(null, lesson.code)}
+      />
+    </>
   );
 }

@@ -13,7 +13,7 @@ completion, project, asset, Supabase, Resend or certificate behavior.
 
 **PHASE 07.0 LAUNCH SHELL IMPLEMENTED FOR SOURCE**
 
-**PHASE 07.1 PERSISTENT PROGRESS NOT STARTED**
+**PHASE 07.1E SIGNED-IN DASHBOARD AND PROGRESS PROJECTION IMPLEMENTED FOR SOURCE**
 
 <!-- PHASE06_PASS1_CURRENT -->
 # ARCH.START Route List — Phase 06 Pass 1
@@ -28,10 +28,14 @@ completion, project, asset, Supabase, Resend or certificate behavior.
 | `/auth/update-password` | authenticated recovery session | set new password |
 | `/onboarding` | authenticated | first-run profile completion |
 | `/profile` | authenticated + onboarded | edit own profile and sign out |
-| `/prototype/a/dashboard` | authenticated + onboarded | truthful account shell |
+| `/prototype/a/dashboard` | authenticated + onboarded | real own-row Dashboard progress and Continue Learning |
 
 All `/prototype/a/course` module, lesson, project, Quiz and Further Study routes
-remain public and unchanged. Phase 07/08 routes or workflows were not added.
+remain public. Signed-in visits to canonical lesson-item routes now record only
+`lesson_code` and `last_item` through the accepted own-row activity RPC. The
+Dashboard reads the current learner's activity, Quiz attempts and explicit
+completion rows through session RLS; no certificate or project-review workflow
+is introduced.
 
 <!-- PHASE03_PASS5A3_HISTORICAL -->
 # ARCH.START Route List — Phase 03 Pass 5A.3 Source Checkpoint
