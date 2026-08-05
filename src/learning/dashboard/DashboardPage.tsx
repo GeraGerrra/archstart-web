@@ -10,7 +10,15 @@ export function DashboardPage({ model }: DashboardPageProps) {
   return (
     <section className="asa-dashboard asa-container">
       <header className="asa-dashboard__hero">
-        <div><h1>{model.title}</h1><p>{model.disclosure}</p></div>
+        <div>
+          <h1>{model.title}</h1>
+          <p>{model.disclosure}</p>
+          {model.profileAction ? (
+            <Link href={model.profileAction.href} className="asa-text-link">
+              {model.profileAction.label}
+            </Link>
+          ) : null}
+        </div>
         <div>
           <strong>{model.completedLessons}</strong>
           <span>из {model.lessonTotal} уроков</span>
