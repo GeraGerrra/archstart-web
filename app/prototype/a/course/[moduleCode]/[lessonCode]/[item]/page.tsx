@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { submitQuizAttemptAction } from "@/src/server/quiz-attempt-action";
 import { SelectedALesson } from "@/src/prototypes/selected-a/SelectedAPrototype";
 import { getLesson, importedLessons, itemIs, itemsFor, slugLesson } from "@/src/prototypes/selected-a/data";
 
@@ -29,6 +30,7 @@ export default async function SelectedALessonItemPage({
       completionState={state === "lesson-complete" ? "complete" : state === "lesson-ready" ? "ready" : "locked"}
       forceContents={state === "contents-open"}
       forceModuleMenu={state === "module-menu-open" ? normalizedModule : null}
+      quizSubmitAction={submitQuizAttemptAction}
     />
   );
 }

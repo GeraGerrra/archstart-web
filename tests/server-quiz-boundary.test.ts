@@ -48,7 +48,25 @@ test("browser and inspector source cannot import or read the server answer bound
   }
 });
 
-test("next config does not exclude generated/server from server output tracing", async () => {
+test("next config includes the server Quiz authority without excluding generated/server from tracing", async () => {
   const source = await readFile("next.config.ts", "utf8");
-  assert.doesNotMatch(source, /generated\/server/u);
+
+  assert.match(
+    source,
+    /outputFileTracingIncludes:[\s\S]*\.\/generated\/server\/quiz-answer-keys\.json/u,
+  );
+
+  const excludesBlock = source.match(
+    /outputFileTracingExcludes:\s*\{[\s\S]*?\n\s*\},/u,
+  );
+
+  assert.ok(
+    excludesBlock,
+    "outputFileTracingExcludes block is missing",
+  );
+
+  assert.doesNotMatch(
+    excludesBlock[0],
+    /generated\/server/u,
+  );
 });
