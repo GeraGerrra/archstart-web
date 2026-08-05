@@ -8,7 +8,7 @@ const reverseRoots = ["src/design-system", "src/app-shell", "src/learning", "src
 const sourceExtensions = new Set([".ts", ".tsx"]);
 const forbiddenSpecifier = /(?:^|\/)(?:prototype-fixtures|prototypes\/selected-a|generated\/public|generated\/server|server)(?:\/|$)|^@\/app(?:\/|$)|^(?:\.\.\/)+app(?:\/|$)/u;
 const forbiddenSourceMarker = /(?:quiz-answer-key-loader|loadQuizAnswerSet|correctOptionId|correctAnswer|answerKey|answer-key|canonicalExplanation)/u;
-const allowedExternalSpecifiers = new Set(["react", "@/src/design-system"]);
+const allowedExternalSpecifiers = new Set(["react", "next/navigation", "@/src/design-system"]);
 
 async function listSourceFiles(directory) {
   const output = [];

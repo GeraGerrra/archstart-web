@@ -1,4 +1,9 @@
 import { notFound } from "next/navigation";
+import {
+  completeModuleCompletionAction,
+  undoModuleCompletionAction,
+} from "@/src/server/completion-actions";
+import { loadModuleCompletionSnapshot } from "@/src/server/completion-state";
 import { SelectedAModule } from "@/src/prototypes/selected-a/SelectedAPrototype";
 import { courseModules, getModule } from "@/src/prototypes/selected-a/data";
 
@@ -18,12 +23,24 @@ export default async function SelectedAModulePage({
   if (!courseModule) notFound();
   const state = Array.isArray(query.state) ? query.state[0] : query.state;
   const lesson = Array.isArray(query.lesson) ? query.lesson[0] : query.lesson;
+  const completionSnapshot = await loadModuleCompletionSnapshot(courseModule.code);
+  const completionState = process.env.NODE_ENV === "development"
+    ? state === "module-complete"
+      ? "complete"
+      : state === "module-ready"
+        ? "ready"
+        : completionSnapshot.state
+    : completionSnapshot.state;
+
   return (
     <SelectedAModule
       moduleCode={courseModule.code}
-      expandedLesson={lesson?.toUpperCase() ?? (["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08"].includes(courseModule.code) ? `${courseModule.code}_L01` : null)}
+      expandedLesson={lesson?.toUpperCase() ?? `${courseModule.code}_L01`}
       forceModuleMenu={state === "module-menu-open" ? courseModule.code : null}
-      completionState={state === "module-complete" ? "complete" : state === "module-ready" ? "ready" : "locked"}
+      completionState={completionState}
+      completedLessonCodes={completionSnapshot.completedLessonCodes}
+      completeCompletionAction={completeModuleCompletionAction.bind(null, courseModule.code)}
+      undoCompletionAction={undoModuleCompletionAction.bind(null, courseModule.code)}
     />
   );
 }

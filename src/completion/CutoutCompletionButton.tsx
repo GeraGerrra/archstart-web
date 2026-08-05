@@ -1,57 +1,127 @@
 "use client";
 
 import Image from "next/image";
-import { type CSSProperties, useId, useState } from "react";
+import { useRouter } from "next/navigation";
+import {
+  type CSSProperties,
+  useId,
+  useState,
+  useTransition,
+} from "react";
 import { TextLink, VisuallyHidden } from "@/src/design-system";
 import { LESSON_FRAGMENTS, MODULE_FRAGMENTS } from "./paperFragments";
-import type { CutoutCompletionButtonProps } from "./types";
+import type {
+  CompletionMutationResult,
+  CutoutCompletionButtonProps,
+} from "./types";
+
+const FALLBACK_MUTATION_ERROR: CompletionMutationResult = {
+  status: "error",
+  state: "locked",
+  message: "Не удалось изменить отметку. Попробуйте ещё раз.",
+};
 
 /**
- * Selected-A-compatible completion control. The cutout image remains the
- * semantic pressed button; undo is a separate quiet action.
+ * Selected-A-compatible completion control. With no Server Actions it keeps
+ * the accepted local demo behavior; production routes pass persistent actions.
  */
-export function CutoutCompletionButton({ model }: CutoutCompletionButtonProps) {
+export function CutoutCompletionButton({
+  model,
+  completeAction,
+  undoAction,
+}: CutoutCompletionButtonProps) {
+  const router = useRouter();
   const [state, setState] = useState(model.initialState);
   const [interacted, setInteracted] = useState(false);
+  const [feedbackMessage, setFeedbackMessage] = useState<string | null>(null);
   const [announcement, setAnnouncement] = useState(
     model.initialState === "complete" ? `${model.completedTitle}. ${model.completedMessage}` : "",
   );
+  const [isPending, startTransition] = useTransition();
   const headingId = useId();
   const liveId = useId();
   const locked = state === "locked";
   const complete = state === "complete";
   const fragments = model.kind === "lesson" ? LESSON_FRAGMENTS : MODULE_FRAGMENTS;
   const title = locked ? model.lockedTitle : complete ? model.completedTitle : model.beforeTitle;
-  const message = locked ? model.lockedMessage : complete ? model.completedMessage : model.beforeMessage;
+  const defaultMessage = locked ? model.lockedMessage : complete ? model.completedMessage : model.beforeMessage;
+  const message = feedbackMessage ?? defaultMessage;
+
+  function applyPersistentResult(result: CompletionMutationResult, interaction: "complete" | "undo") {
+    setState(result.state);
+    setFeedbackMessage(result.message);
+    setAnnouncement(result.message);
+    setInteracted(
+      interaction === "complete"
+      && result.status === "success"
+      && result.state === "complete",
+    );
+
+    if (result.status === "success") router.refresh();
+  }
 
   function handleComplete() {
-    if (state !== "ready") return;
-    setInteracted(true);
-    setState("complete");
-    setAnnouncement(`${model.completedTitle}. ${model.completedMessage}`);
+    if (state !== "ready" || isPending) return;
+
+    if (!completeAction) {
+      setInteracted(true);
+      setState("complete");
+      setAnnouncement(`${model.completedTitle}. ${model.completedMessage}`);
+      return;
+    }
+
+    startTransition(async () => {
+      try {
+        applyPersistentResult(await completeAction(), "complete");
+      } catch {
+        applyPersistentResult(
+          { ...FALLBACK_MUTATION_ERROR, state: "ready" },
+          "complete",
+        );
+      }
+    });
   }
 
   function handleRemove() {
-    if (state !== "complete") return;
-    setState("ready");
-    setAnnouncement("Отметка снята.");
+    if (state !== "complete" || isPending) return;
+
+    if (!undoAction) {
+      setState("ready");
+      setInteracted(false);
+      setFeedbackMessage(null);
+      setAnnouncement("Отметка снята.");
+      return;
+    }
+
+    startTransition(async () => {
+      try {
+        applyPersistentResult(await undoAction(), "undo");
+      } catch {
+        applyPersistentResult(
+          { ...FALLBACK_MUTATION_ERROR, state: "complete" },
+          "undo",
+        );
+      }
+    });
   }
 
   return (
     <section
       className={`asa-cutout-completion asa-cutout-completion--${model.kind}${locked ? " is-locked" : ""}${complete ? " is-complete" : ""}${interacted ? " has-interacted" : ""}`}
       aria-labelledby={headingId}
+      aria-busy={isPending}
+      data-completion-state={state}
     >
       <div className="asa-cutout-completion__copy">
         <h2 id={headingId}>{title}</h2>
-        <p>{message}</p>
+        <p>{isPending ? "Сохраняем изменение..." : message}</p>
       </div>
       <button
         type="button"
         className="asa-cutout-completion__btn"
-        disabled={locked}
+        disabled={locked || isPending}
         aria-pressed={locked ? "false" : complete}
-        aria-disabled={locked || complete}
+        aria-disabled={locked || complete || isPending}
         onClick={handleComplete}
         aria-label={locked ? model.lockedLabel : complete ? model.completedTitle : model.actionLabel}
       >
@@ -90,7 +160,14 @@ export function CutoutCompletionButton({ model }: CutoutCompletionButtonProps) {
       {complete ? (
         <div className="asa-cutout-completion__actions">
           {model.nextAction ? <TextLink href={model.nextAction.href}>{model.nextAction.label}</TextLink> : null}
-          <button type="button" className="asa-cutout-completion__undo" onClick={handleRemove}>{model.undoLabel}</button>
+          <button
+            type="button"
+            className="asa-cutout-completion__undo"
+            onClick={handleRemove}
+            disabled={isPending}
+          >
+            {model.undoLabel}
+          </button>
         </div>
       ) : null}
       {locked ? null : (

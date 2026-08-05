@@ -1,4 +1,9 @@
 import { notFound } from "next/navigation";
+import {
+  completeLessonCompletionAction,
+  undoLessonCompletionAction,
+} from "@/src/server/completion-actions";
+import { loadLessonCompletionSnapshot } from "@/src/server/completion-state";
 import { submitQuizAttemptAction } from "@/src/server/quiz-attempt-action";
 import { SelectedALesson } from "@/src/prototypes/selected-a/SelectedAPrototype";
 import { getLesson, importedLessons, itemIs, itemsFor, slugLesson } from "@/src/prototypes/selected-a/data";
@@ -23,14 +28,27 @@ export default async function SelectedALessonItemPage({
   const lesson = getLesson(code);
   if (!lesson || !itemIs(item) || !itemsFor(lesson).some((entry) => entry.id === item)) notFound();
   const state = Array.isArray(query.state) ? query.state[0] : query.state;
+  const completionSnapshot = item === "quiz"
+    ? await loadLessonCompletionSnapshot(lesson.code)
+    : { state: "locked" as const };
+  const completionState = process.env.NODE_ENV === "development"
+    ? state === "lesson-complete"
+      ? "complete"
+      : state === "lesson-ready"
+        ? "ready"
+        : completionSnapshot.state
+    : completionSnapshot.state;
+
   return (
     <SelectedALesson
       lessonCode={lesson.code}
       item={item}
-      completionState={state === "lesson-complete" ? "complete" : state === "lesson-ready" ? "ready" : "locked"}
+      completionState={completionState}
       forceContents={state === "contents-open"}
       forceModuleMenu={state === "module-menu-open" ? normalizedModule : null}
       quizSubmitAction={submitQuizAttemptAction}
+      completeCompletionAction={completeLessonCompletionAction.bind(null, lesson.code)}
+      undoCompletionAction={undoLessonCompletionAction.bind(null, lesson.code)}
     />
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
 import { useState, useTransition } from "react";
 import { Button } from "@/src/design-system";
@@ -11,6 +12,7 @@ const FALLBACK_SUBMISSION_ERROR: QuizSubmissionResult = {
 };
 
 export function QuizShell({ model, lessonCode, submitAction }: QuizShellProps) {
+  const router = useRouter();
   const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [submissionResult, setSubmissionResult] = useState<QuizSubmissionResult | null>(null);
@@ -34,6 +36,7 @@ export function QuizShell({ model, lessonCode, submitAction }: QuizShellProps) {
         });
         setSubmissionResult(result);
         setSubmitted(result.status === "success");
+        if (result.status === "success") router.refresh();
       } catch {
         setSubmissionResult(FALLBACK_SUBMISSION_ERROR);
         setSubmitted(false);
