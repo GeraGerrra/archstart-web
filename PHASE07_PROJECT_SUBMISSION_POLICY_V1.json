@@ -1,0 +1,271 @@
+{
+  "schemaVersion": "1.0.0",
+  "phase": "07",
+  "pass": "2B1",
+  "status": "FROZEN_FOR_DATABASE_FOUNDATION",
+  "title": "Project submission and review policy v1",
+  "sourceIdentity": "9ba289bf802a11edae20f3e1a1517867d6f9b514",
+  "submission": {
+    "logicalSubmissionPerUserProject": 1,
+    "editableDraftsAtOneTime": 1,
+    "primaryFilesPerVersion": 1,
+    "submittedVersionsImmutable": true,
+    "oldVersionsRetained": true,
+    "prerequisite": "5/5 lesson completions in the matching module",
+    "moduleCutoutRequired": false,
+    "quizMinimumScore": null
+  },
+  "files": {
+    "providerCandidateForPass2C": "private Supabase Storage bucket",
+    "bucketNameReserved": "project-submissions",
+    "bucketCreatedInThisPass": false,
+    "maxFileBytes": 41943040,
+    "singleBoardMimeTypes": [
+      "application/pdf",
+      "image/png"
+    ],
+    "multiPagePackMimeTypes": [
+      "application/pdf"
+    ],
+    "jpeg": false,
+    "svg": false,
+    "officeDocuments": false,
+    "archives": false,
+    "video": false,
+    "publicUrls": false
+  },
+  "projects": [
+    {
+      "projectCode": "M01_P01",
+      "contentVersion": "phase01-source-2026-07-27",
+      "formatType": "SINGLE_BOARD",
+      "allowedMimeTypes": [
+        "application/pdf",
+        "image/png"
+      ],
+      "maxFileBytes": 41943040,
+      "primaryFileCount": 1,
+      "expectedWidth": 1920,
+      "expectedHeight": 1080,
+      "minPageCount": 1,
+      "maxPageCount": 1,
+      "supportingTextMinWords": 0,
+      "supportingTextMaxWords": 0,
+      "policyVersion": 1,
+      "rubricVersion": 1
+    },
+    {
+      "projectCode": "M02_P02",
+      "contentVersion": "phase05-pass1-m02-2026-08-01",
+      "formatType": "SINGLE_BOARD",
+      "allowedMimeTypes": [
+        "application/pdf",
+        "image/png"
+      ],
+      "maxFileBytes": 41943040,
+      "primaryFileCount": 1,
+      "expectedWidth": 1920,
+      "expectedHeight": 1080,
+      "minPageCount": 1,
+      "maxPageCount": 1,
+      "supportingTextMinWords": 120,
+      "supportingTextMaxWords": 180,
+      "policyVersion": 1,
+      "rubricVersion": 1
+    },
+    {
+      "projectCode": "M03_P03",
+      "contentVersion": "phase05-pass3a-m03-2026-08-02",
+      "formatType": "SINGLE_BOARD",
+      "allowedMimeTypes": [
+        "application/pdf",
+        "image/png"
+      ],
+      "maxFileBytes": 41943040,
+      "primaryFileCount": 1,
+      "expectedWidth": 1920,
+      "expectedHeight": 1080,
+      "minPageCount": 1,
+      "maxPageCount": 1,
+      "supportingTextMinWords": 0,
+      "supportingTextMaxWords": 0,
+      "policyVersion": 1,
+      "rubricVersion": 1
+    },
+    {
+      "projectCode": "M04_P04",
+      "contentVersion": "phase05-pass3b-m04-2026-08-02",
+      "formatType": "SINGLE_BOARD",
+      "allowedMimeTypes": [
+        "application/pdf",
+        "image/png"
+      ],
+      "maxFileBytes": 41943040,
+      "primaryFileCount": 1,
+      "expectedWidth": 1920,
+      "expectedHeight": 1080,
+      "minPageCount": 1,
+      "maxPageCount": 1,
+      "supportingTextMinWords": 0,
+      "supportingTextMaxWords": 0,
+      "policyVersion": 1,
+      "rubricVersion": 1
+    },
+    {
+      "projectCode": "M05_P05",
+      "contentVersion": "phase05-pass3c-m05-2026-08-02",
+      "formatType": "SINGLE_BOARD",
+      "allowedMimeTypes": [
+        "application/pdf",
+        "image/png"
+      ],
+      "maxFileBytes": 41943040,
+      "primaryFileCount": 1,
+      "expectedWidth": 1920,
+      "expectedHeight": 1080,
+      "minPageCount": 1,
+      "maxPageCount": 1,
+      "supportingTextMinWords": 0,
+      "supportingTextMaxWords": 0,
+      "policyVersion": 1,
+      "rubricVersion": 1
+    },
+    {
+      "projectCode": "M06_P06",
+      "contentVersion": "phase05-pass3d-m06-2026-08-02",
+      "formatType": "SINGLE_BOARD",
+      "allowedMimeTypes": [
+        "application/pdf",
+        "image/png"
+      ],
+      "maxFileBytes": 41943040,
+      "primaryFileCount": 1,
+      "expectedWidth": 1920,
+      "expectedHeight": 1080,
+      "minPageCount": 1,
+      "maxPageCount": 1,
+      "supportingTextMinWords": 0,
+      "supportingTextMaxWords": 0,
+      "policyVersion": 1,
+      "rubricVersion": 1
+    },
+    {
+      "projectCode": "M07_P07",
+      "contentVersion": "phase05-pass3e-m07-2026-08-02",
+      "formatType": "SINGLE_BOARD",
+      "allowedMimeTypes": [
+        "application/pdf",
+        "image/png"
+      ],
+      "maxFileBytes": 41943040,
+      "primaryFileCount": 1,
+      "expectedWidth": 1920,
+      "expectedHeight": 1080,
+      "minPageCount": 1,
+      "maxPageCount": 1,
+      "supportingTextMinWords": 0,
+      "supportingTextMaxWords": 0,
+      "policyVersion": 1,
+      "rubricVersion": 1
+    },
+    {
+      "projectCode": "M08_P08",
+      "contentVersion": "phase05-pass3f-m08-2026-08-02",
+      "formatType": "MULTI_PAGE_PACK",
+      "allowedMimeTypes": [
+        "application/pdf"
+      ],
+      "maxFileBytes": 41943040,
+      "primaryFileCount": 1,
+      "expectedWidth": 1920,
+      "expectedHeight": 1080,
+      "minPageCount": 8,
+      "maxPageCount": 10,
+      "supportingTextMinWords": 0,
+      "supportingTextMaxWords": 0,
+      "policyVersion": 1,
+      "rubricVersion": 1
+    }
+  ],
+  "rubrics": {
+    "criteriaPerProject": 5,
+    "pointsPerProject": 100,
+    "automaticAcceptanceThreshold": null,
+    "acceptanceIsSeparateReviewerDecision": true
+  },
+  "statusMachine": {
+    "statuses": [
+      "draft",
+      "submitted",
+      "under_review",
+      "revisions_required",
+      "resubmitted",
+      "accepted",
+      "not_accepted"
+    ],
+    "transitions": [
+      [
+        "draft",
+        "submitted"
+      ],
+      [
+        "submitted",
+        "under_review"
+      ],
+      [
+        "under_review",
+        "revisions_required"
+      ],
+      [
+        "under_review",
+        "accepted"
+      ],
+      [
+        "under_review",
+        "not_accepted"
+      ],
+      [
+        "revisions_required",
+        "resubmitted"
+      ],
+      [
+        "not_accepted",
+        "resubmitted"
+      ],
+      [
+        "resubmitted",
+        "under_review"
+      ]
+    ],
+    "acceptedTerminal": true,
+    "notAcceptedRetryable": true,
+    "withdrawnState": false
+  },
+  "staff": {
+    "authority": "private.project_staff_roles",
+    "roles": [
+      "reviewer",
+      "admin"
+    ],
+    "profilesRoleColumn": false,
+    "learnerEditableMetadataAuthority": false,
+    "reviewerIdentityShownToLearner": false,
+    "selfReviewAllowed": false
+  },
+  "publicExposure": {
+    "projectGallery": false,
+    "projectFiles": false,
+    "reviewFeedback": false,
+    "learnerDirectory": false,
+    "showcaseRequiresSeparateExplicitOptIn": true
+  },
+  "deferred": [
+    "public workflow RPCs and server actions (Pass 2B2)",
+    "Storage bucket and untrusted file pipeline (Pass 2C)",
+    "learner submission UI",
+    "reviewer workspace",
+    "notifications",
+    "retention/account deletion automation",
+    "course eligibility and certificates"
+  ]
+}
