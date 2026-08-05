@@ -1,5 +1,6 @@
 import "server-only";
 
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { assertServerQuizAnswerSet, SchemaValidationError } from "../content-engine/schema.ts";
@@ -11,7 +12,19 @@ interface ServerQuizAnswerKeyFile {
   quizzes: Record<string, ServerQuizAnswerSet>;
 }
 
-let cached: Promise<ServerQuizAnswerKeyFile> | null = null;
+interface LoadedServerQuizAnswerKeyFile {
+  file: ServerQuizAnswerKeyFile;
+  sha256: string;
+}
+
+export interface QuizAnswerAuthority {
+  answerSet: Readonly<ServerQuizAnswerSet>;
+  answerKeySha256: string;
+  contentVersion: string;
+  schemaVersion: string;
+}
+
+let cached: Promise<LoadedServerQuizAnswerKeyFile> | null = null;
 
 function assertAnswerKeyFile(value: unknown): asserts value is ServerQuizAnswerKeyFile {
   if (!value || typeof value !== "object" || Array.isArray(value)) {
@@ -39,11 +52,20 @@ function assertAnswerKeyFile(value: unknown): asserts value is ServerQuizAnswerK
   if (issues.length) throw new SchemaValidationError("ServerQuizAnswerKeyFile", issues);
 }
 
-async function readAnswerKeyFile(): Promise<ServerQuizAnswerKeyFile> {
+async function readAnswerKeyFile(): Promise<LoadedServerQuizAnswerKeyFile> {
   const path = resolve(process.cwd(), "generated/server/quiz-answer-keys.json");
-  const parsed: unknown = JSON.parse(await readFile(path, "utf8"));
+  const raw = await readFile(path);
+  const parsed: unknown = JSON.parse(raw.toString("utf8"));
   assertAnswerKeyFile(parsed);
-  return parsed;
+  return {
+    file: parsed,
+    sha256: createHash("sha256").update(raw).digest("hex"),
+  };
+}
+
+async function loadedAnswerKeyFile(): Promise<LoadedServerQuizAnswerKeyFile> {
+  cached ??= readAnswerKeyFile();
+  return cached;
 }
 
 /**
@@ -51,11 +73,22 @@ async function readAnswerKeyFile(): Promise<ServerQuizAnswerKeyFile> {
  * and must never be re-exported from a client-safe module.
  */
 export async function loadQuizAnswerSet(lessonCode: LessonCode): Promise<Readonly<ServerQuizAnswerSet>> {
-  cached ??= readAnswerKeyFile();
-  const file = await cached;
-  const answerSet = file.quizzes[lessonCode];
+  const loaded = await loadedAnswerKeyFile();
+  const answerSet = loaded.file.quizzes[lessonCode];
   if (!answerSet) throw new Error(`No server-only quiz answer set exists for ${lessonCode}.`);
   return answerSet;
+}
+
+export async function loadQuizAnswerAuthority(lessonCode: LessonCode): Promise<Readonly<QuizAnswerAuthority>> {
+  const loaded = await loadedAnswerKeyFile();
+  const answerSet = loaded.file.quizzes[lessonCode];
+  if (!answerSet) throw new Error(`No server-only quiz answer set exists for ${lessonCode}.`);
+  return {
+    answerSet,
+    answerKeySha256: loaded.sha256,
+    contentVersion: loaded.file.contentVersion,
+    schemaVersion: loaded.file.schemaVersion,
+  };
 }
 
 /** Test-only cache reset. It remains inside the server-only module boundary. */

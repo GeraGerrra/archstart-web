@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return externalAssetRedirects();
   },
+  outputFileTracingIncludes: {
+    "/*": [
+      "./generated/public/quizzes/**/*.json",
+      "./generated/server/quiz-answer-keys.json",
+    ],
+  },
   outputFileTracingExcludes: {
     "/*": [
       "./tools/content-inspector/**/*",

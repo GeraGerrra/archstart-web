@@ -63,6 +63,7 @@ import {
 } from "@/src/media";
 import { CutoutCompletionButton } from "@/src/completion";
 import { QuizShell } from "@/src/quiz";
+import type { QuizSubmissionAction } from "@/src/quiz/types";
 import {
   selectedACompletionViewModel,
   selectedACutout,
@@ -272,9 +273,10 @@ interface SelectedALessonProps {
   completionState?: CompletionDemoState;
   forceContents?: boolean;
   forceModuleMenu?: string | null;
+  quizSubmitAction?: QuizSubmissionAction;
 }
 
-function renderItem(lesson: Lesson, item: ItemId, mapping: SelectedALessonMapping) {
+function renderItem(lesson: Lesson, item: ItemId, mapping: SelectedALessonMapping, quizSubmitAction?: QuizSubmissionAction) {
   switch (item) {
     case "overview": return <OverviewItem model={mapping.overview} />;
     case "vocabulary": return <VocabularyViewer model={mapping.vocabulary} />;
@@ -292,12 +294,12 @@ function renderItem(lesson: Lesson, item: ItemId, mapping: SelectedALessonMappin
         caption={mapping.practiceExample.caption}
       />
     ) : undefined} />;
-    case "quiz": return mapping.quiz ? <QuizShell model={mapping.quiz} /> : <div className="asa-item"><p>Квиз для урока не найден.</p></div>;
+    case "quiz": return mapping.quiz ? <QuizShell model={mapping.quiz} lessonCode={lesson.code} submitAction={quizSubmitAction} /> : <div className="asa-item"><p>Квиз для урока не найден.</p></div>;
     case "resources": return mapping.resources ? <ResourcesItem model={mapping.resources} /> : null;
   }
 }
 
-export function SelectedALesson({ lessonCode, item, completionState = "locked", forceContents = false, forceModuleMenu }: SelectedALessonProps) {
+export function SelectedALesson({ lessonCode, item, completionState = "locked", forceContents = false, forceModuleMenu, quizSubmitAction }: SelectedALessonProps) {
   const lesson = getLesson(lessonCode) ?? m01Lessons[0]!;
   const visibleItems = itemsFor(lesson);
   const validItem = visibleItems.some((entry) => entry.id === item) ? item : "overview";
@@ -307,7 +309,7 @@ export function SelectedALesson({ lessonCode, item, completionState = "locked", 
     <SelectedAShell active="lesson" currentModule={lesson.moduleCode} forceModuleMenu={forceModuleMenu}>
       <LessonWorkspace
         model={mapping.workspace}
-        activeItemContent={renderItem(lesson, validItem, mapping)}
+        activeItemContent={renderItem(lesson, validItem, mapping, quizSubmitAction)}
         completionContent={validItem === "quiz" ? (
           <CutoutCompletionButton
             model={selectedACompletionViewModel({
