@@ -9,7 +9,7 @@ const sourceExtensions = new Set([".ts", ".tsx"]);
 const forbiddenSpecifier = /(?:^|\/)(?:prototype-fixtures|prototypes\/selected-a|generated\/public|generated\/server|server)(?:\/|$)|^@\/app(?:\/|$)|^(?:\.\.\/)+app(?:\/|$)/u;
 const forbiddenSourceMarker = /(?:quiz-answer-key-loader|loadQuizAnswerSet|correctOptionId|correctAnswer|answerKey|answer-key|canonicalExplanation)/u;
 const randomMarker = /(?:Math\.random|crypto\.getRandomValues|randomUUID|Date\.now|confetti)/u;
-const allowedExternalSpecifiers = new Set(["react", "next/image", "@/src/design-system"]);
+const allowedExternalSpecifiers = new Set(["react", "next/image", "next/navigation", "@/src/design-system"]);
 
 async function listSourceFiles(directory) {
   const output = [];

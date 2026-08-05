@@ -62,6 +62,7 @@ import {
   VocabularyViewer,
 } from "@/src/media";
 import { CutoutCompletionButton } from "@/src/completion";
+import type { CompletionMutationAction } from "@/src/completion";
 import { QuizShell } from "@/src/quiz";
 import type { QuizSubmissionAction } from "@/src/quiz/types";
 import {
@@ -198,19 +199,43 @@ function selectedAModuleLesson(lesson: (typeof courseLessons)[number]): ModuleLe
   };
 }
 
-export function SelectedAModule({ moduleCode, expandedLesson, forceModuleMenu, completionState = "locked" }: {
-  moduleCode: string; expandedLesson?: string | null; forceModuleMenu?: string | null; completionState?: CompletionDemoState;
+export function SelectedAModule({
+  moduleCode,
+  expandedLesson,
+  forceModuleMenu,
+  completionState = "locked",
+  completedLessonCodes,
+  completeCompletionAction,
+  undoCompletionAction,
+}: {
+  moduleCode: string;
+  expandedLesson?: string | null;
+  forceModuleMenu?: string | null;
+  completionState?: CompletionDemoState;
+  completedLessonCodes?: readonly string[];
+  completeCompletionAction?: CompletionMutationAction;
+  undoCompletionAction?: CompletionMutationAction;
 }) {
   const courseModule = getModule(moduleCode) ?? m01Module;
   const lessons = moduleLessons(courseModule.code);
   const project = moduleProject(courseModule.code);
   const state = progress[courseModule.code] ?? progress.M01 ?? EMPTY_PROGRESS;
   const completed = completionState === "complete";
+  const persistentProgress = completedLessonCodes !== undefined;
+  const completedLessonSet = new Set(
+    (completedLessonCodes ?? []).map((code) => code.toUpperCase()),
+  );
   const model: ModuleOverviewViewModel = {
     code: courseModule.code, titleRu: courseModule.titleRu, titleEn: courseModule.titleEn, goal: courseModule.goal,
-    cutout: selectedACutout(courseModule.code, true), completedLessons: completed ? 5 : state.done, lessonTotal: 5,
+    cutout: selectedACutout(courseModule.code, true), completedLessons: persistentProgress ? completedLessonSet.size : completed ? 5 : state.done, lessonTotal: 5,
     outcomes: courseModule.outcomes.map(({ order, label, text }) => ({ order, label, text })),
-    lessons: lessons.map(selectedAModuleLesson),
+    lessons: lessons.map((lesson) => {
+      const mapped = selectedAModuleLesson(lesson);
+      return persistentProgress ? {
+        ...mapped,
+        status: completedLessonSet.has(lesson.code) ? "complete" : "available",
+      } : mapped;
+    }),
     project: project ? {
       code: project.code, titleRu: project.titleRu, titleEn: project.titleEn, objective: project.objective,
       status: completed ? "complete" : state.project ? "complete" : state.status === "locked" ? "locked" : "available",
@@ -221,7 +246,12 @@ export function SelectedAModule({ moduleCode, expandedLesson, forceModuleMenu, c
   return (
     <SelectedAShell active="module" currentModule={courseModule.code} forceModuleMenu={forceModuleMenu}>
       <ModuleOverviewPage model={model} initialExpandedLessonCode={expandedLesson ?? (["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08"].includes(courseModule.code) ? `${courseModule.code}_L01` : null)} completionContent={["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08"].includes(courseModule.code) ? (
-        <CutoutCompletionButton model={selectedACompletionViewModel({ kind: "module", moduleCode: courseModule.code, state: completionState })} />
+        <CutoutCompletionButton
+          key={`${courseModule.code}:${completionState}`}
+          model={selectedACompletionViewModel({ kind: "module", moduleCode: courseModule.code, state: completionState })}
+          completeAction={completeCompletionAction}
+          undoAction={undoCompletionAction}
+        />
       ) : undefined} />
     </SelectedAShell>
   );
@@ -274,6 +304,8 @@ interface SelectedALessonProps {
   forceContents?: boolean;
   forceModuleMenu?: string | null;
   quizSubmitAction?: QuizSubmissionAction;
+  completeCompletionAction?: CompletionMutationAction;
+  undoCompletionAction?: CompletionMutationAction;
 }
 
 function renderItem(lesson: Lesson, item: ItemId, mapping: SelectedALessonMapping, quizSubmitAction?: QuizSubmissionAction) {
@@ -299,7 +331,16 @@ function renderItem(lesson: Lesson, item: ItemId, mapping: SelectedALessonMappin
   }
 }
 
-export function SelectedALesson({ lessonCode, item, completionState = "locked", forceContents = false, forceModuleMenu, quizSubmitAction }: SelectedALessonProps) {
+export function SelectedALesson({
+  lessonCode,
+  item,
+  completionState = "locked",
+  forceContents = false,
+  forceModuleMenu,
+  quizSubmitAction,
+  completeCompletionAction,
+  undoCompletionAction,
+}: SelectedALessonProps) {
   const lesson = getLesson(lessonCode) ?? m01Lessons[0]!;
   const visibleItems = itemsFor(lesson);
   const validItem = visibleItems.some((entry) => entry.id === item) ? item : "overview";
@@ -312,12 +353,15 @@ export function SelectedALesson({ lessonCode, item, completionState = "locked", 
         activeItemContent={renderItem(lesson, validItem, mapping, quizSubmitAction)}
         completionContent={validItem === "quiz" ? (
           <CutoutCompletionButton
+            key={`${lesson.code}:${completionState}`}
             model={selectedACompletionViewModel({
               kind: "lesson",
               moduleCode: lesson.moduleCode,
               state: completionState,
               nextAction: mapping.completionAction,
             })}
+            completeAction={completeCompletionAction}
+            undoAction={undoCompletionAction}
           />
         ) : undefined}
         initialContentsOpen={forceContents}
