@@ -1,0 +1,188 @@
+{
+  "schemaVersion": "1.0.0",
+  "phase": "07",
+  "pass": "2B2",
+  "status": "IMPLEMENTATION_AUTHORITY",
+  "title": "Project submission workflow activation",
+  "acceptedSource": {
+    "branch": "main",
+    "gitHead": "8e26589e2e4a7688cbeb789b2511f021df813f99",
+    "predecessorPass": "07.2B1",
+    "predecessorForm": "DATABASE_SCHEMA_ONLY",
+    "currentProjectPolicies": 8,
+    "rubricCriteria": 40,
+    "projectTables": 10,
+    "projectTriggers": 16,
+    "projectWorkflowRows": 0,
+    "projectStorageBucketExists": false,
+    "projectStoragePolicies": 0,
+    "b1FunctionIdentityCount": 17,
+    "normallyEnabledProjectTriggers": 16
+  },
+  "statusMachine": {
+    "statuses": [
+      "draft",
+      "submitted",
+      "under_review",
+      "revisions_required",
+      "resubmitted",
+      "accepted",
+      "not_accepted"
+    ],
+    "transitions": [
+      [
+        "draft",
+        "submitted"
+      ],
+      [
+        "submitted",
+        "under_review"
+      ],
+      [
+        "under_review",
+        "revisions_required"
+      ],
+      [
+        "under_review",
+        "accepted"
+      ],
+      [
+        "under_review",
+        "not_accepted"
+      ],
+      [
+        "revisions_required",
+        "resubmitted"
+      ],
+      [
+        "not_accepted",
+        "resubmitted"
+      ],
+      [
+        "resubmitted",
+        "under_review"
+      ]
+    ],
+    "acceptedTerminal": true,
+    "notAcceptedResubmittable": true
+  },
+  "invariants": {
+    "oneLogicalSubmissionPerUserProject": true,
+    "oneEditableDraftPerSubmission": true,
+    "onePrimaryFilePerVersion": true,
+    "submittedVersionsImmutable": true,
+    "revisionsCreateNewVersion": true,
+    "submissionPrerequisite": "5/5 lesson completions in the matching module",
+    "quizScoreThreshold": null,
+    "selfReviewBlocked": true,
+    "reviewCriteriaPerDecision": 5,
+    "reviewScoreAuthority": "database sum of awarded_points",
+    "reviewRubricSnapshotAuthority": "private.project_rubric_criteria",
+    "actorIdentityAuthority": "auth.uid()",
+    "learnerMaySupplyUserId": false,
+    "learnerMaySupplyStatus": false,
+    "learnerMaySupplyScore": false,
+    "learnerMaySupplyReviewerId": false,
+    "rowLocksRequired": true,
+    "advisoryLocksRequiredForCreateAndStaffBootstrap": true,
+    "idempotentRetryRequired": true,
+    "statusEventsRequired": true,
+    "crossOwnerRowsLockedBeforeAuthorization": false
+  },
+  "rpcSurface": [
+    {
+      "signature": "public.set_project_staff_role(uuid,text,boolean,uuid)",
+      "caller": "service_role",
+      "purpose": "trusted reviewer/admin bootstrap, activation, and revocation"
+    },
+    {
+      "signature": "public.create_project_draft(text)",
+      "caller": "authenticated",
+      "purpose": "create or idempotently reuse the initial owned draft"
+    },
+    {
+      "signature": "public.update_project_draft(uuid,text,text)",
+      "caller": "authenticated",
+      "purpose": "update learner note and supporting text on an owned editable draft"
+    },
+    {
+      "signature": "public.submit_project(uuid)",
+      "caller": "authenticated",
+      "purpose": "lock and submit the initial draft after database prerequisites pass"
+    },
+    {
+      "signature": "public.create_project_revision_draft(uuid)",
+      "caller": "authenticated",
+      "purpose": "create or reuse one new revision draft"
+    },
+    {
+      "signature": "public.resubmit_project(uuid)",
+      "caller": "authenticated",
+      "purpose": "lock and atomically promote the revision as current"
+    },
+    {
+      "signature": "public.assign_project_reviewer(uuid,uuid)",
+      "caller": "authenticated active admin",
+      "purpose": "idempotently assign or reassign an active reviewer/admin"
+    },
+    {
+      "signature": "public.begin_project_review(uuid)",
+      "caller": "authenticated assigned reviewer/admin",
+      "purpose": "transition submitted or resubmitted work to under_review"
+    },
+    {
+      "signature": "public.decide_project_review(uuid,text,text,jsonb)",
+      "caller": "authenticated assigned reviewer/admin",
+      "purpose": "write one immutable five-criterion review and transition the decision"
+    }
+  ],
+  "security": {
+    "allRpcsSecurityDefiner": true,
+    "allRpcsEmptySearchPath": true,
+    "allRelationReferencesSchemaQualified": true,
+    "anonExecuteCount": 0,
+    "authenticatedExecuteCount": 8,
+    "serviceRoleOnlyRpcCount": 1,
+    "authenticatedDirectProjectDml": false,
+    "reviewerAuthorityStorage": "private.project_staff_roles",
+    "reviewerAuthorityInProfiles": false,
+    "reviewerAuthorityInJwtMetadata": false,
+    "reviewerIdentityVisibleToLearnerRows": false,
+    "fileObjectPathVisibleToLearners": false,
+    "ownershipAndAssignmentFiltersPrecedeProtectedRowLocks": true,
+    "unassignedStaffSubmissionExistenceOracleBlocked": true,
+    "exactReviewRetryMayUseOriginalImmutableReviewerIdentity": true
+  },
+  "fileBoundary": {
+    "metadataTableRetained": true,
+    "storageBucketCreated": false,
+    "storagePoliciesCreated": false,
+    "uploadEndpointCreated": false,
+    "fileFinalizationRpcCreated": false,
+    "byteInspectionCreated": false,
+    "submissionRemainsBlockedUntilValidFileMetadataExists": true
+  },
+  "deliberatelyDeferred": [
+    "Supabase Storage bucket and object RLS",
+    "signed or resumable upload",
+    "file finalization and byte inspection",
+    "learner submission UI",
+    "reviewer/admin UI",
+    "Dashboard project projection",
+    "notifications and email",
+    "course eligibility",
+    "certificates"
+  ],
+  "nextPass": {
+    "phase": "07",
+    "pass": "2C",
+    "title": "Private project file upload and validation activation",
+    "mayStartAutomatically": false
+  },
+  "validation": {
+    "focusedStaticTests": 16,
+    "focusedStaticResult": "PASS",
+    "hostedPostgresSyntaxExecution": "PENDING_OWNER_APPLY",
+    "hostedTwoAccountTransaction": "PENDING_OWNER_APPLY"
+  }
+}
