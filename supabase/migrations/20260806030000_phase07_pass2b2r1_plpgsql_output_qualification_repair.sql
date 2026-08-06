@@ -727,26 +727,33 @@ begin
     'public.set_project_staff_role(uuid,text,boolean,uuid)'::regprocedure
   );
 
-  if pg_catalog.position(
-    'inserted_version.version_number' in create_draft_definition
+  if pg_catalog.strpos(
+    create_draft_definition,
+    'inserted_version.version_number'
   ) = 0
-    or pg_catalog.position(
-      'inserted_version.version_state' in create_draft_definition
+    or pg_catalog.strpos(
+      create_draft_definition,
+      'inserted_version.version_state'
     ) = 0
-    or pg_catalog.position(
-      'inserted_version.version_number' in create_revision_definition
+    or pg_catalog.strpos(
+      create_revision_definition,
+      'inserted_version.version_number'
     ) = 0
-    or pg_catalog.position(
-      'inserted_version.version_state' in create_revision_definition
+    or pg_catalog.strpos(
+      create_revision_definition,
+      'inserted_version.version_state'
     ) = 0
-    or pg_catalog.position(
-      'inserted_assignment.assigned_at' in assignment_definition
+    or pg_catalog.strpos(
+      assignment_definition,
+      'inserted_assignment.assigned_at'
     ) = 0
-    or pg_catalog.position(
-      'update private.project_staff_roles as staff' in staff_definition
+    or pg_catalog.strpos(
+      staff_definition,
+      'update private.project_staff_roles as staff'
     ) = 0
-    or pg_catalog.position(
-      'staff.staff_role = normalized_role' in staff_definition
+    or pg_catalog.strpos(
+      staff_definition,
+      'staff.staff_role = normalized_role'
     ) = 0
   then
     raise exception using
