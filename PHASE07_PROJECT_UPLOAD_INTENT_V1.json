@@ -1,0 +1,99 @@
+{
+  "schemaVersion": "1.0.0",
+  "pass": "ARCH.START Phase 07.2C2A",
+  "result": "SOURCE_CONTRACT",
+  "scope": "project upload-intent database foundation only",
+  "acceptedSource": {
+    "requiredBranch": "main",
+    "requiresOriginMainSync": true,
+    "phase2C1SourceHashes": {
+      "PHASE07_PROJECT_STORAGE_BUCKET_FOUNDATION.md": "cc9b31b84694d0c5d9302640c0235c6def8592aa44925b9a8b28e58b9bef0578",
+      "PHASE07_PROJECT_STORAGE_BUCKET_V1.json": "e65cdeba57332309b12a10379a25cf17841ce9efb753bfc42b65802060084d73",
+      "supabase/migrations/20260806180000_phase07_pass2c1_project_storage_bucket_foundation.sql": "d94ec23008f266afb07ecae7c172e4fe93f1b7bbd4906e2a4661dc4268bd8e18",
+      "supabase/verification/phase07-pass2c1-project-storage-bucket-foundation.sql": "b7641e50beabcd8343c0f501efc88e0197f97c8d6f8f2371519afeb4fa2a2015",
+      "tests/phase07-pass2c1-project-storage-bucket-foundation.test.ts": "5ce243a6bee96a25de80f7f1408a2158736d2a84ad53394ce09587f3a745ac0d"
+    },
+    "bucket": {
+      "id": "project-submissions",
+      "public": false,
+      "fileSizeLimitBytes": 41943040,
+      "allowedMimeTypes": [
+        "application/pdf",
+        "image/png"
+      ],
+      "projectObjectPolicies": 0,
+      "projectObjects": 0
+    },
+    "workflowRpcCount": 9,
+    "projectWorkflowRows": 0,
+    "gitHead": "1cd30e549027c8b2d13a2b04904dcc8d54f4d52c",
+    "authorityResult": "PASS"
+  },
+  "uploadIntent": {
+    "table": "private.project_upload_intents",
+    "idLifetime": "audit identity",
+    "plannedFileId": "future public.project_submission_files.id",
+    "expirySeconds": 7200,
+    "standardUploadMaximumBytes": 6291456,
+    "absoluteMaximumBytes": 41943040,
+    "transferModes": [
+      "standard",
+      "tus"
+    ],
+    "states": [
+      "pending",
+      "finalized",
+      "rejected",
+      "cancelled",
+      "expired"
+    ],
+    "onePendingIntentPerVersion": true,
+    "originalFilenameExcludedFromObjectPath": true,
+    "objectPathShape": "<user_uuid>/<submission_uuid>/<version_uuid>/<planned_file_uuid>.<pdf|png>"
+  },
+  "rpcs": [
+    {
+      "signature": "public.create_project_upload_intent(uuid,text,text,bigint)",
+      "caller": "authenticated",
+      "purpose": "validate an owned draft and reserve an idempotent server-generated object path"
+    },
+    {
+      "signature": "public.cancel_project_upload_intent(uuid)",
+      "caller": "authenticated",
+      "purpose": "idempotently close the learner-owned pending intent without deleting history"
+    }
+  ],
+  "accessModel": {
+    "anonDirectTableAccess": false,
+    "authenticatedDirectTableAccess": false,
+    "serviceRoleDirectTablePrivileges": [
+      "SELECT",
+      "INSERT",
+      "UPDATE"
+    ],
+    "serviceRoleDelete": false,
+    "rlsEnabled": true,
+    "rlsPolicyCount": 0,
+    "gucGuardedWrites": true
+  },
+  "deferred": {
+    "signedUploadToken": "Phase 07.2C2B",
+    "standardAndTusTransfer": "Phase 07.2C2B",
+    "byteInspectionAndSha256": "Phase 07.2C2C",
+    "pdfAndPngShapeInspection": "Phase 07.2C2C",
+    "atomicFileFinalization": "Phase 07.2C2C",
+    "orphanCleanup": "Phase 07.2C2C",
+    "signedDownload": "Phase 07.2C2C",
+    "projectUi": "later Phase 07 pass"
+  },
+  "scopeBoundary": {
+    "createsStorageObjects": false,
+    "createsStoragePolicies": false,
+    "createsSignedTokens": false,
+    "changesExistingWorkflowFunctions": false,
+    "changesAppOrUi": false,
+    "changesDependencies": false,
+    "changesVercelConfiguration": false,
+    "changesR2Configuration": false
+  }
+}
