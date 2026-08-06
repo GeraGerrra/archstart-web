@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0.0",
+  "pass": "ARCH.START Phase 07.2C2B1",
+  "result": "SOURCE_CONTRACT",
+  "scope": "trusted server signed-upload capability minting only",
+  "acceptedSource": {
+    "gitHead": "1aeb086d6278e8bc400d415ddfd79d1026541fe0",
+    "requiredBranch": "main",
+    "requiresOriginMainSync": true,
+    "phase2C2AFileHashes": {
+      "PHASE07_PROJECT_UPLOAD_INTENT_FOUNDATION.md": "cc4a05ba2b404d074d2b4a24757a6fe9abe1f7118ad826d3163f2cf28605f0e4",
+      "PHASE07_PROJECT_UPLOAD_INTENT_V1.json": "7ab832c33c28e63926e07fff3459dea4cb729253ec04564e141e2e8f5b6ceb11",
+      "supabase/migrations/20260807100000_phase07_pass2c2a_project_upload_intent_foundation.sql": "14b3827343e03486da102e72c378a378d68f924a4f453a133a4fedaa3d99a4d1",
+      "supabase/verification/phase07-pass2c2a-project-upload-intent-foundation.sql": "a9b0ae63964a7244571a261fddb426b5669c14e31ecb2a4b92a7427a2b863d62",
+      "supabase/verification/phase07-pass2c2a-two-account-upload-intent-template.sql": "9f447bf17a6fa88a48c2b2a1662b6dc3bc0178191596030827362b80930976ce",
+      "tests/phase07-pass2c2a-project-upload-intent-foundation.test.ts": "fa44a37c8d144a8e935fc5a0aaedef7a8e16cce9454561d6373f455b9a57e645"
+    },
+    "coreFileHashes": {
+      "src/lib/supabase/admin.ts": "f4118fc72ca0dec7014d790bb0673e765eb9296f887b768e3b22b40d645eaa96",
+      "src/lib/supabase/server.ts": "e83d4e002df54f7763dcc89c2cd1879cab347b9bed7fe318f2a23635114207a7",
+      "src/auth/config.ts": "9651467a54c9323c558a70f317566097366aed5928cc9bdad05539f730239c51",
+      "src/server/quiz-attempt-action.ts": "9210cf48006cd7344e389510e3acd7954ef9b0716e5ffafaf19f816c5c0fd290",
+      "package.json": "c8782e847026e8b4bf9bfef4ce29c11970b5cf9cb882ae31ca4b3510ed97aeb4",
+      "pnpm-lock.yaml": "4467288a190f46242fb0b31e65545773e9efc29507457c09f636c41a04487a10",
+      "pnpm-workspace.yaml": "9d4e87e65e2d9ede4b803649532796408c4c49e92a9874c22ebd12f733ea3ae5",
+      ".nvmrc": "55075b5ec4e8b31936cbbc282b8829116d1fd48f2f2f1856dee592a6650700ce"
+    },
+    "hostedState": {
+      "projectBucket": "project-submissions",
+      "bucketPublic": false,
+      "bucketFileSizeLimitBytes": 41943040,
+      "allowedMimeTypes": [
+        "application/pdf",
+        "image/png"
+      ],
+      "uploadIntentRows": 0,
+      "projectObjects": 0,
+      "projectObjectPolicies": 0
+    }
+  },
+  "serverAction": {
+    "export": "requestProjectUploadCapabilityAction",
+    "inputOwnsNoIdentity": true,
+    "authentication": "Supabase session claims before RPC or secret client use",
+    "intentRpc": "public.create_project_upload_intent(uuid,text,text,bigint)",
+    "staleRetry": "cancel and replace a reused intent with less than 115 minutes remaining",
+    "storageBucket": "project-submissions",
+    "storageMethod": "createSignedUploadUrl",
+    "upsert": false,
+    "returnedSecret": "single path-scoped upload token only",
+    "returnsUserId": false,
+    "returnsServiceKey": false,
+    "logsToken": false
+  },
+  "capability": {
+    "validity": "Supabase signed-upload token is two hours; client deadline is capped by database intent expiry",
+    "supportedTransferModes": [
+      "standard",
+      "tus"
+    ],
+    "standardConsumer": "Phase 07.2C2B2 uploadToSignedUrl transport",
+    "tusConsumer": "Phase 07.2C2B2 x-signature transport",
+    "createsStorageObject": false
+  },
+  "sourceBoundary": {
+    "changedPaths": [
+      "PHASE07_PROJECT_SIGNED_UPLOAD_CAPABILITY.md",
+      "PHASE07_PROJECT_SIGNED_UPLOAD_CAPABILITY_V1.json",
+      "src/project-upload/types.ts",
+      "src/project-upload/index.ts",
+      "src/server/project-upload-capability-action.ts",
+      "supabase/verification/phase07-pass2c2b1-project-signed-upload-capability-readiness.sql",
+      "tests/phase07-pass2c2b1-project-signed-upload-capability.test.ts"
+    ],
+    "pathCount": 7,
+    "databaseMigration": false,
+    "storagePolicyChange": false,
+    "storageObjectWrite": false,
+    "uiChange": false,
+    "routeChange": false,
+    "dependencyChange": false,
+    "environmentVariableChange": false,
+    "vercelChange": false,
+    "r2Change": false
+  },
+  "deferred": {
+    "standardBrowserTransfer": "Phase 07.2C2B2",
+    "tusBrowserTransfer": "Phase 07.2C2B2",
+    "liveStorageObjectTest": "Phase 07.2C2B2",
+    "byteInspection": "Phase 07.2C2C",
+    "sha256AndShapeValidation": "Phase 07.2C2C",
+    "atomicFileFinalization": "Phase 07.2C2C",
+    "orphanCleanup": "Phase 07.2C2C",
+    "signedDownload": "Phase 07.2C2C",
+    "learnerUi": "later Phase 07 pass"
+  }
+}
