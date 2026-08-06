@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "phase": "07",
+  "pass": "2C1",
+  "status": "IMPLEMENTATION_AUTHORITY",
+  "title": "Private project-submissions bucket with a closed browser policy boundary",
+  "acceptedSource": {
+    "branch": "main",
+    "gitHead": "449430959e0500f11cefda3d8ada6ded5526c5b4",
+    "sourceContextZipSha256": "b570d05f94489517a153025719cbb7a1019e04b75f071d4588e8fda01aea5162",
+    "hostedReconCsvSha256": "02d0703cc2bff1a7e8197d9d8f419c87db8f00c1df236ad9b4812320e0929280",
+    "b2WorkflowRpcCount": 9,
+    "currentProjectPolicies": 8,
+    "rubricCriteria": 40,
+    "projectWorkflowRows": 0,
+    "storageBucketCount": 0,
+    "projectStoragePolicyCount": 0
+  },
+  "bucket": {
+    "id": "project-submissions",
+    "name": "project-submissions",
+    "public": false,
+    "fileSizeLimitBytes": 41943040,
+    "allowedMimeTypes": ["application/pdf", "image/png"],
+    "globalLimitObservedInDashboard": "50 MB",
+    "imageTransformationEnabled": false
+  },
+  "accessModel": {
+    "defaultDeny": true,
+    "anonProjectObjectPolicies": 0,
+    "authenticatedProjectObjectPolicies": 0,
+    "directBrowserList": false,
+    "directBrowserRead": false,
+    "directBrowserInsert": false,
+    "directBrowserUpdate": false,
+    "directBrowserDelete": false,
+    "trustedServerMayBypassRls": true,
+    "signedUploadMinting": "deferred to Pass 2C2 trusted server action",
+    "signedDownloadMinting": "deferred to a later trusted server action",
+    "upsert": false
+  },
+  "scope": {
+    "createsBucket": true,
+    "createsStorageObjects": false,
+    "createsProjectObjectPolicies": false,
+    "changesWorkflowRpcDefinitions": false,
+    "changesProjectTables": false,
+    "changesAppOrUi": false,
+    "changesDependencies": false,
+    "changesVercel": false,
+    "changesR2": false
+  },
+  "nextPass": {
+    "phase": "07",
+    "pass": "2C2",
+    "title": "Upload intent, signed/resumable upload, byte inspection and atomic finalization",
+    "mayStartAutomatically": false
+  }
+}
