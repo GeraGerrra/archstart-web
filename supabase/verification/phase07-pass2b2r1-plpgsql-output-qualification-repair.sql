@@ -56,7 +56,7 @@ with repaired_function(signature, expected_caller, required_fragments) as (
   select
     function_state.signature,
     fragment,
-    pg_catalog.position(fragment in function_state.definition) > 0 as present
+    pg_catalog.strpos(function_state.definition, fragment) > 0 as present
   from function_state
   cross join lateral pg_catalog.unnest(
     function_state.required_fragments
