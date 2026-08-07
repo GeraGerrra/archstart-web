@@ -13,7 +13,7 @@ completion, project, asset, Supabase, Resend or certificate behavior.
 
 **PHASE 07.0 LAUNCH SHELL IMPLEMENTED FOR SOURCE**
 
-**PHASE 07.1E SIGNED-IN DASHBOARD AND PROGRESS PROJECTION IMPLEMENTED FOR SOURCE**
+**PHASE 07.1E-R1 SIGNED-IN DASHBOARD + ANONYMOUS ZERO-PROGRESS ISOLATION IMPLEMENTED FOR SOURCE**
 
 <!-- PHASE06_PASS1_CURRENT -->
 # ARCH.START Route List — Phase 06 Pass 1
@@ -31,7 +31,8 @@ completion, project, asset, Supabase, Resend or certificate behavior.
 | `/prototype/a/dashboard` | authenticated + onboarded | real own-row Dashboard progress and Continue Learning |
 
 All `/prototype/a/course` module, lesson, project, Quiz and Further Study routes
-remain public. Signed-in visits to canonical lesson-item routes now record only
+remain public. Anonymous visits use a truthful zero-progress shell and never inherit
+Phase 02 demonstration completion values. Signed-in visits to canonical lesson-item routes now record only
 `lesson_code` and `last_item` through the accepted own-row activity RPC. The
 Dashboard reads the current learner's activity, Quiz attempts and explicit
 completion rows through session RLS; no certificate or project-review workflow
