@@ -69,7 +69,7 @@
     "minimumBytes": 6291457,
     "maximumBytes": 41943040,
     "chunkSizeBytes": 6291456,
-    "directEndpointShape": "https://<20-character-project-ref>.storage.supabase.co/storage/v1/upload/resumable",
+    "directEndpointShape": "https://<20-character-project-ref>.storage.supabase.co/storage/v1/upload/resumable/sign",
     "signedHeader": "x-signature",
     "upsertHeader": {
       "name": "x-upsert",
@@ -116,7 +116,9 @@
       "invalid file",
       "unsafe endpoint",
       "unsafe upload URL"
-    ]
+    ],
+    "unsignedEndpointRejected": "https://<20-character-project-ref>.storage.supabase.co/storage/v1/upload/resumable",
+    "fingerprintNamespace": "archstart-project-tus-v2"
   },
   "validation": {
     "fileNameMatchesCapability": true,
@@ -171,5 +173,29 @@
     "orphanCleanup": "Phase 07.2C2C",
     "signedDownload": "Phase 07.2C2C",
     "learnerUi": "later Phase 07 pass"
+  },
+  "signedEndpointRepair": {
+    "pass": "ARCH.START Phase 07.2C2B2B-R2",
+    "acceptedBaseGitHead": "e45f94c21f6d433eebd420cc0fce60c691b4c019",
+    "triggerEvidence": {
+      "standardSignedUpload": "PASS",
+      "tusCreation": "STOP",
+      "storageResponseCode": 400,
+      "storageErrorCode": "AccessDenied",
+      "storageMessage": "Invalid Compact JWS",
+      "temporaryObjectCleanup": "PASS"
+    },
+    "rootCause": "A token minted by createSignedUploadUrl was sent in x-signature to the unsigned resumable endpoint. Signed resumable uploads require the /sign route.",
+    "repair": {
+      "signedEndpointSuffix": "/sign",
+      "unsignedEndpointRejected": true,
+      "fingerprintNamespaceAdvanced": true,
+      "databaseMigration": false,
+      "storagePolicyChange": false,
+      "dependencyChange": false,
+      "uiChange": false,
+      "routeChange": false,
+      "environmentChange": false
+    }
   }
 }
