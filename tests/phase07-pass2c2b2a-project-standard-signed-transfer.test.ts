@@ -360,9 +360,7 @@ test("client-safe barrel exposes the pure controller but not the Supabase client
   assert.doesNotMatch(source, /src\/server|server-only/u);
 });
 
-test("B2A adds no TUS dependency, UI, route, migration or live object acceptance", async () => {
-  const packageJson = await text("package.json");
-  const lockfile = await text("pnpm-lock.yaml");
+test("B2A standard transfer remains TUS-free after the dedicated resumable pass", async () => {
   const documentation = await text(documentationPath);
   const contract = await text(contractPath);
   const combined = [
@@ -372,9 +370,10 @@ test("B2A adds no TUS dependency, UI, route, migration or live object acceptance
     contract,
   ].join("\n");
 
-  assert.doesNotMatch(packageJson, /tus-js-client|@uppy\//iu);
-  assert.doesNotMatch(lockfile, /tus-js-client|@uppy\//iu);
-  assert.doesNotMatch(combined, /new\s+tus\.Upload|x-signature/iu);
+  assert.doesNotMatch(
+    combined,
+    /tus-js-client|new\s+tus\.Upload|x-signature|findPreviousUploads|resumeFromPreviousUpload/iu,
+  );
   assert.match(documentation, /does \*\*not\*\* add a learner UI/iu);
   assert.match(contract, /"databaseMigration": false/u);
   assert.match(contract, /"liveStorageObjectWrite": false/u);

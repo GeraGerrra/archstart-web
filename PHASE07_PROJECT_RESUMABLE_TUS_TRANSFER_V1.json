@@ -1,0 +1,175 @@
+{
+  "schemaVersion": "1.0.0",
+  "pass": "ARCH.START Phase 07.2C2B2B",
+  "result": "SOURCE_CONTRACT",
+  "scope": "resumable signed TUS browser-transfer core without UI or hosted upload",
+  "acceptedSource": {
+    "gitHead": "5009aaf74803ae9383c9e9454f12d5a86c97296a",
+    "gitTree": "8e61e9d811a4197fb0a4b12b4293aac93e472ac2",
+    "sourceTreeSha256": "1c0933c3ac5d54f2dd48c3ee6c3d35559129f782a19d7fd101c7aa845edd4ebd",
+    "sourceContextZipSha256": "6816ce053d94111d70a3e94afdb7eebb138f9256375ad0076d2310c1eebd842b",
+    "requiredBranch": "main",
+    "requiresOriginMainSync": true,
+    "phase2C2B2AFileHashes": {
+      "PHASE07_PROJECT_STANDARD_SIGNED_TRANSFER.md": "adb66ce6ffc9985a71ca3ed6679978c0b8303ee3e7e6866789810924c4e8da32",
+      "PHASE07_PROJECT_STANDARD_SIGNED_TRANSFER_V1.json": "dcaf88750d1064558fb9cf53c1eecac591595f4c02e2f5a2462d413202a959a5",
+      "src/project-upload/index.ts": "26dc8846590edc7110662ad677129062ecac5c419bd730e82bfe135aab34e5b4",
+      "src/project-upload/standard-transfer.ts": "8c6026c3a0ed2326f460a672feecc1109967002de1d5c9734ba6f41f0ed62740",
+      "src/project-upload/supabase-standard-transfer.ts": "fc67f8d7b65643c1fd0e08c2aa7be320c0928d445f345e08bf0f0c4ddbfa9814",
+      "supabase/verification/phase07-pass2c2b2a-project-standard-signed-transfer-readiness.sql": "2119ec686b6153039044ee723b2ca4fea221883841aee1201757e3f8657f128c",
+      "tests/phase07-pass2c2b2a-project-standard-signed-transfer.test.ts": "35c465168e0c4e9520f8c20eabf4ea6dd44ca738010a7cc69d8f90e288c86687"
+    },
+    "capabilityBoundaryHashes": {
+      "src/project-upload/types.ts": "0cf90d7194cf111eb5608ca94dd2d1fb15a0dc8f60de30bb220bb06dfb4ca0f8",
+      "src/server/project-upload-capability-action.ts": "371cfdaf93c76dc7f6816f14463c633fc3f43f38b2c56bffcce3dfaea6b5855b",
+      "tests/phase07-pass2c2b1-project-signed-upload-capability.test.ts": "30462ee36393d19b7a082c56d83f1df29acc2e64cfa04d276531c555b8a65862"
+    },
+    "packageBoundaryHashes": {
+      "package.json": "c8782e847026e8b4bf9bfef4ce29c11970b5cf9cb882ae31ca4b3510ed97aeb4",
+      "pnpm-lock.yaml": "4467288a190f46242fb0b31e65545773e9efc29507457c09f636c41a04487a10",
+      "pnpm-workspace.yaml": "9d4e87e65e2d9ede4b803649532796408c4c49e92a9874c22ebd12f733ea3ae5",
+      ".nvmrc": "55075b5ec4e8b31936cbbc282b8829116d1fd48f2f2f1856dee592a6650700ce",
+      ".env.example": "588d8fb66bc0edaa8204a4360db52290e6577b1318a6ebd51e1fb8c2f8118313",
+      "next.config.ts": "027717e9107d368abecbe8c45a990e28a294e6234e6f2b7dde7d079cb6317189"
+    },
+    "hostedReadiness": {
+      "result": "PASS",
+      "bucket": "project-submissions",
+      "bucketPublic": false,
+      "bucketFileSizeLimitBytes": 41943040,
+      "allowedMimeTypes": [
+        "application/pdf",
+        "image/png"
+      ],
+      "uploadIntentRows": 0,
+      "projectObjects": 0,
+      "projectObjectPolicies": 0,
+      "currentProjectPolicies": 8,
+      "rubricCriteria": 40
+    }
+  },
+  "dependency": {
+    "name": "tus-js-client",
+    "version": "4.3.1",
+    "saveExact": true,
+    "packageManagerOwnedFiles": [
+      "package.json",
+      "pnpm-lock.yaml"
+    ],
+    "applyMode": "sealed exact package-manager result; frozen install is the acceptance gate",
+    "provenanceCommand": "pnpm add --save-exact --lockfile-only tus-js-client@4.3.1",
+    "lockGraphPackageCount": 21,
+    "packageJsonSha256": "4dafbb0425c74c31f25b1a25953385154f722994eb7cc9495c7270e988b878ed",
+    "pnpmLockSha256": "8e6a30efb3984e49762e92571e4c949f4b37db2d836538af72c568d69dd1e944",
+    "lockfileVerifier": "PASS",
+    "lockGraphClosure": "PASS"
+  },
+  "tusTransfer": {
+    "bucket": "project-submissions",
+    "minimumBytes": 6291457,
+    "maximumBytes": 41943040,
+    "chunkSizeBytes": 6291456,
+    "directEndpointShape": "https://<20-character-project-ref>.storage.supabase.co/storage/v1/upload/resumable",
+    "signedHeader": "x-signature",
+    "upsertHeader": {
+      "name": "x-upsert",
+      "value": "false"
+    },
+    "parallelUploads": 1,
+    "uploadDataDuringCreation": true,
+    "storeFingerprintForResuming": true,
+    "removeFingerprintOnSuccess": true,
+    "requestRetryDelaysMilliseconds": [
+      0,
+      1500,
+      3000
+    ],
+    "maximumControllerAttemptsPerCapability": 2,
+    "publicStartCountPerCapability": 1,
+    "maximumPreviousUploadAgeMilliseconds": 86400000,
+    "states": [
+      "idle",
+      "validating",
+      "uploading",
+      "paused",
+      "succeeded",
+      "failed",
+      "cancelled"
+    ],
+    "pause": "abort(false)",
+    "resume": "start()",
+    "cancel": "abort(true)",
+    "retryableClasses": [
+      "network failure",
+      "408",
+      "423",
+      "429",
+      "5xx"
+    ],
+    "terminalClasses": [
+      "400",
+      "401",
+      "403",
+      "409",
+      "413",
+      "invalid capability",
+      "invalid file",
+      "unsafe endpoint",
+      "unsafe upload URL"
+    ]
+  },
+  "validation": {
+    "fileNameMatchesCapability": true,
+    "mimeMatchesCapability": true,
+    "byteLengthMatchesCapability": true,
+    "tusModeRequired": true,
+    "databaseObjectPathShapeRechecked": true,
+    "plannedFileIdentityRechecked": true,
+    "capabilityDeadlineRechecked": true,
+    "directEndpointRechecked": true,
+    "previousUploadMetadataRechecked": true,
+    "previousUploadAgeRechecked": true,
+    "previousUploadUrlRechecked": true,
+    "percentageBeforeSuccessMaximum": 99,
+    "completionProgress": 100,
+    "tokenLogged": false,
+    "browserSecretAuthority": false
+  },
+  "sourceBoundary": {
+    "changedPaths": [
+      "PHASE07_PROJECT_RESUMABLE_TUS_TRANSFER.md",
+      "PHASE07_PROJECT_RESUMABLE_TUS_TRANSFER_V1.json",
+      "package.json",
+      "pnpm-lock.yaml",
+      "src/project-upload/index.ts",
+      "src/project-upload/tus-transfer.ts",
+      "src/project-upload/supabase-tus-transfer.ts",
+      "supabase/verification/phase07-pass2c2b2b-project-resumable-tus-transfer-readiness.sql",
+      "tests/phase07-pass2c2b1-project-signed-upload-capability.test.ts",
+      "tests/phase07-pass2c2b2a-project-standard-signed-transfer.test.ts",
+      "tests/phase07-pass2c2b2b-project-resumable-tus-transfer.test.ts"
+    ],
+    "pathCount": 11,
+    "sealedPayloadPaths": 9,
+    "packageManagerOwnedPaths": 2,
+    "databaseMigration": false,
+    "storagePolicyChange": false,
+    "liveStorageObjectWrite": false,
+    "signedCapabilityRequest": false,
+    "uiChange": false,
+    "routeChange": false,
+    "environmentVariableChange": false,
+    "vercelChange": false,
+    "r2Change": false
+  },
+  "deferred": {
+    "liveTusAcceptance": "Phase 07.2C2B2C",
+    "temporaryObjectCleanup": "Phase 07.2C2B2C",
+    "byteInspection": "Phase 07.2C2C",
+    "sha256AndShapeValidation": "Phase 07.2C2C",
+    "atomicFileFinalization": "Phase 07.2C2C",
+    "orphanCleanup": "Phase 07.2C2C",
+    "signedDownload": "Phase 07.2C2C",
+    "learnerUi": "later Phase 07 pass"
+  }
+}
