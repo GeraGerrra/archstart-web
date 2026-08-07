@@ -1,0 +1,134 @@
+{
+  "schemaVersion": "1.0.0",
+  "pass": "ARCH.START Phase 07.2C2B2A",
+  "result": "SOURCE_CONTRACT",
+  "scope": "standard signed direct browser-transfer core without UI or hosted upload",
+  "acceptedSource": {
+    "gitHead": "383d18f9e4fc46503071fbe008369d40277833df",
+    "gitTree": "c7454657e9035e351671baa10de92bf89ed59278",
+    "sourceTreeSha256": "42ce0242491532dc1882a9073b645cb8093f4b8e0a05a996dd509571ab660c31",
+    "sourceContextZipSha256": "490384e8fa570dd6a0f7685ea4b945141b8d827d0d26a21792deaff780454255",
+    "requiredBranch": "main",
+    "requiresOriginMainSync": true,
+    "phase2C2AFileHashes": {
+      "PHASE07_PROJECT_UPLOAD_INTENT_FOUNDATION.md": "cc4a05ba2b404d074d2b4a24757a6fe9abe1f7118ad826d3163f2cf28605f0e4",
+      "PHASE07_PROJECT_UPLOAD_INTENT_V1.json": "7ab832c33c28e63926e07fff3459dea4cb729253ec04564e141e2e8f5b6ceb11",
+      "supabase/migrations/20260807100000_phase07_pass2c2a_project_upload_intent_foundation.sql": "14b3827343e03486da102e72c378a378d68f924a4f453a133a4fedaa3d99a4d1",
+      "supabase/verification/phase07-pass2c2a-project-upload-intent-foundation.sql": "a9b0ae63964a7244571a261fddb426b5669c14e31ecb2a4b92a7427a2b863d62",
+      "supabase/verification/phase07-pass2c2a-two-account-upload-intent-template.sql": "9f447bf17a6fa88a48c2b2a1662b6dc3bc0178191596030827362b80930976ce",
+      "tests/phase07-pass2c2a-project-upload-intent-foundation.test.ts": "fa44a37c8d144a8e935fc5a0aaedef7a8e16cce9454561d6373f455b9a57e645"
+    },
+    "phase2C2B1FileHashes": {
+      "PHASE07_PROJECT_SIGNED_UPLOAD_CAPABILITY.md": "d4d838cff9cac1be667c3ad5f79514e58f24f563db0291be31b6f1af8a16c6df",
+      "PHASE07_PROJECT_SIGNED_UPLOAD_CAPABILITY_V1.json": "09cc064df861c4c8741d324f9edbd841f8412731484866a250cfa70a45d0463a",
+      "src/project-upload/types.ts": "0cf90d7194cf111eb5608ca94dd2d1fb15a0dc8f60de30bb220bb06dfb4ca0f8",
+      "src/project-upload/index.ts": "39f9e940bc45a700d92eded6bf0a83749be7410b39cb11b9c73886175980e1df",
+      "src/server/project-upload-capability-action.ts": "371cfdaf93c76dc7f6816f14463c633fc3f43f38b2c56bffcce3dfaea6b5855b",
+      "supabase/verification/phase07-pass2c2b1-project-signed-upload-capability-readiness.sql": "17020df9ce3f0868318b020210eef2ac50cb8f41eacf49e601bc31fae0d16732",
+      "tests/phase07-pass2c2b1-project-signed-upload-capability.test.ts": "30462ee36393d19b7a082c56d83f1df29acc2e64cfa04d276531c555b8a65862"
+    },
+    "coreFileHashes": {
+      "src/auth/config.ts": "9651467a54c9323c558a70f317566097366aed5928cc9bdad05539f730239c51",
+      "src/lib/supabase/client.ts": "0e3c5f5a6f3ccfc3c7d069a40072eabad38fe9b9f5a7c1cc70ed33b281e73214",
+      "package.json": "c8782e847026e8b4bf9bfef4ce29c11970b5cf9cb882ae31ca4b3510ed97aeb4",
+      "pnpm-lock.yaml": "4467288a190f46242fb0b31e65545773e9efc29507457c09f636c41a04487a10",
+      "pnpm-workspace.yaml": "9d4e87e65e2d9ede4b803649532796408c4c49e92a9874c22ebd12f733ea3ae5",
+      ".nvmrc": "55075b5ec4e8b31936cbbc282b8829116d1fd48f2f2f1856dee592a6650700ce"
+    },
+    "hostedReadiness": {
+      "result": "PASS",
+      "bucket": "project-submissions",
+      "bucketPublic": false,
+      "bucketFileSizeLimitBytes": 41943040,
+      "allowedMimeTypes": [
+        "application/pdf",
+        "image/png"
+      ],
+      "uploadIntentRows": 0,
+      "projectObjects": 0,
+      "projectObjectPolicies": 0,
+      "currentProjectPolicies": 8,
+      "rubricCriteria": 40,
+      "intentFunctions": {
+        "public.create_project_upload_intent(uuid,text,text,bigint)": "0807ba2150245b62bd24287cd66c0fdc",
+        "public.cancel_project_upload_intent(uuid)": "04610018d73892ad60dd3b1b4ca06c51",
+        "private.stamp_project_upload_intent()": "0e8dac189de44fdc0f789312b6ed1bfb",
+        "private.reject_project_upload_intent_delete()": "6e7c445e65917d4b75e6912c24e6c6a4"
+      }
+    }
+  },
+  "standardTransfer": {
+    "method": "uploadToSignedUrl",
+    "bucket": "project-submissions",
+    "maximumBytes": 6291456,
+    "cacheControlSeconds": 3600,
+    "upsert": false,
+    "trueAbort": "request-scoped custom fetch receives the controller AbortSignal",
+    "intermediateProgress": "indeterminate only; no fabricated percentage",
+    "completionProgress": 100,
+    "maximumAttemptsPerCapability": 2,
+    "publicStartCountPerCapability": 1,
+    "retryableClasses": [
+      "408",
+      "429",
+      "5xx",
+      "network failure"
+    ],
+    "terminalHttpClasses": [
+      "400",
+      "401",
+      "403",
+      "409",
+      "413"
+    ],
+    "states": [
+      "idle",
+      "validating",
+      "uploading",
+      "succeeded",
+      "failed",
+      "cancelled"
+    ]
+  },
+  "validation": {
+    "fileNameMatchesCapability": true,
+    "mimeMatchesCapability": true,
+    "byteLengthMatchesCapability": true,
+    "standardModeRequired": true,
+    "databaseObjectPathShapeRechecked": true,
+    "plannedFileIdentityRechecked": true,
+    "capabilityDeadlineRechecked": true,
+    "tokenLogged": false
+  },
+  "sourceBoundary": {
+    "changedPaths": [
+      "PHASE07_PROJECT_STANDARD_SIGNED_TRANSFER.md",
+      "PHASE07_PROJECT_STANDARD_SIGNED_TRANSFER_V1.json",
+      "src/project-upload/index.ts",
+      "src/project-upload/standard-transfer.ts",
+      "src/project-upload/supabase-standard-transfer.ts",
+      "supabase/verification/phase07-pass2c2b2a-project-standard-signed-transfer-readiness.sql",
+      "tests/phase07-pass2c2b2a-project-standard-signed-transfer.test.ts"
+    ],
+    "pathCount": 7,
+    "databaseMigration": false,
+    "storagePolicyChange": false,
+    "liveStorageObjectWrite": false,
+    "uiChange": false,
+    "routeChange": false,
+    "dependencyChange": false,
+    "environmentVariableChange": false,
+    "vercelChange": false,
+    "r2Change": false
+  },
+  "deferred": {
+    "tusResumableTransfer": "Phase 07.2C2B2B",
+    "liveStorageAcceptance": "Phase 07.2C2B2C",
+    "byteInspection": "Phase 07.2C2C",
+    "sha256AndShapeValidation": "Phase 07.2C2C",
+    "atomicFileFinalization": "Phase 07.2C2C",
+    "orphanCleanup": "Phase 07.2C2C",
+    "signedDownload": "Phase 07.2C2C",
+    "learnerUi": "later Phase 07 pass"
+  }
+}
