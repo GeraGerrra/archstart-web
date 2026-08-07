@@ -42,7 +42,7 @@ function deriveDirectTusEndpoint(supabaseUrl: string): string {
     throw new Error("NEXT_PUBLIC_SUPABASE_URL must use the standard HTTPS project hostname.");
   }
 
-  return `https://${match[1]}.storage.supabase.co/storage/v1/upload/resumable`;
+  return `https://${match[1]}.storage.supabase.co/storage/v1/upload/resumable/sign`;
 }
 
 function fingerprintFor(
@@ -50,7 +50,7 @@ function fingerprintFor(
   capability: ProjectUploadCapability,
 ): string {
   return [
-    "archstart-project-tus-v1",
+    "archstart-project-tus-v2",
     PROJECT_UPLOAD_BUCKET_ID,
     capability.objectPath,
     capability.intentId,

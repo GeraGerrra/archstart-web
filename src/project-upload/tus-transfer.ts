@@ -10,7 +10,7 @@ const UUID_PATTERN =
   /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/iu;
 
 const PROJECT_REF_PATTERN = /^[a-z0-9]{20}$/u;
-const TUS_ENDPOINT_PATH = "/storage/v1/upload/resumable";
+const TUS_ENDPOINT_PATH = "/storage/v1/upload/resumable/sign";
 
 export const PROJECT_TUS_TRANSFER_LIMITS = Object.freeze({
   minimumBytes: PROJECT_UPLOAD_CAPABILITY_LIMITS.standardMaximumBytes + 1,

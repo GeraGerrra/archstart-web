@@ -26,6 +26,8 @@ const readinessPath =
 
 const fixedNow = Date.parse("2026-08-07T05:30:00.000Z");
 const endpoint =
+  "https://xjesjgpbbkldbjuvnqfq.storage.supabase.co/storage/v1/upload/resumable/sign";
+const unsignedEndpoint =
   "https://xjesjgpbbkldbjuvnqfq.storage.supabase.co/storage/v1/upload/resumable";
 const uploadUrl = `${endpoint}/9f43d21d-0b86-4de3-9957-109e4b76ff7a`;
 
@@ -223,17 +225,22 @@ test("TUS validation accepts only exact server capability and matching large Fil
 
 test("direct endpoint and upload URLs reject alternate origins and path tricks", () => {
   assert.equal(isSafeProjectTusEndpoint(endpoint), true);
+  assert.equal(isSafeProjectTusEndpoint(unsignedEndpoint), false);
   assert.equal(isSafeProjectTusEndpoint(endpoint.replace("https:", "http:")), false);
   assert.equal(
     isSafeProjectTusEndpoint(
-      "https://xjesjgpbbkldbjuvnqfq.supabase.co/storage/v1/upload/resumable",
+      "https://xjesjgpbbkldbjuvnqfq.supabase.co/storage/v1/upload/resumable/sign",
     ),
     false,
   );
   assert.equal(isSafeProjectTusUploadUrl(uploadUrl, endpoint), true);
   assert.equal(
+    isSafeProjectTusUploadUrl(`${unsignedEndpoint}/unsafe-id`, endpoint),
+    false,
+  );
+  assert.equal(
     isSafeProjectTusUploadUrl(
-      "https://evil.example/storage/v1/upload/resumable/abc",
+      "https://evil.example/storage/v1/upload/resumable/sign/abc",
       endpoint,
     ),
     false,
@@ -418,7 +425,7 @@ test("unsafe previous upload poisons the resume set and is terminated", async ()
   const expected = capability();
   const { transport, harness } = harnessTransport({
     previousUploads: [previousUpload(expected, {
-      uploadUrl: "https://evil.example/storage/v1/upload/resumable/abc",
+      uploadUrl: "https://evil.example/storage/v1/upload/resumable/sign/abc",
     })],
   });
   const controller = createProjectTusTransferController(transport, {
@@ -589,7 +596,7 @@ test("synchronous unsafe upload URL terminates the assigned session before failu
     canStorePreviousUploads: false,
     createSession(input) {
       input.onUploadUrlAvailable(
-        "https://attacker.example/storage/v1/upload/resumable/unsafe",
+        "https://attacker.example/storage/v1/upload/resumable/sign/unsafe",
       );
       return {
         async findPreviousUploads() { return []; },
@@ -615,9 +622,14 @@ test("Supabase adapter owns exact signed TUS options and no browser secret", asy
   const source = await text(adapterPath);
   assert.match(source, /^"use client";/u);
   assert.match(source, /import \* as tus from "tus-js-client"/u);
-  assert.match(source, /\.storage\.supabase\.co\/storage\/v1\/upload\/resumable/u);
+  assert.match(source, /\.storage\.supabase\.co\/storage\/v1\/upload\/resumable\/sign/u);
   assert.match(source, /new tus\.Upload\(file/u);
   assert.match(source, /"x-signature": capability\.uploadToken/u);
+  assert.match(source, /"archstart-project-tus-v2"/u);
+  assert.doesNotMatch(
+    source,
+    /storage\.supabase\.co\/storage\/v1\/upload\/resumable`/u,
+  );
   assert.match(source, /"x-upsert": "false"/u);
   assert.match(source, /bucketName: PROJECT_UPLOAD_BUCKET_ID/u);
   assert.match(source, /objectName: capability\.objectPath/u);
@@ -667,6 +679,10 @@ test("B2B source scope adds no UI, route, migration or live upload evidence", as
   const contract = await text(contractPath);
   assert.match(documentation, /does \*\*not\*\* add a learner UI/iu);
   assert.match(documentation, /does not\s+perform a live TUS upload/iu);
+  assert.match(documentation, /upload\/resumable\/sign/iu);
+  assert.match(documentation, /unsigned[\s\S]*upload\/resumable/iu);
+  assert.match(contract, /"directEndpointShape": "[^"]*upload\/resumable\/sign"/u);
+  assert.match(contract, /"unsignedEndpointRejected": "[^"]*upload\/resumable"/u);
   assert.match(contract, /"databaseMigration": false/u);
   assert.match(contract, /"liveStorageObjectWrite": false/u);
   assert.match(contract, /"uiChange": false/u);

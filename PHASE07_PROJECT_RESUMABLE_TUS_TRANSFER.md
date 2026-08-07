@@ -35,12 +35,16 @@ The browser adapter derives only this endpoint shape from the accepted public
 Supabase project URL:
 
 ```text
-https://<20-character-project-ref>.storage.supabase.co/storage/v1/upload/resumable
+https://<20-character-project-ref>.storage.supabase.co/storage/v1/upload/resumable/sign
 ```
 
 It rejects custom origins, HTTP, credentials, ports, query strings, fragments,
-and alternate paths. Every stored or newly returned upload URL must remain on
-the same HTTPS origin and below the exact resumable endpoint path.
+and alternate paths. The `/sign` suffix is mandatory when the request carries
+a token from `createSignedUploadUrl` in `x-signature`; the unsigned
+`/storage/v1/upload/resumable` route is reserved for JWT/RLS authorization and
+must not receive the signed-upload token. Every stored or newly returned upload
+URL must remain on the same HTTPS origin and below the exact signed resumable
+endpoint path.
 
 ## Signed authentication and overwrite boundary
 
@@ -66,8 +70,10 @@ removeFingerprintOnSuccess:  true
 request retry delays:        0 ms, 1,500 ms, 3,000 ms
 ```
 
-The upload fingerprint binds the browser file to the database-owned bucket,
-object path, intent and planned-file identity. A matching local file cannot
+The upload fingerprint namespace is `archstart-project-tus-v2`. It binds the
+browser file to the database-owned bucket, object path, intent and planned-file
+identity. The namespace was advanced after the signed-endpoint repair so stale
+pre-repair local URLs cannot poison a new transfer. A matching local file cannot
 silently resume a TUS URL created for another project path.
 
 ## Previous-upload validation
