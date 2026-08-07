@@ -10,6 +10,17 @@ export {
   validateProjectStandardTransferInput,
 } from "./standard-transfer.ts";
 
+export {
+  PROJECT_TUS_TRANSFER_LIMITS,
+  createProjectTusTransferController,
+  isSafeProjectTusEndpoint,
+  isSafeProjectTusPreviousUpload,
+  isSafeProjectTusUploadUrl,
+  projectTusStatusFromError,
+  shouldRetryProjectTusRequest,
+  validateProjectTusTransferInput,
+} from "./tus-transfer.ts";
+
 export type {
   ProjectUploadCapability,
   ProjectUploadCapabilityInput,
@@ -32,3 +43,20 @@ export type {
   ProjectStandardUploadTransportInput,
   ProjectStandardUploadTransportResult,
 } from "./standard-transfer.ts";
+
+export type {
+  ProjectTusPreviousUpload,
+  ProjectTusTransferController,
+  ProjectTusTransferControllerOptions,
+  ProjectTusTransferErrorCode,
+  ProjectTusTransferProgress,
+  ProjectTusTransferSnapshot,
+  ProjectTusTransferStatus,
+  ProjectTusTransferValidationFailure,
+  ProjectTusTransferValidationResult,
+  ProjectTusTransferValidationSuccess,
+  ProjectTusUploadSession,
+  ProjectTusUploadSessionInput,
+  ProjectTusUploadSuccess,
+  ProjectTusUploadTransport,
+} from "./tus-transfer.ts";

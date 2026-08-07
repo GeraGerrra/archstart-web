@@ -100,11 +100,13 @@ test("token and secret material cannot be logged or sourced from browser input",
   assert.doesNotMatch(types, /userId: string/u);
 });
 
-test("no dependency or lockfile change is needed before browser transport", async () => {
-  const packageJson = await text("package.json");
-  const lockfile = await text("pnpm-lock.yaml");
-  assert.doesNotMatch(packageJson, /tus-js-client|uppy/iu);
-  assert.doesNotMatch(lockfile, /tus-js-client|@uppy\//iu);
+test("B1 signed-capability minting remains transport-free after later upload passes", async () => {
+  const source = executable(await text(actionPath));
+  assert.doesNotMatch(
+    source,
+    /tus-js-client|new\s+tus\.Upload|x-signature|findPreviousUploads|resumeFromPreviousUpload/iu,
+  );
+  assert.doesNotMatch(source, /uploadToSignedUrl\(|storage\.objects/iu);
 });
 
 test("hosted readiness is read-only and preserves zero-row, empty-bucket boundaries", async () => {
