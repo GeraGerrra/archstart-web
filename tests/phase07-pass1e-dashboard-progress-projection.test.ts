@@ -116,12 +116,13 @@ test("lesson route mounts the invisible activity recorder before the accepted su
 });
 
 
-test("signed-in Dashboard shell uses real progress while static demo fallback remains", () => {
+test("signed-in Dashboard uses real progress while public shells default to anonymous zero state", () => {
   assert.match(shellAdapter, /SelectedAShellProgressProjection/u);
   assert.match(shellAdapter, /completedLessonCodes/u);
   assert.match(shellAdapter, /completedModuleCodes/u);
   assert.match(shellAdapter, /activeLessonCodes/u);
-  assert.match(shellAdapter, /selectedAModulesForProjection\(progressProjection\)/u);
+  assert.match(shellAdapter, /ANONYMOUS_SHELL_PROGRESS_PROJECTION/u);
+  assert.match(shellAdapter, /progressProjection \?\? ANONYMOUS_SHELL_PROGRESS_PROJECTION/u);
   assert.match(selectedA, /model = selectedADashboardModel/u);
   assert.match(selectedA, /progressProjection\?: SelectedAShellProgressProjection/u);
   assert.match(selectedA, /currentModule=\{progressProjection\?\.currentModuleCode \?\? "M01"\}/u);
@@ -138,9 +139,9 @@ test("Dashboard keeps selected-A layout, optional profile access, and official m
 
 
 test("Pass 1E is source-only and documents the exact deferred boundary", () => {
-  assert.match(routeList, /PHASE 07\.1E SIGNED-IN DASHBOARD AND PROGRESS PROJECTION/u);
+  assert.match(routeList, /PHASE 07\.1E-R1 SIGNED-IN DASHBOARD \+ ANONYMOUS ZERO-PROGRESS ISOLATION/u);
   assert.match(phaseDoc, /No Supabase migration is required/u);
-  assert.match(phaseDoc, /public Course Overview remains unchanged/u);
+  assert.match(phaseDoc, /anonymous zero-progress projection/u);
   assert.match(phaseDoc, /no Supabase migration|No Supabase migration/iu);
   for (const deferred of [
     "certificate",

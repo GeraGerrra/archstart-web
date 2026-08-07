@@ -87,24 +87,27 @@ const HOME_MODULE_SHORT_TITLES: Readonly<Record<string, string>> = {
 };
 
 const EMPTY_PROGRESS = { status: "locked" as Status, done: 0, project: false, label: "Закрыт" };
+const PUBLIC_ZERO_PROGRESS = { status: "available" as Status, done: 0, project: false, label: "Не начат" };
 
 function selectedACourseModule(module: ModuleSummary): CourseModuleCardDisplay {
-  const state = progress[module.code] ?? EMPTY_PROGRESS;
+  const state = PUBLIC_ZERO_PROGRESS;
   const lessons = moduleLessons(module.code);
   const project = moduleProject(module.code);
   return {
     code: module.code, titleRu: module.titleRu, titleEn: module.titleEn, goal: module.goal,
-    href: pathModule(module.code), status: state.status, completedLessons: state.done, lessonTotal: 5,
+    href: pathModule(module.code), status: state.status, completedLessons: 0, lessonTotal: 5,
     cutout: selectedACutout(module.code),
-    lessons: lessons.map((lesson) => {
-      const lessonState = statusForLesson(lesson);
-      return {
-        code: lesson.code, shortCode: lesson.code.slice(-3).replace("_", ""), titleRu: lesson.titleRu, status: lessonState,
-        action: ["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08"].includes(module.code) ? { label: "Открыть", href: pathItem(module.code, lesson.code, "overview") } : undefined,
-        quietStatusLabel: ["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08"].includes(module.code) ? undefined : VISUAL_STATUS_LABELS[lessonState],
-      };
-    }),
-    project: project ? { code: project.code, titleRu: project.titleRu, href: pathProject(module.code), status: state.project ? "complete" : state.status === "locked" ? "locked" : "available" } : undefined,
+    lessons: lessons.map((lesson) => ({
+      code: lesson.code, shortCode: lesson.code.slice(-3).replace("_", ""), titleRu: lesson.titleRu, status: "available",
+      action: { label: "Открыть", href: pathItem(module.code, lesson.code, "overview") },
+      quietStatusLabel: undefined,
+    })),
+    project: project ? {
+      code: project.code,
+      titleRu: project.titleRu,
+      href: pathProject(module.code),
+      status: "available",
+    } : undefined,
   };
 }
 
@@ -143,11 +146,11 @@ const selectedAHomeModel: HomePageViewModel = {
 const selectedACourseModel: CourseOverviewViewModel = {
   title: "Курс ARCH.START",
   summary: "Полная карта обучения: восемь модулей, сорок уроков и один проект после каждого модуля.",
-  demoDisclosure: "Демонстрационный прогресс показан только для проверки состояний и не является данными пользователя.",
-  continueAction: { label: "Продолжить обучение", href: pathItem("M01", "M01_L02", "vocabulary") },
+  demoDisclosure: "Без аккаунта показано нулевое стартовое состояние. Войдите в «Мой курс», чтобы видеть и сохранять личный прогресс.",
+  continueAction: { label: "Начать обучение", href: pathItem("M01", "M01_L01", "overview") },
   totals: {
-    completedLessons: totals.lessons, lessonTotal: 40, completedModules: totals.modules, moduleTotal: 8,
-    completedProjects: totals.projects, projectTotal: 8, quizQuestions: courseIndex.course.quizQuestionCount,
+    completedLessons: 0, lessonTotal: 40, completedModules: 0, moduleTotal: 8,
+    completedProjects: 0, projectTotal: 8, quizQuestions: courseIndex.course.quizQuestionCount,
   },
   moduleListTitle: "Все модули курса", modules: courseModules.map(selectedACourseModule),
 };

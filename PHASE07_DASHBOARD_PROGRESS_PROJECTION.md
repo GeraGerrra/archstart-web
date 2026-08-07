@@ -16,8 +16,12 @@
 - the module map remains in official M01–M08 order;
 - the selected-A shell on the signed-in Dashboard uses the same real projection
   rather than the Phase 02 demo state;
-- the public Course Overview remains unchanged and continues to identify its
-  progress as demonstration data.
+- public Home, Course, Module, Project, Lesson and account shells use a truthful
+  anonymous zero-progress projection when no authenticated projection is supplied;
+- the public Course Overview shows zero completed lessons/modules/projects and
+  directs learners to «Мой курс» for persisted personal progress;
+- Phase 02 demonstration states remain isolated to explicit development/showcase
+  fixtures and never appear as anonymous production progress.
 
 ## Source-only boundary
 
@@ -48,3 +52,17 @@ shows zero lesson/module counts. With persisted data, it shows the latest
 lesson/item, latest aggregate Quiz score when one exists, and explicit lesson
 completion count. It never exposes answers, correctness per question, or
 canonical explanations.
+
+
+## Pass 1E-R1 anonymous progress isolation repair
+
+A production review found that the selected-A shell still fell back to Phase 02
+demonstration values when `progressProjection` was absent. That made anonymous
+module menus display deterministic but misleading states such as M01 `2 / 5` and
+M04 `5 / 5`.
+
+Pass 1E-R1 removes that production fallback. Anonymous/public surfaces now render
+zero completed lessons and no completed modules or projects. All public course
+content remains available. The authenticated `/prototype/a/dashboard` continues
+to receive the real own-row projection and is unchanged. No database, RLS, Auth,
+Quiz, completion mutation, project upload or Storage behavior changes.
