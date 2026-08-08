@@ -1,6 +1,8 @@
--- ARCH.START Phase 07.2C2C-R1E2 — read-only hosted verification
--- Uses pg_proc.prosrc directly. It does not invoke the function-definition
--- deparser and does not execute any target function.
+-- ARCH.START Phase 07.2C2C-R1E6 — read-only hosted verification
+-- Exact function identity is verified with normalized pg_proc.prosrc MD5 values.
+-- R1 lock-order and orphan-selector source contracts remain covered by the
+-- committed migration-source tests; this hosted query does not perform brittle
+-- substring analysis of PL/pgSQL bodies and executes no target function.
 
 with expected_functions(signature, expected_body_md5) as (
   values
@@ -24,50 +26,40 @@ with expected_functions(signature, expected_body_md5) as (
       'public.authorize_project_file_download(uuid,uuid)',
       '19e230473177a46977ea264cda187986'
     )
-), function_catalog as (
+), function_audit as (
   select
     expected.signature,
-    expected.expected_body_md5,
-    procedure.oid,
-    procedure.prosecdef,
-    procedure.proconfig,
-    procedure.prosrc,
-    case
-      when procedure.oid is null then ''
-      else pg_catalog.btrim(
-        pg_catalog.lower(
-          pg_catalog.regexp_replace(
-            coalesce(procedure.prosrc, ''),
-            '[[:space:]]+',
-            ' ',
-            'g'
+    procedure.oid is not null as present,
+    coalesce(procedure.prosecdef, false) as security_definer,
+    procedure.proconfig is not distinct from array['search_path=""']::text[]
+      as empty_search_path,
+    case when procedure.oid is null then false else
+      pg_catalog.has_function_privilege('anon', procedure.oid, 'EXECUTE')
+    end as anon_execute,
+    case when procedure.oid is null then false else
+      pg_catalog.has_function_privilege('authenticated', procedure.oid, 'EXECUTE')
+    end as authenticated_execute,
+    case when procedure.oid is null then false else
+      pg_catalog.has_function_privilege('service_role', procedure.oid, 'EXECUTE')
+    end as service_role_execute,
+    case when procedure.oid is null then null else
+      pg_catalog.md5(
+        pg_catalog.btrim(
+          pg_catalog.lower(
+            pg_catalog.regexp_replace(
+              coalesce(procedure.prosrc, ''),
+              '[[:space:]]+',
+              ' ',
+              'g'
+            )
           )
         )
       )
-    end as normalized_source
+    end as actual_body_md5,
+    expected.expected_body_md5
   from expected_functions as expected
   left join pg_catalog.pg_proc as procedure
     on procedure.oid = pg_catalog.to_regprocedure(expected.signature)
-), function_audit as (
-  select
-    catalog.signature,
-    catalog.oid is not null as present,
-    coalesce(catalog.prosecdef, false) as security_definer,
-    catalog.proconfig is not distinct from array['search_path=""']::text[]
-      as empty_search_path,
-    case when catalog.oid is null then false else
-      pg_catalog.has_function_privilege('anon', catalog.oid, 'EXECUTE')
-    end as anon_execute,
-    case when catalog.oid is null then false else
-      pg_catalog.has_function_privilege('authenticated', catalog.oid, 'EXECUTE')
-    end as authenticated_execute,
-    case when catalog.oid is null then false else
-      pg_catalog.has_function_privilege('service_role', catalog.oid, 'EXECUTE')
-    end as service_role_execute,
-    case when catalog.oid is null then false else
-      pg_catalog.md5(catalog.normalized_source) = catalog.expected_body_md5
-    end as body_matches
-  from function_catalog as catalog
 ), boundary as (
   select
     exists (
@@ -100,102 +92,35 @@ with expected_functions(signature, expected_body_md5) as (
     (
       select count(*) from private.project_rubric_criteria
     ) as rubric_criterion_count
-), repair_source as (
-  select
-    coalesce((
-      select catalog.normalized_source
-      from function_catalog as catalog
-      where catalog.signature =
-        'public.finalize_project_upload_intent(uuid,uuid,text,bigint,text,smallint,integer,integer)'
-    ), '') as finalizer_definition,
-    coalesce((
-      select catalog.normalized_source
-      from function_catalog as catalog
-      where catalog.signature =
-        'public.list_stale_project_upload_intents(uuid,integer)'
-    ), '') as cleanup_definition
-), repair_contract as (
-  select
-    pg_catalog.strpos(finalizer_definition,
-      'select candidate.version_id into pre_read_version_id') > 0
-      and pg_catalog.strpos(finalizer_definition,
-        'select candidate.version_id into pre_read_version_id')
-        < pg_catalog.strpos(finalizer_definition,
-          'perform pg_catalog.pg_advisory_xact_lock')
-      as finalizer_identity_pre_read_before_advisory_lock,
-    pg_catalog.strpos(finalizer_definition,
-      'pg_catalog.hashtext(pre_read_version_id::text)') > 0
-      as finalizer_uses_user_version_advisory_lock,
-    pg_catalog.strpos(finalizer_definition,
-      'select version_candidate.* into version_row') > 0
-      and pg_catalog.strpos(finalizer_definition,
-        'select version_candidate.* into version_row')
-        < pg_catalog.strpos(finalizer_definition,
-          'select candidate.* into intent_row')
-      as finalizer_locks_version_before_intent,
-    finalizer_definition like
-      '%intent_row.user_id is distinct from p_requester_id%'
-      and finalizer_definition like
-        '%intent_row.version_id is distinct from pre_read_version_id%'
-      and finalizer_definition like
-        '%intent_row.submission_id is distinct from version_row.submission_id%'
-      as finalizer_revalidates_locked_identity,
-    cleanup_definition like
-      '%intent_row.state in (''pending'', ''expired'', ''cancelled'')%'
-      and cleanup_definition like
-        '%intent_row.state in (''expired'', ''cancelled'')%'
-      as cleanup_covers_expired_pending_and_terminal_states,
-    cleanup_definition like '%from storage.objects as object_row%'
-      and cleanup_definition like
-        '%object_row.bucket_id = intent_row.bucket_id%'
-      and cleanup_definition like
-        '%object_row.name = intent_row.object_path%'
-      as terminal_cleanup_requires_exact_object_existence,
-    cleanup_definition like '%intent_row.finalized_file_id is null%'
-      and cleanup_definition like
-        '%file_row.id = intent_row.planned_file_id%'
-      and cleanup_definition like
-        '%file_row.bucket_id = intent_row.bucket_id%'
-      and cleanup_definition like
-        '%file_row.object_path = intent_row.object_path%'
-      as actual_finalized_identity_and_path_protected,
-    cleanup_definition not like
-      '%file_row.version_id = intent_row.version_id%'
-      as competing_different_file_does_not_blanket_protect_orphan
-  from repair_source
 ), verdict as (
   select
-    (select count(*) from function_audit) = 5
-    and not exists (
-      select 1 from function_audit
-      where not present
-        or not security_definer
-        or not empty_search_path
-        or anon_execute
-        or authenticated_execute
-        or not service_role_execute
-        or not body_matches
-    )
+    count(*) = 5
+    and bool_and(present)
+    and bool_and(security_definer)
+    and bool_and(empty_search_path)
+    and bool_and(not anon_execute)
+    and bool_and(not authenticated_execute)
+    and bool_and(service_role_execute)
+    and bool_and(actual_body_md5 = expected_body_md5)
     and boundary.private_bucket_matches
     and boundary.project_storage_policy_count = 0
     and boundary.authenticated_intent_select is false
     and boundary.current_policy_count = 8
     and boundary.rubric_criterion_count = 40
-    and repair_contract.finalizer_identity_pre_read_before_advisory_lock
-    and repair_contract.finalizer_uses_user_version_advisory_lock
-    and repair_contract.finalizer_locks_version_before_intent
-    and repair_contract.finalizer_revalidates_locked_identity
-    and repair_contract.cleanup_covers_expired_pending_and_terminal_states
-    and repair_contract.terminal_cleanup_requires_exact_object_existence
-    and repair_contract.actual_finalized_identity_and_path_protected
-    and repair_contract.competing_different_file_does_not_blanket_protect_orphan
       as passed
-  from boundary, repair_contract
+  from function_audit, boundary
+  group by
+    boundary.private_bucket_matches,
+    boundary.project_storage_policy_count,
+    boundary.authenticated_intent_select,
+    boundary.current_policy_count,
+    boundary.rubric_criterion_count
 )
 select pg_catalog.jsonb_build_object(
   'check', 'phase07_pass2c2c_project_file_inspection_finalization',
-  'verificationRevision', 'R1E2_PROSRC',
+  'verificationRevision', 'R1E6_CATALOG_HASH',
   'result', case when verdict.passed then 'PASS' else 'STOP' end,
+  'migrationAppliedExactly', verdict.passed,
   'functions', (
     select pg_catalog.jsonb_agg(
       pg_catalog.jsonb_build_object(
@@ -206,12 +131,14 @@ select pg_catalog.jsonb_build_object(
         'anonExecute', anon_execute,
         'authenticatedExecute', authenticated_execute,
         'serviceRoleExecute', service_role_execute,
-        'bodyMatches', body_matches
+        'actualBodyMd5', actual_body_md5,
+        'expectedBodyMd5', expected_body_md5,
+        'bodyMatches', actual_body_md5 = expected_body_md5
       ) order by signature
-    ) from function_audit
+    )
+    from function_audit
   ),
   'boundary', pg_catalog.to_jsonb(boundary),
-  'r1Repair', pg_catalog.to_jsonb(repair_contract),
   'rowCounts', pg_catalog.jsonb_build_object(
     'uploadIntents', (select count(*) from private.project_upload_intents),
     'files', (select count(*) from public.project_submission_files),
@@ -220,4 +147,4 @@ select pg_catalog.jsonb_build_object(
     )
   )
 ) as phase07_pass2c2c_verification
-from boundary, repair_contract, verdict;
+from boundary, verdict;

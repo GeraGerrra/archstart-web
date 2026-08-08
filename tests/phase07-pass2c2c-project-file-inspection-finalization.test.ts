@@ -312,8 +312,8 @@ test("R1 orphan selector covers closed exact-path objects without protecting a c
   assert.match(cleanupSql, /file_row\.object_path = intent_row\.object_path/u);
   assert.doesNotMatch(cleanupSql, /file_row\.version_id = intent_row\.version_id/u);
   assert.match(cleanupSql, /order by intent_row\.expires_at, intent_row\.id[\s\S]*limit 20/u);
-  assert.match(verification, /terminal_cleanup_requires_exact_object_existence/u);
-  assert.match(verification, /competing_different_file_does_not_blanket_protect_orphan/u);
+  assert.match(verification, /fdc4c28fff4683cddd3ebccd3aa986a0/u);
+  assert.match(verification, /492e48dcdf471fafce0b13ecfda05d30/u);
   assert.match(runtimeTemplate, /LIVE_OBJECT_CLEANUP_ACCEPTANCE=NOT_RUN/u);
 });
 
@@ -335,8 +335,9 @@ test("read-only verification and rollback-only runtime template cover required b
     executableVerification,
     /\b(insert|update|delete|create|alter|drop|grant|revoke|truncate|commit|rollback)\b/iu,
   );
-  assert.match(runtimeTemplate, /USER_A_UUID/gu);
-  assert.match(runtimeTemplate, /USER_B_UUID/gu);
+
+  assert.equal((runtimeTemplate.match(/'USER_A_UUID'/gu) ?? []).length, 1);
+  assert.equal((runtimeTemplate.match(/'USER_B_UUID'/gu) ?? []).length, 1);
   assert.match(runtimeTemplate, /finalized_retry\.reused is not true/u);
   assert.match(runtimeTemplate, /owner_download_count/u);
   assert.match(runtimeTemplate, /denied_download_count/u);
@@ -345,34 +346,60 @@ test("read-only verification and rollback-only runtime template cover required b
   assert.match(runtimeTemplate, /released_reviewer_download_count/u);
   assert.match(runtimeTemplate, /admin_download_count/u);
 
-  const reviewerRole = runtimeTemplate.indexOf("user_b, 'reviewer'");
+  const adminGrantor = runtimeTemplate.indexOf("(user_a, 'admin', true, user_a)");
+  const reviewerRole = runtimeTemplate.indexOf("(user_b, 'reviewer', true, user_a)");
   const unassignedCheck = runtimeTemplate.indexOf("into unassigned_reviewer_download_count");
   const assignment = runtimeTemplate.indexOf("insert into private.project_reviewer_assignments");
+  const adminAssignment = runtimeTemplate.indexOf("draft_a.submission_id, user_b, user_a");
+  const assignmentAssertion = runtimeTemplate.indexOf("active reviewer assignment was not created");
   const assignedCheck = runtimeTemplate.indexOf("into assigned_download_count");
   const release = runtimeTemplate.indexOf("set released_at = now()");
   const releasedCheck = runtimeTemplate.indexOf("into released_reviewer_download_count");
-  const adminRole = runtimeTemplate.indexOf("user_b, 'admin'");
+  const reviewerAdminRole = runtimeTemplate.indexOf("user_b, 'admin', true, user_a");
   const adminCheck = runtimeTemplate.indexOf("into admin_download_count");
-  assert.ok(reviewerRole >= 0);
+  assert.ok(adminGrantor >= 0);
+  assert.ok(adminGrantor < reviewerRole);
   assert.ok(reviewerRole < unassignedCheck);
   assert.ok(unassignedCheck < assignment);
-  assert.ok(assignment < assignedCheck);
+  assert.ok(assignment < adminAssignment);
+  assert.ok(adminAssignment < assignmentAssertion);
+  assert.ok(assignmentAssertion < assignedCheck);
   assert.ok(assignedCheck < release);
   assert.ok(release < releasedCheck);
-  assert.ok(releasedCheck < adminRole);
-  assert.ok(adminRole < adminCheck);
+  assert.ok(releasedCheck < reviewerAdminRole);
+  assert.ok(reviewerAdminRole < adminCheck);
+
+  assert.match(runtimeTemplate, /ACTIVE_ADMIN_ASSIGNMENT_AUTHORITY=PASS/u);
   assert.match(runtimeTemplate, /UNASSIGNED_AND_RELEASED_REVIEWER_DENIAL=PASS/u);
-  assert.match(runtimeTemplate, /R1_ORPHAN_SELECTOR_AND_LOCK_ORDER_SOURCE_CONTRACT=PASS/u);
+  assert.match(runtimeTemplate, /TEMPORARY_OBJECT_AND_ROWS_ROLLED_BACK=PASS/u);
   assert.match(runtimeTemplate, /LIVE_OBJECT_CLEANUP_ACCEPTANCE=NOT_RUN/u);
-  assert.match(verification, /procedure\.prosrc/u);
-  assert.match(verification, /verificationRevision', 'R1E2_PROSRC'/u);
-  assert.match(verification, /bodyMatches/u);
-  assert.match(runtimeTemplate, /from pg_catalog\.pg_proc as procedure/u);
-  assert.match(runtimeTemplate, /pg_catalog\.md5\(finalizer_definition\)/u);
-  assert.doesNotMatch(`${verification}\n${runtimeTemplate}`, /pg_get_functiondef/u);
-  assert.match(runtimeTemplate, /delete from storage\.objects[\s\S]*name = temporary_object_path/u);
   assert.match(runtimeTemplate, /ROLLBACK_SENTINEL/u);
   assert.match(runtimeTemplate, /rollback cleanup failed/u);
+  assert.match(
+    runtimeTemplate,
+    /if exists \([\s\S]*from storage\.objects[\s\S]*name = temporary_object_path[\s\S]*unexpected Storage object exists in database-only runtime/u,
+  );
+  assert.doesNotMatch(runtimeTemplate, /delete\s+from\s+storage\.objects/iu);
+  assert.doesNotMatch(
+    runtimeTemplate,
+    /pg_catalog\.pg_proc|procedure\.prosrc|pg_catalog\.strpos|pre_read_version_id|finalizer_definition|cleanup_definition/iu,
+  );
+
+  assert.match(verification, /verificationRevision', 'R1E6_CATALOG_HASH'/u);
+  assert.match(verification, /procedure\.prosrc/u);
+  assert.match(verification, /actualBodyMd5/u);
+  assert.match(verification, /bodyMatches/u);
+  assert.match(verification, /migrationAppliedExactly/u);
+  assert.match(verification, /private_bucket_matches/u);
+  assert.match(verification, /project_storage_policy_count/u);
+  assert.match(verification, /authenticated_intent_select/u);
+  assert.match(verification, /current_policy_count/u);
+  assert.match(verification, /rubric_criterion_count/u);
+  assert.doesNotMatch(
+    verification,
+    /repair_source|repair_contract|pg_catalog\.strpos|pre_read_version_id|finalizer_definition|cleanup_definition/u,
+  );
+  assert.doesNotMatch(`${verification}\n${runtimeTemplate}`, /pg_get_functiondef/u);
 });
 
 test("pdfjs is the only exact new parser dependency and scope contains no forbidden feature", () => {

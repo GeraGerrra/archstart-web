@@ -1,11 +1,11 @@
--- ARCH.START Phase 07.2C2C — rollback-only two-account runtime template
+-- ARCH.START Phase 07.2C2C-R1E6 — rollback-only two-account database runtime template
 -- Replace USER_A_UUID and USER_B_UUID with two clean auth.users UUIDs.
--- Run once as postgres. The inner subtransaction intentionally rolls back all
--- inserted rows. Any external harness object must use temporary_object_path;
--- delete it through the Storage API before the rollback sentinel. The exact
--- metadata path is also deleted idempotently below and verified absent.
--- This template is rollback-only database evidence. It is not live Storage
--- object cleanup acceptance and does not substitute for later hosted testing.
+-- Run once as postgres. No source introspection; no direct Storage-table DML.
+-- The inner subtransaction intentionally rolls back every inserted database row.
+-- This database-only harness does NOT upload a real Storage object. Supabase
+-- protects storage.objects from direct DELETE; real object cleanup must use the
+-- Storage API and remains a separate live acceptance step. This query only
+-- verifies that no object exists at the reserved exact path.
 
 do $phase07$
 declare
@@ -23,89 +23,10 @@ declare
   released_reviewer_download_count integer;
   admin_download_count integer;
   temporary_object_path text;
-  finalizer_definition text;
-  cleanup_definition text;
 begin
-  finalizer_definition := (
-    select pg_catalog.btrim(
-      pg_catalog.lower(
-        pg_catalog.regexp_replace(
-          coalesce(procedure.prosrc, ''),
-          '[[:space:]]+',
-          ' ',
-          'g'
-        )
-      )
-    )
-    from pg_catalog.pg_proc as procedure
-    where procedure.oid = pg_catalog.to_regprocedure(
-      'public.finalize_project_upload_intent(uuid,uuid,text,bigint,text,smallint,integer,integer)'
-    )
-  );
-
-  cleanup_definition := (
-    select pg_catalog.btrim(
-      pg_catalog.lower(
-        pg_catalog.regexp_replace(
-          coalesce(procedure.prosrc, ''),
-          '[[:space:]]+',
-          ' ',
-          'g'
-        )
-      )
-    )
-    from pg_catalog.pg_proc as procedure
-    where procedure.oid = pg_catalog.to_regprocedure(
-      'public.list_stale_project_upload_intents(uuid,integer)'
-    )
-  );
-
-  if finalizer_definition is null or cleanup_definition is null then
-    raise exception using errcode = 'P7R10', message = 'R1 target function source unavailable';
-  end if;
-
-  if pg_catalog.md5(finalizer_definition) <> 'fdc4c28fff4683cddd3ebccd3aa986a0'
-    or pg_catalog.md5(cleanup_definition) <> '492e48dcdf471fafce0b13ecfda05d30'
-  then
-    raise exception using errcode = 'P7R10', message = 'R1 target function body mismatch';
-  end if;
-
-  if pg_catalog.strpos(finalizer_definition,
-      'select candidate.version_id into pre_read_version_id') = 0
-    or pg_catalog.strpos(finalizer_definition,
-      'select candidate.version_id into pre_read_version_id')
-      >= pg_catalog.strpos(finalizer_definition,
-        'perform pg_catalog.pg_advisory_xact_lock')
-    or finalizer_definition not like
-      '%pg_catalog.hashtext(pre_read_version_id::text)%'
-    or pg_catalog.strpos(finalizer_definition,
-      'select version_candidate.* into version_row') = 0
-    or pg_catalog.strpos(finalizer_definition,
-      'select version_candidate.* into version_row')
-      >= pg_catalog.strpos(finalizer_definition,
-        'select candidate.* into intent_row')
-    or finalizer_definition not like
-      '%intent_row.version_id is distinct from pre_read_version_id%'
-    or finalizer_definition not like
-      '%intent_row.submission_id is distinct from version_row.submission_id%'
-  then
-    raise exception using errcode = 'P7R11', message = 'R1 finalizer lock contract failed';
-  end if;
-
-  if cleanup_definition not like
-      '%intent_row.state in (''pending'', ''expired'', ''cancelled'')%'
-    or cleanup_definition not like '%from storage.objects as object_row%'
-    or cleanup_definition not like
-      '%object_row.name = intent_row.object_path%'
-    or cleanup_definition not like
-      '%file_row.id = intent_row.planned_file_id%'
-    or cleanup_definition not like
-      '%file_row.object_path = intent_row.object_path%'
-    or cleanup_definition like
-      '%file_row.version_id = intent_row.version_id%'
-  then
-    raise exception using errcode = 'P7R12', message = 'R1 orphan selector contract failed';
-  end if;
+  -- Function-body and privilege identity is a separate prerequisite proven by
+  -- the accepted hosted function-catalog diagnostic. This rollback runtime
+  -- deliberately performs no function-source introspection.
 
   if user_a = user_b
     or (select count(*) from auth.users where id in (user_a, user_b)) <> 2
@@ -114,12 +35,25 @@ begin
   end if;
 
   if exists (
+    select 1 from public.lesson_activity where user_id in (user_a, user_b)
+  ) or exists (
+    select 1 from public.lesson_completions where user_id in (user_a, user_b)
+  ) or exists (
+    select 1 from public.module_completions where user_id in (user_a, user_b)
+  ) or exists (
+    select 1 from public.quiz_attempts where user_id in (user_a, user_b)
+  ) or exists (
     select 1 from public.project_submissions where user_id in (user_a, user_b)
   ) or exists (
     select 1 from private.project_staff_roles
     where user_id in (user_a, user_b) or granted_by in (user_a, user_b)
+  ) or exists (
+    select 1 from private.project_reviewer_assignments
+    where reviewer_id in (user_a, user_b) or assigned_by in (user_a, user_b)
   ) then
-    raise exception using errcode = '55000', message = 'test users must start with no project rows';
+    raise exception using
+      errcode = '55000',
+      message = 'test users must start with no progress, project, staff, or assignment rows';
   end if;
 
   begin
@@ -219,12 +153,28 @@ begin
 
     perform 1 from public.submit_project(draft_a.version_id);
 
+    -- The assignment trigger requires assigned_by to hold an active admin
+    -- role at INSERT time. User A is therefore provisioned as the temporary
+    -- admin grantor before User B is provisioned as reviewer. Both rows are
+    -- inside this rollback-only subtransaction.
     perform pg_catalog.set_config('archstart.project_staff_write_authorized', 'on', true);
     insert into private.project_staff_roles (
       user_id, staff_role, active, granted_by
-    ) values (
-      user_b, 'reviewer', true, user_b
-    );
+    ) values
+      (user_a, 'admin', true, user_a),
+      (user_b, 'reviewer', true, user_a);
+
+    if not private.project_staff_has_role(
+      user_a,
+      array['admin']::text[]
+    ) or not private.project_staff_has_role(
+      user_b,
+      array['reviewer']::text[]
+    ) then
+      raise exception using
+        errcode = 'P7C06',
+        message = 'temporary admin/reviewer role setup failed';
+    end if;
 
     select count(*) into unassigned_reviewer_download_count
     from public.authorize_project_file_download(finalized_a.file_id, user_b);
@@ -233,8 +183,21 @@ begin
     insert into private.project_reviewer_assignments (
       submission_id, reviewer_id, assigned_by
     ) values (
-      draft_a.submission_id, user_b, user_b
+      draft_a.submission_id, user_b, user_a
     );
+
+    if not exists (
+      select 1
+      from private.project_reviewer_assignments as assignment
+      where assignment.submission_id = draft_a.submission_id
+        and assignment.reviewer_id = user_b
+        and assignment.assigned_by = user_a
+        and assignment.released_at is null
+    ) then
+      raise exception using
+        errcode = 'P7C07',
+        message = 'active reviewer assignment was not created';
+    end if;
 
     select count(*) into assigned_download_count
     from public.authorize_project_file_download(finalized_a.file_id, user_b);
@@ -245,14 +208,35 @@ begin
       and reviewer_id = user_b
       and released_at is null;
 
+    if exists (
+      select 1
+      from private.project_reviewer_assignments as assignment
+      where assignment.submission_id = draft_a.submission_id
+        and assignment.reviewer_id = user_b
+        and assignment.released_at is null
+    ) then
+      raise exception using
+        errcode = 'P7C08',
+        message = 'reviewer assignment release failed';
+    end if;
+
     select count(*) into released_reviewer_download_count
     from public.authorize_project_file_download(finalized_a.file_id, user_b);
 
     insert into private.project_staff_roles (
       user_id, staff_role, active, granted_by
     ) values (
-      user_b, 'admin', true, user_b
+      user_b, 'admin', true, user_a
     );
+
+    if not private.project_staff_has_role(
+      user_b,
+      array['admin']::text[]
+    ) then
+      raise exception using
+        errcode = 'P7C09',
+        message = 'temporary admin role setup failed';
+    end if;
 
     select count(*) into admin_download_count
     from public.authorize_project_file_download(finalized_a.file_id, user_b);
@@ -267,18 +251,18 @@ begin
       raise exception using errcode = 'P7C04', message = 'download authorization matrix failed';
     end if;
 
-    -- Exact-path, idempotent metadata cleanup. A real object created by an
-    -- external harness must already have been removed through the Storage API.
-    delete from storage.objects
-    where bucket_id = 'project-submissions'
-      and name = temporary_object_path;
-
+    -- This is a database-only rollback harness: no real Storage object was
+    -- uploaded. Direct mutation of the protected Storage metadata table is
+    -- intentionally forbidden and must never be attempted here. A real object,
+    -- present, is a hard STOP and must later be removed through the Storage API.
     if exists (
       select 1 from storage.objects
       where bucket_id = 'project-submissions'
         and name = temporary_object_path
     ) then
-      raise exception using errcode = 'P7C05', message = 'temporary object cleanup failed';
+      raise exception using
+        errcode = 'P7C05',
+        message = 'unexpected Storage object exists in database-only runtime';
     end if;
 
     raise exception using
@@ -291,6 +275,14 @@ begin
   perform pg_catalog.set_config('request.jwt.claims', '{}', true);
 
   if exists (
+    select 1 from public.lesson_activity where user_id in (user_a, user_b)
+  ) or exists (
+    select 1 from public.lesson_completions where user_id in (user_a, user_b)
+  ) or exists (
+    select 1 from public.module_completions where user_id in (user_a, user_b)
+  ) or exists (
+    select 1 from public.quiz_attempts where user_id in (user_a, user_b)
+  ) or exists (
     select 1 from public.project_submissions where user_id in (user_a, user_b)
   ) or exists (
     select 1 from public.project_submission_versions where user_id in (user_a, user_b)
@@ -309,16 +301,18 @@ begin
     where bucket_id = 'project-submissions'
       and name = temporary_object_path
   ) then
-    raise exception using errcode = 'P7D2C', message = 'Phase 07.2C2C rollback cleanup failed';
+    raise exception using
+      errcode = 'P7D2C',
+      message = 'Phase 07.2C2C rollback cleanup failed';
   end if;
 
   raise notice 'PHASE07_PASS2C2C_TWO_ACCOUNT_RUNTIME=PASS';
   raise notice 'PLANNED_FILE_ID_AND_IDEMPOTENCY=PASS';
   raise notice 'OWNER_ASSIGNED_REVIEWER_ADMIN_MATRIX=PASS';
+  raise notice 'ACTIVE_ADMIN_ASSIGNMENT_AUTHORITY=PASS';
   raise notice 'OTHER_LEARNER_DENIAL=PASS';
   raise notice 'UNASSIGNED_AND_RELEASED_REVIEWER_DENIAL=PASS';
   raise notice 'TEMPORARY_OBJECT_AND_ROWS_ROLLED_BACK=PASS';
-  raise notice 'R1_ORPHAN_SELECTOR_AND_LOCK_ORDER_SOURCE_CONTRACT=PASS';
   raise notice 'LIVE_OBJECT_CLEANUP_ACCEPTANCE=NOT_RUN';
 end;
 $phase07$;
