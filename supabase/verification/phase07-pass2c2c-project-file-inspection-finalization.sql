@@ -1,31 +1,73 @@
--- ARCH.START Phase 07.2C2C — read-only hosted verification
+-- ARCH.START Phase 07.2C2C-R1E2 — read-only hosted verification
+-- Uses pg_proc.prosrc directly. It does not invoke the function-definition
+-- deparser and does not execute any target function.
 
-with expected_functions(signature) as (
+with expected_functions(signature, expected_body_md5) as (
   values
-    ('public.get_project_upload_finalization_context(uuid,uuid)'),
-    ('public.finalize_project_upload_intent(uuid,uuid,text,bigint,text,smallint,integer,integer)'),
-    ('public.close_project_upload_intent_after_inspection(uuid,uuid,text,text)'),
-    ('public.list_stale_project_upload_intents(uuid,integer)'),
-    ('public.authorize_project_file_download(uuid,uuid)')
-), function_audit as (
+    (
+      'public.get_project_upload_finalization_context(uuid,uuid)',
+      '174932e16cb7838a305aa63a66a49180'
+    ),
+    (
+      'public.finalize_project_upload_intent(uuid,uuid,text,bigint,text,smallint,integer,integer)',
+      'fdc4c28fff4683cddd3ebccd3aa986a0'
+    ),
+    (
+      'public.close_project_upload_intent_after_inspection(uuid,uuid,text,text)',
+      '0f8176890d5e1bc948ba344f5e1c02d7'
+    ),
+    (
+      'public.list_stale_project_upload_intents(uuid,integer)',
+      '492e48dcdf471fafce0b13ecfda05d30'
+    ),
+    (
+      'public.authorize_project_file_download(uuid,uuid)',
+      '19e230473177a46977ea264cda187986'
+    )
+), function_catalog as (
   select
     expected.signature,
-    procedure.oid is not null as present,
-    coalesce(procedure.prosecdef, false) as security_definer,
-    procedure.proconfig is not distinct from array['search_path=""']::text[]
-      as empty_search_path,
-    case when procedure.oid is null then false else
-      pg_catalog.has_function_privilege('anon', procedure.oid, 'EXECUTE')
-    end as anon_execute,
-    case when procedure.oid is null then false else
-      pg_catalog.has_function_privilege('authenticated', procedure.oid, 'EXECUTE')
-    end as authenticated_execute,
-    case when procedure.oid is null then false else
-      pg_catalog.has_function_privilege('service_role', procedure.oid, 'EXECUTE')
-    end as service_role_execute
+    expected.expected_body_md5,
+    procedure.oid,
+    procedure.prosecdef,
+    procedure.proconfig,
+    procedure.prosrc,
+    case
+      when procedure.oid is null then ''
+      else pg_catalog.btrim(
+        pg_catalog.lower(
+          pg_catalog.regexp_replace(
+            coalesce(procedure.prosrc, ''),
+            '[[:space:]]+',
+            ' ',
+            'g'
+          )
+        )
+      )
+    end as normalized_source
   from expected_functions as expected
   left join pg_catalog.pg_proc as procedure
     on procedure.oid = pg_catalog.to_regprocedure(expected.signature)
+), function_audit as (
+  select
+    catalog.signature,
+    catalog.oid is not null as present,
+    coalesce(catalog.prosecdef, false) as security_definer,
+    catalog.proconfig is not distinct from array['search_path=""']::text[]
+      as empty_search_path,
+    case when catalog.oid is null then false else
+      pg_catalog.has_function_privilege('anon', catalog.oid, 'EXECUTE')
+    end as anon_execute,
+    case when catalog.oid is null then false else
+      pg_catalog.has_function_privilege('authenticated', catalog.oid, 'EXECUTE')
+    end as authenticated_execute,
+    case when catalog.oid is null then false else
+      pg_catalog.has_function_privilege('service_role', catalog.oid, 'EXECUTE')
+    end as service_role_execute,
+    case when catalog.oid is null then false else
+      pg_catalog.md5(catalog.normalized_source) = catalog.expected_body_md5
+    end as body_matches
+  from function_catalog as catalog
 ), boundary as (
   select
     exists (
@@ -60,12 +102,18 @@ with expected_functions(signature) as (
     ) as rubric_criterion_count
 ), repair_source as (
   select
-    coalesce(pg_catalog.pg_get_functiondef(pg_catalog.to_regprocedure(
-      'public.finalize_project_upload_intent(uuid,uuid,text,bigint,text,smallint,integer,integer)'
-    )), '') as finalizer_definition,
-    coalesce(pg_catalog.pg_get_functiondef(pg_catalog.to_regprocedure(
-      'public.list_stale_project_upload_intents(uuid,integer)'
-    )), '') as cleanup_definition
+    coalesce((
+      select catalog.normalized_source
+      from function_catalog as catalog
+      where catalog.signature =
+        'public.finalize_project_upload_intent(uuid,uuid,text,bigint,text,smallint,integer,integer)'
+    ), '') as finalizer_definition,
+    coalesce((
+      select catalog.normalized_source
+      from function_catalog as catalog
+      where catalog.signature =
+        'public.list_stale_project_upload_intents(uuid,integer)'
+    ), '') as cleanup_definition
 ), repair_contract as (
   select
     pg_catalog.strpos(finalizer_definition,
@@ -126,6 +174,7 @@ with expected_functions(signature) as (
         or anon_execute
         or authenticated_execute
         or not service_role_execute
+        or not body_matches
     )
     and boundary.private_bucket_matches
     and boundary.project_storage_policy_count = 0
@@ -145,6 +194,7 @@ with expected_functions(signature) as (
 )
 select pg_catalog.jsonb_build_object(
   'check', 'phase07_pass2c2c_project_file_inspection_finalization',
+  'verificationRevision', 'R1E2_PROSRC',
   'result', case when verdict.passed then 'PASS' else 'STOP' end,
   'functions', (
     select pg_catalog.jsonb_agg(
@@ -155,7 +205,8 @@ select pg_catalog.jsonb_build_object(
         'emptySearchPath', empty_search_path,
         'anonExecute', anon_execute,
         'authenticatedExecute', authenticated_execute,
-        'serviceRoleExecute', service_role_execute
+        'serviceRoleExecute', service_role_execute,
+        'bodyMatches', body_matches
       ) order by signature
     ) from function_audit
   ),

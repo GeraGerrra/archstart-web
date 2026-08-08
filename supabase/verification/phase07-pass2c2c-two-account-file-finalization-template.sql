@@ -23,17 +23,53 @@ declare
   released_reviewer_download_count integer;
   admin_download_count integer;
   temporary_object_path text;
-  finalizer_definition text := pg_catalog.pg_get_functiondef(
-    pg_catalog.to_regprocedure(
+  finalizer_definition text;
+  cleanup_definition text;
+begin
+  finalizer_definition := (
+    select pg_catalog.btrim(
+      pg_catalog.lower(
+        pg_catalog.regexp_replace(
+          coalesce(procedure.prosrc, ''),
+          '[[:space:]]+',
+          ' ',
+          'g'
+        )
+      )
+    )
+    from pg_catalog.pg_proc as procedure
+    where procedure.oid = pg_catalog.to_regprocedure(
       'public.finalize_project_upload_intent(uuid,uuid,text,bigint,text,smallint,integer,integer)'
     )
   );
-  cleanup_definition text := pg_catalog.pg_get_functiondef(
-    pg_catalog.to_regprocedure(
+
+  cleanup_definition := (
+    select pg_catalog.btrim(
+      pg_catalog.lower(
+        pg_catalog.regexp_replace(
+          coalesce(procedure.prosrc, ''),
+          '[[:space:]]+',
+          ' ',
+          'g'
+        )
+      )
+    )
+    from pg_catalog.pg_proc as procedure
+    where procedure.oid = pg_catalog.to_regprocedure(
       'public.list_stale_project_upload_intents(uuid,integer)'
     )
   );
-begin
+
+  if finalizer_definition is null or cleanup_definition is null then
+    raise exception using errcode = 'P7R10', message = 'R1 target function source unavailable';
+  end if;
+
+  if pg_catalog.md5(finalizer_definition) <> 'fdc4c28fff4683cddd3ebccd3aa986a0'
+    or pg_catalog.md5(cleanup_definition) <> '492e48dcdf471fafce0b13ecfda05d30'
+  then
+    raise exception using errcode = 'P7R10', message = 'R1 target function body mismatch';
+  end if;
+
   if pg_catalog.strpos(finalizer_definition,
       'select candidate.version_id into pre_read_version_id') = 0
     or pg_catalog.strpos(finalizer_definition,

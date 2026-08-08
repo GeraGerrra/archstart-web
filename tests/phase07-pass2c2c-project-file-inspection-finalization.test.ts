@@ -364,6 +364,12 @@ test("read-only verification and rollback-only runtime template cover required b
   assert.match(runtimeTemplate, /UNASSIGNED_AND_RELEASED_REVIEWER_DENIAL=PASS/u);
   assert.match(runtimeTemplate, /R1_ORPHAN_SELECTOR_AND_LOCK_ORDER_SOURCE_CONTRACT=PASS/u);
   assert.match(runtimeTemplate, /LIVE_OBJECT_CLEANUP_ACCEPTANCE=NOT_RUN/u);
+  assert.match(verification, /procedure\.prosrc/u);
+  assert.match(verification, /verificationRevision', 'R1E2_PROSRC'/u);
+  assert.match(verification, /bodyMatches/u);
+  assert.match(runtimeTemplate, /from pg_catalog\.pg_proc as procedure/u);
+  assert.match(runtimeTemplate, /pg_catalog\.md5\(finalizer_definition\)/u);
+  assert.doesNotMatch(`${verification}\n${runtimeTemplate}`, /pg_get_functiondef/u);
   assert.match(runtimeTemplate, /delete from storage\.objects[\s\S]*name = temporary_object_path/u);
   assert.match(runtimeTemplate, /ROLLBACK_SENTINEL/u);
   assert.match(runtimeTemplate, /rollback cleanup failed/u);
