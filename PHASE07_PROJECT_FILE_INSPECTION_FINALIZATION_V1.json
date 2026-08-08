@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "1.0.0",
+  "pass": "ARCH.START Phase 07.2C2C",
+  "result": "SOURCE_CONTRACT",
+  "scope": "project object inspection, frozen-policy validation, atomic file finalization, bounded stale cleanup, and authorized private download",
+  "acceptedSource": {
+    "gitHead": "bb0d07169dac4f7e065d84a126a7e875e1bdc62c",
+    "gitTree": "f0c55125b41a4cb53933ec4a2d33bc7f554e82c7",
+    "sourceFileCount": 401,
+    "sourceZipSha256": "9426609bacaf04475a0bcef8858668ab2d336357ca8de6fb6ac1aec30edecf9c",
+    "controlChainSha256": "4329d5805dcaa81f33190a0ff8269ad288cd51af6d9212a227f6f7a18577fad9"
+  },
+  "inputBoundary": {
+    "finalizationBrowserFields": ["intentId"],
+    "downloadBrowserFields": ["fileId"],
+    "cleanupBrowserFields": [],
+    "authenticatedUserDerivedFromServerClaims": true,
+    "browserPathAccepted": false,
+    "browserPolicyAccepted": false
+  },
+  "inspection": {
+    "minimumBytes": 1,
+    "maximumBytes": 41943040,
+    "sha256": "server Node crypto lowercase hex",
+    "png": {
+      "signatureBytes": 8,
+      "firstChunk": "IHDR",
+      "ihdrLength": 13,
+      "ihdrCrcChecked": true,
+      "requiredWidth": 1920,
+      "requiredHeight": 1080
+    },
+    "pdf": {
+      "signature": "%PDF-",
+      "pageCountSource": "pdfjs-dist parser",
+      "dependency": "pdfjs-dist@6.2.108",
+      "regexPageCount": false,
+      "encryptedOrUnsupportedRejected": true
+    }
+  },
+  "database": {
+    "rpcs": [
+      "public.get_project_upload_finalization_context(uuid,uuid)",
+      "public.finalize_project_upload_intent(uuid,uuid,text,bigint,text,smallint,integer,integer)",
+      "public.close_project_upload_intent_after_inspection(uuid,uuid,text,text)",
+      "public.list_stale_project_upload_intents(uuid,integer)",
+      "public.authorize_project_file_download(uuid,uuid)"
+    ],
+    "caller": "service_role only",
+    "securityDefiner": true,
+    "emptySearchPath": true,
+    "plannedFileIdBecomesFinalRowId": true,
+    "transactional": true,
+    "idempotent": true,
+    "concurrencySafe": true,
+    "finalizationLock": {
+      "identityPreRead": "owned intent version only",
+      "advisoryIdentity": "requester user + version",
+      "rowLockOrder": ["version", "submission", "intent"],
+      "lockedIdentityRevalidated": ["user", "version", "submission"]
+    },
+    "scanStatus": "not_required",
+    "validationStatus": "valid"
+  },
+  "cleanup": {
+    "stableReasonsOnly": true,
+    "exactTrustedPathOnly": true,
+    "closeAfterStorageRemoval": true,
+    "absentObjectIdempotent": true,
+    "adminBatchSize": 20,
+    "eligibleStates": ["pending", "expired", "cancelled"],
+    "expiredPendingSelectedWhenObjectAbsent": true,
+    "terminalSelectedOnlyWhileExactObjectExists": true,
+    "finalizedRowsExcluded": true,
+    "actualFinalizedFileIdentityAndPathProtected": true,
+    "differentCompetingFinalizedFileDoesNotProtectOrphan": true,
+    "cronAdded": false
+  },
+  "download": {
+    "signedUrlExpirySeconds": 60,
+    "allowed": ["owner", "active admin", "active assigned reviewer"],
+    "sameDenialForMissingOrUnauthorized": true,
+    "publicUrl": false,
+    "pathReturnedSeparately": false
+  },
+  "scopeBoundary": {
+    "hostedSupabaseMutation": false,
+    "storageMutation": false,
+    "gitMutation": false,
+    "vercelMutation": false,
+    "uiChange": false,
+    "notificationChange": false,
+    "phase08Code": false
+  }
+}
