@@ -12,6 +12,7 @@ const packageJson = JSON.parse(read("package.json")) as {
   scripts?: Record<string, string>;
 };
 const lockfile = read("pnpm-lock.yaml");
+const pnpmWorkspace = read("pnpm-workspace.yaml");
 
 test("ordinary project Server Actions do not evaluate the PDF finalization runtime", () => {
   assert.doesNotMatch(actions, /^import\s+\{\s*finalizeProjectUploadAction\s*\}\s+from\s+["']\.\/project-file-finalization-runtime["'];/mu);
@@ -37,10 +38,14 @@ test("Vercel production builds use Webpack to avoid Turbopack external-alias sym
   );
 });
 
-test("Vercel tracing includes the exact native PDF runtime", () => {
+test("Vercel tracing uses a hoisted pnpm layout without manual native-runtime globs", () => {
   assert.equal(packageJson.dependencies?.["pdfjs-dist"], "6.2.108");
   assert.equal(packageJson.dependencies?.["@napi-rs/canvas"], "1.0.3");
   assert.match(lockfile, /'@napi-rs\/canvas':\s*\n\s+specifier: 1\.0\.3\s*\n\s+version: 1\.0\.3/u);
   assert.match(nextConfig, /serverExternalPackages:\s*\[[^\]]*["']@napi-rs\/canvas["'][^\]]*["']pdfjs-dist["'][^\]]*\]/u);
-  for (const required of ["./node_modules/@napi-rs/canvas/**/*", "./node_modules/@napi-rs/canvas-linux-x64-gnu/**/*", "./node_modules/@napi-rs/canvas-linux-x64-musl/**/*", "./node_modules/pdfjs-dist/**/*"]) assert.ok(nextConfig.includes(required), required);
+  assert.match(pnpmWorkspace, /^nodeLinker:\s*hoisted\s*$/mu);
+  assert.ok(nextConfig.includes("./generated/public/quizzes/**/*.json"));
+  assert.ok(nextConfig.includes("./generated/server/quiz-answer-keys.json"));
+  assert.doesNotMatch(nextConfig, /outputFileTracingIncludes:[\s\S]*?node_modules\//u);
+  assert.doesNotMatch(nextConfig, /@napi-rs\/canvas-linux-x64-(?:gnu|musl)\/\*\*\*/u);
 });
