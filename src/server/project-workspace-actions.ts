@@ -55,15 +55,16 @@ async function activeStaffRole(
   allowed: readonly ("reviewer" | "admin")[],
 ): Promise<"reviewer" | "admin" | null> {
   const secretClient = createSecretSupabaseClient();
-  const { data, error } = await secretClient
-    .schema("private")
-    .from("project_staff_roles")
-    .select("staff_role")
-    .eq("user_id", userId)
-    .eq("active", true)
-    .in("staff_role", [...allowed]);
+  const { data, error } = await secretClient.rpc(
+    "get_project_staff_roles_for_service",
+    { p_user_id: userId },
+  );
   if (error || !Array.isArray(data)) return null;
-  const roles = new Set(data.map((row) => row?.staff_role));
+  const roles = new Set(
+    data
+      .map((row) => row?.staff_role)
+      .filter((role) => allowed.includes(role)),
+  );
   if (allowed.includes("admin") && roles.has("admin")) return "admin";
   if (allowed.includes("reviewer") && roles.has("reviewer")) return "reviewer";
   return null;

@@ -203,14 +203,14 @@ async function authenticatedSession(): Promise<{
 
 async function activePolicy(projectCode: ProjectCode): Promise<ProjectPolicyProjection> {
   const secretClient = createSecretSupabaseClient();
-  const { data, error } = await secretClient
-    .schema("private")
-    .from("project_submission_policies")
-    .select("project_code,format_type,allowed_mime_types,max_file_bytes,expected_width,expected_height,min_page_count,max_page_count,supporting_text_min_words,supporting_text_max_words")
-    .eq("project_code", projectCode)
-    .eq("is_current", true)
-    .maybeSingle();
-  const policy = parsePolicy(data, projectCode);
+  const { data, error } = await secretClient.rpc(
+    "get_project_submission_policy_for_service",
+    { p_project_code: projectCode },
+  );
+  const policyRows = rows(data);
+  const policy = policyRows.length === 1
+    ? parsePolicy(policyRows[0], projectCode)
+    : null;
   if (error || !policy) throw new Error("Active project policy is unavailable.");
   return policy;
 }
@@ -385,13 +385,10 @@ export async function loadStaffProjectWorkspaceProjection(): Promise<StaffProjec
   const session = await authenticatedSession();
   if (!session) return { kind: "denied" };
   const secretClient = createSecretSupabaseClient();
-  const { data: ownRoleData, error: ownRoleError } = await secretClient
-    .schema("private")
-    .from("project_staff_roles")
-    .select("staff_role")
-    .eq("user_id", session.userId)
-    .eq("active", true)
-    .in("staff_role", ["reviewer", "admin"]);
+  const { data: ownRoleData, error: ownRoleError } = await secretClient.rpc(
+    "get_project_staff_roles_for_service",
+    { p_user_id: session.userId },
+  );
   if (ownRoleError) throw new Error("Staff authorization is unavailable.");
   const ownRoles = new Set(rows(ownRoleData).map((row) => row.staff_role));
   const role = ownRoles.has("admin") ? "admin" : ownRoles.has("reviewer") ? "reviewer" : null;
@@ -399,10 +396,7 @@ export async function loadStaffProjectWorkspaceProjection(): Promise<StaffProjec
 
   const [activeRoleResult, queueResult, ownAssignmentResult] = await Promise.all([
     role === "admin"
-      ? secretClient.schema("private").from("project_staff_roles")
-        .select("user_id,staff_role")
-        .eq("active", true)
-        .in("staff_role", ["reviewer", "admin"])
+      ? secretClient.rpc("list_active_project_staff_for_service")
       : Promise.resolve({ data: [], error: null }),
     role === "admin"
       ? secretClient.from("project_submissions")
@@ -410,17 +404,17 @@ export async function loadStaffProjectWorkspaceProjection(): Promise<StaffProjec
         .in("current_status", ["submitted", "resubmitted"])
         .order("submitted_at", { ascending: true })
       : Promise.resolve({ data: [], error: null }),
-    secretClient.schema("private").from("project_reviewer_assignments")
-      .select("submission_id,reviewer_id")
-      .eq("reviewer_id", session.userId)
-      .is("released_at", null),
+    secretClient.rpc("list_active_project_reviewer_assignments_for_service"),
   ]);
   if (activeRoleResult.error || queueResult.error || ownAssignmentResult.error) {
     throw new Error("Staff project lists are unavailable.");
   }
 
   const queueRows = rows(queueResult.data);
-  const ownAssignmentRows = rows(ownAssignmentResult.data);
+  const activeAssignmentRows = rows(ownAssignmentResult.data);
+  const ownAssignmentRows = activeAssignmentRows.filter(
+    (row) => uuid(row.reviewer_id) === session.userId,
+  );
   const ownSubmissionIds = ownAssignmentRows
     .map((row) => uuid(row.submission_id))
     .filter((id): id is string => Boolean(id));
@@ -475,10 +469,11 @@ export async function loadStaffProjectWorkspaceProjection(): Promise<StaffProjec
         .in("user_id", profileIds)
       : Promise.resolve({ data: [], error: null }),
     queueRows.length
-      ? secretClient.schema("private").from("project_reviewer_assignments")
-        .select("submission_id,reviewer_id")
-        .in("submission_id", queueRows.map((row) => row.id))
-        .is("released_at", null)
+      ? Promise.resolve({
+          data: activeAssignmentRows.filter((assignment) =>
+            queueRows.some((submission) => submission.id === assignment.submission_id)),
+          error: null,
+        })
       : Promise.resolve({ data: [], error: null }),
   ]);
   if (
@@ -557,10 +552,9 @@ export async function loadStaffProjectWorkspaceProjection(): Promise<StaffProjec
   });
   const rubricProjectCodes = [...new Set(rubricPairs.map((pair) => pair.projectCode))];
   const rubricResult = rubricProjectCodes.length
-    ? await secretClient.schema("private").from("project_rubric_criteria")
-      .select("project_code,rubric_version,criterion_number,title,description,max_points")
-      .in("project_code", rubricProjectCodes)
-      .order("criterion_number", { ascending: true })
+    ? await secretClient.rpc("list_project_rubric_criteria_for_service", {
+      p_project_codes: rubricProjectCodes,
+    })
     : { data: [], error: null };
   if (rubricResult.error) throw new Error("Project rubric is unavailable.");
   const rubricRows = rows(rubricResult.data);

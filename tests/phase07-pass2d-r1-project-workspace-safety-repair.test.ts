@@ -118,7 +118,7 @@ test("revision decisions keep the previous submitted file downloadable", () => {
 });
 
 test("active staff assignments include and display note and M02 text only after assignment scope", () => {
-  const assignmentScope = projection.indexOf('.from("project_reviewer_assignments")');
+  const assignmentScope = projection.indexOf('.rpc("list_active_project_reviewer_assignments_for_service")');
   const textRead = projection.indexOf('.select("id,learner_note,supporting_text")');
   assert.ok(assignmentScope >= 0 && assignmentScope < textRead);
   assert.match(projection, /assignedVersionIds[\s\S]*?ownSubmissionRows/u);

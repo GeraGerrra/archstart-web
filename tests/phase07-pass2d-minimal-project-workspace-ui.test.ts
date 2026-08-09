@@ -45,7 +45,8 @@ test("signed-in learner queries are explicitly own-row scoped", () => {
 test("browser mutation payloads cannot choose user, bucket, path, role or authority", () => {
   assert.match(actions, /exactObject\(inputValue, \["projectCode"\]\)/u);
   assert.match(actions, /exactObject\(inputValue, \["versionId", "learnerNote", "supportingText"\]\)/u);
-  assert.doesNotMatch(actions, /p_user_id|p_bucket|p_object_path|p_staff_role/u);
+  assert.match(actions, /\{ p_user_id: userId \}/u);
+  assert.doesNotMatch(actions, /p_user_id:\s*input|p_bucket|p_object_path|p_staff_role/u);
   assert.doesNotMatch(learner, /userId:|bucketId:|objectPath:|reviewerAuthority:/u);
 });
 
@@ -109,9 +110,9 @@ test("review form requires exactly five database rubric criteria", () => {
 
 test("non-staff and unassigned staff cannot receive review data", () => {
   const roleCheck = projection.indexOf("if (!role) return { kind: \"denied\" }");
-  const assignmentRead = projection.indexOf('.from("project_reviewer_assignments")', roleCheck);
+  const assignmentRead = projection.indexOf('.rpc("list_active_project_reviewer_assignments_for_service")', roleCheck);
   assert.ok(roleCheck >= 0 && roleCheck < assignmentRead);
-  assert.match(projection, /\.eq\("reviewer_id", session\.userId\)[\s\S]*?\.is\("released_at", null\)/u);
+  assert.match(projection, /activeAssignmentRows\.filter\([\s\S]*?uuid\(row\.reviewer_id\) === session\.userId/u);
   assert.match(reviewRoute, /projection\.kind === "denied"\) redirect/u);
 });
 
