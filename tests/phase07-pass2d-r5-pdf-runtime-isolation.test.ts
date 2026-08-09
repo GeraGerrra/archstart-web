@@ -38,7 +38,7 @@ test("Vercel production builds use Webpack to avoid Turbopack external-alias sym
   );
 });
 
-test("Vercel tracing uses a hoisted pnpm layout without manual native-runtime globs", () => {
+test("Vercel tracing uses a hoisted pnpm layout and includes the exact PDF worker on PDF routes", () => {
   assert.equal(packageJson.dependencies?.["pdfjs-dist"], "6.2.108");
   assert.equal(packageJson.dependencies?.["@napi-rs/canvas"], "1.0.3");
   assert.match(lockfile, /'@napi-rs\/canvas':\s*\n\s+specifier: 1\.0\.3\s*\n\s+version: 1\.0\.3/u);
@@ -46,6 +46,14 @@ test("Vercel tracing uses a hoisted pnpm layout without manual native-runtime gl
   assert.match(pnpmWorkspace, /^nodeLinker:\s*hoisted\s*$/mu);
   assert.ok(nextConfig.includes("./generated/public/quizzes/**/*.json"));
   assert.ok(nextConfig.includes("./generated/server/quiz-answer-keys.json"));
-  assert.doesNotMatch(nextConfig, /outputFileTracingIncludes:[\s\S]*?node_modules\//u);
+  assert.match(
+    nextConfig,
+    /["']\/prototype\/a\/course\/\*\/project["']:\s*\[[\s\S]*?["']\.\/node_modules\/pdfjs-dist\/legacy\/build\/pdf\.worker\.mjs["'][\s\S]*?\]/u,
+  );
+  assert.match(
+    nextConfig,
+    /["']\/prototype\/a\/review["']:\s*\[[\s\S]*?["']\.\/node_modules\/pdfjs-dist\/legacy\/build\/pdf\.worker\.mjs["'][\s\S]*?\]/u,
+  );
+  assert.doesNotMatch(nextConfig, /node_modules\/pdfjs-dist\/legacy\/build\/\*\*/u);
   assert.doesNotMatch(nextConfig, /@napi-rs\/canvas-linux-x64-(?:gnu|musl)\/\*\*\*/u);
 });

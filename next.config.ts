@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
       "./generated/public/quizzes/**/*.json",
       "./generated/server/quiz-answer-keys.json",
     ],
+    "/prototype/a/course/*/project": [
+      "./node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs",
+    ],
+    "/prototype/a/review": [
+      "./node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs",
+    ],
   },
   outputFileTracingExcludes: {
     "/*": [
