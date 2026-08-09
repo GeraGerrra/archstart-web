@@ -2,13 +2,18 @@ import "server-only";
 
 import type { DashboardViewModel } from "@/src/learning/types";
 import { createServerSupabaseClient } from "@/src/lib/supabase/server";
+import { isProjectSubmissionStatus } from "@/src/project-workspace/policy";
+import type { ProjectSubmissionStatus } from "@/src/project-workspace/types";
 import type { SelectedAShellProgressProjection } from "@/src/prototypes/selected-a/shell-adapter";
+import { hasActiveProjectStaffRole } from "./dashboard-project-staff-projection";
 import {
   courseLessons,
   courseModules,
   pathCourse,
   pathItem,
   pathModule,
+  pathProject,
+  moduleProject,
 } from "@/src/prototypes/selected-a/data";
 
 const LESSON_CODE_PATTERN = /^M0[1-8]_L0[1-5]$/u;
@@ -50,6 +55,22 @@ interface ModuleCompletionRow {
   module_code: string;
   completed_at: string;
 }
+
+interface ProjectSubmissionRow {
+  project_code: string;
+  current_status: ProjectSubmissionStatus;
+}
+
+const PROJECT_STATUS_LABELS: Readonly<Record<"none" | ProjectSubmissionStatus, string>> = {
+  none: "Не начат",
+  draft: "Черновик",
+  submitted: "Отправлен",
+  under_review: "На проверке",
+  revisions_required: "Нужны правки",
+  resubmitted: "Отправлен повторно",
+  accepted: "Принят",
+  not_accepted: "Не принят",
+};
 
 export interface DashboardProjection {
   model: DashboardViewModel;
@@ -117,6 +138,17 @@ function asModuleCompletionRows(value: unknown): ModuleCompletionRow[] {
   });
 }
 
+function asProjectSubmissionRows(value: unknown): ProjectSubmissionRow[] {
+  if (!Array.isArray(value)) return [];
+  return value.filter((row): row is ProjectSubmissionRow => {
+    if (!row || typeof row !== "object") return false;
+    const record = row as Record<string, unknown>;
+    return typeof record.project_code === "string"
+      && /^M0[1-8]_P0[1-8]$/u.test(record.project_code)
+      && isProjectSubmissionStatus(record.current_status);
+  });
+}
+
 function displayLessonCode(lessonCode: string): string {
   return `${lessonCode.slice(0, 3)} · ${lessonCode.slice(4)}`;
 }
@@ -174,7 +206,7 @@ export async function loadDashboardProjection(
 ): Promise<DashboardProjection> {
   const { client, userId } = await authenticatedSession();
 
-  const [activityResult, latestAttemptResult, lessonCompletionResult, moduleCompletionResult] = await Promise.all([
+  const [activityResult, latestAttemptResult, lessonCompletionResult, moduleCompletionResult, projectResult, hasStaffRole] = await Promise.all([
     client
       .from("lesson_activity")
       .select("lesson_code,last_item,started_at,last_visited_at")
@@ -195,12 +227,18 @@ export async function loadDashboardProjection(
       .from("module_completions")
       .select("module_code,completed_at")
       .eq("user_id", userId),
+    client
+      .from("project_submissions")
+      .select("project_code,current_status")
+      .eq("user_id", userId),
+    hasActiveProjectStaffRole(userId),
   ]);
 
   if (activityResult.error
     || latestAttemptResult.error
     || lessonCompletionResult.error
-    || moduleCompletionResult.error) {
+    || moduleCompletionResult.error
+    || projectResult.error) {
     throw new Error("Unable to load signed-in Dashboard projection.");
   }
 
@@ -208,6 +246,10 @@ export async function loadDashboardProjection(
   const latestAttempt = asLatestQuizAttempt(latestAttemptResult.data);
   const lessonCompletions = asLessonCompletionRows(lessonCompletionResult.data);
   const moduleCompletions = asModuleCompletionRows(moduleCompletionResult.data);
+  const projectSubmissions = asProjectSubmissionRows(projectResult.data);
+  const projectStatusByCode = new Map(
+    projectSubmissions.map((submission) => [submission.project_code, submission.current_status]),
+  );
 
   const orderedLessons = [...courseLessons].sort(
     (left, right) => left.globalOrder - right.globalOrder,
@@ -381,6 +423,21 @@ export async function loadDashboardProjection(
             { label: "Модули", value: `0 из ${courseModules.length}` },
           ],
         },
+    projects: courseModules.map((module) => {
+      const project = moduleProject(module.code);
+      if (!project) throw new Error(`Project display record is missing for ${module.code}.`);
+      const status = projectStatusByCode.get(project.code) ?? "none";
+      return {
+        projectCode: project.code,
+        titleRu: project.titleRu,
+        status,
+        statusLabel: PROJECT_STATUS_LABELS[status],
+        action: { label: "Открыть", href: pathProject(module.code) },
+      };
+    }),
+    staffReviewAction: hasStaffRole
+      ? { label: "Проверка проектов", href: "/prototype/a/review" }
+      : undefined,
   };
 
   return { model, shellProgress };

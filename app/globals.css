@@ -1593,6 +1593,105 @@ img { max-width: 100%; }
 .asa-project__submission h2 { margin-bottom: 8px; font-size: 28px; }
 .asa-project__submission p { max-width: 760px; margin-bottom: 0; color: var(--asa-muted); }
 .asa-project__submission .asa-button:disabled { cursor: not-allowed; opacity: .45; }
+.asa-visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; margin: -1px; padding: 0; border: 0; clip: rect(0 0 0 0); white-space: nowrap; }
+.asa-dashboard-projects { margin-top: 76px; padding-top: 54px; border-top: 1px solid var(--asa-ink); }
+.asa-dashboard-projects > header { display: flex; align-items: end; justify-content: space-between; gap: 24px; }
+.asa-dashboard-projects > ol { display: grid; margin: 28px 0 0; padding: 0; border-top: 1px solid var(--asa-ink); grid-template-columns: repeat(2, minmax(0, 1fr)); list-style: none; }
+.asa-dashboard-projects > ol > li { display: grid; min-height: 88px; padding: 14px 18px; border-right: 1px solid var(--asa-rule); border-bottom: 1px solid var(--asa-rule); grid-template-columns: 78px minmax(0, 1fr) 150px auto; gap: 12px; align-items: center; }
+.asa-dashboard-projects > ol > li:nth-child(2n) { border-right: 0; }
+.asa-dashboard-projects > ol > li > span { font-size: 11px; font-weight: 700; }
+.asa-dashboard-projects > ol > li > strong { font-size: 12px; line-height: 1.35; }
+
+/* Phase 07 Pass 2D: learner project workspace */
+.asa-project-workspace { display: grid; margin: 0 0 64px; padding: clamp(24px, 4vw, 48px); border: 1px solid var(--asa-ink); background: var(--asa-white); gap: 34px; }
+.asa-project-workspace--gate { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+.asa-project-workspace--gate h2 { margin: 8px 0 12px; font-size: clamp(2rem, 4vw, 4.2rem); }
+.asa-project-workspace--gate p { max-width: 760px; margin: 0; color: var(--asa-muted); }
+.asa-project-workspace__header { display: grid; padding-bottom: 30px; border-bottom: 1px solid var(--asa-ink); grid-template-columns: minmax(0, 1fr) auto; gap: 30px; align-items: end; }
+.asa-project-workspace__header h2 { margin: 8px 0 6px; font-size: clamp(2.4rem, 5vw, 5.6rem); }
+.asa-project-workspace__header p { margin: 0; color: var(--asa-muted); }
+.asa-project-workspace__status { display: grid; justify-items: end; gap: 8px; }
+.asa-project-workspace__status > span { color: var(--asa-muted); font-size: 11px; }
+.asa-project-workspace__readiness { display: grid; border: 1px solid var(--asa-ink); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.asa-project-workspace__readiness > div { min-height: 92px; padding: 18px; border-right: 1px solid var(--asa-rule); }
+.asa-project-workspace__readiness > div:last-child { border-right: 0; }
+.asa-project-workspace__readiness span, .asa-project-workspace__readiness strong { display: block; }
+.asa-project-workspace__readiness span { margin-bottom: 12px; color: var(--asa-muted); font-size: 10px; }
+.asa-project-workspace__readiness strong { font-size: 18px; }
+.asa-project-workspace__policy { padding: 20px 22px; border-left: 4px solid var(--asa-ink); background: var(--asa-soft); }
+.asa-project-workspace__policy p { margin: 8px 0 0; color: var(--asa-muted); font-size: 13px; line-height: 1.55; }
+.asa-project-workspace__primary-action, .asa-project-workspace__submit, .asa-project-workspace__immutable { display: grid; padding: 24px; border: 1px solid var(--asa-rule); grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; }
+.asa-project-workspace__primary-action p, .asa-project-workspace__submit p, .asa-project-workspace__immutable p { max-width: 760px; margin: 0; color: var(--asa-muted); font-size: 13px; }
+.asa-project-workspace__submit strong, .asa-project-workspace__immutable strong { display: block; margin-bottom: 6px; }
+.asa-project-workspace__editor { display: grid; gap: 30px; }
+.asa-project-workspace__form { display: grid; gap: 22px; }
+.asa-project-workspace__form label, .asa-project-workspace__picker { display: grid; gap: 8px; font-size: 12px; font-weight: 700; }
+.asa-project-workspace__form label small, .asa-project-workspace__picker small { color: var(--asa-muted); font-size: 10px; font-weight: 400; }
+.asa-project-workspace__form textarea, .asa-project-workspace__picker input { width: 100%; border: 1px solid var(--asa-rule); border-radius: 0; padding: 13px 14px; color: var(--asa-ink); background: var(--asa-paper); font: inherit; }
+.asa-project-workspace__form textarea { resize: vertical; line-height: 1.5; }
+.asa-project-workspace__form textarea:focus, .asa-project-workspace__picker input:focus { border-color: var(--asa-ink); outline: 2px solid var(--asa-ink); outline-offset: 2px; }
+.asa-project-workspace__form textarea[aria-invalid="true"] { box-shadow: inset 4px 0 0 var(--asa-ink); }
+.asa-project-workspace__form .asa-button { justify-self: start; }
+.asa-project-workspace__file { display: grid; padding: 26px; border: 1px solid var(--asa-ink); gap: 20px; }
+.asa-project-workspace__file h3 { margin: 0; font-size: 24px; }
+.asa-project-workspace__picker { padding: 22px; border: 1px dashed var(--asa-ink); background: var(--asa-paper); }
+.asa-project-workspace__picker input { padding: 10px; background: var(--asa-white); cursor: pointer; }
+.asa-project-workspace__fixed-file { display: grid; padding: 18px; border: 1px solid var(--asa-rule); grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: center; }
+.asa-project-workspace__fixed-file strong, .asa-project-workspace__fixed-file span { display: block; overflow-wrap: anywhere; }
+.asa-project-workspace__fixed-file span { margin-top: 6px; color: var(--asa-muted); font-size: 11px; }
+.asa-project-workspace__transfer { display: grid; padding: 18px; border: 1px solid var(--asa-rule); background: var(--asa-soft); gap: 12px; }
+.asa-project-workspace__transfer p { margin: 0; color: var(--asa-muted); font-size: 12px; }
+.asa-project-workspace__transfer-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.asa-project-workspace__review { display: grid; padding-top: 34px; border-top: 1px solid var(--asa-ink); gap: 24px; }
+.asa-project-workspace__review > header { display: flex; align-items: end; justify-content: space-between; gap: 30px; }
+.asa-project-workspace__review h3 { margin: 7px 0 0; font-size: clamp(2rem, 4vw, 4rem); }
+.asa-project-workspace__review > header > strong { font-size: clamp(2.5rem, 5vw, 5rem); letter-spacing: -.06em; }
+.asa-project-workspace__review > p { max-width: 900px; margin: 0; line-height: 1.6; }
+.asa-project-workspace__review ol { margin: 0; padding: 0; border-top: 1px solid var(--asa-ink); list-style: none; }
+.asa-project-workspace__review li { display: grid; min-height: 128px; padding: 20px 0; border-bottom: 1px solid var(--asa-rule); grid-template-columns: 48px minmax(0, 1fr) 80px; gap: 18px; }
+.asa-project-workspace__review li > span { font-weight: 700; }
+.asa-project-workspace__review li p { margin: 7px 0; color: var(--asa-muted); font-size: 12px; line-height: 1.5; }
+.asa-project-workspace__review li small { display: block; padding: 10px; border-left: 3px solid var(--asa-ink); background: var(--asa-soft); }
+.asa-project-workspace__review li b { text-align: right; }
+.asa-project-workspace__message, .asa-review-workspace__message { position: sticky; z-index: 2; bottom: 18px; margin: 0; padding: 14px 18px; border: 1px solid var(--asa-ink); background: var(--asa-white); box-shadow: var(--as-shadow-panel); font-size: 12px; }
+
+/* Phase 07 Pass 2D: protected staff workspace */
+.asa-review-workspace { padding-top: 90px; padding-bottom: 120px; }
+.asa-review-workspace__hero { display: grid; min-height: 330px; padding-bottom: 50px; border-bottom: 1px solid var(--asa-ink); grid-template-columns: minmax(0, 1fr) auto; gap: 50px; align-items: end; }
+.asa-review-workspace__hero h1 { max-width: 1000px; margin: 10px 0 18px; }
+.asa-review-workspace__hero p { max-width: 760px; margin: 0; color: var(--asa-muted); line-height: 1.6; }
+.asa-review-workspace__section { padding-top: 76px; }
+.asa-review-workspace__section > header { max-width: 920px; margin-bottom: 34px; }
+.asa-review-workspace__section > header h2 { margin: 9px 0 14px; }
+.asa-review-workspace__section > header p { color: var(--asa-muted); }
+.asa-review-workspace__empty { padding: 26px; border: 1px solid var(--asa-rule); color: var(--asa-muted); background: var(--asa-white); }
+.asa-review-assignment-list, .asa-review-project-list { margin: 0; padding: 0; border-top: 1px solid var(--asa-ink); list-style: none; }
+.asa-review-assignment-list > li { display: grid; min-height: 112px; padding: 18px 0; border-bottom: 1px solid var(--asa-rule); grid-template-columns: minmax(260px, 1fr) minmax(240px, .7fr) auto; gap: 22px; align-items: center; }
+.asa-review-assignment-list__identity { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 16px; }
+.asa-review-assignment-list__identity > span { font-weight: 700; }
+.asa-review-assignment-list__identity strong, .asa-review-assignment-list__identity small { display: block; }
+.asa-review-assignment-list__identity small { margin-top: 5px; color: var(--asa-muted); }
+.asa-review-assignment-list label, .asa-review-form > label, .asa-review-rubric label { display: grid; gap: 7px; font-size: 11px; font-weight: 700; }
+.asa-review-assignment-list select, .asa-review-form select, .asa-review-form textarea, .asa-review-rubric input, .asa-review-rubric textarea { width: 100%; min-width: 0; padding: 11px 12px; border: 1px solid var(--asa-rule); border-radius: 0; color: var(--asa-ink); background: var(--asa-paper); font: inherit; }
+.asa-review-assignment-list select:focus, .asa-review-form select:focus, .asa-review-form textarea:focus, .asa-review-rubric input:focus, .asa-review-rubric textarea:focus { border-color: var(--asa-ink); outline: 2px solid var(--asa-ink); outline-offset: 2px; }
+.asa-review-assignment-list label small, .asa-review-rubric label small { color: var(--asa-muted); font-size: 9px; font-weight: 400; }
+.asa-review-project { display: grid; padding: 32px 0 54px; border-bottom: 1px solid var(--asa-ink); gap: 26px; }
+.asa-review-project__header { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: end; }
+.asa-review-project__header > div > span { font-size: 13px; font-weight: 700; }
+.asa-review-project__header h3 { margin: 8px 0 4px; font-size: clamp(2rem, 4vw, 4rem); }
+.asa-review-project__header p { margin: 0; color: var(--asa-muted); }
+.asa-review-project__file { display: grid; padding: 18px; border: 1px solid var(--asa-rule); grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: center; }
+.asa-review-project__file strong, .asa-review-project__file span { display: block; overflow-wrap: anywhere; }
+.asa-review-project__file span { margin-top: 5px; color: var(--asa-muted); font-size: 10px; }
+.asa-review-project > .asa-button { justify-self: start; }
+.asa-review-form { display: grid; padding: 28px; border: 1px solid var(--asa-ink); background: var(--asa-white); gap: 24px; }
+.asa-review-rubric { margin: 0; padding: 0; border-top: 1px solid var(--asa-ink); list-style: none; }
+.asa-review-rubric > li { display: grid; padding: 22px 0; border-bottom: 1px solid var(--asa-rule); grid-template-columns: minmax(0, 1fr) 140px minmax(220px, .45fr); gap: 22px; align-items: start; }
+.asa-review-rubric__copy { display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 12px; }
+.asa-review-rubric__copy > span { font-weight: 700; }
+.asa-review-rubric__copy p { margin: 7px 0 0; color: var(--asa-muted); font-size: 12px; line-height: 1.5; }
+.asa-review-rubric textarea, .asa-review-form > label textarea { resize: vertical; line-height: 1.5; }
+.asa-review-form > .asa-button { justify-self: start; }
 .asa-project-pack { min-width: 0; border: 1px solid var(--asa-ink); background: var(--asa-white); }
 .asa-project-pack__header { display: flex; align-items: end; justify-content: space-between; gap: 32px; padding: 24px; border-bottom: 1px solid var(--asa-rule); }
 .asa-project-pack__header h3 { margin: 6px 0 8px; font-size: clamp(1.4rem, 2vw, 2rem); }
@@ -1985,6 +2084,21 @@ img { max-width: 100%; }
   .asa-project__hero > div { display: block; }
   .asa-project__hero > div > span { display: block; margin-bottom: 10px; }
   .asa-project__submission { grid-template-columns: 1fr; }
+  .asa-dashboard-projects > header { align-items: stretch; flex-direction: column; }
+  .asa-dashboard-projects > ol { grid-template-columns: 1fr; }
+  .asa-dashboard-projects > ol > li, .asa-dashboard-projects > ol > li:nth-child(2n) { min-height: 132px; padding: 16px 0; border-right: 0; grid-template-columns: 70px minmax(0, 1fr); }
+  .asa-dashboard-projects > ol > li .asa-status, .asa-dashboard-projects > ol > li .asa-button { grid-column: 2; justify-self: start; }
+  .asa-project-workspace { padding: 20px 16px; }
+  .asa-project-workspace--gate, .asa-project-workspace__header, .asa-project-workspace__readiness, .asa-project-workspace__primary-action, .asa-project-workspace__submit, .asa-project-workspace__immutable { grid-template-columns: 1fr; }
+  .asa-project-workspace__status { justify-items: start; }
+  .asa-project-workspace__readiness > div { border-right: 0; border-bottom: 1px solid var(--asa-rule); }
+  .asa-project-workspace__readiness > div:last-child { border-bottom: 0; }
+  .asa-project-workspace__fixed-file, .asa-project-workspace__review li { grid-template-columns: 1fr; }
+  .asa-project-workspace__review > header { align-items: flex-start; flex-direction: column; }
+  .asa-project-workspace__review li b { text-align: left; }
+  .asa-review-workspace { padding-top: 55px; }
+  .asa-review-workspace__hero, .asa-review-assignment-list > li, .asa-review-project__header, .asa-review-project__file, .asa-review-rubric > li { grid-template-columns: 1fr; }
+  .asa-review-form { padding: 18px 14px; }
   .asa-project-pack__header { align-items: flex-start; flex-direction: column; padding: 18px; }
   .asa-project-pack__file-actions { display: grid; width: 100%; grid-template-columns: 1fr 1fr; }
   .asa-project-pack__file-actions .asa-button { padding-inline: 8px; font-size: 10px; }

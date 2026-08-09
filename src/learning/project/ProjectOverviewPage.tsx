@@ -29,7 +29,7 @@ function ProjectContent({ block }: { block: ProjectContentBlock }) {
   return <p>{block.text}</p>;
 }
 
-export function ProjectOverviewPage({ model, exampleContent }: ProjectOverviewPageProps) {
+export function ProjectOverviewPage({ model, exampleContent, workspaceContent }: ProjectOverviewPageProps) {
   return (
     <section className="asa-project asa-container">
       <header className="asa-project__hero">
@@ -59,17 +59,7 @@ export function ProjectOverviewPage({ model, exampleContent }: ProjectOverviewPa
           ))}
         </ol>
       </section>
-      {model.submissionNotice ? (
-        <section className="asa-project__submission" aria-labelledby="project-submission-title">
-          <div>
-            <h2 id="project-submission-title">{model.submissionNotice.title}</h2>
-            <p id="project-submission-description">{model.submissionNotice.description}</p>
-          </div>
-          <Button type="button" variant="dark" disabled aria-describedby="project-submission-description">
-            {model.submissionNotice.buttonLabel}
-          </Button>
-        </section>
-      ) : null}
+      {workspaceContent}
       <Button href={model.backAction.href} variant="line">{model.backAction.label}</Button>
     </section>
   );

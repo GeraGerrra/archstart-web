@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button, ProgressBar, SectionHeading } from "@/src/design-system";
+import { Button, ProgressBar, SectionHeading, StatusMark } from "@/src/design-system";
 import type { DashboardViewModel } from "../types";
 
 export interface DashboardPageProps {
@@ -65,6 +65,32 @@ export function DashboardPage({ model }: DashboardPageProps) {
           </dl>
         </aside>
       </div>
+      {model.projects ? (
+        <section className="asa-dashboard-projects" aria-labelledby="dashboard-projects-title">
+          <header>
+            <SectionHeading title="Проекты модулей" />
+            {model.staffReviewAction ? (
+              <Button href={model.staffReviewAction.href} variant="dark">
+                {model.staffReviewAction.label}
+              </Button>
+            ) : null}
+          </header>
+          <h2 id="dashboard-projects-title" className="asa-visually-hidden">Статусы восьми проектов</h2>
+          <ol>
+            {model.projects.map((project) => (
+              <li key={project.projectCode}>
+                <span>{project.projectCode}</span>
+                <strong>{project.titleRu}</strong>
+                <StatusMark
+                  status={project.status === "accepted" ? "complete" : project.status === "none" ? "available" : "in-progress"}
+                  label={project.statusLabel}
+                />
+                <Button href={project.action.href}>{project.action.label}</Button>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ) : null}
     </section>
   );
 }

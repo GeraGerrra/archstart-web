@@ -22,6 +22,7 @@ export type {
   DashboardContinueLearning,
   DashboardEmptyHistory,
   DashboardModuleMapItem,
+  DashboardProjectItem,
   DashboardViewModel,
   HomeHeroCopy,
   HomeMetric,

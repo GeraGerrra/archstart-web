@@ -74,6 +74,7 @@ import { furtherStudyForModule } from "./module-further-study";
 
 export type { CompletionDemoState } from "@/src/completion";
 import type { CompletionDemoState } from "@/src/completion";
+import type { ReactNode } from "react";
 
 const HOME_MODULE_SHORT_TITLES: Readonly<Record<string, string>> = {
   M01: "Пространство, масштаб, функция",
@@ -275,7 +276,13 @@ export function SelectedAModule({
   );
 }
 
-export function SelectedAProject({ moduleCode }: { moduleCode: string }) {
+export function SelectedAProject({
+  moduleCode,
+  workspaceContent,
+}: {
+  moduleCode: string;
+  workspaceContent?: ReactNode;
+}) {
   const courseModule = getModule(moduleCode) ?? m01Module;
   const project = getImportedModuleData(courseModule.code)?.project ?? (moduleProject(courseModule.code) ?? m01Project);
   const projectBlocks = project.normalizedPublicContent?.blocks;
@@ -288,13 +295,6 @@ export function SelectedAProject({ moduleCode }: { moduleCode: string }) {
       .map(({ order, type, style, text, rows }) => ({ order, type, style, text, rows })),
     exampleBlockOrder: exampleHeading?.order,
     exampleCaptionBlockOrder: exampleHeading ? projectBlocks?.find((block) => block.order > exampleHeading.order)?.order : undefined,
-    submissionNotice: ["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08"].includes(courseModule.code) ? {
-      title: "Отправка проекта",
-      description: courseModule.code === "M08"
-        ? "Отправка, проверка и обратная связь станут доступны после запуска личного кабинета учащегося. Сейчас подготовьте и сохраните итоговый многостраничный PDF у себя."
-        : "Отправка, проверка и обратная связь станут доступны после запуска личного кабинета учащегося. Сейчас подготовьте и сохраните итоговый PDF или PNG у себя.",
-      buttonLabel: "Отправить проект",
-    } : undefined,
     backAction: { label: "Вернуться к модулю", href: pathModule(courseModule.code) },
   };
   const projectExample = selectedAProjectExample(courseModule.code);
@@ -310,7 +310,9 @@ export function SelectedAProject({ moduleCode }: { moduleCode: string }) {
         />
       ) : projectExample ? (
         <RevealExample {...projectExample} />
-      ) : <div className="asa-project__pending">Проектный маршрут показан структурно. Полный импорт ещё не выполнен.</div>} />
+      ) : <div className="asa-project__pending">Проектный маршрут показан структурно. Полный импорт ещё не выполнен.</div>}
+      workspaceContent={workspaceContent}
+      />
     </SelectedAShell>
   );
 }
