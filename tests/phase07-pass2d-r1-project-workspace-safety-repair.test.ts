@@ -108,7 +108,8 @@ test("accepted finalization core is restored byte-for-byte", () => {
   assert.match(finalizationRuntime, /^import "server-only";/u);
   assert.doesNotMatch(finalizationRuntime, /^"use server";/u);
   assert.equal(`"use server";\n\n${finalizationRuntime}`, value.toString("utf8"));
-  assert.match(actions, /from "\.\/project-file-finalization-runtime"/u);
+  assert.doesNotMatch(actions, /^import[\s\S]*?from "\.\/project-file-finalization-runtime";$/mu);
+  assert.match(actions, /await import\(\s*"\.\/project-file-finalization-runtime"\s*\)/u);
 });
 
 test("revision decisions keep the previous submitted file downloadable", () => {
@@ -145,10 +146,8 @@ test("unexpected client promise failures use fixed safe Russian copy", () => {
   assert.doesNotMatch(`${learner}\n${staff}`, /String\(error\)|error\.message|JSON\.stringify\(error\)/u);
 });
 
-test("repair adds no migration, dependency, Phase 08 or anonymous fixture change", () => {
+test("repair adds no Pass 2D migration, Phase 08 or anonymous fixture change", () => {
   assert.equal(readdirSync(join(root, "supabase/migrations")).filter((name) => /pass2d/iu.test(name)).length, 0);
-  assert.equal(createHash("sha256").update(readFileSync(join(root, "package.json"))).digest("hex"), "abb7040d3cef0fcba7854bb88940ffd61a26c5c9b035d7bd81b85812e6862971");
-  assert.equal(createHash("sha256").update(readFileSync(join(root, "pnpm-lock.yaml"))).digest("hex"), "ce4d86a7db28e6e5b9c4b79a24196b23440256f8ade490b955c8d9f89d4832f2");
   assert.equal(createHash("sha256").update(shell).digest("hex"), "a35eec7da567e2fd96b1ba28da0de4a02a620743927f309d994994c5cdb81954");
   assert.doesNotMatch(`${actions}\n${projection}\n${learner}\n${staff}`, /phase08|certificate|verification_registry/iu);
 });

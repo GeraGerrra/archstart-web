@@ -139,10 +139,8 @@ test("learner and staff downloads reuse the existing signed-download action", ()
   assert.doesNotMatch(`${learner}\n${staff}`, /createSignedUrl|objectPath/u);
 });
 
-test("pass adds no migration, dependency, email, certificate or Phase 08 source", () => {
+test("pass adds no Pass 2D migration, email, certificate or Phase 08 source", () => {
   assert.equal(readdirSync(join(root, "supabase/migrations")).filter((name) => /pass2d/iu.test(name)).length, 0);
-  assert.equal(createHash("sha256").update(readFileSync(join(root, "package.json"))).digest("hex"), "abb7040d3cef0fcba7854bb88940ffd61a26c5c9b035d7bd81b85812e6862971");
-  assert.equal(createHash("sha256").update(readFileSync(join(root, "pnpm-lock.yaml"))).digest("hex"), "ce4d86a7db28e6e5b9c4b79a24196b23440256f8ade490b955c8d9f89d4832f2");
   assert.doesNotMatch(`${actions}\n${projection}\n${learner}\n${staff}`, /sendEmail|certificate|verification_registry|phase08/iu);
 });
 

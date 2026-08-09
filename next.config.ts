@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  serverExternalPackages: ["@napi-rs/canvas", "pdfjs-dist"],
   async redirects() {
     return externalAssetRedirects();
   },
@@ -14,6 +15,10 @@ const nextConfig: NextConfig = {
     "/*": [
       "./generated/public/quizzes/**/*.json",
       "./generated/server/quiz-answer-keys.json",
+      "./node_modules/@napi-rs/canvas/**/*",
+      "./node_modules/@napi-rs/canvas-linux-x64-gnu/**/*",
+      "./node_modules/@napi-rs/canvas-linux-x64-musl/**/*",
+      "./node_modules/pdfjs-dist/**/*",
     ],
   },
   outputFileTracingExcludes: {

@@ -17,7 +17,6 @@ import {
 } from "@/src/project-workspace/policy";
 import type { ProjectWorkspaceMutationResult } from "@/src/project-workspace/types";
 import { requestProjectFileDownloadAction } from "./project-file-download-action";
-import { finalizeProjectUploadAction } from "./project-file-finalization-runtime";
 import { requestProjectUploadCapabilityAction } from "./project-upload-capability-action";
 import {
   authenticatedProjectSession as authenticatedSession,
@@ -93,7 +92,17 @@ export async function finalizeProjectWorkspaceUploadAction(
         : "Проверка профиля временно недоступна.",
     };
   }
-  return finalizeProjectUploadAction(inputValue);
+  try {
+    const { finalizeProjectUploadAction } = await import(
+      "./project-file-finalization-runtime"
+    );
+    return await finalizeProjectUploadAction(inputValue);
+  } catch {
+    return {
+      status: "error",
+      message: "Проверка файла временно недоступна.",
+    };
+  }
 }
 
 export async function requestProjectWorkspaceUploadCapabilityAction(
