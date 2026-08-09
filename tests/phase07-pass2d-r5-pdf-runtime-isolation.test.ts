@@ -7,7 +7,10 @@ const actions = read("src/server/project-workspace-actions.ts");
 const inspection = read("src/project-upload/file-inspection.ts");
 const runtime = read("src/project-upload/pdfjs-node-runtime.ts");
 const nextConfig = read("next.config.ts");
-const packageJson = JSON.parse(read("package.json")) as { dependencies?: Record<string, string> };
+const packageJson = JSON.parse(read("package.json")) as {
+  dependencies?: Record<string, string>;
+  scripts?: Record<string, string>;
+};
 const lockfile = read("pnpm-lock.yaml");
 
 test("ordinary project Server Actions do not evaluate the PDF finalization runtime", () => {
@@ -25,6 +28,13 @@ test("the PDF-only runtime installs native Node globals before loading PDF.js", 
   assert.match(runtime, /from ["']@napi-rs\/canvas["']/u);
   assert.match(runtime, /DOMMatrix/u); assert.match(runtime, /ImageData/u); assert.match(runtime, /Path2D/u);
   assert.match(runtime, /installPdfJsNodeGlobals\(\);[\s\S]*import\(["']pdfjs-dist\/legacy\/build\/pdf\.mjs["']\)/u);
+});
+
+test("Vercel production builds use Webpack to avoid Turbopack external-alias symlink packaging", () => {
+  assert.equal(
+    packageJson.scripts?.build,
+    "next build --webpack && node scripts/security/scan-browser-quiz-leaks.mjs",
+  );
 });
 
 test("Vercel tracing includes the exact native PDF runtime", () => {

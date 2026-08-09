@@ -16,7 +16,7 @@
     "test": "node --experimental-strip-types --test tests/deployment/*.test.ts tests/acceptance.test.ts tests/schema-validation.test.ts tests/server-quiz-boundary.test.ts",
     "content:generate": "node --experimental-strip-types scripts/content/generate.ts",
     "content:validate": "node --experimental-strip-types scripts/content/validate.ts",
-    "build": "next build && node scripts/security/scan-browser-quiz-leaks.mjs",
+    "build": "next build --webpack && node scripts/security/scan-browser-quiz-leaks.mjs",
     "security:scan-browser": "node scripts/security/scan-browser-quiz-leaks.mjs",
     "lockfile:verify": "node scripts/verify-lockfile.mjs",
     "prototype:security-scan": "node scripts/security/scan-prototype-quiz-leaks.mjs",
