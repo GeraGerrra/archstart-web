@@ -229,8 +229,7 @@ export async function loadDashboardProjection(
       .eq("user_id", userId),
     client
       .from("project_submissions")
-      .select("project_code,current_status")
-      .eq("user_id", userId),
+      .select("project_code,current_status"),
     hasActiveProjectStaffRole(userId),
   ]);
 

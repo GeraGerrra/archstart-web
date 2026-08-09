@@ -240,7 +240,6 @@ export async function loadLearnerProjectWorkspaceProjection(
     session.client
       .from("project_submissions")
       .select("id,current_version_id,current_status")
-      .eq("user_id", session.userId)
       .eq("project_code", projectCode)
       .maybeSingle(),
     session.client
@@ -288,7 +287,6 @@ export async function loadLearnerProjectWorkspaceProjection(
   const versionsResult = await session.client
     .from("project_submission_versions")
     .select("id,version_number,version_state,learner_note,supporting_text,submitted_at")
-    .eq("user_id", session.userId)
     .eq("submission_id", submissionId)
     .order("version_number", { ascending: false });
   if (versionsResult.error) throw new Error("Learner project versions are unavailable.");
@@ -306,12 +304,10 @@ export async function loadLearnerProjectWorkspaceProjection(
     session.client
       .from("project_submission_files")
       .select("id,version_id,original_filename,declared_mime,size_bytes")
-      .eq("user_id", session.userId)
       .in("version_id", versionIds),
     session.client
       .from("project_reviews")
       .select("id,version_id,decision,summary,score,reviewed_at")
-      .eq("user_id", session.userId)
       .eq("version_id", currentVersion.id)
       .maybeSingle(),
   ]);
@@ -344,7 +340,6 @@ export async function loadLearnerProjectWorkspaceProjection(
       const criteriaResult = await session.client
         .from("project_review_criteria")
         .select("criterion_number,criterion_title_snapshot,criterion_description_snapshot,max_points,awarded_points,comment")
-        .eq("user_id", session.userId)
         .eq("review_id", reviewId)
         .order("criterion_number", { ascending: true });
       if (criteriaResult.error) throw new Error("Learner review criteria are unavailable.");

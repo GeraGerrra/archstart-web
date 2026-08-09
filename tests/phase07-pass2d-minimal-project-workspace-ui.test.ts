@@ -36,10 +36,21 @@ test("anonymous projection returns before profile, policy, learner or staff read
   assert.match(learner, /projection\.kind === "anonymous"/u);
 });
 
-test("signed-in learner queries are explicitly own-row scoped", () => {
-  assert.match(projection, /\.from\("project_submissions"\)[\s\S]*?\.eq\("user_id", session\.userId\)/u);
-  assert.match(projection, /\.from\("project_submission_versions"\)[\s\S]*?\.eq\("user_id", session\.userId\)/u);
-  assert.match(projection, /\.from\("project_submission_files"\)[\s\S]*?\.eq\("user_id", session\.userId\)/u);
+test("signed-in learner project queries rely on own-row RLS without hidden user_id filters", () => {
+  for (const table of [
+    "project_submissions",
+    "project_submission_versions",
+    "project_submission_files",
+    "project_reviews",
+    "project_review_criteria",
+  ]) {
+    const start = projection.indexOf(`.from("${table}")`);
+    assert.notEqual(start, -1);
+    const nextFrom = projection.indexOf('.from("', start + 1);
+    const chain = projection.slice(start, nextFrom === -1 ? start + 700 : nextFrom);
+    assert.doesNotMatch(chain, /\.eq\("user_id", session\.userId\)/u);
+  }
+  assert.match(projection, /\.from\("project_submissions"\)[\s\S]*?\.eq\("project_code", projectCode\)/u);
 });
 
 test("browser mutation payloads cannot choose user, bucket, path, role or authority", () => {
