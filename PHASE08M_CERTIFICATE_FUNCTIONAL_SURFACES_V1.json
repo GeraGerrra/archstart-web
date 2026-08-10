@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "ARCH.START",
+  "phase": "Phase 08M",
+  "pass": "Pass 2 Certificate Projection and Functional Product Surfaces",
+  "status": "SOURCE_CANDIDATE",
+  "acceptedBase": {
+    "branch": "phase-08m-certificate-mvp",
+    "gitHead": "c00bbf09eaf83476719011d12ac4176894f0f3e5",
+    "gitTree": "5a1ef0134511be38e505c708fe2b20c583d46607",
+    "hostedCertificateAuthority": "PASS",
+    "certificateRows": 0,
+    "certificateStorageBuckets": 0
+  },
+  "routes": {
+    "private": "/prototype/a/certificate",
+    "publicVerification": "/certificate/[certificateCode]"
+  },
+  "states": ["locked", "eligible", "issued", "revoked", "unavailable"],
+  "serverBoundaries": {
+    "eligibilityRpc": "public.get_my_course_certificate_eligibility()",
+    "issuanceRpc": "public.issue_my_course_certificate()",
+    "publicVerificationRpc": "public.verify_course_certificate(text)",
+    "parameterFreeIssueAction": true,
+    "ownRowSnapshotRead": true,
+    "fixedSafeErrors": true
+  },
+  "publicDisclosure": [
+    "display_name_snapshot",
+    "course_title_snapshot",
+    "course_version",
+    "issued_at",
+    "certificate_code",
+    "VALID_OR_REVOKED"
+  ],
+  "excluded": [
+    "new_migration",
+    "certificate_storage",
+    "server_pdf",
+    "print_stylesheet",
+    "save_as_pdf_control",
+    "qr_code",
+    "email",
+    "public_registry",
+    "admin_certificate_ui",
+    "request_approval_workflow",
+    "final_certificate_visual_design"
+  ],
+  "visualDesignGate": "PHASE08M_CERTIFICATE_VISUAL_DESIGN_GATE"
+}
