@@ -88,9 +88,10 @@ test("verification preserves exact catalogs, QA roles and empty project/storage 
   assert.match(verification, /project_storage_object_count <> 0/u);
 });
 
-test("R3 preserves UI, deferred sidebar fixture and Phase 08 boundaries", () => {
-  assert.equal(sha256("src/prototypes/selected-a/shell-adapter.tsx"), "a35eec7da567e2fd96b1ba28da0de4a02a620743927f309d994994c5cdb81954");
-  assert.equal(sha256("src/learning/project/ProjectWorkspace.tsx"), "29b23fe388009a0b0c7afa35eb61d0c15137648898afe93d73de7bed47f88efc");
+test("R3 bridge remains unchanged while the later bounded progress UI repair supersedes its deferred fixture", () => {
+  const shell = read("src/prototypes/selected-a/shell-adapter.tsx");
+  assert.match(shell, /ANONYMOUS_SHELL_PROGRESS_PROJECTION/u);
+  assert.doesNotMatch(shell, /lesson\.moduleCode === "M04"/u);
   assert.equal(sha256("src/learning/review/StaffProjectWorkspace.tsx"), "badce5bda8bd655f5f7cf883157e444c2e946b7c1159de011904084ceb44ca80");
   assert.doesNotMatch(`${migration}\n${verification}\n${projection}\n${dashboardStaff}\n${actions}`, /phase08|certificate|verification_registry/iu);
 });

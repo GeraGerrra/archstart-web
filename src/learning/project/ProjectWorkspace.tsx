@@ -7,6 +7,7 @@ import {
   PROJECT_FILE_LIMITS,
   projectSupportingTextWordCount,
 } from "@/src/project-workspace/policy";
+import { formatProjectFileSize } from "@/src/project-workspace/format";
 import {
   FINALIZATION_RETRY_MESSAGE,
   UNEXPECTED_WORKSPACE_ERROR_MESSAGE,
@@ -63,13 +64,7 @@ const DECISION_LABELS = {
   not_accepted: "Не принят",
 } as const;
 
-function formatBytes(value: number): string {
-  return new Intl.NumberFormat("ru-RU", {
-    style: "unit",
-    unit: "megabyte",
-    maximumFractionDigits: 1,
-  }).format(value / (1024 * 1024));
-}
+
 
 function fileValidationMessage(
   file: File,
@@ -573,7 +568,7 @@ function LearnerWorkspace({
               <div className="asa-project-workspace__fixed-file">
                 <div>
                   <strong>{projection.activeFile.originalFilename}</strong>
-                  <span>{formatBytes(projection.activeFile.sizeBytes)} · файл закреплён за версией</span>
+                  <span>{formatProjectFileSize(projection.activeFile.sizeBytes)} · файл закреплён за версией</span>
                 </div>
                 <Button
                   disabled={interactionLocked}
@@ -597,7 +592,7 @@ function LearnerWorkspace({
                       setMessage(file ? fileValidationMessage(file, projection) ?? "Файл готов к загрузке." : "");
                     }}
                   />
-                  <small>{selectedFile ? `${selectedFile.name} · ${formatBytes(selectedFile.size)}` : "PDF / PNG · максимум 40 MiB"}</small>
+                  <small>{selectedFile ? `${selectedFile.name} · ${formatProjectFileSize(selectedFile.size)}` : "PDF / PNG · максимум 40 MiB"}</small>
                 </label>
                 <Button variant="dark" disabled={interactionLocked || !selectedFile} onClick={() => void startUpload()}>
                   Загрузить и проверить
@@ -666,7 +661,9 @@ function LearnerWorkspace({
               <strong>{canSend ? "Проект готов к отправке" : "Проверьте готовность"}</strong>
               <p>{textReadiness.hasUnsavedText
                 ? "Сначала сохраните текст. Отправка использует только сохранённую сервером версию."
-                : "Финальное решение о готовности принимает база данных: нужны 5 уроков, принятый файл и корректный сохранённый текст M02."}</p>
+                : requiresSupportingText
+                  ? "Финальное решение принимает база данных: нужны 5 уроков, принятый файл и сохранённый текст M02 объёмом 120–180 слов."
+                  : "Финальное решение принимает база данных: нужны 5 уроков и принятый файл."}</p>
             </div>
             <Button
               variant="dark"

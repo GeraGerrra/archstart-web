@@ -86,6 +86,7 @@ export interface CourseProjectDisplay {
   titleRu: string;
   href?: string;
   status: VisualStatus;
+  statusLabel?: string;
 }
 
 export interface CourseModuleCardDisplay {
@@ -194,6 +195,7 @@ export interface ModuleProjectRowDisplay {
   titleEn: string;
   objective: string;
   status: VisualStatus;
+  statusLabel?: string;
   action: LearningLink;
 }
 

@@ -27,6 +27,7 @@ import type {
   VocabularyViewerViewModel,
 } from "@/src/media";
 import type { QuizShellViewModel } from "@/src/quiz";
+import type { CourseProgressProjection } from "@/src/progress/course-progress";
 
 export interface SelectedALessonMapping {
   workspace: LessonWorkspaceViewModel;
@@ -133,7 +134,11 @@ export function selectedAProjectExample(moduleCode: string): RevealExampleProps 
                 : undefined;
 }
 
-export function selectedALessonMapping(lesson: Lesson, item: ItemId): SelectedALessonMapping {
+export function selectedALessonMapping(
+  lesson: Lesson,
+  item: ItemId,
+  progressProjection?: CourseProgressProjection,
+): SelectedALessonMapping {
   const definition = ITEMS.find((entry) => entry.id === item) ?? { ru: "Слайды и транскрипт", en: "Slides & Transcript" };
   const list = itemsFor(lesson);
   const index = list.findIndex((entry) => entry.id === item);
@@ -163,7 +168,10 @@ export function selectedALessonMapping(lesson: Lesson, item: ItemId): SelectedAL
             shortCode: entry.code.slice(-3).replace("_", ""),
             titleRu: entry.titleRu,
             href: pathItem(moduleCode, entry.code, "overview"),
-            status: statusForLesson(courseLessons.find((record) => record.code === entry.code) ?? courseLessons[0]!),
+            status: statusForLesson(
+              courseLessons.find((record) => record.code === entry.code) ?? courseLessons[0]!,
+              progressProjection,
+            ),
             open,
             items: open ? itemsFor(entry).map((itemDefinition, itemPosition) => ({
               id: itemDefinition.id,

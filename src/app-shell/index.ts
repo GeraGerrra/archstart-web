@@ -14,6 +14,7 @@ export type {
   ModuleProjectNavigationItem,
   ShellBrand,
   ShellFooterContent,
+  ShellHeaderProgress,
   ShellFooterLink,
   ShellNavigationItem,
   ShellWordmark,

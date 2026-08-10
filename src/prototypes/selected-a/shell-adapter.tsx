@@ -8,7 +8,16 @@ import {
   type ShellFooterContent,
   type ShellNavigationItem,
 } from "@/src/app-shell";
-import { VISUAL_STATUS_LABELS, type VisualStatus } from "@/src/design-system";
+import { VISUAL_STATUS_LABELS } from "@/src/design-system";
+import type { ProjectCode } from "@/src/project-workspace/types";
+import {
+  COURSE_PROJECT_STATUS_LABELS,
+  courseLessonVisualStatus,
+  courseModuleVisualStatus,
+  courseProjectStatusMap,
+  courseProjectVisualStatus,
+  type CourseProgressProjection,
+} from "@/src/progress/course-progress";
 import {
   type LessonSummary,
   courseModules,
@@ -22,20 +31,28 @@ import {
   pathProject,
 } from "./data";
 
-
 export type SelectedAShellActiveSection = "home" | "course" | "dashboard" | "module" | "lesson" | "project" | "account";
 
-export interface SelectedAShellProgressProjection {
-  completedLessonCodes: readonly string[];
-  completedModuleCodes: readonly string[];
-  activeLessonCodes: readonly string[];
-  currentModuleCode: string;
-}
+export type SelectedAShellProgressProjection = Pick<
+  CourseProgressProjection,
+  | "authenticated"
+  | "completedLessonCodes"
+  | "completedModuleCodes"
+  | "activeLessonCodes"
+  | "projectStatuses"
+  | "currentModuleCode"
+>;
 
 export const ANONYMOUS_SHELL_PROGRESS_PROJECTION: SelectedAShellProgressProjection = {
+  authenticated: false,
   completedLessonCodes: [],
   completedModuleCodes: [],
   activeLessonCodes: [],
+  projectStatuses: courseModules.map((module) => {
+    const project = moduleProject(module.code);
+    if (!project) throw new Error(`Selected-A module ${module.code} has no project display record.`);
+    return { projectCode: project.code as ProjectCode, status: "none" as const };
+  }),
   currentModuleCode: "M01",
 };
 
@@ -48,11 +65,11 @@ export interface SelectedAShellProps {
   progressProjection?: SelectedAShellProgressProjection;
 }
 
-export function selectedAStatusForLesson(lesson: LessonSummary): VisualStatus {
-  if (lesson.code === "M01_L01") return "complete";
-  if (lesson.code === "M01_L02") return "in-progress";
-  if (["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08"].includes(lesson.moduleCode)) return lesson.moduleCode === "M04" ? "complete" : "available";
-  return "locked";
+export function selectedAStatusForLesson(
+  lesson: LessonSummary,
+  projection: SelectedAShellProgressProjection = ANONYMOUS_SHELL_PROGRESS_PROJECTION,
+) {
+  return courseLessonVisualStatus(lesson.code, projection);
 }
 
 const selectedANavigationItems: readonly ShellNavigationItem[] = [
@@ -101,8 +118,8 @@ function selectedAModulesForProjection(
   projection: SelectedAShellProgressProjection,
 ): readonly ModuleNavigationItem[] {
   const completedLessonCodes = new Set(projection.completedLessonCodes);
-  const completedModuleCodes = new Set(projection.completedModuleCodes);
   const activeLessonCodes = new Set(projection.activeLessonCodes);
+  const projectStatusByCode = courseProjectStatusMap(projection);
 
   return courseModules.map((module) => {
     const project = moduleProject(module.code);
@@ -110,12 +127,8 @@ function selectedAModulesForProjection(
 
     const lessons = moduleLessons(module.code);
     const completedLessonCount = lessons.filter((lesson) => completedLessonCodes.has(lesson.code)).length;
-    const moduleHasActivity = lessons.some((lesson) => activeLessonCodes.has(lesson.code));
-    const moduleStatus: VisualStatus = completedModuleCodes.has(module.code)
-      ? "complete"
-      : completedLessonCount > 0 || moduleHasActivity
-        ? "in-progress"
-        : "available";
+    const projectCode = project.code as ProjectCode;
+    const projectStatus = projectStatusByCode.get(projectCode) ?? "none";
 
     return {
       code: module.code,
@@ -123,12 +136,7 @@ function selectedAModulesForProjection(
       titleEn: module.titleEn,
       href: pathModule(module.code),
       lessons: lessons.map((lesson) => {
-        const status: VisualStatus = completedLessonCodes.has(lesson.code)
-          ? "complete"
-          : activeLessonCodes.has(lesson.code)
-            ? "in-progress"
-            : "available";
-
+        const status = courseLessonVisualStatus(lesson.code, projection);
         return {
           code: lesson.code,
           displayCode: lesson.code.replace("_", " · "),
@@ -143,11 +151,16 @@ function selectedAModulesForProjection(
         code: project.code,
         titleRu: project.titleRu,
         href: pathProject(module.code),
-        status: completedModuleCodes.has(module.code) ? "complete" : "available",
+        status: courseProjectVisualStatus(projectStatus),
+        statusLabel: COURSE_PROJECT_STATUS_LABELS[projectStatus],
       },
       completedLessonCount,
       lessonTotal: 5,
-      status: moduleStatus,
+      status: courseModuleVisualStatus(
+        module.code,
+        projection,
+        projectCode,
+      ),
     };
   });
 }
@@ -160,7 +173,6 @@ const selectedAFooter: ShellFooterContent = {
     { href: "/prototype-review", label: "История направлений A, B, C" },
   ],
 };
-
 
 export function SelectedAShell({
   children,
@@ -176,6 +188,11 @@ export function SelectedAShell({
       navigationItems={selectedANavigationItems}
       activeNavigationItemId={active}
       headerLabels={selectedAHeaderLabels}
+      headerProgress={progressProjection?.authenticated ? {
+        value: `${progressProjection.completedLessonCodes.length} / 40`,
+        label: "уроков",
+        ariaLabel: `${progressProjection.completedLessonCodes.length} из 40 уроков завершено`,
+      } : undefined}
       modules={selectedAModulesForProjection(
         progressProjection ?? ANONYMOUS_SHELL_PROGRESS_PROJECTION,
       )}

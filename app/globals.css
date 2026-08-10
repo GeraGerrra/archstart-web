@@ -1289,7 +1289,10 @@ img { max-width: 100%; }
 .asa-wordmark { display: inline-flex; width: max-content; max-width: 100%; align-items: center; }
 .asa-wordmark img { width: auto; height: 23px; max-width: 100%; aspect-ratio: 1000 / 138; object-fit: contain; }
 .asa-header__nav { display: flex; min-width: 0; align-items: center; justify-self: center; justify-content: center; gap: clamp(18px, 3.2vw, 52px); white-space: nowrap; }
-.asa-header__utilities { display: flex; min-width: 0; justify-self: end; align-items: center; justify-content: flex-end; }
+.asa-header__utilities { display: flex; min-width: 0; justify-self: end; align-items: center; justify-content: flex-end; gap: 12px; }
+.asa-header__progress { display: inline-flex; align-items: baseline; gap: 6px; white-space: nowrap; }
+.asa-header__progress strong { font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.asa-header__progress span { color: var(--asa-muted); font-size: 10px; letter-spacing: .04em; text-transform: uppercase; }
 .asa-header__nav a { position: relative; font-size: 13px; font-weight: 600; }
 .asa-header__nav a::after { position: absolute; right: 0; bottom: -20px; left: 0; height: 2px; background: var(--asa-ink); content: ""; transform: scaleX(0); transform-origin: center; transition: transform 160ms ease; }
 .asa-header__nav a:hover::after, .asa-header__nav a[aria-current="page"]::after { transform: scaleX(1); }
@@ -2418,6 +2421,7 @@ img { max-width: 100%; }
 @media (max-width: 640px) {
   .asa-header__inner { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 10px; }
   .asa-header__nav { display: none; }
+  .asa-header__progress span { display: none; }
   .asa-header__mobile-nav-trigger { display: inline-flex; }
   .asa-header__utilities { grid-column: 3; }
   .asa-primary-drawer__sheet { width: min(90vw, 360px); }

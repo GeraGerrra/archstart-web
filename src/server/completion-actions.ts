@@ -102,13 +102,20 @@ function lessonQuizRoute(lessonCode: string): string {
   return `${moduleRoute(moduleCode)}/${lessonSlug}/quiz`;
 }
 
+function revalidateProgressSurfaces(moduleCode: string): void {
+  revalidatePath("/prototype/a/home");
+  revalidatePath("/prototype/a/course");
+  revalidatePath("/prototype/a/dashboard");
+  revalidatePath(moduleRoute(moduleCode));
+}
+
 function revalidateLessonCompletionPaths(lessonCode: string): void {
   revalidatePath(lessonQuizRoute(lessonCode));
-  revalidatePath(moduleRoute(lessonCode.slice(0, 3)));
+  revalidateProgressSurfaces(lessonCode.slice(0, 3));
 }
 
 function revalidateModuleCompletionPath(moduleCode: string): void {
-  revalidatePath(moduleRoute(moduleCode));
+  revalidateProgressSurfaces(moduleCode);
 }
 
 export async function completeLessonCompletionAction(
@@ -240,7 +247,7 @@ export async function completeModuleCompletionAction(
     return result("error", "locked", "Не удалось проверить состояние модуля.");
   }
   if (existing.count > 0) {
-    return result("success", "complete", "Модуль уже отмечен завершённым.");
+    return result("success", "complete", "Уроки модуля уже отмечены завершёнными.");
   }
 
   const lessons = await completedLessonCount(auth.client, auth.userId, normalizedModuleCode);
@@ -267,7 +274,7 @@ export async function completeModuleCompletionAction(
   }
 
   revalidateModuleCompletionPath(normalizedModuleCode);
-  return result("success", "complete", `Модуль ${normalizedModuleCode.slice(1)} отмечен завершённым.`);
+  return result("success", "complete", `Уроки ${normalizedModuleCode} отмечены завершёнными.`);
 }
 
 export async function undoModuleCompletionAction(
@@ -300,5 +307,5 @@ export async function undoModuleCompletionAction(
   }
 
   revalidateModuleCompletionPath(normalizedModuleCode);
-  return result("success", nextState, "Отметка модуля снята.");
+  return result("success", nextState, "Отметка уроков модуля снята.");
 }

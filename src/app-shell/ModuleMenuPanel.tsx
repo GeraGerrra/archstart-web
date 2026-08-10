@@ -21,7 +21,7 @@ export function ModuleMenuPanel({
     <>
       <span>{module.project.code}</span>
       <strong>{module.project.titleRu}</strong>
-      <StatusMark status={module.project.status} compact />
+      <StatusMark status={module.project.status} label={module.project.statusLabel} />
     </>
   );
 

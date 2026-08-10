@@ -70,8 +70,12 @@ async function activeStaffRole(
 }
 
 function refreshProjectRoutes(projectCode?: string): void {
+  revalidatePath("/prototype/a/home");
+  revalidatePath("/prototype/a/course");
   if (projectCode) {
-    revalidatePath(`/prototype/a/course/${projectCode.slice(0, 3).toLowerCase()}/project`);
+    const modulePath = `/prototype/a/course/${projectCode.slice(0, 3).toLowerCase()}`;
+    revalidatePath(modulePath);
+    revalidatePath(`${modulePath}/project`);
   }
   revalidatePath("/prototype/a/dashboard");
   revalidatePath("/prototype/a/review");

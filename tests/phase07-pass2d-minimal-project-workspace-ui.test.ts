@@ -1,5 +1,4 @@
 import assert from "node:assert/strict";
-import { createHash } from "node:crypto";
 import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import test from "node:test";
@@ -144,9 +143,11 @@ test("pass adds no Pass 2D migration, email, certificate or Phase 08 source", ()
   assert.doesNotMatch(`${actions}\n${projection}\n${learner}\n${staff}`, /sendEmail|certificate|verification_registry|phase08/iu);
 });
 
-test("known anonymous M01/M04 sidebar fixture remains byte-identical", () => {
-  assert.equal(createHash("sha256").update(shell).digest("hex"), "a35eec7da567e2fd96b1ba28da0de4a02a620743927f309d994994c5cdb81954");
-  assert.match(shell, /lesson\.moduleCode === "M04" \? "complete" : "available"/u);
+test("later Phase 07.2E repair replaces the deferred M01/M04 fixture with anonymous zero and account truth", () => {
+  assert.match(shell, /ANONYMOUS_SHELL_PROGRESS_PROJECTION/u);
+  assert.match(shell, /projectStatuses/u);
+  assert.doesNotMatch(shell, /lesson\.moduleCode === "M04"/u);
+  assert.doesNotMatch(shell, /M01_L01[\s\S]*?"complete"/u);
 });
 
 test("protected route and dashboard expose only role-authorized staff entry", () => {

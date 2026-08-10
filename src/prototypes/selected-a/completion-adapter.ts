@@ -2,7 +2,6 @@ import type { CompletionDemoState, CutoutCompletionViewModel } from "@/src/compl
 import type { LearningImage } from "@/src/learning";
 import {
   lessonCompletionMessage,
-  moduleCompletionMessage,
   pathCourse,
   pathModule,
 } from "./data";
@@ -69,15 +68,15 @@ export function selectedACompletionViewModel({
     segmentCode: normalizedModuleCode,
     cutout: selectedACutout(normalizedModuleCode),
     initialState: state,
-    lockedTitle: "Завершение модуля",
-    lockedMessage: "Завершите обязательные пункты модуля. После этого эскиз станет активным.",
-    lockedLabel: "Завершение модуля пока недоступно",
-    beforeTitle: "Модуль готов к завершению",
-    beforeMessage: `Нажмите на эскиз, чтобы завершить ${normalizedModuleCode}.`,
-    completedTitle: `Модуль ${normalizedModuleCode.slice(1)} завершён`,
-    completedMessage: moduleCompletionMessage,
-    actionLabel: `Завершить ${normalizedModuleCode}`,
-    undoLabel: "Снять отметку",
+    lockedTitle: "Завершение уроков модуля",
+    lockedMessage: "Завершите все пять уроков. Статус проекта учитывается отдельно.",
+    lockedLabel: "Отметка уроков модуля пока недоступна",
+    beforeTitle: "Все уроки модуля готовы к отметке",
+    beforeMessage: `Нажмите на эскиз, чтобы подтвердить завершение уроков ${normalizedModuleCode}.`,
+    completedTitle: `Все уроки ${normalizedModuleCode} завершены`,
+    completedMessage: "Отметка уроков сохранена. Модуль станет полностью завершённым после принятия проекта.",
+    actionLabel: `Подтвердить уроки ${normalizedModuleCode}`,
+    undoLabel: "Снять отметку уроков",
     nextAction: normalizedModuleCode === "M08" ? {
       href: pathCourse,
       label: "Вернуться ко всему курсу",

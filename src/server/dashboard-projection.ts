@@ -3,9 +3,10 @@ import "server-only";
 import type { DashboardViewModel } from "@/src/learning/types";
 import { createServerSupabaseClient } from "@/src/lib/supabase/server";
 import { isProjectSubmissionStatus } from "@/src/project-workspace/policy";
-import type { ProjectSubmissionStatus } from "@/src/project-workspace/types";
+import type { ProjectCode, ProjectSubmissionStatus } from "@/src/project-workspace/types";
 import type { SelectedAShellProgressProjection } from "@/src/prototypes/selected-a/shell-adapter";
 import { hasActiveProjectStaffRole } from "./dashboard-project-staff-projection";
+import { buildCourseProgressProjection } from "@/src/progress/course-progress";
 import {
   courseLessons,
   courseModules,
@@ -57,7 +58,7 @@ interface ModuleCompletionRow {
 }
 
 interface ProjectSubmissionRow {
-  project_code: string;
+  project_code: ProjectCode;
   current_status: ProjectSubmissionStatus;
 }
 
@@ -256,7 +257,7 @@ export async function loadDashboardProjection(
   const orderedLessonCodes = orderedLessons.map((lesson) => lesson.code);
   const lessonByCode = new Map(orderedLessons.map((lesson) => [lesson.code, lesson]));
   const completedLessonCodes = new Set(lessonCompletions.map((row) => row.lesson_code));
-  const completedModuleCodes = new Set(moduleCompletions.map((row) => row.module_code));
+  const moduleCompletionRowCodes = new Set(moduleCompletions.map((row) => row.module_code));
   const latestActivity = activities[0] ?? null;
   const latestLessonCompletion = [...lessonCompletions].sort(
     (left, right) => right.completed_at.localeCompare(left.completed_at),
@@ -311,18 +312,29 @@ export async function loadDashboardProjection(
     activeLessonCodes.add(latestAttempt.lesson_code);
   }
 
+  const sharedProgress = buildCourseProgressProjection({
+    authenticated: true,
+    completedLessonCodes: [...completedLessonCodes],
+    activeLessonCodes: [...activeLessonCodes],
+    moduleCompletionRowCodes: [...moduleCompletionRowCodes],
+    projectSubmissions,
+    latestActivityLessonCode: latestActivity?.lesson_code ?? null,
+  });
+  const completedModuleCodes = new Set(sharedProgress.completedModuleCodes);
   const shellProgress: SelectedAShellProgressProjection = {
-    completedLessonCodes: [...completedLessonCodes].sort(),
-    completedModuleCodes: [...completedModuleCodes].sort(),
-    activeLessonCodes: [...activeLessonCodes].sort(),
-    currentModuleCode: continueLesson?.moduleCode ?? "M08",
+    authenticated: true,
+    completedLessonCodes: sharedProgress.completedLessonCodes,
+    completedModuleCodes: sharedProgress.completedModuleCodes,
+    activeLessonCodes: sharedProgress.activeLessonCodes,
+    projectStatuses: sharedProgress.projectStatuses,
+    currentModuleCode: continueLesson?.moduleCode ?? sharedProgress.currentModuleCode,
   };
 
   const learnerName = firstName?.trim() || "участник";
   const hasHistory = activities.length > 0
     || latestAttempt !== null
     || completedLessonCodes.size > 0
-    || completedModuleCodes.size > 0;
+    || moduleCompletionRowCodes.size > 0;
 
   const historyLesson = activityLesson ?? attemptLesson ?? completionLesson ?? continueLesson;
   const historyItemLabel = latestActivity
@@ -425,7 +437,7 @@ export async function loadDashboardProjection(
     projects: courseModules.map((module) => {
       const project = moduleProject(module.code);
       if (!project) throw new Error(`Project display record is missing for ${module.code}.`);
-      const status = projectStatusByCode.get(project.code) ?? "none";
+      const status = projectStatusByCode.get(project.code as ProjectCode) ?? "none";
       return {
         projectCode: project.code,
         titleRu: project.titleRu,

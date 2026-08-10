@@ -146,8 +146,9 @@ test("unexpected client promise failures use fixed safe Russian copy", () => {
   assert.doesNotMatch(`${learner}\n${staff}`, /String\(error\)|error\.message|JSON\.stringify\(error\)/u);
 });
 
-test("repair adds no Pass 2D migration, Phase 08 or anonymous fixture change", () => {
+test("repair adds no Pass 2D migration or Phase 08 and accepts the later bounded progress-fixture replacement", () => {
   assert.equal(readdirSync(join(root, "supabase/migrations")).filter((name) => /pass2d/iu.test(name)).length, 0);
-  assert.equal(createHash("sha256").update(shell).digest("hex"), "a35eec7da567e2fd96b1ba28da0de4a02a620743927f309d994994c5cdb81954");
+  assert.match(shell, /ANONYMOUS_SHELL_PROGRESS_PROJECTION/u);
+  assert.doesNotMatch(shell, /lesson\.moduleCode === "M04"/u);
   assert.doesNotMatch(`${actions}\n${projection}\n${learner}\n${staff}`, /phase08|certificate|verification_registry/iu);
 });

@@ -4,10 +4,14 @@ import {
   undoLessonCompletionAction,
 } from "@/src/server/completion-actions";
 import { loadLessonCompletionSnapshot } from "@/src/server/completion-state";
+import { loadCourseProgressProjection } from "@/src/server/course-progress-projection";
 import { submitQuizAttemptAction } from "@/src/server/quiz-attempt-action";
 import { SelectedALesson } from "@/src/prototypes/selected-a/SelectedAPrototype";
 import { getLesson, importedLessons, itemIs, itemsFor, slugLesson } from "@/src/prototypes/selected-a/data";
 import { LessonActivityRecorder } from "./LessonActivityRecorder";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export function generateStaticParams() {
   return importedLessons.flatMap((lesson) =>
@@ -29,9 +33,12 @@ export default async function SelectedALessonItemPage({
   const lesson = getLesson(code);
   if (!lesson || !itemIs(item) || !itemsFor(lesson).some((entry) => entry.id === item)) notFound();
   const state = Array.isArray(query.state) ? query.state[0] : query.state;
-  const completionSnapshot = item === "quiz"
-    ? await loadLessonCompletionSnapshot(lesson.code)
-    : { state: "locked" as const };
+  const [completionSnapshot, progressProjection] = await Promise.all([
+    item === "quiz"
+      ? loadLessonCompletionSnapshot(lesson.code)
+      : Promise.resolve({ state: "locked" as const }),
+    loadCourseProgressProjection(),
+  ]);
   const completionState = process.env.NODE_ENV === "development"
     ? state === "lesson-complete"
       ? "complete"
@@ -49,6 +56,7 @@ export default async function SelectedALessonItemPage({
         completionState={completionState}
         forceContents={state === "contents-open"}
         forceModuleMenu={state === "module-menu-open" ? normalizedModule : null}
+        progressProjection={progressProjection}
         quizSubmitAction={submitQuizAttemptAction}
         completeCompletionAction={completeLessonCompletionAction.bind(null, lesson.code)}
         undoCompletionAction={undoLessonCompletionAction.bind(null, lesson.code)}
