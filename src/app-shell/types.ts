@@ -40,6 +40,7 @@ export interface ModuleProjectNavigationItem {
   titleRu: string;
   href?: string;
   status: VisualStatus;
+  statusLabel?: string;
 }
 
 /** Serializable shell-owned view of one module. */
@@ -66,6 +67,13 @@ export interface ShellFooterContent {
   brandLabel: string;
   copy: string;
   links: readonly ShellFooterLink[];
+}
+
+/** Optional account-scoped progress displayed in the shared header. */
+export interface ShellHeaderProgress {
+  value: string;
+  label: string;
+  ariaLabel: string;
 }
 
 /** Approved labels for the reusable header and primary navigation. */

@@ -25,7 +25,6 @@ import {
   progress,
   totals,
 } from "./data";
-import { VISUAL_STATUS_LABELS } from "@/src/design-system";
 import {
   SelectedAShell,
   selectedAStatusForLesson as statusForLesson,
@@ -50,7 +49,6 @@ import {
   type CourseOverviewViewModel,
   type DashboardViewModel,
   type HomePageViewModel,
-  type LearningImage,
   type ModuleLessonBranchDisplay,
   type ModuleOverviewViewModel,
   type ProjectOverviewViewModel,
@@ -66,14 +64,25 @@ import { CutoutCompletionButton } from "@/src/completion";
 import type { CompletionMutationAction } from "@/src/completion";
 import { QuizShell } from "@/src/quiz";
 import type { QuizSubmissionAction } from "@/src/quiz/types";
+import type { ProjectCode } from "@/src/project-workspace/types";
 import {
   selectedACompletionViewModel,
   selectedACutout,
 } from "./completion-adapter";
 import { furtherStudyForModule } from "./module-further-study";
+import {
+  ANONYMOUS_COURSE_PROGRESS_PROJECTION,
+  COURSE_PROJECT_STATUS_LABELS,
+  courseLessonVisualStatus,
+  courseModuleVisualStatus,
+  courseProjectStatusMap,
+  courseProjectVisualStatus,
+  type CourseProgressProjection,
+} from "@/src/progress/course-progress";
 
 export type { CompletionDemoState } from "@/src/completion";
 import type { CompletionDemoState } from "@/src/completion";
+import type { ReactNode } from "react";
 
 const HOME_MODULE_SHORT_TITLES: Readonly<Record<string, string>> = {
   M01: "Пространство, масштаб, функция",
@@ -87,27 +96,50 @@ const HOME_MODULE_SHORT_TITLES: Readonly<Record<string, string>> = {
 };
 
 const EMPTY_PROGRESS = { status: "locked" as Status, done: 0, project: false, label: "Закрыт" };
-const PUBLIC_ZERO_PROGRESS = { status: "available" as Status, done: 0, project: false, label: "Не начат" };
 
-function selectedACourseModule(module: ModuleSummary): CourseModuleCardDisplay {
-  const state = PUBLIC_ZERO_PROGRESS;
+const SELECTED_A_PUBLIC_ZERO_PROGRESS = ANONYMOUS_COURSE_PROGRESS_PROJECTION;
+
+function selectedACourseModule(
+  module: ModuleSummary,
+  projection: CourseProgressProjection,
+): CourseModuleCardDisplay {
   const lessons = moduleLessons(module.code);
   const project = moduleProject(module.code);
+  if (!project) throw new Error(`Selected-A module ${module.code} has no project display record.`);
+  const projectCode = project.code as ProjectCode;
+  const projectStatus = courseProjectStatusMap(projection).get(projectCode) ?? "none";
+  const completedLessons = lessons.filter(
+    (lesson) => projection.completedLessonCodes.includes(lesson.code),
+  ).length;
+
   return {
-    code: module.code, titleRu: module.titleRu, titleEn: module.titleEn, goal: module.goal,
-    href: pathModule(module.code), status: state.status, completedLessons: 0, lessonTotal: 5,
+    code: module.code,
+    titleRu: module.titleRu,
+    titleEn: module.titleEn,
+    goal: module.goal,
+    href: pathModule(module.code),
+    status: courseModuleVisualStatus(module.code, projection, projectCode),
+    completedLessons,
+    lessonTotal: 5,
     cutout: selectedACutout(module.code),
-    lessons: lessons.map((lesson) => ({
-      code: lesson.code, shortCode: lesson.code.slice(-3).replace("_", ""), titleRu: lesson.titleRu, status: "available",
-      action: { label: "Открыть", href: pathItem(module.code, lesson.code, "overview") },
-      quietStatusLabel: undefined,
-    })),
-    project: project ? {
+    lessons: lessons.map((lesson) => {
+      const status = courseLessonVisualStatus(lesson.code, projection);
+      return {
+        code: lesson.code,
+        shortCode: lesson.code.slice(-3).replace("_", ""),
+        titleRu: lesson.titleRu,
+        status,
+        action: { label: "Открыть", href: pathItem(module.code, lesson.code, "overview") },
+        quietStatusLabel: undefined,
+      };
+    }),
+    project: {
       code: project.code,
       titleRu: project.titleRu,
       href: pathProject(module.code),
-      status: "available",
-    } : undefined,
+      status: courseProjectVisualStatus(projectStatus),
+      statusLabel: COURSE_PROJECT_STATUS_LABELS[projectStatus],
+    },
   };
 }
 
@@ -143,17 +175,38 @@ const selectedAHomeModel: HomePageViewModel = {
   },
 };
 
-const selectedACourseModel: CourseOverviewViewModel = {
-  title: "Курс ARCH.START",
-  summary: "Полная карта обучения: восемь модулей, сорок уроков и один проект после каждого модуля.",
-  demoDisclosure: "Без аккаунта показано нулевое стартовое состояние. Войдите в «Мой курс», чтобы видеть и сохранять личный прогресс.",
-  continueAction: { label: "Начать обучение", href: pathItem("M01", "M01_L01", "overview") },
-  totals: {
-    completedLessons: 0, lessonTotal: 40, completedModules: 0, moduleTotal: 8,
-    completedProjects: 0, projectTotal: 8, quizQuestions: courseIndex.course.quizQuestionCount,
-  },
-  moduleListTitle: "Все модули курса", modules: courseModules.map(selectedACourseModule),
-};
+function selectedACourseModelForProjection(
+  projection: CourseProgressProjection,
+): CourseOverviewViewModel {
+  const acceptedProjects = projection.projectStatuses.filter(
+    (entry) => entry.status === "accepted",
+  ).length;
+  const continueLessonCode = projection.continueLessonCode ?? "M01_L01";
+  const continueLesson = getLesson(continueLessonCode) ?? m01Lessons[0]!;
+
+  return {
+    title: "Курс ARCH.START",
+    summary: "Полная карта обучения: восемь модулей, сорок уроков и один проект после каждого модуля.",
+    demoDisclosure: projection.authenticated
+      ? "Показан сохранённый прогресс этого аккаунта. Уроки и проекты учитываются отдельно."
+      : "Без аккаунта показано нулевое стартовое состояние. Войдите в «Мой курс», чтобы видеть и сохранять личный прогресс.",
+    continueAction: {
+      label: projection.authenticated ? "Продолжить обучение" : "Начать обучение",
+      href: pathItem(continueLesson.moduleCode, continueLesson.code, "overview"),
+    },
+    totals: {
+      completedLessons: projection.completedLessonCodes.length,
+      lessonTotal: 40,
+      completedModules: projection.completedModuleCodes.length,
+      moduleTotal: 8,
+      completedProjects: acceptedProjects,
+      projectTotal: 8,
+      quizQuestions: courseIndex.course.quizQuestionCount,
+    },
+    moduleListTitle: "Все модули курса",
+    modules: courseModules.map((module) => selectedACourseModule(module, projection)),
+  };
+}
 
 const selectedADashboardModel: DashboardViewModel = {
   title: "Продолжить с того места, где остановились.", disclosure: "История, авторизация и сохранение прогресса пока не подключены.",
@@ -177,12 +230,47 @@ const selectedADashboardModel: DashboardViewModel = {
   },
 };
 
-export function SelectedAHome({ forceModuleMenu, forceMobileModules }: { forceModuleMenu?: string | null; forceMobileModules?: boolean }) {
-  return <SelectedAShell active="home" forceModuleMenu={forceModuleMenu} forceMobileModules={forceMobileModules}><HomePage model={selectedAHomeModel} /></SelectedAShell>;
+export function SelectedAHome({
+  forceModuleMenu,
+  forceMobileModules,
+  progressProjection = SELECTED_A_PUBLIC_ZERO_PROGRESS,
+}: {
+  forceModuleMenu?: string | null;
+  forceMobileModules?: boolean;
+  progressProjection?: CourseProgressProjection;
+}) {
+  return (
+    <SelectedAShell
+      active="home"
+      forceModuleMenu={forceModuleMenu}
+      forceMobileModules={forceMobileModules}
+      progressProjection={progressProjection}
+    >
+      <HomePage model={selectedAHomeModel} />
+    </SelectedAShell>
+  );
 }
 
-export function SelectedACourse({ forceModuleMenu, forceMobileModules }: { forceModuleMenu?: string | null; forceMobileModules?: boolean }) {
-  return <SelectedAShell active="course" currentModule="M01" forceModuleMenu={forceModuleMenu} forceMobileModules={forceMobileModules}><CourseOverviewPage model={selectedACourseModel} /></SelectedAShell>;
+export function SelectedACourse({
+  forceModuleMenu,
+  forceMobileModules,
+  progressProjection = SELECTED_A_PUBLIC_ZERO_PROGRESS,
+}: {
+  forceModuleMenu?: string | null;
+  forceMobileModules?: boolean;
+  progressProjection?: CourseProgressProjection;
+}) {
+  return (
+    <SelectedAShell
+      active="course"
+      currentModule={progressProjection.currentModuleCode}
+      forceModuleMenu={forceModuleMenu}
+      forceMobileModules={forceMobileModules}
+      progressProjection={progressProjection}
+    >
+      <CourseOverviewPage model={selectedACourseModelForProjection(progressProjection)} />
+    </SelectedAShell>
+  );
 }
 
 export function SelectedADashboard({
@@ -203,12 +291,15 @@ export function SelectedADashboard({
   );
 }
 
-function selectedAModuleLesson(lesson: (typeof courseLessons)[number]): ModuleLessonBranchDisplay {
+function selectedAModuleLesson(
+  lesson: (typeof courseLessons)[number],
+  progressProjection: CourseProgressProjection,
+): ModuleLessonBranchDisplay {
   const actual = getLesson(lesson.code);
   const visibleItems = actual ? itemsFor(actual) : ITEMS.filter((entry) => entry.id !== "resources");
   return {
     code: lesson.code, order: lesson.orderInModule, titleRu: lesson.titleRu, titleEn: lesson.titleEn,
-    objective: lesson.objective, status: statusForLesson(lesson),
+    objective: lesson.objective, status: statusForLesson(lesson, progressProjection),
     items: visibleItems.map((item) => ({
       id: item.id, titleRu: item.ru, titleEn: item.en,
       action: actual ? { label: "Открыть", href: pathItem(lesson.moduleCode, lesson.code, item.id) } : undefined,
@@ -222,7 +313,7 @@ export function SelectedAModule({
   expandedLesson,
   forceModuleMenu,
   completionState = "locked",
-  completedLessonCodes,
+  progressProjection = SELECTED_A_PUBLIC_ZERO_PROGRESS,
   completeCompletionAction,
   undoCompletionAction,
 }: {
@@ -230,52 +321,76 @@ export function SelectedAModule({
   expandedLesson?: string | null;
   forceModuleMenu?: string | null;
   completionState?: CompletionDemoState;
-  completedLessonCodes?: readonly string[];
+  progressProjection?: CourseProgressProjection;
   completeCompletionAction?: CompletionMutationAction;
   undoCompletionAction?: CompletionMutationAction;
 }) {
   const courseModule = getModule(moduleCode) ?? m01Module;
   const lessons = moduleLessons(courseModule.code);
   const project = moduleProject(courseModule.code);
-  const state = progress[courseModule.code] ?? progress.M01 ?? EMPTY_PROGRESS;
-  const completed = completionState === "complete";
-  const persistentProgress = completedLessonCodes !== undefined;
-  const completedLessonSet = new Set(
-    (completedLessonCodes ?? []).map((code) => code.toUpperCase()),
-  );
+  if (!project) throw new Error(`Selected-A module ${courseModule.code} has no project display record.`);
+  const projectCode = project.code as ProjectCode;
+  const projectStatus = courseProjectStatusMap(progressProjection).get(projectCode) ?? "none";
+  const completedLessons = lessons.filter(
+    (lesson) => progressProjection.completedLessonCodes.includes(lesson.code),
+  ).length;
   const model: ModuleOverviewViewModel = {
-    code: courseModule.code, titleRu: courseModule.titleRu, titleEn: courseModule.titleEn, goal: courseModule.goal,
-    cutout: selectedACutout(courseModule.code, true), completedLessons: persistentProgress ? completedLessonSet.size : completed ? 5 : state.done, lessonTotal: 5,
+    code: courseModule.code,
+    titleRu: courseModule.titleRu,
+    titleEn: courseModule.titleEn,
+    goal: courseModule.goal,
+    cutout: selectedACutout(courseModule.code, true),
+    completedLessons,
+    lessonTotal: 5,
     outcomes: courseModule.outcomes.map(({ order, label, text }) => ({ order, label, text })),
-    lessons: lessons.map((lesson) => {
-      const mapped = selectedAModuleLesson(lesson);
-      return persistentProgress ? {
-        ...mapped,
-        status: completedLessonSet.has(lesson.code) ? "complete" : "available",
-      } : mapped;
-    }),
-    project: project ? {
-      code: project.code, titleRu: project.titleRu, titleEn: project.titleEn, objective: project.objective,
-      status: completed ? "complete" : state.project ? "complete" : state.status === "locked" ? "locked" : "available",
+    lessons: lessons.map((lesson) => selectedAModuleLesson(lesson, progressProjection)),
+    project: {
+      code: project.code,
+      titleRu: project.titleRu,
+      titleEn: project.titleEn,
+      objective: project.objective,
+      status: courseProjectVisualStatus(projectStatus),
+      statusLabel: COURSE_PROJECT_STATUS_LABELS[projectStatus],
       action: { label: "Открыть проект", href: pathProject(courseModule.code) },
-    } : undefined,
+    },
     furtherStudy: furtherStudyForModule(courseModule.code),
   };
   return (
-    <SelectedAShell active="module" currentModule={courseModule.code} forceModuleMenu={forceModuleMenu}>
-      <ModuleOverviewPage model={model} initialExpandedLessonCode={expandedLesson ?? (["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08"].includes(courseModule.code) ? `${courseModule.code}_L01` : null)} completionContent={["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08"].includes(courseModule.code) ? (
-        <CutoutCompletionButton
-          key={`${courseModule.code}:${completionState}`}
-          model={selectedACompletionViewModel({ kind: "module", moduleCode: courseModule.code, state: completionState })}
-          completeAction={completeCompletionAction}
-          undoAction={undoCompletionAction}
-        />
-      ) : undefined} />
+    <SelectedAShell
+      active="module"
+      currentModule={courseModule.code}
+      forceModuleMenu={forceModuleMenu}
+      progressProjection={progressProjection}
+    >
+      <ModuleOverviewPage
+        model={model}
+        initialExpandedLessonCode={expandedLesson ?? `${courseModule.code}_L01`}
+        completionContent={(
+          <CutoutCompletionButton
+            key={`${courseModule.code}:${completionState}`}
+            model={selectedACompletionViewModel({
+              kind: "module",
+              moduleCode: courseModule.code,
+              state: completionState,
+            })}
+            completeAction={completeCompletionAction}
+            undoAction={undoCompletionAction}
+          />
+        )}
+      />
     </SelectedAShell>
   );
 }
 
-export function SelectedAProject({ moduleCode }: { moduleCode: string }) {
+export function SelectedAProject({
+  moduleCode,
+  workspaceContent,
+  progressProjection = SELECTED_A_PUBLIC_ZERO_PROGRESS,
+}: {
+  moduleCode: string;
+  workspaceContent?: ReactNode;
+  progressProjection?: CourseProgressProjection;
+}) {
   const courseModule = getModule(moduleCode) ?? m01Module;
   const project = getImportedModuleData(courseModule.code)?.project ?? (moduleProject(courseModule.code) ?? m01Project);
   const projectBlocks = project.normalizedPublicContent?.blocks;
@@ -288,18 +403,11 @@ export function SelectedAProject({ moduleCode }: { moduleCode: string }) {
       .map(({ order, type, style, text, rows }) => ({ order, type, style, text, rows })),
     exampleBlockOrder: exampleHeading?.order,
     exampleCaptionBlockOrder: exampleHeading ? projectBlocks?.find((block) => block.order > exampleHeading.order)?.order : undefined,
-    submissionNotice: ["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08"].includes(courseModule.code) ? {
-      title: "Отправка проекта",
-      description: courseModule.code === "M08"
-        ? "Отправка, проверка и обратная связь станут доступны после запуска личного кабинета учащегося. Сейчас подготовьте и сохраните итоговый многостраничный PDF у себя."
-        : "Отправка, проверка и обратная связь станут доступны после запуска личного кабинета учащегося. Сейчас подготовьте и сохраните итоговый PDF или PNG у себя.",
-      buttonLabel: "Отправить проект",
-    } : undefined,
     backAction: { label: "Вернуться к модулю", href: pathModule(courseModule.code) },
   };
   const projectExample = selectedAProjectExample(courseModule.code);
   return (
-    <SelectedAShell active="project" currentModule={courseModule.code}>
+    <SelectedAShell active="project" currentModule={courseModule.code} progressProjection={progressProjection}>
       <ProjectOverviewPage model={model} exampleContent={courseModule.code === "M08" ? (
         <ProjectPackViewer
           title="Project 08 — Final Architecture Presentation Pack"
@@ -310,7 +418,9 @@ export function SelectedAProject({ moduleCode }: { moduleCode: string }) {
         />
       ) : projectExample ? (
         <RevealExample {...projectExample} />
-      ) : <div className="asa-project__pending">Проектный маршрут показан структурно. Полный импорт ещё не выполнен.</div>} />
+      ) : <div className="asa-project__pending">Проектный маршрут показан структурно. Полный импорт ещё не выполнен.</div>}
+      workspaceContent={workspaceContent}
+      />
     </SelectedAShell>
   );
 }
@@ -321,6 +431,7 @@ interface SelectedALessonProps {
   completionState?: CompletionDemoState;
   forceContents?: boolean;
   forceModuleMenu?: string | null;
+  progressProjection?: CourseProgressProjection;
   quizSubmitAction?: QuizSubmissionAction;
   completeCompletionAction?: CompletionMutationAction;
   undoCompletionAction?: CompletionMutationAction;
@@ -355,6 +466,7 @@ export function SelectedALesson({
   completionState = "locked",
   forceContents = false,
   forceModuleMenu,
+  progressProjection = SELECTED_A_PUBLIC_ZERO_PROGRESS,
   quizSubmitAction,
   completeCompletionAction,
   undoCompletionAction,
@@ -362,10 +474,10 @@ export function SelectedALesson({
   const lesson = getLesson(lessonCode) ?? m01Lessons[0]!;
   const visibleItems = itemsFor(lesson);
   const validItem = visibleItems.some((entry) => entry.id === item) ? item : "overview";
-  const mapping = selectedALessonMapping(lesson, validItem);
+  const mapping = selectedALessonMapping(lesson, validItem, progressProjection);
 
   return (
-    <SelectedAShell active="lesson" currentModule={lesson.moduleCode} forceModuleMenu={forceModuleMenu}>
+    <SelectedAShell active="lesson" currentModule={lesson.moduleCode} forceModuleMenu={forceModuleMenu} progressProjection={progressProjection}>
       <LessonWorkspace
         model={mapping.workspace}
         activeItemContent={renderItem(lesson, validItem, mapping, quizSubmitAction)}

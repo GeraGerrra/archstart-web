@@ -43,13 +43,13 @@ export function CourseModuleCard({ module }: CourseModuleCardProps) {
         <Link href={module.project.href} className="asa-course-module__project">
           <span>{module.project.code}</span>
           <strong>{module.project.titleRu}</strong>
-          <StatusMark status={module.project.status} compact />
+          <StatusMark status={module.project.status} label={module.project.statusLabel} />
         </Link>
       ) : module.project ? (
         <div className="asa-course-module__project">
           <span>{module.project.code}</span>
           <strong>{module.project.titleRu}</strong>
-          <StatusMark status={module.project.status} compact />
+          <StatusMark status={module.project.status} label={module.project.statusLabel} />
         </div>
       ) : null}
       <Button href={module.href} variant="line">Обзор модуля</Button>

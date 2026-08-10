@@ -402,13 +402,18 @@ test("read-only verification and rollback-only runtime template cover required b
   assert.doesNotMatch(`${verification}\n${runtimeTemplate}`, /pg_get_functiondef/u);
 });
 
-test("pdfjs is the only exact new parser dependency and scope contains no forbidden feature", () => {
+test("pdfjs and its exact Node canvas runtime are pinned without widening product scope", () => {
   const packageJson = JSON.parse(read("package.json")) as {
     dependencies?: Record<string, string>;
   };
   const lockfile = read("pnpm-lock.yaml");
   assert.equal(packageJson.dependencies?.["pdfjs-dist"], "6.2.108");
+  assert.equal(packageJson.dependencies?.["@napi-rs/canvas"], "1.0.3");
   assert.match(lockfile, /pdfjs-dist:\s*\n\s+specifier: 6\.2\.108\s*\n\s+version: 6\.2\.108/u);
+  assert.match(
+    lockfile,
+    /'@napi-rs\/canvas':\s*\n\s+specifier: 1\.0\.3\s*\n\s+version: 1\.0\.3/u,
+  );
   const combined = `${migration.replace(/^--.*$/gmu, "")}\n${finalizationAction}\n${downloadAction}\n${cleanupAction}`;
   assert.doesNotMatch(combined, /certificate|verification registry|revocation|sendEmail|nodemailer|vercel/iu);
   assert.doesNotMatch(combined, /sb_secret_[A-Za-z0-9_-]+|BEGIN PRIVATE KEY/gu);

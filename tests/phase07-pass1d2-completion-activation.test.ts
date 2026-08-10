@@ -125,7 +125,8 @@ test("production routes use persistent state while development keeps explicit QA
   assert.match(moduleRoute, /process\.env\.NODE_ENV === "development"/u);
   assert.match(moduleRoute, /module-ready/u);
   assert.match(moduleRoute, /module-complete/u);
-  assert.match(moduleRoute, /completedLessonCodes/u);
+  assert.match(moduleRoute, /loadCourseProgressProjection/u);
+  assert.match(moduleRoute, /progressProjection=\{progressProjection\}/u);
   assert.match(moduleRoute, /completeModuleCompletionAction\.bind/u);
   assert.match(moduleRoute, /undoModuleCompletionAction\.bind/u);
 

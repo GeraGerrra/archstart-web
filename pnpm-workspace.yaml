@@ -1,6 +1,10 @@
 packages:
   - "."
 
+# Vercel Serverless packaging rejects the isolated pnpm package-directory symlinks
+# traced for the native PDF runtime. Keep pnpm, but materialize a flat npm-like tree.
+nodeLinker: hoisted
+
 engineStrict: true
 
 blockExoticSubdeps: true

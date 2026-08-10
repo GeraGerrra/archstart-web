@@ -86,6 +86,7 @@ export interface CourseProjectDisplay {
   titleRu: string;
   href?: string;
   status: VisualStatus;
+  statusLabel?: string;
 }
 
 export interface CourseModuleCardDisplay {
@@ -158,6 +159,16 @@ export interface DashboardViewModel {
   moduleMapTitle: string;
   modules: readonly DashboardModuleMapItem[];
   emptyHistory: DashboardEmptyHistory;
+  projects?: readonly DashboardProjectItem[];
+  staffReviewAction?: LearningLink;
+}
+
+export interface DashboardProjectItem {
+  projectCode: string;
+  titleRu: string;
+  status: "none" | "draft" | "submitted" | "under_review" | "revisions_required" | "resubmitted" | "accepted" | "not_accepted";
+  statusLabel: string;
+  action: LearningLink;
 }
 
 export interface ModuleLessonItemDisplay {
@@ -184,6 +195,7 @@ export interface ModuleProjectRowDisplay {
   titleEn: string;
   objective: string;
   status: VisualStatus;
+  statusLabel?: string;
   action: LearningLink;
 }
 
@@ -257,4 +269,5 @@ export interface ProjectContentBlock {
 export interface ProjectOverviewPageProps {
   model: ProjectOverviewViewModel;
   exampleContent: ReactNode;
+  workspaceContent?: ReactNode;
 }

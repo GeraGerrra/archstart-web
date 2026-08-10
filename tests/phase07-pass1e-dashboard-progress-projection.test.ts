@@ -49,6 +49,7 @@ test("Dashboard projection reads all accepted learner authorities without writin
     "quiz_attempts",
     "lesson_completions",
     "module_completions",
+    "project_submissions",
   ]) {
     assert.match(projection, new RegExp(`\\.from\\("${table}"\\)`, "u"));
   }
@@ -58,7 +59,9 @@ test("Dashboard projection reads all accepted learner authorities without writin
 
 test("Quiz attempts support history but completion counts come only from explicit rows", () => {
   assert.match(projection, /completedLessonCodes = new Set\(lessonCompletions/u);
-  assert.match(projection, /completedModuleCodes = new Set\(moduleCompletions/u);
+  assert.match(projection, /moduleCompletionRowCodes = new Set\(moduleCompletions/u);
+  assert.match(projection, /buildCourseProgressProjection/u);
+  assert.match(projection, /completedModuleCodes = new Set\(sharedProgress\.completedModuleCodes\)/u);
   assert.match(projection, /latestAttempt\.score/u);
   assert.match(projection, /completedLessons: completedLessonCodes\.size/u);
   assert.doesNotMatch(projection, /completedLessons:\s*.*latestAttempt/u);
@@ -116,8 +119,9 @@ test("lesson route mounts the invisible activity recorder before the accepted su
 });
 
 
-test("signed-in Dashboard uses real progress while public shells default to anonymous zero state", () => {
+test("Dashboard and all Selected-A shells share project-aware account progress with anonymous zero fallback", () => {
   assert.match(shellAdapter, /SelectedAShellProgressProjection/u);
+  assert.match(shellAdapter, /authenticated/u);
   assert.match(shellAdapter, /completedLessonCodes/u);
   assert.match(shellAdapter, /completedModuleCodes/u);
   assert.match(shellAdapter, /activeLessonCodes/u);
@@ -125,6 +129,7 @@ test("signed-in Dashboard uses real progress while public shells default to anon
   assert.match(shellAdapter, /progressProjection \?\? ANONYMOUS_SHELL_PROGRESS_PROJECTION/u);
   assert.match(selectedA, /model = selectedADashboardModel/u);
   assert.match(selectedA, /progressProjection\?: SelectedAShellProgressProjection/u);
+  assert.match(selectedA, /progressProjection\?: CourseProgressProjection/u);
   assert.match(selectedA, /currentModule=\{progressProjection\?\.currentModuleCode \?\? "M01"\}/u);
 });
 

@@ -25,8 +25,8 @@ export function CourseOverviewPage({ model }: CourseOverviewPageProps) {
             <span>/ {model.totals.lessonTotal} уроков</span>
           </div>
           <dl>
-            <div><dt>{model.totals.completedModules} / {model.totals.moduleTotal}</dt><dd>модулей завершено</dd></div>
-            <div><dt>{model.totals.completedProjects} / {model.totals.projectTotal}</dt><dd>проектов завершено</dd></div>
+            <div><dt>{model.totals.completedModules} / {model.totals.moduleTotal}</dt><dd>модулей полностью завершено</dd></div>
+            <div><dt>{model.totals.completedProjects} / {model.totals.projectTotal}</dt><dd>проектов принято</dd></div>
             <div><dt>{model.totals.quizQuestions}</dt><dd>вопросов в курсе</dd></div>
           </dl>
         </div>

@@ -6,16 +6,28 @@ import { useEffect, useId, useRef, useState } from "react";
 import { focusOnNextFrame } from "./focus";
 import { MobileNavigation } from "./MobileNavigation";
 import { PrimaryNavigation } from "./PrimaryNavigation";
-import type { HeaderLabels, ShellBrand, ShellNavigationItem } from "./types";
+import type {
+  HeaderLabels,
+  ShellBrand,
+  ShellHeaderProgress,
+  ShellNavigationItem,
+} from "./types";
 
 export interface HeaderProps {
   brand: ShellBrand;
   navigationItems: readonly ShellNavigationItem[];
   activeNavigationItemId: string;
   labels: HeaderLabels;
+  progress?: ShellHeaderProgress;
 }
 
-export function Header({ brand, navigationItems, activeNavigationItemId, labels }: HeaderProps) {
+export function Header({
+  brand,
+  navigationItems,
+  activeNavigationItemId,
+  labels,
+  progress,
+}: HeaderProps) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const mobileNavId = useId();
   const mobileNavTriggerRef = useRef<HTMLButtonElement | null>(null);
@@ -62,6 +74,12 @@ export function Header({ brand, navigationItems, activeNavigationItemId, labels 
             ariaLabel={labels.primaryNavigationAriaLabel}
           />
           <div className="asa-header__utilities">
+            {progress ? (
+              <div className="asa-header__progress" aria-label={progress.ariaLabel}>
+                <strong>{progress.value}</strong>
+                <span>{progress.label}</span>
+              </div>
+            ) : null}
             <button
               ref={mobileNavTriggerRef}
               type="button"

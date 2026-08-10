@@ -9,6 +9,7 @@ import type {
   ModuleNavigationLabels,
   ShellBrand,
   ShellFooterContent,
+  ShellHeaderProgress,
   ShellNavigationItem,
 } from "./types";
 
@@ -18,6 +19,7 @@ export interface AppShellProps {
   navigationItems: readonly ShellNavigationItem[];
   activeNavigationItemId: string;
   headerLabels: HeaderLabels;
+  headerProgress?: ShellHeaderProgress;
   modules: readonly ModuleNavigationItem[];
   moduleLabels: ModuleNavigationLabels;
   footer: ShellFooterContent;
@@ -33,6 +35,7 @@ export function AppShell({
   navigationItems,
   activeNavigationItemId,
   headerLabels,
+  headerProgress,
   modules,
   moduleLabels,
   footer,
@@ -49,6 +52,7 @@ export function AppShell({
         navigationItems={navigationItems}
         activeNavigationItemId={activeNavigationItemId}
         labels={headerLabels}
+        progress={headerProgress}
       />
       <ModuleStrip
         modules={modules}

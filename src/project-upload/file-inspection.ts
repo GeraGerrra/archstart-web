@@ -1,5 +1,4 @@
 import { createHash } from "node:crypto";
-import { getDocument, VerbosityLevel } from "pdfjs-dist/legacy/build/pdf.mjs";
 import {
   PROJECT_FILE_FINALIZATION_LIMITS,
   type ProjectFileInspection,
@@ -91,6 +90,8 @@ async function inspectPdfPageCount(bytes: Uint8Array): Promise<
   | { ok: false; encryptedOrUnsupported: boolean }
 > {
   try {
+    const { loadPdfJsModule } = await import("./pdfjs-node-runtime.ts");
+    const { getDocument, VerbosityLevel } = await loadPdfJsModule();
     const loadingTask = getDocument({
       data: Uint8Array.from(bytes),
       stopAtErrors: true,

@@ -35,7 +35,7 @@ export function ModuleOverviewPage({
             </div>
           </div>
           <p className="asa-lead">{model.goal}</p>
-          <ProgressBar value={model.completedLessons} max={model.lessonTotal} label="Прогресс модуля" />
+          <ProgressBar value={model.completedLessons} max={model.lessonTotal} label="Прогресс уроков" />
         </div>
       </section>
 
@@ -71,7 +71,7 @@ export function ModuleOverviewPage({
               <small>{model.project.titleEn}</small>
               <p>{model.project.objective}</p>
             </div>
-            <StatusMark status={model.project.status} />
+            <StatusMark status={model.project.status} label={model.project.statusLabel} />
             <Button href={model.project.action.href} variant="line">{model.project.action.label}</Button>
           </article>
         ) : null}

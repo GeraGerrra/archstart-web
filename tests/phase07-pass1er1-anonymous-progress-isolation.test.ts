@@ -29,30 +29,23 @@ test("anonymous shell projection is exact zero state", () => {
 });
 
 
-test("public Course Overview is zero and starts at M01 L01", () => {
-  assert.match(selectedA, /completedLessons: 0, lessonTotal: 40/u);
-  assert.match(selectedA, /completedModules: 0, moduleTotal: 8/u);
-  assert.match(selectedA, /completedProjects: 0, projectTotal: 8/u);
-  assert.match(selectedA, /label: "Начать обучение"/u);
-  assert.match(selectedA, /pathItem\("M01", "M01_L01", "overview"\)/u);
+test("public Course Overview derives exact zero from the anonymous shared projection", () => {
+  assert.match(selectedA, /selectedACourseModelForProjection/u);
+  assert.match(selectedA, /projection\.completedLessonCodes\.length/u);
+  assert.match(selectedA, /projection\.completedModuleCodes\.length/u);
+  assert.match(selectedA, /acceptedProjects/u);
+  assert.match(selectedA, /label: projection\.authenticated \? "Продолжить обучение" : "Начать обучение"/u);
   assert.match(selectedA, /Без аккаунта показано нулевое стартовое состояние/u);
-  assert.match(selectedA, /status: "available"/u);
-  const publicCourseSource = selectedA.slice(
-    selectedA.indexOf("const selectedACourseModel"),
-    selectedA.indexOf("const selectedADashboardModel"),
-  );
-  assert.doesNotMatch(publicCourseSource, /completedLessons: totals\.lessons/u);
-  assert.doesNotMatch(publicCourseSource, /completedModules: totals\.modules/u);
-  assert.doesNotMatch(publicCourseSource, /completedProjects: totals\.projects/u);
+  assert.match(selectedA, /ANONYMOUS_COURSE_PROGRESS_PROJECTION/u);
 });
 
-
-test("Phase 02 demo fixture remains data-only and cannot drive public shell fallback", () => {
+test("Phase 02 demo fixture remains data-only and cannot drive any production shell fallback", () => {
   assert.match(data, /export const progress:/u);
   assert.match(data, /M01:\{status:"in-progress",done:2/u);
   assert.match(data, /M04:\{status:"complete",done:5/u);
   assert.doesNotMatch(shell, /progress,/u);
   assert.doesNotMatch(selectedA.slice(0, selectedA.indexOf("const selectedADashboardModel")), /progress\[module\.code\]/u);
+  assert.doesNotMatch(shell, /lesson\.moduleCode === "M04"/u);
 });
 
 
