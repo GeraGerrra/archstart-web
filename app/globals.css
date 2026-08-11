@@ -2508,10 +2508,10 @@ img { max-width: 100%; }
 .asa-certificate-artwork p, .asa-certificate-artwork dl, .asa-certificate-artwork h1 { margin: 0; }
 .asa-certificate-artwork__identity { position: absolute; top: 10.7%; left: 30.5%; }
 .asa-certificate-artwork__identity strong { display: block; font-size: 5.05cqw; font-weight: 500; line-height: .72; letter-spacing: .018em; }
-.asa-certificate-artwork__identity p { margin-top: 2.1cqw; font-size: 2.18cqw; line-height: 1.04; letter-spacing: -.025em; }
+.asa-certificate-artwork__identity p { margin-top: 1.58cqw; font-size: 1.72cqw; line-height: 1.04; letter-spacing: -.02em; }
 .asa-certificate-artwork__metadata { position: absolute; top: 18.75%; left: 65.38%; display: grid; width: 29.8%; grid-template-columns: 1.23fr 1fr; gap: 4.59cqw; }
 .asa-certificate-artwork__metadata div { min-width: 0; }
-.asa-certificate-artwork__metadata dt, .asa-certificate-artwork__metadata dd { font-size: 2.18cqw; line-height: 1.04; letter-spacing: -.025em; white-space: nowrap; }
+.asa-certificate-artwork__metadata dt, .asa-certificate-artwork__metadata dd { font-size: 1.72cqw; line-height: 1.04; letter-spacing: -.02em; white-space: nowrap; }
 .asa-certificate-artwork__metadata dd { margin: 0; }
 .asa-certificate-artwork__name { position: absolute; right: 4.35%; bottom: 38.2%; display: grid; width: 64%; justify-items: end; color: #050505; font-size: var(--asa-certificate-name-size, 9.9cqw); font-weight: 400; line-height: .93; letter-spacing: -.035em; text-align: right; text-transform: uppercase; }
 .asa-certificate-artwork__name span { display: block; max-width: 100%; white-space: nowrap; }
@@ -2561,12 +2561,76 @@ img { max-width: 100%; }
 }
 
 @media print {
-  html:has(.asa-certificate-print-root), body:has(.asa-certificate-print-root) { width: 297mm !important; height: 210mm !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; background: #ffffff !important; }
-  body:has(.asa-certificate-print-root) { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-  body:has(.asa-certificate-print-root) * { visibility: hidden !important; }
-  body:has(.asa-certificate-print-root) .asa-certificate-print-root, body:has(.asa-certificate-print-root) .asa-certificate-print-root * { visibility: visible !important; }
-  body:has(.asa-certificate-print-root) .asa-certificate-no-print { display: none !important; }
-  body:has(.asa-certificate-print-root) .asa-certificate-print-root { position: fixed !important; inset: 0 !important; width: 297mm !important; height: 210mm !important; margin: 0 !important; padding: 0 !important; }
-  body:has(.asa-certificate-print-root) .asa-certificate-artwork { width: 297mm !important; height: 210mm !important; max-width: none !important; aspect-ratio: auto !important; box-shadow: none !important; }
-  body:has(.asa-certificate-print-root) .asa-certificate-artwork__background { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  html:has(.asa-certificate-print-root),
+  body:has(.asa-certificate-print-root) {
+    width: 297mm !important;
+    height: 210mm !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+  }
+  body:has(.asa-certificate-print-root) {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body:has(.asa-certificate-print-root) > :not(.asa):not(.asa-public-certificate-page) {
+    display: none !important;
+  }
+  body:has(.asa-certificate-print-root) .asa {
+    display: contents !important;
+  }
+  body:has(.asa-certificate-print-root) .asa > :not(main) {
+    display: none !important;
+  }
+  body:has(.asa-certificate-print-root) #asa-main {
+    display: contents !important;
+  }
+  body:has(.asa-certificate-print-root) .asa-certificate-no-print {
+    display: none !important;
+  }
+  body:has(.asa-certificate-print-root) .asa-certificate-page,
+  body:has(.asa-certificate-print-root) .asa-public-certificate-page,
+  body:has(.asa-certificate-print-root) .asa-public-certificate-page--found {
+    display: block !important;
+    width: 297mm !important;
+    height: 210mm !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+  }
+  body:has(.asa-certificate-print-root) .asa-certificate-page > :not(.asa-certificate-print-root),
+  body:has(.asa-certificate-print-root) .asa-public-certificate-page > :not(.asa-certificate-print-root) {
+    display: none !important;
+  }
+  body:has(.asa-certificate-print-root) .asa-certificate-print-root {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    width: 297mm !important;
+    height: 210mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
+  }
+  body:has(.asa-certificate-print-root) .asa-certificate-artwork {
+    width: 297mm !important;
+    height: 210mm !important;
+    max-width: none !important;
+    aspect-ratio: auto !important;
+    box-shadow: none !important;
+  }
+  body:has(.asa-certificate-print-root) .asa-certificate-artwork__background {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }

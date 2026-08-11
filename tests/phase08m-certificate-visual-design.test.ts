@@ -73,6 +73,13 @@ test("the approved composition uses IBM Plex Sans and real dynamic certificate f
   assert.match(artwork, /не является государственной аккредитацией/u);
 });
 
+test("top certificate information matches the owner-approved restrained scale", () => {
+  assert.match(css, /\.asa-certificate-artwork__identity p \{[^}]*margin-top:\s*1\.58cqw;[^}]*font-size:\s*1\.72cqw;/u);
+  assert.match(css, /\.asa-certificate-artwork__metadata dt, \.asa-certificate-artwork__metadata dd \{[^}]*font-size:\s*1\.72cqw;/u);
+  assert.doesNotMatch(css, /\.asa-certificate-artwork__identity p \{[^}]*font-size:\s*2\.18cqw/u);
+  assert.doesNotMatch(css, /\.asa-certificate-artwork__metadata dt, \.asa-certificate-artwork__metadata dd \{[^}]*font-size:\s*2\.18cqw/u);
+});
+
 test("name layout preserves first plus last name and scales deterministically", () => {
   assert.deepEqual(certificateNameLayout("Алина Сатанова"), {
     lines: ["Алина", "Сатанова"],
@@ -110,14 +117,20 @@ test("private and public issued surfaces share one artwork and truthful revocati
   assert.match(artwork, /REVOKED/u);
 });
 
-test("browser PDF is one A4 landscape page and hides the application shell", () => {
+test("browser PDF removes all non-certificate layout and prints one A4 landscape page", () => {
   assert.match(printControl, /^"use client";/u);
   assert.match(printControl, /window\.print\(\)/u);
   assert.match(css, /@page\s*\{[\s\S]*size:\s*A4 landscape;[\s\S]*margin:\s*0;/u);
-  assert.match(css, /@media print[\s\S]*body:has\(\.asa-certificate-print-root\) \*[\s\S]*visibility:\s*hidden/u);
-  assert.doesNotMatch(css, /@media print\s*\{\s*html, body/u);
+  assert.match(css, /@media print[\s\S]*\.asa > :not\(main\)[\s\S]*display:\s*none/u);
+  assert.match(css, /@media print[\s\S]*#asa-main[\s\S]*display:\s*contents/u);
+  assert.match(css, /\.asa-certificate-page > :not\(\.asa-certificate-print-root\)[\s\S]*display:\s*none/u);
+  assert.match(css, /\.asa-public-certificate-page > :not\(\.asa-certificate-print-root\)[\s\S]*display:\s*none/u);
+  assert.match(css, /\.asa-certificate-print-root[\s\S]*position:\s*relative/u);
+  assert.match(css, /\.asa-certificate-print-root[\s\S]*break-inside:\s*avoid-page/u);
   assert.match(css, /\.asa-certificate-print-root[\s\S]*width:\s*297mm/u);
   assert.match(css, /\.asa-certificate-artwork[\s\S]*height:\s*210mm/u);
+  assert.doesNotMatch(css, /@media print[\s\S]*visibility:\s*hidden/u);
+  assert.doesNotMatch(css, /@media print[\s\S]*position:\s*fixed/u);
   assert.doesNotMatch(`${artwork}\n${printControl}`, /serverPdf|pdfjs|storage\.from|upload/u);
 });
 
