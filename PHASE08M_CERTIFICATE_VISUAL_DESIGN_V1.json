@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "ARCH.START",
+  "phase": "Phase 08M",
+  "pass": "Pass 3 Certificate Visual Design and Browser PDF",
+  "status": "SOURCE_CANDIDATE",
+  "acceptedBase": {
+    "branch": "phase-08m-certificate-mvp",
+    "gitHead": "78b00596918c746ee5faaee75bd16e8e78989af3",
+    "gitTree": "d3f28631571a9503493325d7953ec81688218d8b"
+  },
+  "ownerVisualGate": {
+    "gate": "PHASE08M_CERTIFICATE_VISUAL_DESIGN_GATE",
+    "result": "OPENED_BY_OWNER_APPROVED_DESIGN",
+    "backgroundPath": "public/certificate-assets/archstart-certificate-facade-background.png",
+    "backgroundSha256": "4e4a122394699ff6ef5595e8db3d29a97c57d77b8e839acd5332ddad43905f86",
+    "backgroundWidth": 2048,
+    "backgroundHeight": 1447,
+    "referenceSha256": "16687b86b8766badec0f26a61b1b749d4144b936bcc993172d9950110184c167",
+    "referenceSource": "owner-approved Canva composition over Nano Banana Pro background",
+    "assetDelivery": "app_owned_public_path_outside_prototype_asset_redirect_namespace"
+  },
+  "typography": {
+    "family": "IBM Plex Sans",
+    "regularWeight": 400,
+    "brandWeight": 500
+  },
+  "dynamicFields": [
+    "display_name_snapshot_first_plus_last_name",
+    "issued_at",
+    "course_version",
+    "certificate_code",
+    "public_verification_qr"
+  ],
+  "qr": {
+    "dependency": "qrcode@1.5.4",
+    "errorCorrectionLevel": "M",
+    "payload": "NEXT_PUBLIC_SITE_URL + public certificate path",
+    "privateDataIncluded": false
+  },
+  "print": {
+    "paper": "A4",
+    "orientation": "landscape",
+    "browserPrintDialog": true,
+    "serverPdf": false
+  },
+  "preservedAuthority": {
+    "databaseMigrationAdded": false,
+    "storageAdded": false,
+    "certificateRpcChanged": false,
+    "publicDisclosureChanged": false,
+    "phase09Started": false
+  }
+}

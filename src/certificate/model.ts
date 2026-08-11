@@ -315,7 +315,7 @@ export function formatCertificateDate(value: string): string {
   const date = new Date(value);
   if (!Number.isFinite(date.getTime())) return "—";
   return new Intl.DateTimeFormat("ru-RU", {
-    day: "2-digit",
+    day: "numeric",
     month: "long",
     year: "numeric",
     timeZone: "UTC",

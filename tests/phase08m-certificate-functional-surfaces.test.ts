@@ -15,7 +15,10 @@ const actions = read("src/server/certificate-actions.ts");
 const issueControl = read("src/certificate/CertificateIssueControl.tsx");
 const dashboardCard = read("src/certificate/CertificateDashboardCard.tsx");
 const privatePage = read("src/certificate/PrivateCertificatePage.tsx");
+const artwork = read("src/certificate/CertificateArtwork.tsx");
+const printControl = read("src/certificate/CertificatePrintControl.tsx");
 const publicPage = read("src/certificate/PublicCertificateVerificationPage.tsx");
+const certificateIndex = read("src/certificate/index.ts");
 const privateRoute = read("app/prototype/a/certificate/page.tsx");
 const publicRoute = read("app/certificate/[certificateCode]/page.tsx");
 const dashboardRoute = read("app/prototype/a/dashboard/page.tsx");
@@ -23,6 +26,8 @@ const dashboard = read("src/learning/dashboard/DashboardPage.tsx");
 const selectedA = read("src/prototypes/selected-a/SelectedAPrototype.tsx");
 const css = read("app/globals.css");
 const scope = read("PHASE08M_CERTIFICATE_FUNCTIONAL_SURFACES.md");
+const visualScope = read("PHASE08M_CERTIFICATE_VISUAL_DESIGN.md");
+const packageJson = JSON.parse(read("package.json")) as { dependencies: Record<string, string>; devDependencies: Record<string, string> };
 const authority = JSON.parse(read("PHASE08M_CERTIFICATE_FUNCTIONAL_SURFACES_V1.json")) as {
   acceptedBase: { gitHead: string; gitTree: string; certificateRows: number; certificateStorageBuckets: number };
   routes: { private: string; publicVerification: string };
@@ -45,9 +50,16 @@ test("the exact private and public certificate routes are present", () => {
   assert.ok(existsSync(join(root, "app/prototype/a/certificate/page.tsx")));
   assert.ok(existsSync(join(root, "app/certificate/[certificateCode]/page.tsx")));
   assert.match(privateRoute, /requireOnboardedProfile\("\/prototype\/a\/certificate"\)/u);
+  assert.match(privateRoute, /from "@\/src\/certificate\/PrivateCertificatePage"/u);
   assert.match(privateRoute, /loadMyCertificateProjection\(\)/u);
   assert.match(privateRoute, /loadCourseProgressProjection\(\)/u);
+  assert.match(publicRoute, /from "@\/src\/certificate\/PublicCertificateVerificationPage"/u);
   assert.match(publicRoute, /loadPublicCertificateVerification\(certificateCode\)/u);
+  assert.match(artwork, /^import "server-only";/u);
+  assert.doesNotMatch(
+    certificateIndex,
+    /CertificateArtwork|PrivateCertificatePage|PublicCertificateVerificationPage/u,
+  );
 });
 
 test("certificate state parsing is exact and issued names come from immutable own-row snapshots", () => {
@@ -101,18 +113,19 @@ test("Dashboard exposes truthful locked, eligible, issued, revoked, and unavaila
   assert.match(dashboardCard, /acceptedProjects[\s\S]*requiredProjects/u);
 });
 
-test("private functional page covers all states and preserves snapshot disclaimer", () => {
+test("private functional page covers all states and renders the immutable snapshot artwork", () => {
   for (const copy of [
     "Сертификат пока недоступен",
     "Сертификат доступен",
-    "ТЕХНИЧЕСКИЙ ПРОСМОТР",
-    "REVOKED",
-    "не является государственной аккредитацией",
+    "Сертификат о завершении курса",
+    "Отозван",
   ]) assert.match(privatePage, new RegExp(copy, "u"));
-  assert.match(privatePage, /certificate\.displayName/u);
-  assert.match(privatePage, /certificate\.certificateCode/u);
+  assert.match(privatePage, /CertificateArtwork/u);
+  assert.match(privatePage, /certificateCode=\{certificate\.certificateCode\}/u);
+  assert.match(privatePage, /displayName=\{certificate\.displayName\}/u);
   assert.match(privatePage, /publicCertificatePath\(certificate\.certificateCode\)/u);
-  assert.doesNotMatch(privatePage, /email|userId|revocationReason|project file|reviewer/iu);
+  assert.match(artwork, /не является государственной аккредитацией/u);
+  assert.doesNotMatch(`${privatePage}\n${artwork}`, /email|userId|revocationReason|project file|reviewer/iu);
 });
 
 test("public verification is noindex, generic for malformed or unknown codes, and minimally disclosed", () => {
@@ -128,30 +141,37 @@ test("public verification is noindex, generic for malformed or unknown codes, an
   assert.doesNotMatch(`${projection}\n${publicPage}`, /revocation_reason|email|user_uuid|quiz_attempt|project_submission_files|reviewer_id/iu);
 });
 
-test("Pass 2 adds no migration, dependency, Storage, server PDF, email, QR, registry, or admin certificate UI", () => {
+test("Pass 2 historical boundary remains intact while Pass 3 opens only the visual layer", () => {
   const certificateMigrations = readdirSync(join(root, "supabase/migrations"))
     .filter((name) => name.includes("phase08m_certificate"));
   assert.deepEqual(certificateMigrations, ["20260810040000_phase08m_certificate_authority.sql"]);
-  assert.equal(sha256("package.json"), "b940f880d27ed59aadc7b877785e932e0e6f53e5cb3760912816332d03d25ae4");
-  assert.equal(sha256("pnpm-lock.yaml"), "05975a1fc77d520edcb201ee8eb6996082b04bd6e3c103a2f512c6b937c54ade");
   assert.equal(sha256("supabase/migrations/20260810040000_phase08m_certificate_authority.sql"), "4fd8d66b24f01b14b584f98169e74a0811d3703e666614ab6b04131bfa51a07b");
-  const combined = `${model}\n${projection}\n${actions}\n${privatePage}\n${publicPage}`;
-  assert.doesNotMatch(combined, /storage\.from|storage\.buckets|pdfjs|@napi-rs|send_email|qr[_ -]?code|public registry|certificate admin/iu);
   for (const excluded of ["new_migration", "certificate_storage", "server_pdf", "qr_code", "email", "public_registry", "admin_certificate_ui"]) {
     assert.ok(authority.excluded.includes(excluded));
   }
+  assert.match(scope, /functional semantic skeleton only/u);
+  assert.match(visualScope, /owner-approved Canva composition/u);
+  assert.equal(packageJson.dependencies.qrcode, "1.5.4");
+  assert.equal(packageJson.devDependencies["@types/qrcode"], "1.5.6");
+  assert.doesNotMatch(`${projection}\n${actions}`, /storage\.from|send_email|public registry|certificate admin/iu);
 });
 
-test("final certificate art direction remains blocked by the explicit owner visual gate", () => {
-  assert.equal(authority.visualDesignGate, "PHASE08M_CERTIFICATE_VISUAL_DESIGN_GATE");
-  assert.match(scope, /functional semantic skeleton only/u);
-  assert.doesNotMatch(css, /@media\s+print|@page/iu);
-  assert.doesNotMatch(`${privatePage}\n${dashboardCard}`, /Печать|Сохранить(?: как)? PDF|QR/u);
-  assert.ok(authority.excluded.includes("final_certificate_visual_design"));
+test("the owner visual gate now provides approved art, real QR, and one-page A4 browser PDF", () => {
+  assert.match(visualScope, /PHASE08M_CERTIFICATE_VISUAL_DESIGN_GATE/u);
+  assert.match(artwork, /IBM_Plex_Sans/u);
+  assert.match(artwork, /QRCode\.toString/u);
+  assert.match(artwork, /publicCertificatePath\(certificateCode\)/u);
+  assert.match(artwork, /archstart-certificate-facade-background\.png/u);
+  assert.match(printControl, /window\.print\(\)/u);
+  assert.match(printControl, /Сохранить PDF/u);
+  assert.match(css, /@page[\s\S]*size:\s*A4 landscape/iu);
+  assert.match(css, /@media print/iu);
+  assert.match(privatePage, /CertificatePrintControl/u);
+  assert.match(publicPage, /CertificateArtwork/u);
 });
 
 test("certificate browser source contains no secret client, credential-shaped value, or private authority input", () => {
-  const browserSource = `${issueControl}\n${dashboardCard}\n${privatePage}\n${publicPage}`;
+  const browserSource = `${issueControl}\n${dashboardCard}\n${privatePage}\n${publicPage}\n${printControl}`;
   assert.doesNotMatch(browserSource, /createSecretSupabaseClient|SUPABASE_SECRET_KEY|sb_secret_|sb_publishable_|BEGIN PRIVATE KEY/gu);
   assert.doesNotMatch(browserSource, /p_user_id|p_display_name|p_eligible|p_issued_at|p_certificate_code/gu);
 });

@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { StatusMark } from "@/src/design-system";
+import { Button, StatusMark } from "@/src/design-system";
 import type { PublicCertificateVerification } from "./types";
-import { formatCertificateDate } from "./model";
+import { CertificateArtwork } from "./CertificateArtwork";
+import { CertificatePrintControl } from "./CertificatePrintControl";
 
 export function PublicCertificateVerificationPage({
   verification,
@@ -22,32 +23,59 @@ export function PublicCertificateVerificationPage({
   }
 
   const revoked = verification.status === "REVOKED";
+  const certificateCode = verification.certificateCode;
+  const displayName = verification.displayName;
+  const courseTitle = verification.courseTitle;
+  const courseVersion = verification.courseVersion;
+  const issuedAt = verification.issuedAt;
+
+  if (!certificateCode || !displayName || !courseTitle || !courseVersion || !issuedAt) {
+    return (
+      <main className="asa-public-certificate-page">
+        <Link href="/prototype/a/home" className="asa-public-certificate-page__brand">ARCH.START</Link>
+        <section className="asa-public-certificate-record" aria-labelledby="certificate-not-found-title">
+          <span className="asa-kicker">ПРОВЕРКА СЕРТИФИКАТА</span>
+          <h1 id="certificate-not-found-title">Сертификат не найден</h1>
+          <p>Проверьте код или запросите у владельца актуальную ссылку.</p>
+        </section>
+      </main>
+    );
+  }
+
   return (
-    <main className="asa-public-certificate-page">
-      <Link href="/prototype/a/home" className="asa-public-certificate-page__brand">ARCH.START</Link>
-      <article className="asa-public-certificate-record" aria-labelledby="public-certificate-title">
-        <header>
-          <div>
-            <span className="asa-kicker">ПРОВЕРКА СЕРТИФИКАТА</span>
-            <h1 id="public-certificate-title">Certificate of Completion</h1>
-          </div>
-          <StatusMark
-            status={revoked ? "locked" : "complete"}
-            label={revoked ? "REVOKED" : "VALID"}
-          />
-        </header>
-        <dl>
-          <div><dt>Имя</dt><dd>{verification.displayName}</dd></div>
-          <div><dt>Курс</dt><dd>{verification.courseTitle}</dd></div>
-          <div><dt>Версия</dt><dd>{verification.courseVersion}</dd></div>
-          <div><dt>Дата выпуска</dt><dd>{verification.issuedAt ? formatCertificateDate(verification.issuedAt) : "—"}</dd></div>
-          <div><dt>Код</dt><dd><code>{verification.certificateCode}</code></dd></div>
-        </dl>
-        <p className="asa-certificate-disclaimer">
-          Эта запись подтверждает завершение некоммерческого курса ARCH.START и не является
-          государственной аккредитацией, университетским кредитом или профессиональной лицензией.
-        </p>
-      </article>
+    <main className="asa-public-certificate-page asa-public-certificate-page--found">
+      <header className="asa-public-certificate-page__verification-head asa-certificate-no-print">
+        <div>
+          <Link href="/prototype/a/home" className="asa-public-certificate-page__brand">ARCH.START</Link>
+          <span className="asa-kicker">ПРОВЕРКА СЕРТИФИКАТА</span>
+          <h1>{revoked ? "Сертификат отозван" : "Сертификат действителен"}</h1>
+          <p>
+            {revoked
+              ? "Публичная запись существует, но сертификат больше не является действительным."
+              : "Код, имя, версия курса и дата выпуска подтверждены сервером ARCH.START."}
+          </p>
+        </div>
+        <StatusMark
+          status={revoked ? "locked" : "complete"}
+          label={revoked ? "REVOKED" : "VALID"}
+        />
+      </header>
+
+      <div className="asa-certificate-print-root">
+        <CertificateArtwork
+          certificateCode={certificateCode}
+          courseTitle={courseTitle}
+          courseVersion={courseVersion}
+          displayName={displayName}
+          issuedAt={issuedAt}
+          status={revoked ? "REVOKED" : "VALID"}
+        />
+      </div>
+
+      <div className="asa-public-certificate-page__actions asa-certificate-no-print">
+        <CertificatePrintControl />
+        <Button href="/prototype/a/home">Вернуться на ARCH.START</Button>
+      </div>
     </main>
   );
 }

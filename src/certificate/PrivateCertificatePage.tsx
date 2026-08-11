@@ -1,7 +1,9 @@
 import { Button, StatusMark } from "@/src/design-system";
 import type { MyCertificateProjection } from "./types";
+import { CertificateArtwork } from "./CertificateArtwork";
 import { CertificateIssueControl } from "./CertificateIssueControl";
-import { formatCertificateDate, publicCertificatePath } from "./model";
+import { CertificatePrintControl } from "./CertificatePrintControl";
+import { publicCertificatePath } from "./model";
 
 function RequirementRows({ projection }: { projection: MyCertificateProjection }) {
   return (
@@ -76,12 +78,16 @@ export function PrivateCertificatePage({
 
   const revoked = projection.state === "revoked";
   return (
-    <main className="asa-certificate-page asa-container">
-      <header className="asa-certificate-page__intro">
+    <main className="asa-certificate-page asa-certificate-page--issued">
+      <header className="asa-certificate-page__intro asa-container asa-certificate-no-print">
         <div>
-          <span className="asa-kicker">ТЕХНИЧЕСКИЙ ПРОСМОТР</span>
+          <span className="asa-kicker">СЕРТИФИКАТ</span>
           <h1>Сертификат о завершении курса</h1>
-          <p>Функциональная версия. Финальная визуальная композиция будет утверждена отдельно.</p>
+          <p>
+            {revoked
+              ? "Сертификат сохранён в истории, но больше не является действительным."
+              : "Сертификат готов к печати, сохранению в PDF и публичной проверке."}
+          </p>
         </div>
         <StatusMark
           status={revoked ? "locked" : "complete"}
@@ -89,31 +95,25 @@ export function PrivateCertificatePage({
         />
       </header>
 
-      <article className={`asa-certificate-document${revoked ? " asa-certificate-document--revoked" : ""}`}>
-        <span className="asa-certificate-document__brand">ARCH.START</span>
-        <p className="asa-certificate-document__type">CERTIFICATE OF COMPLETION</p>
-        <h2>{certificate.displayName}</h2>
-        <p>завершил(а) некоммерческий образовательный курс</p>
-        <h3>{certificate.courseTitle}</h3>
-        <dl>
-          <div><dt>Дата выпуска</dt><dd>{formatCertificateDate(certificate.issuedAt)}</dd></div>
-          <div><dt>Версия курса</dt><dd>{certificate.courseVersion}</dd></div>
-          <div><dt>Код сертификата</dt><dd><code>{certificate.certificateCode}</code></dd></div>
-        </dl>
-        {revoked ? <strong className="asa-certificate-document__revoked">REVOKED</strong> : null}
-      </article>
+      <div className="asa-certificate-print-root">
+        <CertificateArtwork
+          certificateCode={certificate.certificateCode}
+          courseTitle={certificate.courseTitle}
+          courseVersion={certificate.courseVersion}
+          displayName={certificate.displayName}
+          issuedAt={certificate.issuedAt}
+          status={revoked ? "REVOKED" : "VALID"}
+        />
+      </div>
 
-      <p className="asa-certificate-disclaimer">
-        Сертификат подтверждает завершение некоммерческого образовательного курса ARCH.START.
-        Он не является государственной аккредитацией, университетским кредитом,
-        профессиональной лицензией или официальной квалификацией архитектора.
-      </p>
-
-      <div className="asa-certificate-actions">
-        <Button href="/prototype/a/dashboard">Вернуться в «Мой курс»</Button>
-        <Button href={publicCertificatePath(certificate.certificateCode)} variant="dark">
-          Проверить публичную запись
-        </Button>
+      <div className="asa-certificate-page__actions asa-container asa-certificate-no-print">
+        <CertificatePrintControl />
+        <div className="asa-certificate-actions">
+          <Button href="/prototype/a/dashboard">Вернуться в «Мой курс»</Button>
+          <Button href={publicCertificatePath(certificate.certificateCode)}>
+            Проверить публичную запись
+          </Button>
+        </div>
       </div>
     </main>
   );

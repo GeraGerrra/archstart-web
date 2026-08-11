@@ -1,6 +1,5 @@
 export { CertificateDashboardCard } from "./CertificateDashboardCard";
-export { PrivateCertificatePage } from "./PrivateCertificatePage";
-export { PublicCertificateVerificationPage } from "./PublicCertificateVerificationPage";
+export { CertificatePrintControl } from "./CertificatePrintControl";
 export {
   CERTIFICATE_MVP_IDENTITY,
   emptyPublicCertificateVerification,
@@ -17,3 +16,5 @@ export type {
   PublicCertificateStatus,
   PublicCertificateVerification,
 } from "./types";
+export { certificateNameLayout } from "./name-layout";
+export type { CertificateNameLayout, CertificateNameScale } from "./name-layout";

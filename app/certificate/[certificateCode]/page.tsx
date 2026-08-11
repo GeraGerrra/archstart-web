@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PublicCertificateVerificationPage } from "@/src/certificate";
+import { PublicCertificateVerificationPage } from "@/src/certificate/PublicCertificateVerificationPage";
 import { loadPublicCertificateVerification } from "@/src/server/certificate-projection";
 
 export const dynamic = "force-dynamic";

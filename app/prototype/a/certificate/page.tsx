@@ -1,5 +1,5 @@
 import { requireOnboardedProfile } from "@/src/auth/guards";
-import { PrivateCertificatePage } from "@/src/certificate";
+import { PrivateCertificatePage } from "@/src/certificate/PrivateCertificatePage";
 import { SelectedAShell } from "@/src/prototypes/selected-a/shell-adapter";
 import { loadMyCertificateProjection } from "@/src/server/certificate-projection";
 import { loadCourseProgressProjection } from "@/src/server/course-progress-projection";

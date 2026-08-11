@@ -2461,7 +2461,7 @@ img { max-width: 100%; }
   .asa-cutout img, .asa-cutout:hover img, .asa-cutout:focus-visible img { transform: scale(var(--cutout-scale, 1)) !important; transition: none !important; }
 }
 
-/* Phase 08M Pass 2: functional certificate surfaces only. Final A4/print art direction is deferred. */
+/* Phase 08M Pass 3: owner-approved certificate visual design and browser PDF. */
 .asa-certificate-card { display: grid; margin-top: 76px; padding: clamp(24px, 4vw, 48px); border: 1px solid var(--asa-ink); background: var(--asa-white); gap: 28px; }
 .asa-certificate-card__header { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--asa-ink); }
 .asa-certificate-card__header h2 { max-width: 760px; margin: 8px 0 0; font-size: clamp(2rem, 4vw, 4rem); }
@@ -2477,44 +2477,96 @@ img { max-width: 100%; }
 .asa-certificate-issue-control { display: grid; gap: 8px; }
 .asa-certificate-issue-control__message { min-height: 1.4em; margin: 0; color: var(--asa-muted); font-size: 11px; }
 .asa-certificate-page { display: grid; min-height: 72vh; padding-top: clamp(70px, 10vw, 130px); padding-bottom: 120px; gap: 28px; }
+.asa-certificate-page--issued { padding-top: clamp(52px, 7vw, 96px); }
 .asa-certificate-page > h1, .asa-certificate-page__intro h1 { max-width: 980px; margin: 8px 0 0; font-size: clamp(3rem, 7vw, 7rem); line-height: .92; letter-spacing: -.055em; }
 .asa-certificate-page > p, .asa-certificate-page__intro p { max-width: 850px; margin: 0; color: var(--asa-muted); font-size: 17px; line-height: 1.6; }
 .asa-certificate-page__intro { display: flex; align-items: flex-end; justify-content: space-between; gap: 36px; padding-bottom: 32px; border-bottom: 1px solid var(--asa-ink); }
+.asa-certificate-page__actions { display: grid; gap: 18px; }
 .asa-certificate-name-confirmation { display: grid; max-width: 980px; padding: 28px; border: 1px solid var(--asa-ink); gap: 18px; }
 .asa-certificate-name-confirmation h2, .asa-certificate-name-confirmation p { margin: 0; }
 .asa-certificate-name-confirmation strong { font-size: clamp(2rem, 5vw, 4.6rem); line-height: 1; overflow-wrap: anywhere; }
 .asa-certificate-name-confirmation p { color: var(--asa-muted); }
-.asa-certificate-document { position: relative; display: grid; min-height: 560px; padding: clamp(28px, 6vw, 72px); border: 1px solid var(--asa-ink); background: var(--asa-white); align-content: center; text-align: center; gap: 18px; overflow: hidden; }
-.asa-certificate-document::before { position: absolute; inset: 18px; border: 1px solid var(--asa-rule); content: ""; pointer-events: none; }
-.asa-certificate-document__brand { font-size: 15px; font-weight: 800; letter-spacing: .05em; }
-.asa-certificate-document__type { margin: 0; font-size: 11px; letter-spacing: .22em; }
-.asa-certificate-document h2 { max-width: 980px; margin: 12px auto; font-size: clamp(3rem, 7vw, 7rem); line-height: .95; letter-spacing: -.05em; overflow-wrap: anywhere; }
-.asa-certificate-document h3 { max-width: 760px; margin: 0 auto 14px; font-size: clamp(1.4rem, 3vw, 2.5rem); }
-.asa-certificate-document > p { margin: 0; color: var(--asa-muted); }
-.asa-certificate-document dl { display: grid; width: min(900px, 100%); margin: 20px auto 0; border-top: 1px solid var(--asa-rule); grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.asa-certificate-document dl > div { padding: 18px 12px 0; }
-.asa-certificate-document dt { color: var(--asa-muted); font-size: 9px; }
-.asa-certificate-document dd { margin: 8px 0 0; font-size: 12px; font-weight: 700; overflow-wrap: anywhere; }
-.asa-certificate-document--revoked { background: var(--asa-soft); }
-.asa-certificate-document__revoked { position: absolute; right: 6%; bottom: 10%; font-size: clamp(3rem, 9vw, 9rem); letter-spacing: .08em; opacity: .12; transform: rotate(-9deg); }
-.asa-certificate-disclaimer { max-width: 980px; margin: 0; padding: 20px 24px; border-left: 4px solid var(--asa-ink); background: var(--asa-soft); color: var(--asa-muted); font-size: 12px; line-height: 1.6; }
+.asa-certificate-print-control { display: flex; align-items: flex-start; gap: 14px; flex-wrap: wrap; }
+.asa-certificate-print-control > p { max-width: 520px; margin: 9px 0 0; color: var(--asa-muted); font-size: 12px; line-height: 1.5; }
+.asa-certificate-print-root { width: min(1400px, calc(100vw - 48px)); margin: 0 auto; }
+
+.asa-certificate-artwork {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 2048 / 1447;
+  container-type: inline-size;
+  overflow: hidden;
+  background: #f7f6f2;
+  color: #111111;
+  box-shadow: 0 28px 90px rgba(17, 17, 17, .12);
+  font-family: var(--asa-certificate-font), "IBM Plex Sans", Arial, sans-serif;
+  font-weight: 400;
+  isolation: isolate;
+}
+.asa-certificate-artwork__background { z-index: -1; width: 100% !important; height: 100% !important; object-fit: cover; }
+.asa-certificate-artwork p, .asa-certificate-artwork dl, .asa-certificate-artwork h1 { margin: 0; }
+.asa-certificate-artwork__identity { position: absolute; top: 10.7%; left: 30.5%; }
+.asa-certificate-artwork__identity strong { display: block; font-size: 5.05cqw; font-weight: 500; line-height: .72; letter-spacing: .018em; }
+.asa-certificate-artwork__identity p { margin-top: 2.1cqw; font-size: 2.18cqw; line-height: 1.04; letter-spacing: -.025em; }
+.asa-certificate-artwork__metadata { position: absolute; top: 18.75%; left: 65.38%; display: grid; width: 29.8%; grid-template-columns: 1.23fr 1fr; gap: 4.59cqw; }
+.asa-certificate-artwork__metadata div { min-width: 0; }
+.asa-certificate-artwork__metadata dt, .asa-certificate-artwork__metadata dd { font-size: 2.18cqw; line-height: 1.04; letter-spacing: -.025em; white-space: nowrap; }
+.asa-certificate-artwork__metadata dd { margin: 0; }
+.asa-certificate-artwork__name { position: absolute; right: 4.35%; bottom: 38.2%; display: grid; width: 64%; justify-items: end; color: #050505; font-size: var(--asa-certificate-name-size, 9.9cqw); font-weight: 400; line-height: .93; letter-spacing: -.035em; text-align: right; text-transform: uppercase; }
+.asa-certificate-artwork__name span { display: block; max-width: 100%; white-space: nowrap; }
+.asa-certificate-artwork__name--long { line-height: .96; }
+.asa-certificate-artwork__name--extra-long { line-height: 1; letter-spacing: -.045em; }
+.asa-certificate-artwork__course-title { position: absolute; top: 65.2%; right: 4.35%; display: grid; width: 56%; justify-items: end; font-size: 2.62cqw; line-height: .98; letter-spacing: -.025em; text-align: right; }
+.asa-certificate-artwork__course-title span { display: block; white-space: nowrap; }
+.asa-certificate-artwork__verification { position: absolute; top: 73.3%; left: 4.35%; display: flex; align-items: center; gap: 2.45cqw; }
+.asa-certificate-artwork__qr-link { display: block; width: 6.8cqw; height: 6.8cqw; flex: 0 0 auto; background: #ffffff; }
+.asa-certificate-artwork__qr { display: block; width: 100%; height: 100%; }
+.asa-certificate-artwork__verification > div { display: grid; gap: 1.25cqw; }
+.asa-certificate-artwork__verification p { font-size: 1.28cqw; line-height: 1.05; letter-spacing: -.015em; }
+.asa-certificate-artwork__verification code { font-family: var(--asa-certificate-font), "IBM Plex Sans", Arial, sans-serif; font-size: 1.05cqw; font-weight: 400; line-height: 1; white-space: nowrap; }
+.asa-certificate-artwork__disclaimer { position: absolute; top: 88.9%; left: 4.35%; width: 45%; font-size: .78cqw; line-height: 1.02; letter-spacing: -.015em; }
+.asa-certificate-artwork__revoked { position: absolute; inset: 29% 7% auto 37%; display: grid; padding: 2.4cqw 2.8cqw; border: .32cqw solid rgba(17, 17, 17, .24); background: rgba(247, 246, 242, .72); color: rgba(17, 17, 17, .34); font-size: 5.6cqw; font-weight: 500; line-height: .82; letter-spacing: .04em; text-align: center; transform: rotate(-8deg); backdrop-filter: blur(2px); }
+.asa-certificate-artwork__revoked span:last-child { font-size: 2.2cqw; letter-spacing: .16em; }
+
 .asa-public-certificate-page { min-height: 100vh; padding: clamp(24px, 5vw, 72px); background: var(--asa-paper); }
+.asa-public-certificate-page--found { display: grid; gap: clamp(36px, 7vw, 80px); }
 .asa-public-certificate-page__brand { display: inline-block; margin-bottom: clamp(70px, 12vw, 150px); color: var(--asa-ink); font-size: 18px; font-weight: 800; text-decoration: none; }
+.asa-public-certificate-page__verification-head { display: flex; width: min(1400px, 100%); margin: 0 auto; padding-bottom: 30px; border-bottom: 1px solid var(--asa-ink); align-items: flex-end; justify-content: space-between; gap: 36px; }
+.asa-public-certificate-page__verification-head .asa-public-certificate-page__brand { margin-bottom: clamp(50px, 7vw, 90px); }
+.asa-public-certificate-page__verification-head h1 { max-width: 900px; margin: 10px 0 0; font-size: clamp(3rem, 7vw, 7rem); line-height: .9; letter-spacing: -.055em; }
+.asa-public-certificate-page__verification-head p { max-width: 780px; margin: 20px 0 0; color: var(--asa-muted); font-size: 16px; line-height: 1.6; }
+.asa-public-certificate-page__actions { display: flex; width: min(1400px, 100%); margin: 0 auto; align-items: flex-start; gap: 14px; flex-wrap: wrap; }
 .asa-public-certificate-record { display: grid; width: min(100%, 1100px); margin: 0 auto; padding: clamp(28px, 6vw, 72px); border: 1px solid var(--asa-ink); background: var(--asa-white); gap: 34px; }
-.asa-public-certificate-record > header { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 26px; border-bottom: 1px solid var(--asa-ink); }
 .asa-public-certificate-record h1 { margin: 8px 0 0; font-size: clamp(2.5rem, 6vw, 6rem); line-height: .95; letter-spacing: -.05em; }
 .asa-public-certificate-record > p { max-width: 760px; margin: 0; color: var(--asa-muted); font-size: 16px; line-height: 1.6; }
-.asa-public-certificate-record dl { display: grid; margin: 0; border-top: 1px solid var(--asa-rule); }
-.asa-public-certificate-record dl > div { display: grid; min-height: 72px; padding: 14px 0; border-bottom: 1px solid var(--asa-rule); grid-template-columns: 180px minmax(0, 1fr); gap: 20px; align-items: center; }
-.asa-public-certificate-record dt { color: var(--asa-muted); font-size: 11px; }
-.asa-public-certificate-record dd { margin: 0; font-size: 16px; font-weight: 700; overflow-wrap: anywhere; }
 
 @media (max-width: 720px) {
-  .asa-certificate-card__header, .asa-certificate-page__intro, .asa-public-certificate-record > header { align-items: flex-start; flex-direction: column; }
-  .asa-certificate-metrics, .asa-certificate-summary, .asa-certificate-requirements, .asa-certificate-document dl { grid-template-columns: 1fr; }
+  .asa-certificate-card__header, .asa-certificate-page__intro, .asa-public-certificate-page__verification-head { align-items: flex-start; flex-direction: column; }
+  .asa-certificate-metrics, .asa-certificate-summary, .asa-certificate-requirements { grid-template-columns: 1fr; }
   .asa-certificate-metrics > div, .asa-certificate-summary > div, .asa-certificate-requirements > div { min-height: 74px; border-right: 0; border-bottom: 1px solid var(--asa-rule); }
   .asa-certificate-metrics > div:last-child, .asa-certificate-summary > div:last-child, .asa-certificate-requirements > div:last-child { border-bottom: 0; }
-  .asa-certificate-document { min-height: 620px; padding: 42px 26px; }
-  .asa-certificate-document dl > div { padding-top: 14px; }
-  .asa-public-certificate-record dl > div { grid-template-columns: 1fr; gap: 7px; }
+  .asa-certificate-print-root { width: calc(100vw - 20px); }
+  .asa-certificate-page--issued { padding-top: 38px; }
+  .asa-certificate-page__actions { padding-inline: 10px; }
+  .asa-public-certificate-page { padding-inline: 10px; }
+  .asa-public-certificate-page__verification-head, .asa-public-certificate-page__actions { width: calc(100% - 12px); }
+  .asa-certificate-print-control { display: grid; }
+  .asa-certificate-print-control > p { margin-top: 0; }
+}
+
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+@media print {
+  html:has(.asa-certificate-print-root), body:has(.asa-certificate-print-root) { width: 297mm !important; height: 210mm !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; background: #ffffff !important; }
+  body:has(.asa-certificate-print-root) { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body:has(.asa-certificate-print-root) * { visibility: hidden !important; }
+  body:has(.asa-certificate-print-root) .asa-certificate-print-root, body:has(.asa-certificate-print-root) .asa-certificate-print-root * { visibility: visible !important; }
+  body:has(.asa-certificate-print-root) .asa-certificate-no-print { display: none !important; }
+  body:has(.asa-certificate-print-root) .asa-certificate-print-root { position: fixed !important; inset: 0 !important; width: 297mm !important; height: 210mm !important; margin: 0 !important; padding: 0 !important; }
+  body:has(.asa-certificate-print-root) .asa-certificate-artwork { width: 297mm !important; height: 210mm !important; max-width: none !important; aspect-ratio: auto !important; box-shadow: none !important; }
+  body:has(.asa-certificate-print-root) .asa-certificate-artwork__background { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
 }
