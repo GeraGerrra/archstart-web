@@ -74,8 +74,9 @@ test("the approved composition uses IBM Plex Sans and real dynamic certificate f
 });
 
 test("top certificate information matches the owner-approved restrained scale", () => {
-  assert.match(css, /\.asa-certificate-artwork__identity p \{[^}]*margin-top:\s*1\.58cqw;[^}]*font-size:\s*1\.72cqw;/u);
+  assert.match(css, /\.asa-certificate-artwork__identity p \{[^}]*margin-top:\s*2\.12cqw;[^}]*font-size:\s*1\.72cqw;/u);
   assert.match(css, /\.asa-certificate-artwork__metadata dt, \.asa-certificate-artwork__metadata dd \{[^}]*font-size:\s*1\.72cqw;/u);
+  assert.doesNotMatch(css, /\.asa-certificate-artwork__identity p \{[^}]*margin-top:\s*1\.58cqw/u);
   assert.doesNotMatch(css, /\.asa-certificate-artwork__identity p \{[^}]*font-size:\s*2\.18cqw/u);
   assert.doesNotMatch(css, /\.asa-certificate-artwork__metadata dt, \.asa-certificate-artwork__metadata dd \{[^}]*font-size:\s*2\.18cqw/u);
 });

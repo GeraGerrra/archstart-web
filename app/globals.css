@@ -2508,7 +2508,7 @@ img { max-width: 100%; }
 .asa-certificate-artwork p, .asa-certificate-artwork dl, .asa-certificate-artwork h1 { margin: 0; }
 .asa-certificate-artwork__identity { position: absolute; top: 10.7%; left: 30.5%; }
 .asa-certificate-artwork__identity strong { display: block; font-size: 5.05cqw; font-weight: 500; line-height: .72; letter-spacing: .018em; }
-.asa-certificate-artwork__identity p { margin-top: 1.58cqw; font-size: 1.72cqw; line-height: 1.04; letter-spacing: -.02em; }
+.asa-certificate-artwork__identity p { margin-top: 2.12cqw; font-size: 1.72cqw; line-height: 1.04; letter-spacing: -.02em; }
 .asa-certificate-artwork__metadata { position: absolute; top: 18.75%; left: 65.38%; display: grid; width: 29.8%; grid-template-columns: 1.23fr 1fr; gap: 4.59cqw; }
 .asa-certificate-artwork__metadata div { min-width: 0; }
 .asa-certificate-artwork__metadata dt, .asa-certificate-artwork__metadata dd { font-size: 1.72cqw; line-height: 1.04; letter-spacing: -.02em; white-space: nowrap; }
