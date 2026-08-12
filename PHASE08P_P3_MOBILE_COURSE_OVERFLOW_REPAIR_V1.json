@@ -1,0 +1,252 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "ARCH.START",
+  "phase": "Phase 08P",
+  "pass": "Pass 3 Targeted Mobile Course Overflow Repair",
+  "status": "SOURCE_CANDIDATE_HOSTED_ACCEPTANCE_PENDING",
+  "acceptedSource": {
+    "branch": "phase-08p-production-readiness",
+    "gitHead": "ece3e92253c95fda9eb103ba40aa53cf53382424",
+    "gitTree": "5917f60ad09d107d829a8b8a9bc7094bc6f5a2d7",
+    "sourceContextZip": "ARCHSTART_PHASE_08P_PASS_3_SOURCE_CONTEXT.zip",
+    "sourceContextSha256": "7a164a90754c7f4255907502fa1f1aec25bf68992566bc695479dbece5d71fbc",
+    "sourceFileCount": 486,
+    "sourceSizeBytes": 10462872,
+    "p2HostedAcceptance": "OWNER_CONFIRMED_ALL_TESTS_PASS"
+  },
+  "surface": {
+    "canonicalRoute": "/course",
+    "legacyRoute": "/prototype/a/course",
+    "legacyBehavior": "PERMANENT_308_TO_CANONICAL_ROUTE_PRESERVED",
+    "component": "src/learning/course/CourseModuleCard.tsx",
+    "runtimeChangeFile": "app/globals.css",
+    "markupChange": false
+  },
+  "historicalDefect": {
+    "authority": "PHASE08P_P1_HISTORICAL_RUNTIME_INVENTORY_V1.json",
+    "classification": "CLIPPED_MIN_CONTENT_OVERFLOW",
+    "beforeMeasurements": [
+      {
+        "viewportCssPx": 320,
+        "documentClientWidthPx": 305,
+        "gridWidthPx": 273,
+        "cardWidthPx": 391.875,
+        "computedCardHeadingFontPx": 32,
+        "overflow": true
+      },
+      {
+        "viewportCssPx": 360,
+        "documentClientWidthPx": 345,
+        "gridWidthPx": 313,
+        "cardWidthPx": 428.984375,
+        "computedCardHeadingFontPx": 36,
+        "overflow": true
+      },
+      {
+        "viewportCssPx": 375,
+        "documentClientWidthPx": 360,
+        "gridWidthPx": 328,
+        "cardWidthPx": 442.890625,
+        "computedCardHeadingFontPx": 37.5,
+        "overflow": true
+      },
+      {
+        "viewportCssPx": 390,
+        "documentClientWidthPx": 375,
+        "gridWidthPx": 343,
+        "cardWidthPx": 456.8125,
+        "computedCardHeadingFontPx": 39,
+        "overflow": true
+      },
+      {
+        "viewportCssPx": 412,
+        "documentClientWidthPx": 397,
+        "gridWidthPx": 365,
+        "cardWidthPx": 477.09375,
+        "computedCardHeadingFontPx": 41.2,
+        "overflow": true
+      },
+      {
+        "viewportCssPx": 430,
+        "documentClientWidthPx": 415,
+        "gridWidthPx": 383,
+        "cardWidthPx": 493.921875,
+        "computedCardHeadingFontPx": 43,
+        "overflow": true
+      }
+    ],
+    "rootCause": [
+      "The later mobile .asa h2 rule had equal specificity and overrode the intended 22px card-title size.",
+      "Automatic minimum sizes in the card and nested grid tracks allowed heading min-content width to expand the card.",
+      "body overflow-x:hidden and .asa overflow-x:clip concealed the oversized geometry."
+    ]
+  },
+  "repairContract": {
+    "courseModuleBounded": true,
+    "singleColumnTrack": "minmax(0, 1fr)",
+    "identityTextTrack": "minmax(0, 1fr)",
+    "lessonTextTrack": "minmax(0, 1fr)",
+    "projectTextTrack": "minmax(0, 1fr)",
+    "mobileCardHeadingPx": 22,
+    "mobileCardHeadingLineHeight": 1.18,
+    "overflowWrapping": true,
+    "genericMobileH2Preserved": true,
+    "overflowMaskAdded": false
+  },
+  "browserGeometry": {
+    "method": "HEADLESS_CHROMIUM_EXACT_PRODUCTION_CSS_TOKENS_ALL_EIGHT_REAL_COURSE_MODULES",
+    "afterMeasurements": [
+      {
+        "viewportCssPx": 320,
+        "documentClientWidthPx": 305,
+        "gridWidthPx": 273,
+        "widestCardWidthPx": 273,
+        "computedCardHeadingFontPx": 22,
+        "overflow": false
+      },
+      {
+        "viewportCssPx": 360,
+        "documentClientWidthPx": 345,
+        "gridWidthPx": 313,
+        "widestCardWidthPx": 313,
+        "computedCardHeadingFontPx": 22,
+        "overflow": false
+      },
+      {
+        "viewportCssPx": 375,
+        "documentClientWidthPx": 360,
+        "gridWidthPx": 328,
+        "widestCardWidthPx": 328,
+        "computedCardHeadingFontPx": 22,
+        "overflow": false
+      },
+      {
+        "viewportCssPx": 390,
+        "documentClientWidthPx": 375,
+        "gridWidthPx": 343,
+        "widestCardWidthPx": 343,
+        "computedCardHeadingFontPx": 22,
+        "overflow": false
+      },
+      {
+        "viewportCssPx": 412,
+        "documentClientWidthPx": 397,
+        "gridWidthPx": 365,
+        "widestCardWidthPx": 365,
+        "computedCardHeadingFontPx": 22,
+        "overflow": false
+      },
+      {
+        "viewportCssPx": 430,
+        "documentClientWidthPx": 415,
+        "gridWidthPx": 383,
+        "widestCardWidthPx": 383,
+        "computedCardHeadingFontPx": 22,
+        "overflow": false
+      },
+      {
+        "viewportCssPx": 640,
+        "documentClientWidthPx": 625,
+        "gridWidthPx": 593,
+        "widestCardWidthPx": 593,
+        "computedCardHeadingFontPx": 22,
+        "overflow": false
+      },
+      {
+        "viewportCssPx": 641,
+        "documentClientWidthPx": 626,
+        "gridWidthPx": 574.75,
+        "widestCardWidthPx": 574.75,
+        "computedCardHeadingFontPx": 22,
+        "overflow": false
+      },
+      {
+        "viewportCssPx": 920,
+        "documentClientWidthPx": 905,
+        "gridWidthPx": 831.40625,
+        "widestCardWidthPx": 831.40625,
+        "computedCardHeadingFontPx": 22,
+        "overflow": false
+      },
+      {
+        "viewportCssPx": 921,
+        "documentClientWidthPx": 906,
+        "gridWidthPx": 832.34375,
+        "widestCardWidthPx": 405.171875,
+        "computedCardHeadingFontPx": 22,
+        "overflow": false
+      }
+    ],
+    "desktopGeometryPreserved": [
+      {
+        "viewportCssPx": 1024,
+        "gridWidthPx": 927.09375,
+        "widestCardWidthPx": 452.546875
+      },
+      {
+        "viewportCssPx": 1440,
+        "gridWidthPx": 1309.8125,
+        "widestCardWidthPx": 643.90625
+      }
+    ],
+    "hostedPreviewRequired": true
+  },
+  "preservedSourceHashes": {
+    "src/learning/course/CourseModuleCard.tsx": "b12af8dab124516f026e632f3b6d1cc13d8e4a421af784d3f9f9a39b4ab71bb5",
+    "src/learning/course/CourseOverviewPage.tsx": "0a119f2483c2933e4c23c01da40d2b5c5d2afbdfe8d0ff6529c6360ce179e2f6",
+    "src/routing/production-routes.ts": "f8f8fbdd75fc78bf6a857917df192beda6bfb55f0781314ab50b4affbf028cc9",
+    "next.config.ts": "f0defd0de8cc8ca175ffdb57352b99e2b3b0d2e822cbdcd6ce337c0fafc5b4fa",
+    "package.json": "7f04db32714b9ff3f061e03f28b5e97d4d6b6b328734ba6157657656a793a376",
+    "pnpm-lock.yaml": "a0da2a1d26abf89d9acf4cffad5f4feaeda235491bee8b0e4f7c808b9094e782"
+  },
+  "changedPaths": [
+    "PHASE08P_P3_MOBILE_COURSE_OVERFLOW_REPAIR.md",
+    "PHASE08P_P3_MOBILE_COURSE_OVERFLOW_REPAIR_V1.json",
+    "app/globals.css",
+    "tests/phase08p-p1-historical-runtime-inventory.test.ts",
+    "tests/phase08p-p3-mobile-course-overflow-repair.test.ts"
+  ],
+  "targetCandidate": {
+    "modifiedPathCount": 2,
+    "addedPathCount": 3,
+    "deletedPathCount": 0,
+    "changedPathCount": 5,
+    "gitTreeSelfReferenceExcluded": true,
+    "gitTreeAuthority": "EXTERNAL_OWNER_KIT_INPUT_AUTHORITY_JSON"
+  },
+  "mutations": {
+    "runtimeCss": true,
+    "reactMarkup": false,
+    "routes": false,
+    "redirects": false,
+    "auth": false,
+    "database": false,
+    "storage": false,
+    "vercel": false,
+    "domain": false,
+    "dependencies": false,
+    "content": false
+  },
+  "hostedAcceptance": {
+    "viewports": [
+      320,
+      360,
+      375,
+      390,
+      412,
+      430,
+      640,
+      768,
+      920,
+      1024,
+      1440
+    ],
+    "allEightModulesVisible": true,
+    "rightBordersInsideViewport": true,
+    "noHorizontalScroll": true,
+    "desktopParity": true,
+    "anonymousLearnerParity": true,
+    "runtimeLogsZeroNewErrors": true
+  },
+  "nextPass": "P4_FLOATING_PREVIEW_CONTROL_CLASSIFICATION_AND_REMOVAL"
+}

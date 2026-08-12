@@ -45,6 +45,8 @@ type HistoricalRuntimeInventoryAuthority = {
     route: string;
     result: string;
     measurements: MobileCourseMeasurement[];
+    deferredP3RepairContract: string[];
+    claimBoundary: string;
   };
   p1ChangedPaths: string[];
   mutations: {
@@ -124,7 +126,7 @@ test("the floating black control is not application-owned in the accepted source
   assert.equal(authority.floatingControlFinding.classification, "DEPLOYMENT_OR_BROWSER_INJECTION_CANDIDATE");
 });
 
-test("P1 pins the browser-reproduced mobile root cause but does not repair it", () => {
+test("P1 preserves the browser-reproduced mobile defect as historical authority", () => {
   assert.equal(authority.mobileCourseFinding.route, "/prototype/a/course");
   assert.equal(authority.mobileCourseFinding.result, "BROWSER_GEOMETRY_REPRODUCED_ROOT_CAUSE_PINNED");
   assert.deepEqual(
@@ -134,12 +136,8 @@ test("P1 pins the browser-reproduced mobile root cause but does not repair it", 
     [[390, true], [412, true], [430, true]],
   );
   assert.equal(authority.mobileCourseFinding.measurements.at(-1)?.overflow, false);
-  const css = read("app/globals.css");
-  assert.match(css, /\.asa-course-module__identity h2 \{[^}]*font-size: 22px/u);
-  assert.match(css, /@media \(max-width: 640px\)[\s\S]*\.asa h2 \{ font-size: clamp\(2rem, 10vw, 3\.1rem\); \}/u);
-  assert.match(css, /@media \(max-width: 920px\)[\s\S]*\.asa-course-list__grid \{ grid-template-columns: 1fr; \}/u);
-  assert.match(css, /body[\s\S]*overflow-x: hidden/u);
-  assert.match(css, /\.asa[\s\S]*overflow-x: clip/u);
+  assert.equal(authority.mobileCourseFinding.deferredP3RepairContract.length, 5);
+  assert.match(authority.mobileCourseFinding.claimBoundary, /Repair remains deferred to P3/u);
   assert.equal(authority.mutations.runtimeBehavior, false);
 });
 
