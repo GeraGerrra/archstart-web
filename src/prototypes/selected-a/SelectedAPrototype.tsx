@@ -25,6 +25,7 @@ import {
   progress,
   totals,
 } from "./data";
+import type { MyCertificateProjection } from "@/src/certificate/types";
 import {
   SelectedAShell,
   selectedAStatusForLesson as statusForLesson,
@@ -276,9 +277,11 @@ export function SelectedACourse({
 export function SelectedADashboard({
   model = selectedADashboardModel,
   progressProjection,
+  certificateProjection,
 }: {
   model?: DashboardViewModel;
   progressProjection?: SelectedAShellProgressProjection;
+  certificateProjection?: MyCertificateProjection;
 } = {}) {
   return (
     <SelectedAShell
@@ -286,7 +289,7 @@ export function SelectedADashboard({
       currentModule={progressProjection?.currentModuleCode ?? "M01"}
       progressProjection={progressProjection}
     >
-      <DashboardPage model={model} />
+      <DashboardPage model={model} certificateProjection={certificateProjection} />
     </SelectedAShell>
   );
 }

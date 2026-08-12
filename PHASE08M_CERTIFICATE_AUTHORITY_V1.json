@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "ARCH.START",
+  "phase": "Phase 08M",
+  "pass": "08M.1 Certificate Database Authority",
+  "status": "SOURCE_CANDIDATE",
+  "acceptedBase": {
+    "branch": "main",
+    "gitHead": "ffae1946ceba5ce3d0f06e811f2b637b178b4c09",
+    "gitTree": "b7d5bcd48d9063dbd169035e340914f2bf712202",
+    "phase07Closed": true
+  },
+  "certificateIdentity": {
+    "courseCode": "ARCHSTART_CORE",
+    "courseVersion": "2026.08",
+    "courseTitleSnapshot": "ARCH.START — русскоязычный вводный курс архитектуры",
+    "certificateCodePattern": "^as-[0-9a-f]{32}$",
+    "oneLifetimeCertificatePerUser": true
+  },
+  "eligibility": {
+    "canonicalLessonsRequired": 40,
+    "canonicalAcceptedProjectsRequired": 8,
+    "profileFirstAndLastNameRequired": true,
+    "quizScoreThreshold": null
+  },
+  "states": ["locked", "eligible", "issued", "revoked"],
+  "publicRpcs": [
+    "public.get_my_course_certificate_eligibility()",
+    "public.issue_my_course_certificate()",
+    "public.verify_course_certificate(text)",
+    "public.revoke_course_certificate(text,text)"
+  ],
+  "grants": {
+    "authenticated": [
+      "public.get_my_course_certificate_eligibility()",
+      "public.issue_my_course_certificate()",
+      "public.verify_course_certificate(text)"
+    ],
+    "anon": ["public.verify_course_certificate(text)"],
+    "service_role": [
+      "public.verify_course_certificate(text)",
+      "public.revoke_course_certificate(text,text)"
+    ]
+  },
+  "excluded": [
+    "server_pdf",
+    "certificate_storage_bucket",
+    "qr_code",
+    "email",
+    "manual_certificate_approval",
+    "certificate_admin_ui",
+    "public_registry",
+    "certificate_reissue",
+    "phase09"
+  ]
+}

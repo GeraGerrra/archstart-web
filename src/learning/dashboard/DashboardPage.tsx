@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { Button, ProgressBar, SectionHeading, StatusMark } from "@/src/design-system";
 import type { DashboardViewModel } from "../types";
+import { CertificateDashboardCard } from "@/src/certificate";
+import type { MyCertificateProjection } from "@/src/certificate/types";
 
 export interface DashboardPageProps {
   model: DashboardViewModel;
+  certificateProjection?: MyCertificateProjection;
 }
 
-export function DashboardPage({ model }: DashboardPageProps) {
+export function DashboardPage({ model, certificateProjection }: DashboardPageProps) {
   return (
     <section className="asa-dashboard asa-container">
       <header className="asa-dashboard__hero">
@@ -90,6 +93,9 @@ export function DashboardPage({ model }: DashboardPageProps) {
             ))}
           </ol>
         </section>
+      ) : null}
+      {certificateProjection ? (
+        <CertificateDashboardCard projection={certificateProjection} />
       ) : null}
     </section>
   );
