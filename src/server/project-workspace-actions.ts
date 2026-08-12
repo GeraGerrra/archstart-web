@@ -10,6 +10,14 @@ import type {
 } from "@/src/project-upload/finalization-types";
 import type { ProjectUploadCapabilityResult } from "@/src/project-upload/types";
 import {
+  COURSE_ROUTE,
+  DASHBOARD_ROUTE,
+  HOME_ROUTE,
+  REVIEW_ROUTE,
+  courseModuleRoute,
+  courseProjectRoute,
+} from "@/src/routing/production-routes";
+import {
   PROJECT_FILE_LIMITS,
   PROJECT_UUID_PATTERN,
   exactObject,
@@ -70,15 +78,15 @@ async function activeStaffRole(
 }
 
 function refreshProjectRoutes(projectCode?: string): void {
-  revalidatePath("/prototype/a/home");
-  revalidatePath("/prototype/a/course");
+  revalidatePath(HOME_ROUTE);
+  revalidatePath(COURSE_ROUTE);
   if (projectCode) {
-    const modulePath = `/prototype/a/course/${projectCode.slice(0, 3).toLowerCase()}`;
-    revalidatePath(modulePath);
-    revalidatePath(`${modulePath}/project`);
+    const moduleCode = projectCode.slice(0, 3);
+    revalidatePath(courseModuleRoute(moduleCode));
+    revalidatePath(courseProjectRoute(moduleCode));
   }
-  revalidatePath("/prototype/a/dashboard");
-  revalidatePath("/prototype/a/review");
+  revalidatePath(DASHBOARD_ROUTE);
+  revalidatePath(REVIEW_ROUTE);
 }
 
 export async function finalizeProjectWorkspaceUploadAction(

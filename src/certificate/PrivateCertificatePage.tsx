@@ -26,7 +26,7 @@ export function PrivateCertificatePage({
         <span className="asa-kicker">СЕРТИФИКАТ</span>
         <h1>Проверка временно недоступна</h1>
         <p>Не удалось загрузить состояние сертификата. Попробуйте открыть страницу позднее.</p>
-        <Button href="/prototype/a/dashboard">Вернуться в «Мой курс»</Button>
+        <Button href="/dashboard">Вернуться в «Мой курс»</Button>
       </main>
     );
   }
@@ -40,7 +40,7 @@ export function PrivateCertificatePage({
         <RequirementRows projection={projection} />
         <div className="asa-certificate-actions">
           {!projection.profileNameReady ? <Button href="/profile">Заполнить профиль</Button> : null}
-          <Button href="/prototype/a/course" variant="dark">Открыть весь курс</Button>
+          <Button href="/course" variant="dark">Открыть весь курс</Button>
         </div>
       </main>
     );
@@ -71,7 +71,7 @@ export function PrivateCertificatePage({
     return (
       <main className="asa-certificate-page asa-container">
         <h1>Сертификат временно недоступен</h1>
-        <Button href="/prototype/a/dashboard">Вернуться в «Мой курс»</Button>
+        <Button href="/dashboard">Вернуться в «Мой курс»</Button>
       </main>
     );
   }
@@ -109,7 +109,7 @@ export function PrivateCertificatePage({
       <div className="asa-certificate-page__actions asa-container asa-certificate-no-print">
         <CertificatePrintControl />
         <div className="asa-certificate-actions">
-          <Button href="/prototype/a/dashboard">Вернуться в «Мой курс»</Button>
+          <Button href="/dashboard">Вернуться в «Мой курс»</Button>
           <Button href={publicCertificatePath(certificate.certificateCode)}>
             Проверить публичную запись
           </Button>

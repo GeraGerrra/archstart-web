@@ -12,7 +12,7 @@ export function PublicCertificateVerificationPage({
   if (!verification.found) {
     return (
       <main className="asa-public-certificate-page">
-        <Link href="/prototype/a/home" className="asa-public-certificate-page__brand">ARCH.START</Link>
+        <Link href="/" className="asa-public-certificate-page__brand">ARCH.START</Link>
         <section className="asa-public-certificate-record" aria-labelledby="certificate-not-found-title">
           <span className="asa-kicker">ПРОВЕРКА СЕРТИФИКАТА</span>
           <h1 id="certificate-not-found-title">Сертификат не найден</h1>
@@ -32,7 +32,7 @@ export function PublicCertificateVerificationPage({
   if (!certificateCode || !displayName || !courseTitle || !courseVersion || !issuedAt) {
     return (
       <main className="asa-public-certificate-page">
-        <Link href="/prototype/a/home" className="asa-public-certificate-page__brand">ARCH.START</Link>
+        <Link href="/" className="asa-public-certificate-page__brand">ARCH.START</Link>
         <section className="asa-public-certificate-record" aria-labelledby="certificate-not-found-title">
           <span className="asa-kicker">ПРОВЕРКА СЕРТИФИКАТА</span>
           <h1 id="certificate-not-found-title">Сертификат не найден</h1>
@@ -46,7 +46,7 @@ export function PublicCertificateVerificationPage({
     <main className="asa-public-certificate-page asa-public-certificate-page--found">
       <header className="asa-public-certificate-page__verification-head asa-certificate-no-print">
         <div>
-          <Link href="/prototype/a/home" className="asa-public-certificate-page__brand">ARCH.START</Link>
+          <Link href="/" className="asa-public-certificate-page__brand">ARCH.START</Link>
           <span className="asa-kicker">ПРОВЕРКА СЕРТИФИКАТА</span>
           <h1>{revoked ? "Сертификат отозван" : "Сертификат действителен"}</h1>
           <p>
@@ -74,7 +74,7 @@ export function PublicCertificateVerificationPage({
 
       <div className="asa-public-certificate-page__actions asa-certificate-no-print">
         <CertificatePrintControl />
-        <Button href="/prototype/a/home">Вернуться на ARCH.START</Button>
+        <Button href="/">Вернуться на ARCH.START</Button>
       </div>
     </main>
   );

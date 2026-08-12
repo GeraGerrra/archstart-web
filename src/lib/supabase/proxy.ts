@@ -2,12 +2,7 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { getPublicSupabaseConfig } from "@/src/auth/config";
 import { safeRelativeDestination } from "@/src/auth/redirects";
-
-const PROTECTED_PATHS = ["/prototype/a/dashboard", "/onboarding", "/profile", "/auth/update-password"] as const;
-
-function isProtected(pathname: string): boolean {
-  return PROTECTED_PATHS.some((path) => pathname === path || pathname.startsWith(`${path}/`));
-}
+import { isProtectedProductionPath } from "@/src/routing/production-routes";
 
 function withRefreshCookies(source: NextResponse, target: NextResponse): NextResponse {
   for (const cookie of source.cookies.getAll()) target.cookies.set(cookie);
@@ -30,7 +25,7 @@ export async function updateSession(request: NextRequest): Promise<NextResponse>
 
   const { data, error } = await supabase.auth.getClaims();
   const authenticated = !error && typeof data?.claims?.sub === "string";
-  if (!authenticated && isProtected(request.nextUrl.pathname)) {
+  if (!authenticated && isProtectedProductionPath(request.nextUrl.pathname)) {
     const next = safeRelativeDestination(`${request.nextUrl.pathname}${request.nextUrl.search}`);
     const signInUrl = request.nextUrl.clone();
     signInUrl.pathname = "/auth/sign-in";

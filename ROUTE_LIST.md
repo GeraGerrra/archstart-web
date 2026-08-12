@@ -1,3 +1,29 @@
+<!-- PHASE08P_PASS2_CURRENT -->
+# ARCH.START Route List — Phase 08P Pass 2
+
+**CANONICAL PRODUCTION ROUTES IMPLEMENTED FOR SOURCE · PREVIEW ACCEPTANCE PENDING**
+
+| Route | Access | Purpose |
+|---|---|---|
+| `/` | public | accepted ARCH.START Home |
+| `/course` | public | complete course overview |
+| `/course/[moduleCode]` | public | module overview |
+| `/course/[moduleCode]/[lessonCode]/[item]` | public | lesson item workspace |
+| `/course/[moduleCode]/project` | anonymous or authenticated projection | module project workspace |
+| `/dashboard` | authenticated + onboarded | learner Dashboard and certificate status |
+| `/review` | authenticated + onboarded + active staff role | staff project workspace |
+| `/certificate` | authenticated + onboarded | private certificate surface |
+| `/certificate/[certificateCode]` | public | public certificate verification |
+
+The former selected-A paths under `/prototype/a` are permanent compatibility
+redirects. Unconsumed query parameters are forwarded by Next.js redirect
+configuration, so QA state links and Auth `next` destinations keep their state.
+The historical `/prototype-review` and `/prototypes/a|b|c/...` surfaces remain
+noindexed and unchanged until the dedicated P6 Course Development bridge.
+
+The sections below are retained as historical phase records and may contain the
+route names that were current when those phases were accepted.
+
 <!-- PHASE07_PASS0_CURRENT -->
 # ARCH.START Route List — Phase 07 Pass 0
 

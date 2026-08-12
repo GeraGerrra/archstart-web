@@ -73,15 +73,6 @@ const authority = JSON.parse(
 
 const runtimeFiles = [...authority.prototypePathCoupling.runtimeSourceFiles];
 
-function runtimePrototypeReferences(): { path: string; line: number }[] {
-  const rows: { path: string; line: number }[] = [];
-  for (const path of runtimeFiles) {
-    const lines = read(path).split(/\r?\n/u);
-    lines.forEach((line, index) => { if (line.includes("/prototype/a")) rows.push({ path, line: index + 1 }); });
-  }
-  return rows;
-}
-
 test("P1 is pinned to the exact closed Phase 08M source", () => {
   assert.equal(authority.acceptedSource.branch, "phase-08p-production-readiness");
   assert.equal(authority.acceptedSource.gitHead, "4aa5f89fab7b55be3bcead533701e7019fcc629c");
@@ -108,23 +99,20 @@ test("historical review and A/B/C routes remain byte-pinned during P1", () => {
   assert.match(read("app/prototypes/layout.tsx"), /robots: \{ index: false, follow: false, nocache: true \}/u);
 });
 
-test("the current launch and selected-A route baseline is recorded without changing behavior", () => {
-  assert.match(read("app/page.tsx"), /redirect\("\/prototype\/a\/home"\)/u);
-  assert.match(read("app/prototype/a/page.tsx"), /redirect\("\/prototype\/a\/home"\)/u);
-  assert.match(read("src/prototypes/selected-a/data.ts"), /pathHome="\/prototype\/a\/home"/u);
+test("the pre-P2 launch and selected-A route baseline remains recorded as historical authority", () => {
   assert.equal(authority.selectedARouteInstanceCounts.totalSelectedARouteInstances, 342);
   assert.equal(authority.selectedARouteInstanceCounts.canonicalLessonItemPages, 240);
   assert.equal(authority.selectedARouteInstanceCounts.legacyLessonRedirects, 80);
-  assert.equal(existsSync(join(root, "app/course/page.tsx")), false);
-  assert.equal(existsSync(join(root, "app/dashboard/page.tsx")), false);
+  assert.ok(existsSync(join(root, "app/prototype/a/page.tsx")));
+  assert.ok(existsSync(join(root, "app/prototype/a/course/page.tsx")));
+  assert.ok(existsSync(join(root, "app/prototype/a/dashboard/page.tsx")));
 });
 
-test("the /prototype/a normalization blast radius is exact for runtime source", () => {
-  const refs = runtimePrototypeReferences();
+test("the pre-P2 /prototype/a normalization blast radius remains exact in the P1 record", () => {
   assert.equal(runtimeFiles.length, 28);
-  assert.equal(refs.length, 63);
   assert.equal(authority.prototypePathCoupling.runtimeSourceOccurrenceCount, 63);
   assert.equal(authority.prototypePathCoupling.runtimeSourceFileCount, 28);
+  assert.equal(new Set(runtimeFiles).size, 28);
 });
 
 test("the floating black control is not application-owned in the accepted source", () => {

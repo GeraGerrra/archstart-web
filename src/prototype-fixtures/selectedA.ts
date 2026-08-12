@@ -32,9 +32,9 @@ import type { QuizShellViewModel } from "@/src/quiz";
 import type { CompletionDemoState, CutoutCompletionViewModel } from "@/src/completion";
 
 const SHOWCASE_HREF = "/dev/design-system";
-const PROTOTYPE_COURSE_HREF = "/prototype/a/course";
-const PROTOTYPE_MODULE_HREF = "/prototype/a/course/m01";
-const PROTOTYPE_LESSON_HREF = "/prototype/a/course/m01/l01/overview";
+const PROTOTYPE_COURSE_HREF = "/course";
+const PROTOTYPE_MODULE_HREF = "/course/m01";
+const PROTOTYPE_LESSON_HREF = "/course/m01/l01/overview";
 
 export const showcaseBrand: ShellBrand = {
   href: SHOWCASE_HREF,
@@ -439,8 +439,8 @@ function completionFixture(kind: "lesson" | "module", initialState: CompletionDe
     actionLabel: moduleMode ? "Завершить M01" : "Отметить урок завершённым",
     undoLabel: "Снять отметку",
     nextAction: moduleMode
-      ? { href: "/prototype/a/course/m02", label: "Перейти к M02" }
-      : { href: "/prototype/a/course/m01/l02/overview", label: "Перейти к M01 · L02" },
+      ? { href: "/course/m02", label: "Перейти к M02" }
+      : { href: "/course/m01/l02/overview", label: "Перейти к M01 · L02" },
   };
 }
 

@@ -19,9 +19,11 @@ const artwork = read("src/certificate/CertificateArtwork.tsx");
 const printControl = read("src/certificate/CertificatePrintControl.tsx");
 const publicPage = read("src/certificate/PublicCertificateVerificationPage.tsx");
 const certificateIndex = read("src/certificate/index.ts");
-const privateRoute = read("app/prototype/a/certificate/page.tsx");
+const legacyPrivateRoute = read("app/prototype/a/certificate/page.tsx");
+const canonicalPrivateRoute = read("app/certificate/page.tsx");
 const publicRoute = read("app/certificate/[certificateCode]/page.tsx");
-const dashboardRoute = read("app/prototype/a/dashboard/page.tsx");
+const legacyDashboardRoute = read("app/prototype/a/dashboard/page.tsx");
+const canonicalDashboardRoute = read("app/dashboard/page.tsx");
 const dashboard = read("src/learning/dashboard/DashboardPage.tsx");
 const selectedA = read("src/prototypes/selected-a/SelectedAPrototype.tsx");
 const css = read("app/globals.css");
@@ -44,15 +46,19 @@ test("Pass 2 is pinned to the hosted-accepted Pass 1 source and zero certificate
   assert.match(scope, /hosted certificate authority: accepted/u);
 });
 
-test("the exact private and public certificate routes are present", () => {
+test("the accepted certificate routes remain present and P2 adds the canonical private route", () => {
   assert.equal(authority.routes.private, "/prototype/a/certificate");
   assert.equal(authority.routes.publicVerification, "/certificate/[certificateCode]");
   assert.ok(existsSync(join(root, "app/prototype/a/certificate/page.tsx")));
+  assert.ok(existsSync(join(root, "app/certificate/page.tsx")));
   assert.ok(existsSync(join(root, "app/certificate/[certificateCode]/page.tsx")));
-  assert.match(privateRoute, /requireOnboardedProfile\("\/prototype\/a\/certificate"\)/u);
-  assert.match(privateRoute, /from "@\/src\/certificate\/PrivateCertificatePage"/u);
-  assert.match(privateRoute, /loadMyCertificateProjection\(\)/u);
-  assert.match(privateRoute, /loadCourseProgressProjection\(\)/u);
+  assert.match(legacyPrivateRoute, /requireOnboardedProfile\("\/prototype\/a\/certificate"\)/u);
+  assert.match(canonicalPrivateRoute, /requireOnboardedProfile\("\/certificate"\)/u);
+  for (const route of [legacyPrivateRoute, canonicalPrivateRoute]) {
+    assert.match(route, /from "@\/src\/certificate\/PrivateCertificatePage"/u);
+    assert.match(route, /loadMyCertificateProjection\(\)/u);
+    assert.match(route, /loadCourseProgressProjection\(\)/u);
+  }
   assert.match(publicRoute, /from "@\/src\/certificate\/PublicCertificateVerificationPage"/u);
   assert.match(publicRoute, /loadPublicCertificateVerification\(certificateCode\)/u);
   assert.match(artwork, /^import "server-only";/u);
@@ -97,7 +103,7 @@ test("issuance action is parameter-free, authenticated, onboarding-gated, and da
 test("client issuance control sends no authority payload and refreshes the private route", () => {
   assert.match(issueControl, /^"use client";/u);
   assert.match(issueControl, /issueMyCourseCertificateAction\(\)/u);
-  assert.match(issueControl, /router\.push\("\/prototype\/a\/certificate"\)/u);
+  assert.match(issueControl, /router\.push\("\/certificate"\)/u);
   assert.doesNotMatch(issueControl, /FormData|userId|certificateCode:|displayName|eligible:/u);
 });
 
@@ -105,8 +111,10 @@ test("Dashboard exposes truthful locked, eligible, issued, revoked, and unavaila
   for (const state of ["unavailable", "locked", "eligible", "issued", "revoked"]) {
     assert.match(dashboardCard, new RegExp(`projection\\.state === "${state}"|state: "${state}"`, "u"));
   }
-  assert.match(dashboardRoute, /Promise\.all\([\s\S]*loadDashboardProjection[\s\S]*loadMyCertificateProjection/u);
-  assert.match(dashboardRoute, /certificateProjection=\{certificateProjection\}/u);
+  for (const route of [legacyDashboardRoute, canonicalDashboardRoute]) {
+    assert.match(route, /Promise\.all\([\s\S]*loadDashboardProjection[\s\S]*loadMyCertificateProjection/u);
+    assert.match(route, /certificateProjection=\{certificateProjection\}/u);
+  }
   assert.match(selectedA, /certificateProjection\?: MyCertificateProjection/u);
   assert.match(dashboard, /CertificateDashboardCard projection=\{certificateProjection\}/u);
   assert.match(dashboardCard, /completedLessons[\s\S]*requiredLessons/u);

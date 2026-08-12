@@ -447,7 +447,7 @@ export async function loadDashboardProjection(
       };
     }),
     staffReviewAction: hasStaffRole
-      ? { label: "Проверка проектов", href: "/prototype/a/review" }
+      ? { label: "Проверка проектов", href: "/review" }
       : undefined,
   };
 
