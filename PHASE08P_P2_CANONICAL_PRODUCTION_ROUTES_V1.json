@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "ARCH.START",
+  "phase": "Phase 08P",
+  "pass": "Pass 2 Canonical Production Routes and Compatibility Redirects",
+  "status": "SOURCE_CANDIDATE_PREVIEW_ACCEPTANCE_PENDING",
+  "acceptedSource": {
+    "branch": "phase-08p-production-readiness",
+    "gitHead": "2d22d354a89f34ccd07848688131328dae822f3a",
+    "gitTree": "3b63d00672d25c922c4f457c4df18e8b7c395d2b",
+    "sourceContextZip": "ARCHSTART_PHASE_08P_PASS_2_SOURCE_CONTEXT.zip",
+    "sourceContextSha256": "6c7f2057999d1d7b41d66fc4e44a46bca0fd0cb77fa86aeb9cfb5d822495b28e",
+    "sourceFileCount": 472,
+    "sourceSizeBytes": 10420962
+  },
+  "canonicalRoutes": {
+    "home": "/",
+    "course": "/course",
+    "module": "/course/[moduleCode]",
+    "lessonItem": "/course/[moduleCode]/[lessonCode]/[item]",
+    "project": "/course/[moduleCode]/project",
+    "dashboard": "/dashboard",
+    "review": "/review",
+    "privateCertificate": "/certificate",
+    "publicCertificate": "/certificate/[certificateCode]"
+  },
+  "compatibility": {
+    "source": "NEXT_CONFIG_REDIRECTS",
+    "redirectCount": 11,
+    "permanent": true,
+    "queryForwarding": "NEXT_CONFIG_UNCONSUMED_QUERY_PARAMETERS_FORWARDED",
+    "postMethodPreservation": "PERMANENT_308_METHOD_PRESERVING",
+    "legacyRouteFilesRetained": true,
+    "legacyPrefix": "/prototype/a",
+    "legacyMaterialAliases": [
+      "slides",
+      "transcript"
+    ],
+    "canonicalMaterialDestination": "lecture-materials"
+  },
+  "pathAuthority": {
+    "file": "src/routing/production-routes.ts",
+    "ownsCanonicalConstants": true,
+    "ownsPathBuilders": true,
+    "ownsCompatibilityRedirects": true,
+    "ownsAuthCanonicalization": true,
+    "ownsExactProtectedPathClassification": true
+  },
+  "security": {
+    "exactPrivateRoutes": [
+      "/dashboard",
+      "/review",
+      "/certificate",
+      "/profile",
+      "/onboarding",
+      "/auth/update-password",
+      "/prototype/a/dashboard",
+      "/prototype/a/review",
+      "/prototype/a/certificate"
+    ],
+    "publicCertificatePattern": "/certificate/[certificateCode]",
+    "publicCertificateChildProtected": false,
+    "browserAuthorityWidened": false
+  },
+  "outputTracing": {
+    "pdfWorkerCanonicalRoutes": [
+      "/course/*/project",
+      "/review"
+    ],
+    "pdfWorkerLegacyFallbackRoutes": [
+      "/prototype/a/course/*/project",
+      "/prototype/a/review"
+    ]
+  },
+  "historicalPreservation": {
+    "prototypeReviewUnchanged": true,
+    "prototypesUnchanged": true,
+    "ownerArchiveSha256": "47cbf4f7d5ef75d728b01b2f17ee774db83e871c23302408a23469f1c185a584",
+    "footerBridgeDeferredToP6": true
+  },
+  "previewAcceptance": {
+    "required": true,
+    "canonicalAnonymousRoutes": true,
+    "learnerParity": true,
+    "staffAuthorization": true,
+    "privateAndPublicCertificate": true,
+    "legacyRedirectsAndQueries": true,
+    "runtimeLogsZeroNewErrors": true
+  },
+  "mutations": {
+    "database": false,
+    "storage": false,
+    "vercel": false,
+    "domain": false,
+    "dependencies": false,
+    "css": false
+  },
+  "changedPaths": [
+    "LEARNING_INFORMATION_ARCHITECTURE.md",
+    "PHASE08P_P2_CANONICAL_PRODUCTION_ROUTES.md",
+    "PHASE08P_P2_CANONICAL_PRODUCTION_ROUTES_V1.json",
+    "ROUTE_LIST.md",
+    "app/certificate/page.tsx",
+    "app/course/[moduleCode]/[lessonCode]/[item]/LessonActivityRecorder.tsx",
+    "app/course/[moduleCode]/[lessonCode]/[item]/page.tsx",
+    "app/course/[moduleCode]/[lessonCode]/slides/page.tsx",
+    "app/course/[moduleCode]/[lessonCode]/transcript/page.tsx",
+    "app/course/[moduleCode]/page.tsx",
+    "app/course/[moduleCode]/project/page.tsx",
+    "app/course/page.tsx",
+    "app/dashboard/page.tsx",
+    "app/onboarding/page.tsx",
+    "app/page.tsx",
+    "app/profile/page.tsx",
+    "app/review/page.tsx",
+    "next.config.ts",
+    "scripts/auth/render-static-review.mjs",
+    "src/auth/components/AccountDashboard.tsx",
+    "src/auth/components/AuthFrame.tsx",
+    "src/auth/redirects.ts",
+    "src/auth/static-fixtures.ts",
+    "src/certificate/CertificateDashboardCard.tsx",
+    "src/certificate/CertificateIssueControl.tsx",
+    "src/certificate/PrivateCertificatePage.tsx",
+    "src/certificate/PublicCertificateVerificationPage.tsx",
+    "src/lib/supabase/proxy.ts",
+    "src/prototype-fixtures/selectedA.ts",
+    "src/prototypes/selected-a/data.ts",
+    "src/prototypes/selected-a/lesson-navigation.ts",
+    "src/routing/production-routes.ts",
+    "src/server/certificate-actions.ts",
+    "src/server/completion-actions.ts",
+    "src/server/dashboard-projection.ts",
+    "src/server/project-workspace-actions.ts",
+    "tests/deployment/d1-deployment-boundary.test.ts",
+    "tests/deployment/phase07-pass0-launch-shell.test.ts",
+    "tests/phase08m-certificate-functional-surfaces.test.ts",
+    "tests/phase08p-p1-historical-runtime-inventory.test.ts",
+    "tests/phase08p-p2-canonical-production-routes.test.ts"
+  ],
+  "targetCandidate": {
+    "modifiedPathCount": 27,
+    "addedPathCount": 14,
+    "deletedPathCount": 0,
+    "changedPathCount": 41,
+    "gitTreeSelfReferenceExcluded": true,
+    "gitTreeAuthority": "EXTERNAL_OWNER_KIT_INPUT_AUTHORITY_JSON"
+  },
+  "nextPass": "P3_MOBILE_LAYOUT_AND_HORIZONTAL_OVERFLOW_REPAIR"
+}

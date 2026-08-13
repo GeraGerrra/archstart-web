@@ -55,6 +55,16 @@ import q37 from "@/generated/public/quizzes/M08_L02.json";
 import q38 from "@/generated/public/quizzes/M08_L03.json";
 import q39 from "@/generated/public/quizzes/M08_L04.json";
 import q40 from "@/generated/public/quizzes/M08_L05.json";
+import {
+  COURSE_ROUTE,
+  DASHBOARD_ROUTE,
+  HOME_ROUTE,
+  PRIVATE_CERTIFICATE_ROUTE,
+  REVIEW_ROUTE,
+  courseLessonItemRoute,
+  courseModuleRoute,
+  courseProjectRoute,
+} from "@/src/routing/production-routes";
 import { resolveLessonNextAction, type LessonNextAction } from "./lesson-navigation";
 
 export type Status = "complete" | "in-progress" | "available" | "locked";
@@ -194,12 +204,14 @@ export const getImportedModuleData=(code:string)=>importedModuleData[code.toUppe
 export const getModule=(code:string)=>courseModules.find(x=>x.code===code.toUpperCase());
 export const slugLesson=(code:string)=>`l${code.slice(-2).toLowerCase()}`;
 export const codeLesson=(module:string,slug:string)=>`${module.toUpperCase()}_L${slug.replace(/^l/i,"").padStart(2,"0")}`;
-export const pathHome="/prototype/a/home";
-export const pathCourse="/prototype/a/course";
-export const pathDashboard="/prototype/a/dashboard";
-export const pathModule=(code:string)=>`/prototype/a/course/${code.toLowerCase()}`;
-export const pathProject=(code:string)=>`${pathModule(code)}/project`;
-export const pathItem=(module:string,lesson:string,item:ItemId)=>`${pathModule(module)}/${slugLesson(lesson)}/${item}`;
+export const pathHome = HOME_ROUTE;
+export const pathCourse = COURSE_ROUTE;
+export const pathDashboard = DASHBOARD_ROUTE;
+export const pathReview = REVIEW_ROUTE;
+export const pathCertificate = PRIVATE_CERTIFICATE_ROUTE;
+export const pathModule = (code:string) => courseModuleRoute(code);
+export const pathProject = (code:string) => courseProjectRoute(code);
+export const pathItem = (module:string,lesson:string,item:ItemId) => courseLessonItemRoute(module, slugLesson(lesson), item);
 export type { LessonNextAction } from "./lesson-navigation";
 export const nextActionForLesson=(lesson:Pick<Lesson,"code"|"moduleCode">):LessonNextAction=>resolveLessonNextAction({
   moduleCode:lesson.moduleCode,

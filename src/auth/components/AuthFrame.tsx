@@ -18,7 +18,7 @@ export function AuthFrame({ eyebrow, title, description, children, footer }: Aut
           <span className="asa-kicker">{eyebrow}</span>
           <h1>{title}</h1>
           <p>{description}</p>
-          <Link className="asa-text-link" href="/prototype/a/course">К публичному курсу</Link>
+          <Link className="asa-text-link" href="/course">К публичному курсу</Link>
         </div>
         <div className="asa-auth__panel">
           {children}

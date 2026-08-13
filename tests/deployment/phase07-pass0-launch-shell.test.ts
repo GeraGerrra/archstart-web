@@ -7,17 +7,13 @@ const root = process.cwd();
 const read = (path: string): string =>
   readFileSync(join(root, path), "utf8");
 
-test("public root redirects to the accepted ARCH.START Home route", () => {
+test("public root renders the accepted ARCH.START Home surface", () => {
   const page = read("app/page.tsx");
 
-  assert.match(
-    page,
-    /import\s+\{\s*redirect\s*\}\s+from\s+["']next\/navigation["']/u,
-  );
-  assert.match(
-    page,
-    /redirect\(\s*["']\/prototype\/a\/home["']\s*\)/u,
-  );
-  assert.doesNotMatch(page, /\bnotFound\s*\(/u);
+  assert.match(page, /SelectedAHome/u);
+  assert.match(page, /loadCourseProgressProjection/u);
+  assert.match(page, /export const dynamic\s*=\s*["']force-dynamic["']/u);
+  assert.match(page, /progressProjection=\{progressProjection\}/u);
+  assert.doesNotMatch(page, /redirect\(\s*["']\/prototype\/a\/home["']\s*\)/u);
   assert.doesNotMatch(page, /RepositoryFoundationPage/u);
 });

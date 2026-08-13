@@ -1,3 +1,5 @@
+import { courseLessonItemRoute, courseProjectRoute } from "@/src/routing/production-routes";
+
 export interface LessonNextAction {
   href: string;
   label: string;
@@ -32,14 +34,14 @@ export function resolveLessonNextAction({
 
   if (nextLessonCode) {
     return {
-      href: `/prototype/a/course/${normalizedModule.toLowerCase()}/${lessonSlug(nextLessonCode)}/overview`,
+      href: courseLessonItemRoute(normalizedModule, lessonSlug(nextLessonCode), "overview"),
       label: `Перейти к ${nextLessonCode.replace("_", " · ")}`,
       context: "lesson",
     };
   }
 
   return {
-    href: `/prototype/a/course/${normalizedModule.toLowerCase()}/project`,
+    href: courseProjectRoute(normalizedModule),
     label: `Перейти к Project ${normalizedModule.slice(1)}`,
     context: "project",
   };

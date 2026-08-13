@@ -1,0 +1,401 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "ARCH.START",
+  "phase": "Phase 08P",
+  "pass": "Pass 1 Historical Prototype Preservation and Runtime Inventory",
+  "status": "SOURCE_CANDIDATE",
+  "acceptedSource": {
+    "branch": "phase-08p-production-readiness",
+    "gitHead": "4aa5f89fab7b55be3bcead533701e7019fcc629c",
+    "gitTree": "c1a2c324995f198269901609286fb7022e92027f",
+    "sourceContextZip": "ARCHSTART_PHASE_08P_P1_SOURCE_CONTEXT.zip",
+    "sourceContextSha256": "6a326e0f839716580abc63e31145926029127abf56e00d0f95b8f1ad2479e426",
+    "sourceFileCount": 468,
+    "sourceSizeBytes": 10392532
+  },
+  "historicalArchive": {
+    "filename": "ARCHSTART_PHASE_08P_PASS_1_HISTORICAL_ABC_ARCHIVE.zip",
+    "sha256": "47cbf4f7d5ef75d728b01b2f17ee774db83e871c23302408a23469f1c185a584",
+    "archiveRoot": "ARCHSTART_PHASE_08P_PASS_1_HISTORICAL_ABC_ARCHIVE",
+    "sourceFileCount": 36,
+    "sourceSizeBytes": 2481934,
+    "externalAssetReferenceCount": 4,
+    "ownerLocalRetentionRequired": true,
+    "embeddedInGit": false
+  },
+  "routeInventory": {
+    "launch": [
+      {
+        "route": "/",
+        "kind": "server_redirect",
+        "destination": "/prototype/a/home",
+        "source": "app/page.tsx"
+      }
+    ],
+    "selectedALive": [
+      {
+        "route": "/prototype/a",
+        "kind": "server_redirect",
+        "destination": "/prototype/a/home"
+      },
+      {
+        "route": "/prototype/a/home",
+        "access": "public"
+      },
+      {
+        "route": "/prototype/a/course",
+        "access": "public"
+      },
+      {
+        "route": "/prototype/a/dashboard",
+        "access": "authenticated_onboarded"
+      },
+      {
+        "route": "/prototype/a/certificate",
+        "access": "authenticated_onboarded"
+      },
+      {
+        "route": "/prototype/a/review",
+        "access": "active_staff_only_after_server_check"
+      },
+      {
+        "route": "/prototype/a/course/[moduleCode]",
+        "instances": 8,
+        "access": "public"
+      },
+      {
+        "route": "/prototype/a/course/[moduleCode]/project",
+        "instances": 8,
+        "access": "anonymous_or_authenticated_projection"
+      },
+      {
+        "route": "/prototype/a/course/[moduleCode]/[lessonCode]/[item]",
+        "instances": 240,
+        "access": "public"
+      },
+      {
+        "route": "/prototype/a/course/[moduleCode]/[lessonCode]/slides",
+        "instances": 40,
+        "kind": "legacy_redirect"
+      },
+      {
+        "route": "/prototype/a/course/[moduleCode]/[lessonCode]/transcript",
+        "instances": 40,
+        "kind": "legacy_redirect"
+      }
+    ],
+    "publicStableOutsidePrototype": [
+      {
+        "route": "/certificate/[certificateCode]",
+        "access": "public_minimal_verification"
+      },
+      {
+        "route": "/auth/sign-up",
+        "access": "public"
+      },
+      {
+        "route": "/auth/sign-in",
+        "access": "public"
+      },
+      {
+        "route": "/auth/check-email",
+        "access": "public"
+      },
+      {
+        "route": "/auth/confirm",
+        "access": "public_route_handler"
+      },
+      {
+        "route": "/auth/forgot-password",
+        "access": "public"
+      },
+      {
+        "route": "/auth/update-password",
+        "access": "authenticated_recovery"
+      },
+      {
+        "route": "/onboarding",
+        "access": "authenticated"
+      },
+      {
+        "route": "/profile",
+        "access": "authenticated_onboarded"
+      }
+    ],
+    "historical": [
+      {
+        "route": "/prototype-review",
+        "access": "public_noindex"
+      },
+      {
+        "route": "/prototypes/[direction]/home",
+        "directions": [
+          "a",
+          "b",
+          "c"
+        ],
+        "instances": 3
+      },
+      {
+        "route": "/prototypes/[direction]/dashboard",
+        "directions": [
+          "a",
+          "b",
+          "c"
+        ],
+        "instances": 3
+      },
+      {
+        "route": "/prototypes/[direction]/module/m01",
+        "directions": [
+          "a",
+          "b",
+          "c"
+        ],
+        "instances": 3
+      },
+      {
+        "route": "/prototypes/[direction]/lesson/m01-l01",
+        "directions": [
+          "a",
+          "b",
+          "c"
+        ],
+        "instances": 3
+      }
+    ],
+    "developmentOnly": [
+      {
+        "route": "/dev/design-system",
+        "productionBehavior": "notFound"
+      }
+    ]
+  },
+  "selectedARouteInstanceCounts": {
+    "modulePages": 8,
+    "projectPages": 8,
+    "canonicalLessonItemPages": 240,
+    "legacyLessonRedirects": 80,
+    "fixedTopLevelSelectedAPagesIncludingSelectedARoot": 6,
+    "totalSelectedARouteInstances": 342
+  },
+  "prototypePathCoupling": {
+    "needle": "/prototype/a",
+    "runtimeSourceOccurrenceCount": 63,
+    "runtimeSourceFileCount": 28,
+    "runtimeSourceFiles": [
+      "app/onboarding/page.tsx",
+      "app/page.tsx",
+      "app/profile/page.tsx",
+      "app/prototype-review/page.tsx",
+      "app/prototype/a/certificate/page.tsx",
+      "app/prototype/a/course/[moduleCode]/[lessonCode]/slides/page.tsx",
+      "app/prototype/a/course/[moduleCode]/[lessonCode]/transcript/page.tsx",
+      "app/prototype/a/course/[moduleCode]/project/page.tsx",
+      "app/prototype/a/dashboard/page.tsx",
+      "app/prototype/a/page.tsx",
+      "app/prototype/a/review/page.tsx",
+      "next.config.ts",
+      "src/auth/components/AccountDashboard.tsx",
+      "src/auth/components/AuthFrame.tsx",
+      "src/auth/redirects.ts",
+      "src/auth/static-fixtures.ts",
+      "src/certificate/CertificateDashboardCard.tsx",
+      "src/certificate/CertificateIssueControl.tsx",
+      "src/certificate/PrivateCertificatePage.tsx",
+      "src/certificate/PublicCertificateVerificationPage.tsx",
+      "src/lib/supabase/proxy.ts",
+      "src/prototype-fixtures/selectedA.ts",
+      "src/prototypes/selected-a/data.ts",
+      "src/prototypes/selected-a/lesson-navigation.ts",
+      "src/server/certificate-actions.ts",
+      "src/server/completion-actions.ts",
+      "src/server/dashboard-projection.ts",
+      "src/server/project-workspace-actions.ts"
+    ],
+    "testOccurrenceCount": 18,
+    "testFileCount": 6,
+    "scriptOccurrenceCount": 3,
+    "deploymentEvidenceOccurrenceCount": 5,
+    "documentationAuthorityOccurrenceCount": 54,
+    "normalizationRisk": "HIGH_CROSS_CUTTING_BUT_SOURCE_LOCAL"
+  },
+  "metadataAndIndexing": {
+    "rootRobots": "noindex_nofollow",
+    "selectedAPrototypeLayoutRobots": "noindex_nofollow_nocache",
+    "historicalPrototypeLayoutRobots": "noindex_nofollow_nocache",
+    "prototypeReviewLayoutRobots": "noindex_nofollow_nocache",
+    "publicCertificateRobots": "noindex_nofollow_nocache",
+    "canonicalMetadataPresent": false,
+    "productionSeoReady": false
+  },
+  "siteOriginConsumers": {
+    "environmentVariable": "NEXT_PUBLIC_SITE_URL",
+    "authEmailConfirmation": true,
+    "passwordRecovery": true,
+    "certificateQrAbsoluteUrl": true,
+    "cutoverMustBeAtomicWithSupabaseRedirectAllowlist": true
+  },
+  "floatingControlFinding": {
+    "result": "NO_APPLICATION_SOURCE_MATCH",
+    "packageVercelToolbarPresent": false,
+    "knownToolbarImportsPresent": false,
+    "fixedPositionDeclarations": [
+      {
+        "path": "app/globals.css",
+        "line": 34,
+        "text": "position: fixed;"
+      },
+      {
+        "path": "app/globals.css",
+        "line": 1265,
+        "text": ".asa-skip { position: fixed; z-index: var(--as-z-skip-link); left: 16px; top: -80px; padding: 10px 14px; color: var(--asa-white); background: var(--asa-ink); }"
+      },
+      {
+        "path": "app/globals.css",
+        "line": 1335,
+        "text": ".asa-module-drawer, .asa-contents-drawer { position: fixed; z-index: var(--as-z-overlay); inset: 0; visibility: hidden; pointer-events: none; }"
+      },
+      {
+        "path": "app/globals.css",
+        "line": 2339,
+        "text": ".asa-primary-drawer { position: fixed; z-index: var(--as-z-primary-drawer); inset: 0; visibility: hidden; pointer-events: none; }"
+      }
+    ],
+    "fixedPositionDeclarationCount": 4,
+    "classification": "DEPLOYMENT_OR_BROWSER_INJECTION_CANDIDATE",
+    "nextPass": "P4",
+    "requiredProof": "Compare clean anonymous browser without Vercel session/extension against team browser and inspect Vercel Toolbar settings."
+  },
+  "mobileCourseFinding": {
+    "result": "BROWSER_GEOMETRY_REPRODUCED_ROOT_CAUSE_PINNED",
+    "route": "/prototype/a/course",
+    "diagnosticMethod": "Headless Chromium rendered all eight real module titles and lesson/project card structures against the accepted app/globals.css and design tokens. P1 records measurements only and applies no CSS mutation.",
+    "sourceFiles": [
+      "app/globals.css",
+      "src/learning/course/CourseModuleCard.tsx",
+      "src/design-system/primitives/StatusMark.tsx"
+    ],
+    "measurements": [
+      {
+        "viewportCssPx": 390,
+        "documentClientWidthPx": 375,
+        "cardWidthPx": 456.8125,
+        "cardRightPx": 472.8125,
+        "computedCardHeadingFontPx": 39.0,
+        "overflow": true
+      },
+      {
+        "viewportCssPx": 412,
+        "documentClientWidthPx": 397,
+        "cardWidthPx": 477.09375,
+        "cardRightPx": 493.09375,
+        "computedCardHeadingFontPx": 41.2,
+        "overflow": true
+      },
+      {
+        "viewportCssPx": 430,
+        "documentClientWidthPx": 415,
+        "cardWidthPx": 493.921875,
+        "cardRightPx": 509.921875,
+        "computedCardHeadingFontPx": 43.0,
+        "overflow": true
+      },
+      {
+        "viewportCssPx": 640,
+        "documentClientWidthPx": 625,
+        "cardWidthPx": 593.0,
+        "cardRightPx": 609.0,
+        "overflow": false
+      },
+      {
+        "viewportCssPx": 920,
+        "documentClientWidthPx": 905,
+        "cardWidthPx": 831.40625,
+        "cardRightPx": 868.203125,
+        "computedCardHeadingFontPx": 22.0,
+        "overflow": false
+      }
+    ],
+    "rootCause": [
+      "The later mobile rule .asa h2 has the same specificity as .asa-course-module__identity h2 and overrides the intended 22px card-title size with clamp(2rem, 10vw, 3.1rem).",
+      "The one-column course grid uses 1fr with its default automatic minimum, while the module card and identity text track do not establish min-width:0/minmax(0,1fr), so heading min-content width expands the complete card beyond the viewport.",
+      "body overflow-x:hidden and .asa overflow-x:clip conceal the overflowing geometry, which makes right borders and content appear shifted instead of exposing a horizontal scrollbar."
+    ],
+    "isolatingExperimentsAt390CssPx": [
+      {
+        "change": "reassert card heading at 22px",
+        "cardWidthPx": 343.0,
+        "cardRightPx": 359.0,
+        "overflow": false
+      },
+      {
+        "change": "set .asa-course-module min-width:0",
+        "cardWidthPx": 343.0,
+        "cardRightPx": 359.0,
+        "overflow": false
+      },
+      {
+        "change": "set course grid track to minmax(0,1fr)",
+        "cardWidthPx": 343.0,
+        "cardRightPx": 359.0,
+        "overflow": false
+      },
+      {
+        "change": "set identity text track to minmax(0,1fr) and children min-width:0",
+        "cardWidthPx": 343.0,
+        "cardRightPx": 359.0,
+        "overflow": false
+      }
+    ],
+    "deferredP3RepairContract": [
+      ".asa-course-list__grid { grid-template-columns: minmax(0, 1fr); }",
+      ".asa-course-module { min-width: 0; }",
+      ".asa-course-module__identity { grid-template-columns: 45px minmax(0, 1fr); }",
+      ".asa-course-module__identity > * { min-width: 0; }",
+      "reassert the module-card h2 scale after the generic mobile .asa h2 rule and add overflow wrapping"
+    ],
+    "claimBoundary": "Root cause is browser-reproduced and recorded. Repair remains deferred to P3; P1 changes no runtime CSS."
+  },
+  "plannedPasses": {
+    "P2": "Canonical production routes plus compatibility redirects; update all runtime path consumers and tests.",
+    "P3": "Mobile course/module geometry repair at 390, 412 and 430 CSS px.",
+    "P4": "Remove deployment/browser-injected floating control from Production after source proof.",
+    "P5": "archdotstart.com, NEXT_PUBLIC_SITE_URL, Supabase Site URL/redirect allowlist, canonical metadata and QR origin.",
+    "P6": "Footer Course Development history bridge using the preserved archive.",
+    "P7": "Final anonymous/learner/staff/certificate/redirect/mobile/production acceptance."
+  },
+  "p1ChangedPaths": [
+    "PHASE08P_PRODUCTION_READINESS_SCOPE_LOCK.md",
+    "PHASE08P_P1_HISTORICAL_RUNTIME_INVENTORY.md",
+    "PHASE08P_P1_HISTORICAL_RUNTIME_INVENTORY_V1.json",
+    "tests/phase08p-p1-historical-runtime-inventory.test.ts"
+  ],
+  "mutations": {
+    "runtimeBehavior": false,
+    "database": false,
+    "storage": false,
+    "vercel": false,
+    "domain": false,
+    "authConfiguration": false
+  },
+  "historicalSourceHashes": {
+    "app/prototype-review/page.tsx": "de229d895d323011861d53279785733d2fa9be26dffc8054f053dc630f568060",
+    "app/prototype-review/layout.tsx": "66e3eb43fec957da59644968f08d3b33703f0bc89ea7aca7c28e4aea511b9450",
+    "app/prototypes/layout.tsx": "f0cb4a7a14ffef4b766da1597833aa069adb6172a82c8c9308bd8a69350a5b77",
+    "app/prototypes/[direction]/home/page.tsx": "daa493911f7b33d182c29eadd50d73d97712a6bd682022177b402e9a44893dda",
+    "app/prototypes/[direction]/dashboard/page.tsx": "aa67f1220465c1b96b58f59f85283d160cecfec1571cb743fc412f576ea10a26",
+    "app/prototypes/[direction]/module/[moduleCode]/page.tsx": "3e98c69871dd2e7267306ec0d19ec850342658c753c54d264ed2b1ca9be4fc34",
+    "app/prototypes/[direction]/lesson/[lessonCode]/page.tsx": "42f5eed093ecb6f88288de43ecb40c26fea96b13f28eb7f324f3ff2f941cfd66",
+    "src/prototypes/directions.ts": "e6b63d0a45add47d0568f949f50bfd312f8d80c6952d046196c0b7b4736ab9ad",
+    "src/prototypes/content.ts": "ba3c0de03c1000a9354bc659e9e90a8bc7912cc805eccc690acdc37a6ea081a2"
+  },
+  "targetCandidate": {
+    "addedPathCount": 4,
+    "modifiedPathCount": 0,
+    "deletedPathCount": 0,
+    "runtimeBehaviorChanged": false,
+    "gitTreeSelfReferenceExcluded": true,
+    "gitTreeAuthority": "EXTERNAL_OWNER_KIT_INPUT_AUTHORITY_JSON"
+  }
+}

@@ -33,7 +33,10 @@ test("external assets use one direct browser redirect with an unchanged public s
 test("next/image preserves direct prototype asset URLs globally", () => {
   const nextConfig = read("next.config.ts");
   assert.match(nextConfig, /images:\s*\{\s*unoptimized:\s*true,?\s*\}/u);
-  assert.match(nextConfig, /async redirects\(\)\s*\{\s*return externalAssetRedirects\(\);\s*\}/u);
+  assert.match(nextConfig, /import \{ productionRouteRedirects \} from "\.\/src\/routing\/production-routes\.ts";/u);
+  assert.match(nextConfig, /import \{ externalAssetRedirects \} from "\.\/src\/assets\/asset-hosting\.ts";/u);
+  assert.match(nextConfig, /async redirects\(\)\s*\{[\s\S]*productionRouteRedirects\(\)[\s\S]*externalAssetRedirects\(\)[\s\S]*\}/u);
+  assert.ok(nextConfig.indexOf("productionRouteRedirects()") < nextConfig.indexOf("externalAssetRedirects()"));
   assert.doesNotMatch(nextConfig, /loader\s*:/u);
   assert.doesNotMatch(nextConfig, /remotePatterns\s*:/u);
 });

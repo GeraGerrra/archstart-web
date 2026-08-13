@@ -58,8 +58,8 @@ export async function issueMyCourseCertificateAction(): Promise<CertificateIssue
       return safeFailure("error", "Сервер не подтвердил выпуск сертификата.");
     }
 
-    revalidatePath("/prototype/a/dashboard");
-    revalidatePath("/prototype/a/certificate");
+    revalidatePath("/dashboard");
+    revalidatePath("/certificate");
     revalidatePath(publicCertificatePath(issued.certificate.certificateCode));
 
     return {

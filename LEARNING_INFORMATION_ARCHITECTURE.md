@@ -75,9 +75,9 @@ Project 01 remains a real lower-page example under `Что создают уча
 
 ## Course and module routes
 
-- Course overview: `/prototype/a/course`
-- Module: `/prototype/a/course/[moduleCode]`
-- Module project: `/prototype/a/course/[moduleCode]/project`
+- Course overview: `/course`
+- Module: `/course/[moduleCode]`
+- Module project: `/course/[moduleCode]/project`
 
 Default M01 remains an in-progress 2/5 demonstration and shows no module completion control. Completion UI exists only in the explicit query states documented below.
 
@@ -85,7 +85,7 @@ Default M01 remains an in-progress 2/5 demonstration and shows no module complet
 
 Canonical route template:
 
-`/prototype/a/course/[moduleCode]/[lessonCode]/[item]`
+`/course/[moduleCode]/[lessonCode]/[item]`
 
 Desktop source layout:
 
@@ -182,7 +182,7 @@ The cutout remains the semantic completion button. The completed mark is a restr
 ## Final-item progression
 
 - M01_L01–M01_L04: the final item continues to the next lesson Overview.
-- M01_L05: the final item continues to `/prototype/a/course/m01/project` with `Перейти к Project 01`.
+- M01_L05: the final item continues to `/course/m01/project` with `Перейти к Project 01`.
 - M01_L05 completed next action uses the same resolver and route.
 
 ## Responsive and accessibility source contract

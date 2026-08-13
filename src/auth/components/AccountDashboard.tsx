@@ -10,7 +10,7 @@ export function AccountDashboard({ firstName, email }: { firstName: string; emai
           <span className="asa-kicker">МОЙ КУРС</span>
           <h1>Здравствуйте, {firstName}.</h1>
           <p>Аккаунт подключён. Все восемь модулей курса по-прежнему доступны публично.</p>
-          <div className="asa-actions"><Link className="asa-button asa-button--dark" href="/prototype/a/course">Открыть весь курс</Link><Link className="asa-button asa-button--line" href="/profile">Редактировать профиль</Link></div>
+          <div className="asa-actions"><Link className="asa-button asa-button--dark" href="/course">Открыть весь курс</Link><Link className="asa-button asa-button--line" href="/profile">Редактировать профиль</Link></div>
         </header>
         <div className="asa-account-dashboard__grid">
           <section><span className="asa-kicker">ТЕКУЩИЙ ЭТАП</span><h2>Профиль готов</h2><p>Вы вошли как <strong>{email}</strong>. Сохранение прогресса, попыток Quiz и отправка проектов появятся только в Phase 07.</p></section>

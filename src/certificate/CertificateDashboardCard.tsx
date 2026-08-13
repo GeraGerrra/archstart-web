@@ -59,7 +59,7 @@ export function CertificateDashboardCard({
           <p>Завершите все уроки и получите принятие по всем восьми проектам.</p>
           <div className="asa-certificate-actions">
             {!projection.profileNameReady ? <Button href="/profile">Заполнить профиль</Button> : null}
-            <Button href="/prototype/a/course">Открыть весь курс</Button>
+            <Button href="/course">Открыть весь курс</Button>
           </div>
         </div>
       ) : projection.state === "eligible" ? (
@@ -85,7 +85,7 @@ export function CertificateDashboardCard({
             <p>Публичная запись сохранена, но сертификат больше не является действительным.</p>
           ) : null}
           <div className="asa-certificate-actions">
-            <Button href="/prototype/a/certificate" variant="dark">Открыть сертификат</Button>
+            <Button href="/certificate" variant="dark">Открыть сертификат</Button>
             <Button href={publicCertificatePath(certificate.certificateCode)}>
               Проверить публичную запись
             </Button>

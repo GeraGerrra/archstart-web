@@ -9,6 +9,13 @@ import type {
 } from "@/src/completion/types";
 import { createSecretSupabaseClient } from "@/src/lib/supabase/admin";
 import { createServerSupabaseClient } from "@/src/lib/supabase/server";
+import {
+  COURSE_ROUTE,
+  DASHBOARD_ROUTE,
+  HOME_ROUTE,
+  courseLessonItemRoute,
+  courseModuleRoute,
+} from "@/src/routing/production-routes";
 
 const LESSON_CODE_PATTERN = /^M0[1-8]_L0[1-5]$/u;
 const MODULE_CODE_PATTERN = /^M0[1-8]$/u;
@@ -93,19 +100,19 @@ async function completedLessonCount(
 }
 
 function moduleRoute(moduleCode: string): string {
-  return `/prototype/a/course/${moduleCode.toLowerCase()}`;
+  return courseModuleRoute(moduleCode);
 }
 
 function lessonQuizRoute(lessonCode: string): string {
   const moduleCode = lessonCode.slice(0, 3);
   const lessonSlug = lessonCode.slice(4).toLowerCase();
-  return `${moduleRoute(moduleCode)}/${lessonSlug}/quiz`;
+  return courseLessonItemRoute(moduleCode, lessonSlug, "quiz");
 }
 
 function revalidateProgressSurfaces(moduleCode: string): void {
-  revalidatePath("/prototype/a/home");
-  revalidatePath("/prototype/a/course");
-  revalidatePath("/prototype/a/dashboard");
+  revalidatePath(HOME_ROUTE);
+  revalidatePath(COURSE_ROUTE);
+  revalidatePath(DASHBOARD_ROUTE);
   revalidatePath(moduleRoute(moduleCode));
 }
 

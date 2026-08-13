@@ -22,7 +22,7 @@ export function CertificateIssueControl({
       const nextResult = await issueMyCourseCertificateAction();
       setResult(nextResult);
       if (nextResult.status === "success") {
-        router.push("/prototype/a/certificate");
+        router.push("/certificate");
         router.refresh();
       }
     });
